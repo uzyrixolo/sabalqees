@@ -1608,24 +1608,24 @@
           "type": "process",
           "settings": {
             "image": "shopify://shop_images/Polygon_7_69227b67-15d4-4a67-b8a6-1dde7400a001.webp",
-            "title": "Direct Sourcing",
-            "content": "<p>We source our honey directly from the beekeeper, ensuring traceability and authenticity for every jar.</p>"
+            "title": "مصادر مباشرة",
+            "content": "<p>نحصل على عسلنا مباشرة من النحّال، بما يضمن التتبع والأصالة لكل عبوة.</p>"
           }
         },
         "process_KTV3G4": {
           "type": "process",
           "settings": {
             "image": "shopify://shop_images/Polygon_6_3caddfa3-ed5d-42e9-9046-d13797098a3b.webp",
-            "title": "Careful Handling",
-            "content": "<p>We ensure the honey's purity through traditional, careful harvesting practices that preserve its natural properties.</p>"
+            "title": "تعامل بعناية",
+            "content": "<p>نضمن نقاء العسل عبر ممارسات حصاد تقليدية دقيقة تحافظ على خصائصه الطبيعية.</p>"
           }
         },
         "process_qdbwAK": {
           "type": "process",
           "settings": {
             "image": "shopify://shop_images/Polygon_7_1.webp",
-            "title": "Exclusive Access",
-            "content": "<p>Our relationships with beekeepers around the world mean we can source the rarest and most unique varieties. </p>"
+            "title": "وصول حصري",
+            "content": "<p>علاقاتنا مع النحّالين حول العالم تتيح لنا الحصول على أندر الأصناف وأكثرها تفرّدًا.</p>"
           }
         }
       },
@@ -1638,8 +1638,8 @@
       "name": "Our Process",
       "settings": {
         "bg_color": "#ffffff",
-        "heading": "Our Process. Why We're the Best Supplier",
-        "subheading": "Commitment to quality, authenticity, and ethical sourcing"
+        "heading": "عمليتنا. لماذا نحن الأفضل في التوريد",
+        "subheading": "التزام بالجودة والأصالة والمصادر الأخلاقية"
       }
     },
     "product-recommendations": {
