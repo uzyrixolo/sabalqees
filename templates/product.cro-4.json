@@ -1517,7 +1517,7 @@
         "destop_img": "{{ product.metafields.custom.honey_origin_map.value.map_image_desktop.value }}",
         "mobile_img": "{{ product.metafields.custom.honey_origin_map.value.map_image_phone.value }}",
         "map_image": "{{ product.metafields.custom.honey_origin_map.value.honey_origin_map.value }}",
-        "heading": "Rarity & Single-Origin Excellence"
+        "heading": "الندرة والتميّز أحادي المصدر"
       }
     },
     "image_text_6ebHxX": {
