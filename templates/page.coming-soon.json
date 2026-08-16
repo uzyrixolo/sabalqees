@@ -46,7 +46,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }
@@ -69,11 +69,11 @@
     "1656132062e41ecbc9": {
       "type": "main-password",
       "settings": {
-        "heading": "Coming Soon!",
+        "heading": "قريبًا!",
         "content": "",
-        "newsletter_placeholder": "Your email address",
-        "newsletter_button_text": "Notify me",
-        "signup_form_success": "We will send you an email right before we open!",
+        "newsletter_placeholder": "عنوان بريدك الإلكتروني",
+        "newsletter_button_text": "أبلغني",
+        "signup_form_success": "سنرسل لك بريدًا إلكترونيًا قبل افتتاحنا مباشرة!",
         "social": "0"
       }
     }

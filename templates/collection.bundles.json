@@ -14,13 +14,13 @@
       "settings": {
         "first_collection_handle": "all",
         "first_collection_link": "shopify://collections/all-products",
-        "first_collection_text": "All Products",
+        "first_collection_text": "جميع المنتجات",
         "second_collection_handle": "bundles",
         "second_collection_link": "shopify://collections/bundles",
-        "second_collection_text": "Bundles",
+        "second_collection_text": "الباقات",
         "third_collection_handle": "gifting",
         "third_collection_link": "shopify://collections/gifting",
-        "third_collection_text": "Gifting"
+        "third_collection_text": "الهدايا"
       }
     },
     "top": {
@@ -167,7 +167,7 @@
             "design_des": "show_all",
             "length": 60,
             "view_more": true,
-            "viewm_txt": "View more",
+            "viewm_txt": "عرض المزيد",
             "fontf": "inherit",
             "text_cl": "#ffffff",
             "text_fs": 16,
@@ -276,7 +276,7 @@
         "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
           "type": "category",
           "settings": {
-            "heading": "Product Categories",
+            "heading": "تصنيفات المنتجات",
             "cat_source": "1",
             "cat_link_list": "",
             "count": true
@@ -285,7 +285,7 @@
         "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
           "type": "collection",
           "settings": {
-            "heading": "Sale Products",
+            "heading": "منتجات التخفيضات",
             "collection": "frontpage",
             "limit_pr": 3,
             "image_ratio": "t4s_ratioadapt",

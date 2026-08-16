@@ -15,7 +15,7 @@
         "combo_1": {
           "type": "combo_tier",
           "settings": {
-            "tier_name": "Starter Bundle",
+            "tier_name": "باقة البداية",
             "tea_count": 1,
             "honey_label": "250g",
             "discount_percent": 10
@@ -24,7 +24,7 @@
         "combo_2": {
           "type": "combo_tier",
           "settings": {
-            "tier_name": "Duo Bundle",
+            "tier_name": "باقة ثنائية",
             "tea_count": 2,
             "honey_label": "400g",
             "discount_percent": 15
@@ -33,7 +33,7 @@
         "combo_3": {
           "type": "combo_tier",
           "settings": {
-            "tier_name": "Family Bundle",
+            "tier_name": "باقة العائلة",
             "tea_count": 3,
             "honey_label": "1kg",
             "discount_percent": 20
@@ -46,7 +46,7 @@
         "combo_3"
       ],
       "settings": {
-        "heading": "Build Your Bundle",
+        "heading": "كوّن باقتك",
         "subheading": "Mix & match your favourite teas with our signature honey — the more you bundle, the more you save.",
         "tea_collection": "african-teas",
         "honey_collection": "everyday-honey"

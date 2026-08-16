@@ -15,7 +15,7 @@
         "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
           "type": "1",
           "settings": {
-            "heading": "Highlights from the hives",
+            "heading": "لمحات من الخلايا",
             "fontf": "2",
             "text_cl": "#ffffff",
             "text_fs": 50,
@@ -96,7 +96,7 @@
         "custom_text_eHcEEV": {
           "type": "custom_text",
           "settings": {
-            "text": "New Zealand",
+            "text": "نيوزيلندا",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -118,7 +118,7 @@
         "custom_text_LdYtD8": {
           "type": "custom_text",
           "settings": {
-            "text": "Our Beekeeper Tom in the South Island",
+            "text": "نحّالنا توم في الجزيرة الجنوبية",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -175,7 +175,7 @@
         "custom_text_xFV8wG": {
           "type": "custom_text",
           "settings": {
-            "text": "Greece",
+            "text": "اليونان",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -197,7 +197,7 @@
         "custom_text_CEgUmw": {
           "type": "custom_text",
           "settings": {
-            "text": "Our Beekeeper Asterios at his apiary in northern Greece",
+            "text": "نحّالنا أستيريوس في منحله شمال اليونان",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -254,7 +254,7 @@
         "custom_text_iJW4KR": {
           "type": "custom_text",
           "settings": {
-            "text": "Yemen",
+            "text": "اليمن",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -276,7 +276,7 @@
         "custom_text_eUntfX": {
           "type": "custom_text",
           "settings": {
-            "text": "Traditional hives in the Do'an valley of Hadhramaut",
+            "text": "خلايا تقليدية في وادي دوعن بحضرموت",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -333,7 +333,7 @@
         "custom_text_EiF8n7": {
           "type": "custom_text",
           "settings": {
-            "text": "United Kingdom",
+            "text": "المملكة المتحدة",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -355,7 +355,7 @@
         "custom_text_UjmU9W": {
           "type": "custom_text",
           "settings": {
-            "text": "Checking on the hives in South Yorkshire",
+            "text": "تفقّد الخلايا في جنوب يوركشاير",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -412,7 +412,7 @@
         "custom_text_ULfJmU": {
           "type": "custom_text",
           "settings": {
-            "text": "New Zealand",
+            "text": "نيوزيلندا",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -434,7 +434,7 @@
         "custom_text_jdbCe7": {
           "type": "custom_text",
           "settings": {
-            "text": "Balqees hives up in the mountains",
+            "text": "خلايا بلقيس في أعالي الجبال",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -491,7 +491,7 @@
         "custom_text_mzUqR6": {
           "type": "custom_text",
           "settings": {
-            "text": "Yemen",
+            "text": "اليمن",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -513,7 +513,7 @@
         "custom_text_WiJUKn": {
           "type": "custom_text",
           "settings": {
-            "text": "A piece of Sidr honeycomb",
+            "text": "قطعة من شمع عسل السدر",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#fff",
@@ -608,7 +608,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }

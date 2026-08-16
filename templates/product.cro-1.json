@@ -1241,7 +1241,7 @@
         "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
           "type": "category",
           "settings": {
-            "title_category": "Product Categories",
+            "title_category": "تصنيفات المنتجات",
             "cat_source": "1",
             "cat_link_list": "",
             "count": true
@@ -1250,7 +1250,7 @@
         "f65f464b-9487-43be-9c91-8688a098bb6f": {
           "type": "collection",
           "settings": {
-            "title_fea_pr": "Sale Products",
+            "title_fea_pr": "منتجات التخفيضات",
             "collection": "frontpage",
             "limit_pr": 5,
             "image_ratio": "t4s_ratioadapt",
@@ -1261,7 +1261,7 @@
         "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
           "type": "instagram",
           "settings": {
-            "title_ins": "Instagram",
+            "title_ins": "إنستغرام",
             "mode": "2",
             "acc": "",
             "limit": 12,
@@ -1274,9 +1274,9 @@
         "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
           "type": "shipping",
           "settings": {
-            "title": "Shipping & Delivery",
+            "title": "الشحن والتوصيل",
             "shipping_1": "las la-truck,شحن مجاني,داخل الرياض للطلبات فوق 500 ريال",
-            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_2": "las la-headset,دعم 24/7,ندعمك 24 ساعة يوميًا",
             "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
             "shipping_4": "",
             "shipping_5": "",
@@ -1433,7 +1433,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "My honey has crystallised, what do i do?",
+            "title": "تبلور عسلي، ماذا أفعل؟",
             "content": "<p>Raw honey will naturally crystallise when it reaches cold temperatures. This happens as the glucose in the honey separates from the water forming crystals. Honey is still safe to eat when it has crystallised, however to return it back to its original form, place the jar in warm water for some time until it liquefies.</p>"
           }
         },
@@ -1473,7 +1473,7 @@
       "settings": {
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "Frequently Asked Questions",
+        "top_heading": "الأسئلة الشائعة",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,
@@ -1819,7 +1819,7 @@
         "show": true,
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "Recently viewed products",
+        "top_heading": "المنتجات المعروضة مؤخرًا",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,
@@ -1917,7 +1917,7 @@
       "settings": {
         "bg_color": "#ffffff",
         "bg_under_color": "",
-        "title_text": "Frequently Asked Questions",
+        "title_text": "الأسئلة الشائعة",
         "destop_img": "shopify://shop_images/Frame_2087326270.webp",
         "mobile_img": "shopify://shop_images/Frame_2087326270_1.webp"
       }

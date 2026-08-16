@@ -86,7 +86,7 @@
             "heading": "Lementum musat dignissim",
             "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
             "url": "",
-            "btn_label": "Read more",
+            "btn_label": "اقرأ المزيد",
             "btn_icon": false,
             "button_style": "default",
             "btn_size": "large",
@@ -108,7 +108,7 @@
             "heading": "Lementum musat dignissim",
             "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
             "url": "",
-            "btn_label": "Read more",
+            "btn_label": "اقرأ المزيد",
             "btn_icon": false,
             "button_style": "default",
             "btn_size": "large",
@@ -148,7 +148,7 @@
         "custom_text_eQcyC4": {
           "type": "custom_text",
           "settings": {
-            "text": "Subscribe to our newsletter",
+            "text": "اشترك في نشرتنا البريدية",
             "remove_br_tag": false,
             "fontf": "2",
             "text_cl": "#000000",

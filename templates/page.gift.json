@@ -58,7 +58,7 @@
             "text": "",
             "length": 31,
             "readm": true,
-            "readm_txt": "Read more"
+            "readm_txt": "اقرأ المزيد"
           }
         },
         "form": {
@@ -86,7 +86,7 @@
             "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
-            "advance_label": "Choose style",
+            "advance_label": "اختر النمط",
             "advance_pr_list": []
           }
         },
@@ -135,14 +135,14 @@
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
           "type": "tab_des",
           "settings": {
-            "title": "Description"
+            "title": "الوصف"
           }
         },
         "e36839f5-0847-44e2-97d3-2885597bd1ff": {
           "type": "tab_add",
           "disabled": true,
           "settings": {
-            "title": "Additional Information"
+            "title": "معلومات إضافية"
           }
         },
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
@@ -157,7 +157,7 @@
         "56e67368-7424-4d73-8f14-dacdda4c59be": {
           "type": "tab_rivui",
           "settings": {
-            "title": "Reviews",
+            "title": "التقييمات",
             "review_liquid": ""
           }
         },
@@ -241,7 +241,7 @@
         "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
           "type": "category",
           "settings": {
-            "title_category": "Product Categories",
+            "title_category": "تصنيفات المنتجات",
             "cat_source": "1",
             "cat_link_list": "",
             "count": true
@@ -250,7 +250,7 @@
         "f65f464b-9487-43be-9c91-8688a098bb6f": {
           "type": "collection",
           "settings": {
-            "title_fea_pr": "Sale Products",
+            "title_fea_pr": "منتجات التخفيضات",
             "collection": "frontpage",
             "limit_pr": 5,
             "image_ratio": "t4s_ratioadapt",
@@ -261,7 +261,7 @@
         "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
           "type": "instagram",
           "settings": {
-            "title_ins": "Instagram",
+            "title_ins": "إنستغرام",
             "mode": "2",
             "acc": "",
             "limit": 12,
@@ -274,9 +274,9 @@
         "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
           "type": "shipping",
           "settings": {
-            "title": "Shipping & Delivery",
+            "title": "الشحن والتوصيل",
             "shipping_1": "las la-truck,شحن مجاني,داخل الرياض للطلبات فوق 500 ريال",
-            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_2": "las la-headset,دعم 24/7,ندعمك 24 ساعة يوميًا",
             "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
             "shipping_4": "",
             "shipping_5": "",
@@ -328,7 +328,7 @@
         "show": true,
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "You may also like",
+        "top_heading": "قد يعجبك أيضًا",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,
@@ -380,7 +380,7 @@
         "show": true,
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "Recently viewed products",
+        "top_heading": "المنتجات المعروضة مؤخرًا",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,

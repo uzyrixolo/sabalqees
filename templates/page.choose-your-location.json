@@ -74,7 +74,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }
@@ -102,7 +102,7 @@
           "settings": {
             "icon_themes": "map-maker",
             "icon": "tractor",
-            "title": "UK",
+            "title": "المملكة المتحدة",
             "text": "<p><a href=\"https://balqees.co.uk\" title=\"balqees.co.uk\">balqees.co.uk</a></p>"
           }
         },
@@ -111,7 +111,7 @@
           "settings": {
             "icon_themes": "map-maker",
             "icon": "life-ring",
-            "title": "Middle East",
+            "title": "الشرق الأوسط",
             "text": "<p><a href=\"https://sa.balqees.com\" title=\"sa.balqees.com\">sa.balqees.com</a></p>"
           }
         },
@@ -121,8 +121,8 @@
           "settings": {
             "icon_themes": "refesh",
             "icon": "undo-alt",
-            "title": "30 DAYS RETURN",
-            "text": "<p>Simply return it within 30 days for an exchange.</p>"
+            "title": "إرجاع خلال 30 يومًا",
+            "text": "<p>أعده ببساطة خلال 30 يومًا للاستبدال.</p>"
           }
         },
         "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-3": {
@@ -131,8 +131,8 @@
           "settings": {
             "icon_themes": "door-lock",
             "icon": "lock",
-            "title": "100% PAYMENT SECURE",
-            "text": "<p>We ensure secure payment with PEV</p>"
+            "title": "دفع آمن 100%",
+            "text": "<p>نضمن الدفع الآمن عبر PEV</p>"
           }
         }
       },

@@ -158,7 +158,7 @@
         "bl_form_iMUcjJ": {
           "type": "bl_form",
           "settings": {
-            "heading": "Get in touch",
+            "heading": "تواصل معنا",
             "enable_phone": true,
             "enable_full_btn": true,
             "button_style": "default",
@@ -170,7 +170,7 @@
           "type": "bl_info",
           "disabled": true,
           "settings": {
-            "heading": "CONTACT INFORMATION",
+            "heading": "معلومات التواصل",
             "text": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p><p><i class=\"las la-home fs__16\"></i> 184 Main Rd E, St Albans Victoria 3021, Australia</p><p><i class=\"las la-phone fs__16\"></i> 1800-123-222 / 1900-1570-230</p><p><i class=\"las la-envelope fs__16\"></i> contact@company.com</p><i class=\"las la-clock fs__16\"></i> Everyday 9:00-17:00"
           }
         }
@@ -212,7 +212,7 @@
         "custom_text_M3KXdr": {
           "type": "custom_text",
           "settings": {
-            "text": "Subscribe to our newsletter",
+            "text": "اشترك في نشرتنا البريدية",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#000000",

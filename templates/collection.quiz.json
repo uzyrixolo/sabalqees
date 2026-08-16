@@ -17,7 +17,7 @@
           "settings": {
             "icon_themes": "none",
             "icon": "las la-shipping-fast",
-            "title": "Free domestic shipping on orders over £50",
+            "title": "شحن مجاني داخل الرياض للطلبات فوق 500 ريال",
             "text": ""
           }
         },
@@ -35,7 +35,7 @@
           "settings": {
             "icon_themes": "refesh",
             "icon": "las la-undo-alt",
-            "title": "14 DAYS RETURN",
+            "title": "إرجاع خلال 14 يومًا",
             "text": ""
           }
         },
@@ -44,7 +44,7 @@
           "settings": {
             "icon_themes": "door-lock",
             "icon": "las la-star",
-            "title": "400+ 5 star reviews",
+            "title": "أكثر من 400 تقييم بخمس نجوم",
             "text": ""
           }
         }
@@ -104,13 +104,13 @@
       "settings": {
         "first_collection_handle": "all",
         "first_collection_link": "",
-        "first_collection_text": "All Products",
+        "first_collection_text": "جميع المنتجات",
         "second_collection_handle": "bundles",
         "second_collection_link": "",
-        "second_collection_text": "Bundles",
+        "second_collection_text": "الباقات",
         "third_collection_handle": "gifting",
         "third_collection_link": "",
-        "third_collection_text": "Gifting"
+        "third_collection_text": "الهدايا"
       }
     },
     "heading_template": {
@@ -119,7 +119,7 @@
         "2_dWJPcz": {
           "type": "2",
           "settings": {
-            "content": "<p>Your Perfect Match</p>",
+            "content": "<p>خيارك المثالي</p>",
             "fontf": "inherit",
             "text_cl": "#ffffff",
             "text_fs": 32,
@@ -162,7 +162,7 @@
         "2_QCxp37": {
           "type": "2",
           "settings": {
-            "content": "<p>Tailored to your specific usage and needs</p>",
+            "content": "<p>مصمم خصيصًا لاستخدامك واحتياجاتك</p>",
             "fontf": "inherit",
             "text_cl": "#ffffff",
             "text_fs": 16,
@@ -186,7 +186,7 @@
             "design_des": "excerpt",
             "length": 10,
             "view_more": false,
-            "viewm_txt": "View more",
+            "viewm_txt": "عرض المزيد",
             "fontf": "inherit",
             "text_cl": "#ffffff",
             "text_fs": 16,
@@ -414,7 +414,7 @@
         "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
           "type": "category",
           "settings": {
-            "heading": "Product Categories",
+            "heading": "تصنيفات المنتجات",
             "cat_source": "1",
             "cat_link_list": "",
             "count": false
@@ -423,7 +423,7 @@
         "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
           "type": "collection",
           "settings": {
-            "heading": "Sale Products",
+            "heading": "منتجات التخفيضات",
             "collection": "frontpage",
             "limit_pr": 3,
             "image_ratio": "t4s_ratioadapt",
@@ -461,7 +461,7 @@
         "custom_text_dQgReQ": {
           "type": "custom_text",
           "settings": {
-            "text": "Subscribe to our newsletter",
+            "text": "اشترك في نشرتنا البريدية",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#000000",

@@ -28,7 +28,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }
@@ -98,7 +98,7 @@
         "template--17017930940691__496ed310-98c1-4907-8a9f-b5ee336a0042-1669017664a519a686-1": {
           "type": "custom_text",
           "settings": {
-            "text": "BESPOKE FUSION",
+            "text": "مزيج حسب الطلب",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#ffffff",
@@ -142,7 +142,7 @@
         "template--17017930940691__496ed310-98c1-4907-8a9f-b5ee336a0042-1669017664a519a686-5": {
           "type": "custom_text",
           "settings": {
-            "text": "PERSONALIZE YOUR HONEY FUSION",
+            "text": "خصّص مزيج عسلك",
             "remove_br_tag": false,
             "fontf": "inherit",
             "text_cl": "#ffffff",
@@ -193,7 +193,7 @@
         "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
           "type": "1",
           "settings": {
-            "heading": "Coming Soon",
+            "heading": "قريبًا",
             "fontf": "2",
             "text_cl": "#222222",
             "text_fs": 50,

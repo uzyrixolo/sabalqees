@@ -157,7 +157,7 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "title": "Sale Products",
+            "title": "منتجات التخفيضات",
             "collection": "women",
             "limit_pr": 3,
             "image_ratio": "t4s_ratioadapt",

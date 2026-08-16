@@ -15,7 +15,7 @@
         "18952756-58af-4afa-a0cc-b1b54300fb8b": {
           "type": "1",
           "settings": {
-            "heading": "Frequently Asked Questions",
+            "heading": "الأسئلة الشائعة",
             "fontf": "2",
             "text_cl": "#ffffff",
             "text_fs": 40,
@@ -83,9 +83,9 @@
           "type": "shipping",
           "disabled": true,
           "settings": {
-            "title": "Shipping & Delivery",
+            "title": "الشحن والتوصيل",
             "shipping_1": "las la-truck,شحن مجاني,داخل الرياض للطلبات فوق 500 ريال",
-            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_2": "las la-headset,دعم 24/7,ندعمك 24 ساعة يوميًا",
             "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
             "shipping_4": "",
             "shipping_5": "",
@@ -123,7 +123,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "Do you pasteurise or filter your honey?",
+            "title": "هل تبسترون العسل أو ترشّحونه؟",
             "content": "<p>All our honey is extracted from the honeycombs of the hives and then strained to remove any impurities like beeswax and dead bees. This method of extraction used at Balqees retains the maximum content of bioflavonoids, vitamins and minerals and of course, natural sugars of fructose and glucose. </p><p>We do not heat-treat or micro-filter the honey, and none of our beekeepers or apiculturists feed sugar solutions or supplements to their bees.</p>"
           }
         },
@@ -131,7 +131,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "My honey has crystallised, what do i do?",
+            "title": "تبلور عسلي، ماذا أفعل؟",
             "content": "<p>Raw honey will naturally crystallise when it reaches cold temperatures. This happens as the glucose in the honey separates from the water. Honey is still safe to eat even when it has crystallised, however, to return it back to its original form, place the jar in a warm water bath and allow it to liquefy.</p>"
           }
         },
@@ -147,7 +147,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "How do I check on an order I have placed?",
+            "title": "كيف أتابع طلبًا قمت به؟",
             "content": "<p>The best way to keep up to date with the status of your order is to visit the Track My Order page. You can also click the link in your dispatch email, which you will receive as soon as your order has been dispatched from our warehouse.</p><p></p><p>If you have not received a confirmation email within 24 hours or dispatch email within three working days after ordering, please check your junk/spam folder and any secondary email addresses you may have used before contacting us.</p><p></p><p>If you have placed your order for next day delivery, confirmation and dispatch emails should be received on the same day.</p><p>If you have an account, you can track your most recent orders by visiting the Track My Order page or the My Orders page in the My Account section.<br/><strong>Please note:</strong> the courier may not post tracking information online for up to 24 hours after the order is dispatched.</p>"
           }
         },
@@ -155,7 +155,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "Where is my confirmation/dispatch email?",
+            "title": "أين رسالة التأكيد/الشحن الخاصة بي؟",
             "content": "<p>You will recieve a confirmation email/SMS once your order has been processed. Once your order has been dispatched you will receive another email/SMS with details on how to track it.</p>"
           }
         },
@@ -164,7 +164,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "Do you accept international orders?",
+            "title": "هل تقبلون الطلبات الدولية؟",
             "content": "<p>At the moment we only cater for orders in the UK, however we will be accepting international orders in the near future.</p>"
           }
         },
@@ -172,7 +172,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "Is it safe to use my credit card?",
+            "title": "هل استخدام بطاقتي الائتمانية آمن؟",
             "content": "<p>At sa.balqees.com, we understand how important security is to you. When you order online with us, we use Secure Socket Layer (SSL) encryption technology. This is the most advanced consumer online security technique to date. You can be assured that your order will be placed safely and securely.</p><p>In order for encryption to take place, your browser must have the SSL protocol. </p>"
           }
         },
@@ -180,7 +180,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "What is your return policy?",
+            "title": "ما هي سياسة الإرجاع لديكم؟",
             "content": "<p>We hope you are delighted with your order. However if for any reason you're not entirely satisfied with your goods, you may return any item in its original condition for a full refund within 14 days of delivery. For more information please see <a href=\"/pages/returns-refunds\" title=\"Returns & Refunds\">Returns & Refunds.</a></p>"
           }
         },
@@ -188,7 +188,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "question_mark",
-            "title": "How do I use a discount code?",
+            "title": "كيف أستخدم رمز الخصم؟",
             "content": "<p>Any promotional codes authorised by us will be able to be used at the payment section of the checkout.</p>"
           }
         },
@@ -205,7 +205,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "How do I unsubscribe from email?",
+            "title": "كيف ألغي الاشتراك من البريد الإلكتروني؟",
             "content": "<p>If you are a Registered Member of Balqees Online, go to My Account, and click on 'View' or 'View Account Profile' under 'Account Profile'. If you have an account with Balqees, you may click on the link provided on the monthly newsletter to be removed from the mailing list.</p>"
           }
         },
@@ -214,7 +214,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "How do I get Balqees samples?",
+            "title": "كيف أحصل على عينات بلقيس؟",
             "content": ""
           }
         },
@@ -223,7 +223,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "Can you mail out samples on request?",
+            "title": "هل يمكنكم إرسال عينات عند الطلب؟",
             "content": "<p>Balqees are unable to mail out samples on request.<br/>Please be advised that sample sizes of our products are not available for sale or general distribution. Samples are only available through online offers and at checkout with purchases where applicable, or at our retail store counter during promotional events.</p><p>We would like to suggest visiting one of our counters, where our representatives will be happy to demonstrate our products and aid you in deciding if the products are right for you.</p>"
           }
         },
@@ -241,7 +241,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "What should I do if I have a complaint?",
+            "title": "ماذا أفعل إذا كانت لديّ شكوى؟",
             "content": "<p>Please visit the Contact Us section if you have a complaint.</p>"
           }
         },
@@ -250,7 +250,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "Do I get the Balqees bag if I order online?",
+            "title": "هل أحصل على حقيبة بلقيس عند الطلب عبر الإنترنت؟",
             "content": "<p>Gift bags will no longer be automatically delivered to our customers when placing an order online. Should you wish to have a gift bag with your order, please visit your nearby Balqees where one of our Stylists will happily provide a bag for you. Please ensure that you present your online order confirmation to the Stylist to avoid disappointment. T</p>"
           }
         },
@@ -259,7 +259,7 @@
           "disabled": true,
           "settings": {
             "icon": "question_mark",
-            "title": "Can you send me a gift bag or can I get one from store?",
+            "title": "هل يمكنكم إرسال حقيبة هدايا لي أم أحصل عليها من المتجر؟",
             "content": "<p>Gift bags will no longer be automatically delivered to our customers when placing an order online. Should you wish to have a gift bag with your order, please visit your nearest Balqees where one of our Stylists will happily provide a bag for you. Please ensure that you present your online order confirmation to the Stylist to avoid disappointment. To find your nearest Balqees please visit our Store Locator page </p><p></p>"
           }
         }
@@ -286,7 +286,7 @@
       "settings": {
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "Find your answer here:",
+        "top_heading": "اعثر على إجابتك هنا:",
         "icon_heading": "",
         "top_subheading": "",
         "tophead_mb": 30,

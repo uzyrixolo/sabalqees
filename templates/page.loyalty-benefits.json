@@ -239,7 +239,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }
@@ -266,11 +266,11 @@
           "type": "package",
           "settings": {
             "highlights_item": false,
-            "heading": "NEW BEE",
+            "heading": "نحلة جديدة",
             "package_label": "",
             "package_label_bg": "#ff0000",
             "price": 10,
-            "des": "Cash Back",
+            "des": "استرداد نقدي",
             "txt": "Spend per Year\n<b style=\"color:#000;font-weight:500;\">SAR 0 - SAR 2,999</b>",
             "button_text": "By now",
             "button_link": "",
@@ -285,11 +285,11 @@
           "type": "package",
           "settings": {
             "highlights_item": false,
-            "heading": "SWEET BEE",
+            "heading": "النحلة الحلوة",
             "package_label": "",
             "package_label_bg": "#ff0000",
             "price": 15,
-            "des": "Cash Back",
+            "des": "استرداد نقدي",
             "txt": "Spend per Year\n<b style=\"color:#000;font-weight:500;\">SAR 3,000 - SAR 7,999</b>",
             "button_text": "By now",
             "button_link": "",
@@ -304,11 +304,11 @@
           "type": "package",
           "settings": {
             "highlights_item": false,
-            "heading": "ROYAL BEE",
+            "heading": "النحلة الملكية",
             "package_label": "",
             "package_label_bg": "#ff0000",
             "price": 20,
-            "des": "Cash Back",
+            "des": "استرداد نقدي",
             "txt": "Spend per Year\n<b style=\"color:#000;font-weight:500;\">SAR 8,000 and more</b>",
             "button_text": "By now",
             "button_link": "",
@@ -328,7 +328,7 @@
       "settings": {
         "design_heading": "1",
         "heading_align": "t4s-text-center",
-        "top_heading": "Loyalty Tiers",
+        "top_heading": "مستويات الولاء",
         "icon_heading": "las la-gem",
         "top_subheading": "",
         "tophead_mb": 30,
@@ -415,7 +415,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "How to Shop Online ",
+            "title": "كيفية التسوق عبر الإنترنت",
             "content": "<p><strong>Welcome to Balqees Online.</strong> Shopping is easy, convenient and secure. Simply select the product you want to purchase and follow the instructions below:</p><p><strong>Step One:</strong> Finding an item and adding to your shopping bag </p><p>Find the item you desire by either going through the category pages, or using on-site search.</p><p>Once you've found the product you want, select the size and then click \"add to bag\".</p><p>You can either rollover a product image and click on the Quickshop button and then click \"add to bag\", or for additional product information, click on the product name or 'view details' link. From the product detail page select add to bag\" to place the item in your bag.</p><p>You will be able to increase or decrease the quantity in your shopping bag.</p><p><strong>Step Two:</strong> The shopping bag</p><p>When you've finished shopping, click the shopping bag icon found on each page. The shopping bag is where you check if the products in your bag are correct, and have the option to change the quantities you're ordering.<br/>To continue to purchase, click the checkout button. </p><p><strong>Step Three:</strong> Order details</p><p>The next page will ask you to sign in, or register (if you have not already done so), and then provide billing and delivery address<br/>details. If you have already saved these in your Account Profile you won't have to fill them out again. Here you will also be asked to choose one of our five delivery options, and have the option to gift-wrap your order. You can also select the multiship option to arrange for parts of your order to be sent to any  address of your choice.</p><p><strong>Step Four:</strong> Confirmation</p><p>Once you've confirmed your order you will see a confirmation page that gives you your unique reference number and the total sum deducted from your credit or debit card account. You can print this page for your reference, or alternatively wait until you receive this information in an order confirmation email. The email will show all details of items purchased, delivery addresses, delivery options and packaging options, which you can keep<br/>for your records. If you have any questions, please contact us.</p><p><strong>View Bag</strong></p><p>Click on the shopping bag icon to display your shopping bag with the list of the items selected for purchase, the selected quantities of each, and the total cost of the purchase. You may remove items or change the quantities ordered in this area.</p><p><strong>Deleting Items from your Shopping Bag</strong></p><p>If you wish to delete an item in your Shopping Bag, simply go to “View Bag” and select the \"Remove\" link below the product name. The item will be removed from your shopping bag.</p>"
           }
         },
@@ -423,7 +423,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Offer Codes",
+            "title": "رموز العروض",
             "content": "<p><strong>Applying an Offer Code</strong><br/></p><p>To successfully apply an offer code to your order, you will need to be signed into your online account with email address and password.Before entering your offer code, please fully read the Terms & Conditions associated with the offer/promotion, to ensure that your order meets the qualifying terms to be applied.Only one offer code may be used per order and offer codes cannot be used in conjunction with any other offers, including but not limited to sale items, new launches, gift sets, limited editions.NOTE: Offers cannot be applied to orders placed outside of the qualifying promotional dates. Any orders placed before the start, and after the expiry of the offer, will not qualify for the offer.<br/></p><p><strong>Troubleshooting</strong><br/></p><p>Please ensure you are signed into your account at the time of placing the order before entering the offer code.Check that your order does not contain any sale items, new launches, gift sets, or limited edition items.Please ensure that the offer code being applied is formatted correctly, e.g. be aware of capital letters and any special characters.NOTE: Offers cannot be applied to orders placed outside of the qualifying promotional dates. Any orders placed before the start, and after the expiry of the offer, will not qualify for the offer. If an offer does not appear to have applied to your order, please check your order qualifies before completing the transaction, as this will not auto-apply after checkout.</p>"
           }
         },
@@ -431,7 +431,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Product Recommendations/Advice",
+            "title": "توصيات ونصائح المنتجات",
             "content": "<p>Having a hard time choosing a honey? Can’t find a honey right for you?<br/>Our salesperson are ready to help you on Live Chat. Just ask away.</p>"
           }
         },
@@ -439,7 +439,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Optimal Monitor Settings",
+            "title": "إعدادات الشاشة المثلى",
             "content": "<p>This site is best viewed with Google Chrome and a minimum monitor resolution of 1024 x 768.</p><p>Please note that monitors display colours differently based upon their settings.</p>"
           }
         },
@@ -447,7 +447,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Internet Browser Requirements",
+            "title": "متطلبات متصفح الإنترنت",
             "content": "<p>Our site works best with Google Chrome on PCs.</p><p>We also support Firefox 3 and Microsoft Edge for PCs and MACs, Safari 2.0.4 on MAC only.</p>"
           }
         },
@@ -455,7 +455,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Security Online",
+            "title": "الأمان عبر الإنترنت",
             "content": "<p>At Balqees Online, we understand how important security is to you and we are committed to making your internet shopping a positive experience. We assure you that any transactions that you make and any personal information you give us is secure.<br/>When you place an order at jomalone-ae.com, we encode your information using Secure Socket Layer (SSL) encryption technology. This is the most advanced consumer online security technique to date.</p><p>In order for encryption to take place, your browser must have the SSL protocol. The browsers that have this software include the following:</p><p>Internet Explorer 6.0 and higher ,Mozilla Firefox 2.0.4 and higher ,Safari 2.0.4 and higher</p>"
           }
         },
@@ -463,7 +463,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Item availability",
+            "title": "توفر المنتج",
             "content": "<p>Temporarily Out of Stock<br/>If a basic stock item is unavailable, it will show as out of stock, and you can request to receive an email when the product comes back into stock.</p><p>Alternatively, you can visit one of our Balqees stores. Please <a href=\"/pages/store-locator\" title=\"/pages/store-locator\">click here</a> to find your nearest store.</p>"
           }
         },
@@ -472,7 +472,7 @@
           "disabled": true,
           "settings": {
             "icon": "none",
-            "title": "Maximum Purchase Policy",
+            "title": "سياسة الحد الأقصى للشراء",
             "content": "<p>We regret that we must limit orders to no more than twelve (12) units of any item, with a maximum purchase of SAR 7500 per customer. In addition, we must also limit orders to no more than three (3) orders per customer per day. If you have any questions, please <a href=\"/pages/contact\" title=\"/pages/contact\">Contact Us </a>and we will be happy to assist.</p>"
           }
         },
@@ -480,7 +480,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Complimentary Gift Wrap Service ",
+            "title": "خدمة تغليف الهدايا مجانًا",
             "content": "<p>Whether a treat for yourself, or a gift for a loved one you can choose for your order to arrive wrapped in the iconic cream box tied with the black ribbon. You can do this at the checkout process. Find out more<br/>If you are sending a gift, you may choose to include a gift card on which we will carefully print your personal message, also at no cost.</p>"
           }
         },
@@ -488,7 +488,7 @@
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Payment Options",
+            "title": "خيارات الدفع",
             "content": "<p>The following Credit/Debit cards are accepted for payment:</p><p>Master Card</p><p>Visa</p><p></p><p></p><p>Please note that with the above payment options full payment will be taken immediately at checkout. </p><p>We’re sorry, we do not accept: Cheques & Postal Orders</p><p><strong>Important information:</strong><br/>For your security and to avoid any fraudulent transactions, your billing name and address must match that of the credit card used for payment. We reserve the right to cancel any order that does not match these criteria.</p>"
           }
         }

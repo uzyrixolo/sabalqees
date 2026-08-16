@@ -65,15 +65,15 @@
             "col_tb": "12",
             "text_size": "60,18",
             "txt_align": "center",
-            "sub_heading": "Introducing",
-            "sub_heading_2": "Your Culinary Partner",
-            "heading": "Balqees Honey",
+            "sub_heading": "نقدّم لكم",
+            "sub_heading_2": "شريكك في المطبخ",
+            "heading": "عسل بلقيس",
             "text": "",
             "subhd_color": "#222222",
             "hd_color": "#d29b74",
             "des_color": "#000000",
             "use_shadow": false,
-            "button_label": "Contact Us",
+            "button_label": "اتصل بنا",
             "button_link": "",
             "open_link": "_blank",
             "btn_icon": false,
@@ -352,14 +352,14 @@
           "type": "bl_info",
           "disabled": true,
           "settings": {
-            "heading": "CONTACT INFORMATION",
+            "heading": "معلومات التواصل",
             "text": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p><p><i class=\"las la-home fs__16\"></i> 184 Main Rd E, St Albans Victoria 3021, Australia</p><p><i class=\"las la-phone fs__16\"></i> 1800-123-222 / 1900-1570-230</p><p><i class=\"las la-envelope fs__16\"></i> contact@company.com</p><i class=\"las la-clock fs__16\"></i> Everyday 9:00-17:00"
           }
         },
         "1648884254cd155bea-0": {
           "type": "bl_form",
           "settings": {
-            "heading": "Tell Us Your Requirements",
+            "heading": "أخبرنا بمتطلباتك",
             "enable_phone": true,
             "enable_full_btn": true,
             "button_style": "default",

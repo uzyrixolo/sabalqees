@@ -15,7 +15,7 @@
         "1_wyWcwa": {
           "type": "1",
           "settings": {
-            "heading": "Contact Us",
+            "heading": "اتصل بنا",
             "fontf": "inherit",
             "text_cl": "#ffffff",
             "text_fs": 20,
@@ -73,7 +73,7 @@
         "1648884254cd155bea-0": {
           "type": "bl_form",
           "settings": {
-            "heading": "DROP US A LINE",
+            "heading": "راسلنا",
             "enable_phone": true,
             "enable_full_btn": true,
             "button_style": "default",
@@ -84,7 +84,7 @@
         "1648884254cd155bea-1": {
           "type": "bl_info",
           "settings": {
-            "heading": "CONTACT INFORMATION",
+            "heading": "معلومات التواصل",
             "text": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p><p><i class=\"las la-home fs__16\"></i> <a href=\"https://maps.google.com/?q=Najm+Ad+Din+Al+Ayyubi+Rd,+Al+Awali,+Riyadh+14926\">3792 Najm Ad Din Al Ayyubi St, Al Awali Dist., Riyadh 14926, KSA</a></p><p><i class=\"las la-phone fs__16\"></i> +966 56 901 7588</p><p><i class=\"las la-envelope fs__16\"></i> \tinfo@sa.balqees.com</p><i class=\"las la-clock fs__16\"></i> Everyday 9:00-17:00"
           }
         }

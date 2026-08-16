@@ -26,7 +26,7 @@
           "settings": {
             "icon_themes": "none",
             "icon": "las la-envelope",
-            "title": "Sign up for 10% off!",
+            "title": "سجّل واحصل على خصم 10%!",
             "text": ""
           }
         },
@@ -36,7 +36,7 @@
           "settings": {
             "icon_themes": "refesh",
             "icon": "las la-undo-alt",
-            "title": "14 DAYS RETURN",
+            "title": "إرجاع خلال 14 يومًا",
             "text": ""
           }
         },
@@ -45,7 +45,7 @@
           "settings": {
             "icon_themes": "door-lock",
             "icon": "las la-star",
-            "title": "500+ 5 star reviews",
+            "title": "أكثر من 500 تقييم بخمس نجوم",
             "text": ""
           }
         }
@@ -120,13 +120,13 @@
       "settings": {
         "first_collection_handle": "all",
         "first_collection_link": "shopify://collections/all-products",
-        "first_collection_text": "All Products",
+        "first_collection_text": "جميع المنتجات",
         "second_collection_handle": "bundles",
         "second_collection_link": "shopify://collections/bundles",
-        "second_collection_text": "Bundles",
+        "second_collection_text": "الباقات",
         "third_collection_handle": "gifting",
         "third_collection_link": "shopify://collections/gifting",
-        "third_collection_text": "Gifting"
+        "third_collection_text": "الهدايا"
       }
     },
     "ss_circle_menu_pro_kQ9p7t": {
@@ -136,7 +136,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/Full_Fusion_brown_ledge.avif",
-            "bubble_text": "Best Sellers",
+            "bubble_text": "الأكثر مبيعًا",
             "bubble_link": "shopify://collections/best-sellers"
           }
         },
@@ -144,7 +144,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/OrangeGroveIsaac.webp",
-            "bubble_text": "Wellness & Functional",
+            "bubble_text": "العافية والوظيفية",
             "bubble_link": "shopify://collections/honey-fusions"
           }
         },
@@ -152,7 +152,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/DSC_0788.webp",
-            "bubble_text": "Everyday Honey",
+            "bubble_text": "عسل الاستخدام اليومي",
             "bubble_link": "shopify://collections/everyday-honey"
           }
         },
@@ -160,7 +160,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/4908-Intellectual_Capital_Arabia-BALQEES_HONEY-YEMENI-WEB_2.webp",
-            "bubble_text": "Rare Honey",
+            "bubble_text": "العسل النادر",
             "bubble_link": "shopify://collections/honeys-of-the-world"
           }
         },
@@ -168,7 +168,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/bundle_image.webp",
-            "bubble_text": "Bundles",
+            "bubble_text": "الباقات",
             "bubble_link": "shopify://collections/bundles"
           }
         },
@@ -184,7 +184,7 @@
           "type": "Image",
           "settings": {
             "bubble_img": "shopify://shop_images/7.webp",
-            "bubble_text": "African Tea",
+            "bubble_text": "الشاي الأفريقي",
             "bubble_link": "shopify://collections/african-teas"
           }
         },
@@ -193,7 +193,7 @@
           "disabled": true,
           "settings": {
             "bubble_img": "shopify://shop_images/DSC_2597_2.webp",
-            "bubble_text": "Hive Essentials",
+            "bubble_text": "أساسيات الخلية",
             "bubble_link": "shopify://collections/hive-essentials"
           }
         }
@@ -212,7 +212,7 @@
       "settings": {
         "hide_mobile": false,
         "hide_desktop": false,
-        "heading_section": "SHOP COLLECTIONS",
+        "heading_section": "تسوّق المجموعات",
         "heading_section_custom": false,
         "heading_section_font": "red_hat_display_n4",
         "heading_section_size": 30,
@@ -303,7 +303,7 @@
             "design_des": "show_all",
             "length": 60,
             "view_more": true,
-            "viewm_txt": "View more",
+            "viewm_txt": "عرض المزيد",
             "fontf": "1",
             "text_cl": "#222222",
             "text_fs": 16,
@@ -529,7 +529,7 @@
         "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
           "type": "category",
           "settings": {
-            "heading": "Product Categories",
+            "heading": "تصنيفات المنتجات",
             "cat_source": "1",
             "cat_link_list": "",
             "count": false
@@ -538,7 +538,7 @@
         "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
           "type": "collection",
           "settings": {
-            "heading": "Sale Products",
+            "heading": "منتجات التخفيضات",
             "collection": "frontpage",
             "limit_pr": 3,
             "image_ratio": "t4s_ratioadapt",

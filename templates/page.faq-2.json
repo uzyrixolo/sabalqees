@@ -15,7 +15,7 @@
         "ba0c8e30-c11a-4ab7-97c4-4acc1a053a3e": {
           "type": "1",
           "settings": {
-            "heading": "FAQ",
+            "heading": "الأسئلة الشائعة",
             "fontf": "inherit",
             "text_cl": "#fff",
             "text_fs": 20,
@@ -81,7 +81,7 @@
         "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "",
             "count": true
           }

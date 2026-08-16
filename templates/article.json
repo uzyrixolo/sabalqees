@@ -68,7 +68,7 @@
         "caa2cee0-01b1-488d-a10e-5e74006f95f4": {
           "type": "blog_cate",
           "settings": {
-            "title": "Blog categories",
+            "title": "تصنيفات المدونة",
             "cat_link_list": "main-menu",
             "count": true
           }
@@ -83,7 +83,7 @@
         "37d3ea69-b6a8-4406-8abd-ae719de8696b": {
           "type": "collection",
           "settings": {
-            "title": "Sale Products",
+            "title": "منتجات التخفيضات",
             "collection": "women",
             "limit_pr": 3,
             "image_ratio": "t4s_ratioadapt",
