@@ -120,7 +120,12 @@ endif -%}
   
     <span class="mt_20">{{ value }}</span>
     {% if serving != blank %}
+    {%- assign serving_num = serving | split: ' ' | first -%}
+    {%- if serving contains 'serving' -%}
+    <span>{{ serving_num }} {{ 'products.product.servings' | t }}</span>
+    {%- else -%}
     <span>{{ serving }}</span>
+    {%- endif -%}
     {% endif %}
   </div>
 {%- endfor -%}

@@ -4149,7 +4149,8 @@
       "sold_out": "غير متوفر",
       "product_type": "النوع:",
       "sold_out_status": "غير متوفر",
-      "product_tag": "الوسوم:"
+      "product_tag": "الوسوم:",
+      "servings": "حصة"
     },
     "product_card": {
       "countdown_text": {
