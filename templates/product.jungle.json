@@ -1894,22 +1894,22 @@
         "content_DAaxfT": {
           "type": "content",
           "settings": {
-            "question_text": "<strong>What is \"Raw\" honey?</strong>",
-            "answer": "<p>Raw honey is honey that has not been excessively heat treated or filtered. This ensures all of it's natural enzymes and beneficial compounds remain intact.</p>"
+            "question_text": "<strong>ما هو العسل \"الخام\"؟</strong>",
+            "answer": "<p>العسل الخام هو عسل لم يخضع لمعالجة حرارية مفرطة أو ترشيح، ما يضمن بقاء جميع إنزيماته الطبيعية ومركّباته المفيدة كاملة.</p>"
           }
         },
         "content_QcPKHX": {
           "type": "content",
           "settings": {
-            "question_text": "<strong>Is it safe for daily use?</strong>",
-            "answer": "<p>Yes, raw honey is packed with nutrients and antioxidants that support immune health and can be safely consumed daily.</p>"
+            "question_text": "<strong>هل هو آمن للاستخدام اليومي؟</strong>",
+            "answer": "<p>نعم، العسل الخام غني بالعناصر الغذائية ومضادات الأكسدة التي تدعم صحة المناعة، ويمكن تناوله يوميًا بأمان.</p>"
           }
         },
         "content_CQ389y": {
           "type": "content",
           "settings": {
-            "question_text": "<strong>Is it suitable for diabetics?</strong>",
-            "answer": "<p>While raw honey can have a better glycaemic response than white sugar, we recommend speaking to a healthcare professional before consuming if you are diabetic.</p>"
+            "question_text": "<strong>هل هو مناسب لمرضى السكري؟</strong>",
+            "answer": "<p>رغم أن استجابة العسل الخام السكرية قد تكون أفضل من السكر الأبيض، ننصح باستشارة مختص رعاية صحية قبل تناوله إذا كنت مصابًا بالسكري.</p>"
           }
         }
       },
