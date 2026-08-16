@@ -162,7 +162,7 @@
             "image_1": "shopify://shop_images/ShieldCheck_1.svg",
             "heading_1": "ضمان استرداد المال",
             "image_2": "shopify://shop_images/Package_1.svg",
-            "heading_2": "شحن مجاني في دبي للطلبات فوق 500 درهم",
+            "heading_2": "شحن مجاني داخل الرياض للطلبات فوق 500 ريال",
             "heading_3": "",
             "heading_4": ""
           }
@@ -1275,7 +1275,7 @@
           "type": "shipping",
           "settings": {
             "title": "Shipping & Delivery",
-            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_1": "las la-truck,شحن مجاني,داخل الرياض للطلبات فوق 500 ريال",
             "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
             "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
             "shipping_4": "",
