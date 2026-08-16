@@ -600,22 +600,22 @@
         "content_HDNetz": {
           "type": "content",
           "settings": {
-            "image_title": "Raw Sidr Honey",
-            "image_text": "Supports immunity and digestive health while delivering natural antioxidants that promote overall well-being."
+            "image_title": "عسل السدر الخام",
+            "image_text": "يدعم المناعة وصحة الجهاز الهضمي، ويمنح مضادات أكسدة طبيعية تعزّز العافية العامة."
           }
         },
         "content_bNitXm": {
           "type": "content",
           "settings": {
-            "image_title": "Black Seed",
-            "image_text": "Rich in nutrients, known for its powerful immune-boosting properties, and supports overall health by promoting anti-inflammatory effects."
+            "image_title": "الحبة السوداء",
+            "image_text": "غنية بالعناصر الغذائية، ومعروفة بخصائصها القوية المعزّزة للمناعة، وتدعم الصحة العامة عبر تعزيز التأثيرات المضادة للالتهابات."
           }
         },
         "content_K4rXrm": {
           "type": "content",
           "settings": {
-            "image_title": "100% Natural",
-            "image_text": "No preservatives, artificial ingredients, or processing. Just pure, raw honey with all its natural health benefits intact."
+            "image_title": "طبيعي 100%",
+            "image_text": "بلا مواد حافظة أو مكوّنات صناعية أو معالجة. عسل خام نقي بكل فوائده الصحية الطبيعية كاملة."
           }
         }
       },
@@ -627,8 +627,8 @@
       "name": "Pure Honey Section",
       "settings": {
         "bg_color": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(232, 227, 218, 1) 100%)",
-        "title": "Purity and Functionality",
-        "text": "We believe in transparent, simple ingredients. Nothing more, nothing less."
+        "title": "النقاء والفعالية",
+        "text": "نؤمن بمكوّنات بسيطة وشفافة. لا أكثر ولا أقل."
       }
     },
     "honey_profile_section_Ptyngb": {
