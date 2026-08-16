@@ -188,6 +188,13 @@
     }
 
     /* End CSS */
+
+    /* RTL: mirror the row so the image sits on the right */
+    @media (min-width: 768px) {
+      [dir="rtl"] .power-mixture-section .question-faqs-wrapper {
+        flex-direction: row-reverse;
+      }
+    }
 </style>
 <section class="power-mixture-section">
   <div class="page-width">
