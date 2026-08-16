@@ -302,7 +302,7 @@
         "tab_liquid_gKKgmq": {
           "type": "tab_liquid",
           "settings": {
-            "title": "Health Benefits",
+            "title": "الفوائد الصحية",
             "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
           }
         },

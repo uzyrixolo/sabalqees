@@ -217,7 +217,7 @@
             "tab_heading_1": "Product Info",
             "product_description_1": false,
             "tab_txt_1": "<p>{{ product.metafields.custom.info.value }}</p>",
-            "tab_heading_2": "Health Benefits",
+            "tab_heading_2": "الفوائد الصحية",
             "product_description_2": true,
             "tab_txt_2": "<p>{{ product.metafields.custom.health_goals | metafield_tag }}</p>",
             "tab_heading_3": "shipping and returns",
@@ -411,7 +411,7 @@
           "type": "tab_liquid",
           "disabled": true,
           "settings": {
-            "title": "Health Benefits",
+            "title": "الفوائد الصحية",
             "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
           }
         },
