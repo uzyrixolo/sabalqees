@@ -1759,84 +1759,84 @@
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "Raw, unfiltered"
+            "text": "خام وغير مُصفّى"
           }
         },
         "left_point_WgPCgE": {
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "Verified origin"
+            "text": "منشأ موثّق"
           }
         },
         "left_point_JTxtAi": {
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "No sugar syrups"
+            "text": "بلا محاليل سكرية"
           }
         },
         "left_point_yJgEhw": {
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "Traditional harvesting"
+            "text": "حصاد تقليدي"
           }
         },
         "left_point_zNNGDD": {
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "Lab-tested authenticity"
+            "text": "أصالة مثبتة مخبريًا"
           }
         },
         "left_point_eYUDPc": {
           "type": "left_point",
           "settings": {
             "check_svg": "shopify://shop_images/Check_2.svg",
-            "text": "Rich, layered flavor"
+            "text": "نكهة غنية متعددة الطبقات"
           }
         },
         "right_point_P9aTmk": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Micro-filtered"
+            "text": "ترشيح دقيق"
           }
         },
         "right_point_4RWMqa": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Blended sources"
+            "text": "مصادر مخلوطة"
           }
         },
         "right_point_NRKa8m": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Risk of sugar adulteration"
+            "text": "خطر الغش بالسكر"
           }
         },
         "right_point_Etx6d9": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Industrial extraction"
+            "text": "استخلاص صناعي"
           }
         },
         "right_point_HmaKDr": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Undisclosed tests"
+            "text": "فحوصات غير معلنة"
           }
         },
         "right_point_D9xDTL": {
           "type": "right_point",
           "settings": {
             "cross_svg": "shopify://shop_images/X_2.svg",
-            "text": "Flat, uniform flavor"
+            "text": "نكهة مسطّحة متجانسة"
           }
         }
       },
@@ -1857,9 +1857,9 @@
       "name": "Why Choose Sidr Honey old",
       "settings": {
         "bg_color": "#e8e3da",
-        "heading": "Why Choose {{ product.title }}",
-        "subheading": "Discover the difference between authentic raw honey and processed alternatives",
-        "btn_txt": "ADD TO CART",
+        "heading": "لماذا تختار {{ product.title }}",
+        "subheading": "اكتشف الفرق بين العسل الخام الأصلي والبدائل المعالجة",
+        "btn_txt": "أضف إلى السلة",
         "btn_url": "",
         "btn_bg_color": "#000000",
         "btn_text_color": "#ffffff",
@@ -1877,13 +1877,13 @@
       "name": "Why Choose Sidr Honey Section",
       "settings": {
         "bg_color": "#fff",
-        "heading": "Why Choose {{ product.title }}?",
-        "subheading": "Discover the difference between authentic raw honey and processed alternatives",
+        "heading": "لماذا تختار {{ product.title }}؟",
+        "subheading": "اكتشف الفرق بين العسل الخام الأصلي والبدائل المعالجة",
         "raw_image": "{{ product.metafields.custom.centered_img.value }}",
         "p1_bg": "linear-gradient(180deg, rgba(138, 90, 25, 1), rgba(59, 32, 6, 1) 100%)",
         "raw_title": "DEFAULT",
         "generic_image": "shopify://shop_images/144615442_10453635_1.png",
-        "generic_title": "Generic Raw Honey",
+        "generic_title": "عسل خام عادي",
         "supermarket_image": "shopify://shop_images/144615442_10453635_2.svg",
         "supermarket_title": "عسل السوبرماركت العادي"
       }

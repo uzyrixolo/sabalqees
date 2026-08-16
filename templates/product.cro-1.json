@@ -1871,8 +1871,8 @@
       "name": "Why Choose Sidr Honey Section",
       "settings": {
         "bg_color": "#e8e3da",
-        "heading": "Why Choose {{ product.title }}?",
-        "subheading": "Discover the difference between authentic raw honey and processed alternatives",
+        "heading": "لماذا تختار {{ product.title }}؟",
+        "subheading": "اكتشف الفرق بين العسل الخام الأصلي والبدائل المعالجة",
         "raw_image": "{{ product.metafields.custom.centered_img.value }}",
         "p1_bg_image": "shopify://shop_images/Rectangle_4.png",
         "p1_bg": "linear-gradient(180deg, rgba(138, 90, 25, 1), rgba(59, 32, 6, 1) 100%)",
