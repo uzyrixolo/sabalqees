@@ -58,7 +58,7 @@
             "text": "",
             "length": 31,
             "readm": true,
-            "readm_txt": "Read more"
+            "readm_txt": "اقرأ المزيد"
           }
         },
         "form": {
@@ -86,7 +86,7 @@
             "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
-            "advance_label": "Choose style",
+            "advance_label": "اختر النمط",
             "advance_pr_list": []
           }
         },
@@ -142,14 +142,14 @@
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
           "type": "tab_des",
           "settings": {
-            "title": "Description"
+            "title": "الوصف"
           }
         },
         "e36839f5-0847-44e2-97d3-2885597bd1ff": {
           "type": "tab_add",
           "disabled": true,
           "settings": {
-            "title": "Additional Information"
+            "title": "معلومات إضافية"
           }
         },
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
@@ -164,7 +164,7 @@
         "56e67368-7424-4d73-8f14-dacdda4c59be": {
           "type": "tab_rivui",
           "settings": {
-            "title": "Reviews",
+            "title": "التقييمات",
             "review_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'></div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      </div>\n      <!-- End of Judge.me code -->"
           }
         },

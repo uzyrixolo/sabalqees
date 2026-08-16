@@ -44,7 +44,7 @@
         "review_video_JMFgeH": {
           "type": "review_video",
           "settings": {
-            "heading": "Watch real customers share their experience"
+            "heading": "شاهد عملاء حقيقيين يشاركون تجربتهم"
           }
         },
         "title": {
@@ -69,13 +69,13 @@
           "type": "features_grid",
           "settings": {
             "image_1": "shopify://shop_images/CheckCircle.svg",
-            "heading_1": "Raw, unheated, full of life-giving enzymes",
+            "heading_1": "خام وغير مُسخّن، غني بالإنزيمات الحيوية",
             "image_2": "shopify://shop_images/CheckCircle.svg",
-            "heading_2": "Packed with natural antioxidants",
+            "heading_2": "مفعم بمضادات الأكسدة الطبيعية",
             "image_3": "shopify://shop_images/CheckCircle.svg",
-            "heading_3": "Sourced from the Do'an Valley, Yemen",
+            "heading_3": "من وادي دوعن في اليمن",
             "image_4": "shopify://shop_images/CheckCircle.svg",
-            "heading_4": "Sustainable, time-honored practices",
+            "heading_4": "ممارسات مستدامة عريقة",
             "heading_5": "",
             "heading_6": ""
           }
@@ -152,7 +152,7 @@
             "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
-            "advance_label": "Choose style",
+            "advance_label": "اختر النمط",
             "advance_pr_list": []
           }
         },
@@ -160,9 +160,9 @@
           "type": "icon_txt",
           "settings": {
             "image_1": "shopify://shop_images/ShieldCheck_1.svg",
-            "heading_1": "Money back guarantee",
+            "heading_1": "ضمان استرداد المال",
             "image_2": "shopify://shop_images/Package_1.svg",
-            "heading_2": "FREE shipping over 500 AED in Dubai",
+            "heading_2": "شحن مجاني في دبي للطلبات فوق 500 درهم",
             "heading_3": "",
             "heading_4": ""
           }
@@ -172,12 +172,12 @@
           "settings": {
             "image_1": "shopify://shop_images/Frame_2087326262_c536a6eb-8895-4018-b887-5814f0b2b4ae.svg",
             "name_1": "4.9/5",
-            "desc_1": "James T.",
-            "rating_1": "\"A proper raw honey with depth of flavour.\"",
+            "desc_1": "جيمس ت.",
+            "rating_1": "«عسل خام حقيقي بعمق في النكهة.»",
             "image_2": "shopify://shop_images/Frame_2087326262_c536a6eb-8895-4018-b887-5814f0b2b4ae.svg",
             "name_2": "4.9/5",
-            "desc_2": "James T.",
-            "rating_2": "\"A proper raw honey with depth of flavour.\"",
+            "desc_2": "جيمس ت.",
+            "rating_2": "«عسل خام حقيقي بعمق في النكهة.»",
             "name_3": "",
             "desc_3": "",
             "rating_3": "",
@@ -276,7 +276,7 @@
           "type": "tab_add",
           "disabled": true,
           "settings": {
-            "title": "Additional Information"
+            "title": "معلومات إضافية"
           }
         },
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
@@ -292,7 +292,7 @@
           "type": "tab_rivui",
           "disabled": true,
           "settings": {
-            "title": "Reviews",
+            "title": "التقييمات",
             "review_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'></div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      </div>\n      <!-- End of Judge.me code -->"
           }
         },
@@ -323,7 +323,7 @@
           "type": "tab_liquid",
           "disabled": true,
           "settings": {
-            "title": "Raw vs other honey",
+            "title": "العسل الخام مقابل الأنواع الأخرى",
             "custom_liquid": "<p>Some text here<p>"
           }
         },
@@ -331,7 +331,7 @@
           "type": "tab_liquid",
           "disabled": true,
           "settings": {
-            "title": "How to enjoy?",
+            "title": "كيف تستمتع به؟",
             "custom_liquid": "<p>{{product.metafields.custom.enjoy}}</p>"
           }
         },
@@ -353,13 +353,13 @@
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
           "type": "tab_des",
           "settings": {
-            "title": "Product Details"
+            "title": "تفاصيل المنتج"
           }
         },
         "tab_html_YdtJ8r": {
           "type": "tab_html",
           "settings": {
-            "title": "Shipping Information",
+            "title": "معلومات الشحن",
             "content": "",
             "page": "delivery-information"
           }
@@ -367,8 +367,8 @@
         "tab_html_ccjh6C": {
           "type": "tab_html",
           "settings": {
-            "title": "Refunds & Returns",
-            "content": "<p>You have 7 days to place a returns request. Learn more about our returns process <a href=\"https://sa.balqees.com/pages/return-refund-policy\" title=\"https://sa.balqees.com/pages/return-refund-policy\">here</a>.</p>",
+            "title": "الإرجاع والاسترداد",
+            "content": "<p>لديك 7 أيام لتقديم طلب إرجاع. تعرّف على المزيد حول عملية الإرجاع <a href=\"https://sa.balqees.com/pages/return-refund-policy\" title=\"https://sa.balqees.com/pages/return-refund-policy\">من هنا</a>.</p>",
             "page": ""
           }
         },
@@ -376,7 +376,7 @@
           "type": "tab_liquid",
           "disabled": true,
           "settings": {
-            "title": "Certification Breakdown",
+            "title": "تفاصيل الشهادات",
             "custom_liquid": "<div class=\"tab-content-desc-wp\">\n            <div class=\"content\">\n              <div class=\"content_item content-item-1\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_4.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Glyphosate Residue Free:</h4>\n                  <p>Every batch of Manukora honey is 3rd-party tested and verified free from any toxins, pesticides, and glyphosates. All traceable through our unique QR code system on each product.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-2\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_2.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Third Party Tested:</h4>\n                  <p>All our Mānuka honey undergo rigorous testing by independent labs to verify the MGO levels and potency of Mānuka while ensuring all other bioactive compounds are accounted for.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-3\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tab_3.png?v=1694553035\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Certified B Corporation:</h4>\n                  <p>Manukora is proudly B-Corp Certified. We've forged strong ties with expert beekeepers in remote New Zealand. Together, we're shaping a business that cares for bees, their homes, and fosters local community bonds.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-4\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_1.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Non GMO Verified:</h4>\n                  <p>Our Mānuka honey is ethically harvested and produced, all GMO-free verified by the Non-GMO Project.</p>\n                </div>\n              </div>\n            </div>\n          </div>"
           }
         }
@@ -428,7 +428,7 @@
         ".t4s-section-main-product {background: linear-gradient(180deg, #ffffff 35.52%, #e8e3da 100%); padding-top: 1rem; padding-bottom: 5rem;}"
       ],
       "settings": {
-        "video_heading": "Watch real customers share their experience",
+        "video_heading": "شاهد عملاء حقيقيين يشاركون تجربتهم",
         "pr_layout": "default",
         "product-view": "#efeeee",
         "enable_sticky_info": true,
