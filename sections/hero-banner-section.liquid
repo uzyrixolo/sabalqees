@@ -1,0 +1,469 @@
+<style>
+  /* Start CSS */
+  .hero-banner-section {
+    position: relative;
+    overflow: hidden;
+    background: {{ section.settings.bg_color }};
+  }
+
+  .hero-banner-section .main-bg-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hero-banner-section .main-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-banner-section .main-bg-image picture {
+    height: 100%;
+  }
+
+  .hero-banner-section .hero-banner-wrapper {
+    position: relative;
+    max-width: 1294px;
+    display: block;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  .hero-banner-section .hero-banner-wrap {
+    max-width: 622px;
+    width: 100%;
+    display: block;
+    padding: 79px 0 97px;
+  }
+
+  .hero-banner-section .group-star-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 11px;
+  }
+
+  .hero-banner-section .group-star img {
+    width: 95px;
+    min-width: 95px;
+    height: 19px;
+    display: block;
+  }
+
+  .hero-banner-section .group-star-text {
+    font-family: 'Aeonik';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.7pxs;
+  }
+
+  .hero-banner-section .icon-wrap img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    min-width: 30px;
+  }
+
+  .hero-banner-section .icon-group-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 30px;
+    max-width: 472px;
+    width: 100%;
+  }
+
+  .hero-banner-section .icon-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 38%;
+  }
+
+  .hero-banner-section .icon-text {
+    font-family: 'Aeonik';
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-banner-section .title-wrap h1 {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    margin: 0 0 11px;
+  }
+
+  .hero-banner-section .title-wrap h1 p {
+    margin: 0;
+  }
+
+  .hero-banner-section .swiper-slide {
+    height: auto;
+  }
+
+  .hero-banner-section .dev-btn {
+    margin-top: 16px;
+  }
+
+  .hero-banner-section .mobile-icon-text-wrapper {
+    display: none;
+  }
+
+  .hero-banner-section .mobile-icon-text-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-top: 11px;
+  }
+
+  .hero-banner-section .mobile-icon {
+    width: 39px;
+    height: 39px;
+    display: block;
+    min-width: 39px;
+  }
+
+  .hero-banner-section .mobile-icon-text {
+    font-family: 'Aeonik';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1350px) {
+    .hero-banner-section .hero-banner-wrapper {
+      position: relative;
+      max-width: 1070px;
+    }
+  }
+
+  /* mobile view in 767px */
+
+  @media only screen and (max-width:767px) {
+    .hero-banner-section .hero-banner-wrap {
+      padding: 26px 0 31px;
+      max-width: 100%;
+    }
+
+    .hero-banner-section .group-star-wrap {
+      justify-content: center;
+    }
+
+    .hero-banner-section .title-wrap h1 {
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .hero-banner-section .icon-group-wrapper {
+    max-width: 330px;
+    gap: 6px 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.hero-banner-section .icon-text-wrapper {
+    width: auto;
+}
+
+    .hero-banner-section .dev-btn {
+      margin-top: 278px;
+    }
+
+    .hero-banner-section .button-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-banner-section .mobile-icon-text-wrapper {
+      display: block;
+    }
+
+  }
+
+  /* End CSS */
+</style>
+<section class="hero-banner-section">
+  <div class="block-wrapper">
+    <div class="swiper honey-banner-slide">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="block-wrap" style="color: {{ block.settings.text_color }}">
+              <div class="main-bg-image">
+                {%- if block.settings.destop_img != blank -%}
+                  {%- liquid
+                    assign mobileImage = block.settings.destop_img
+                    if block.settings.mobile_img != blank
+                      assign mobileImage = block.settings.mobile_img
+                    endif
+                  -%}
+                  <picture>
+                    <source
+                      media="(min-width: 1901px)"
+                      srcset="{{ block.settings.destop_img | image_url: width: 2560 }}"
+                    >
+                    <source
+                      media="(min-width: 1700px)"
+                      srcset="{{ block.settings.destop_img | image_url: width: 2020 }}"
+                    >
+                    <source
+                      media="(min-width: 1500px)"
+                      srcset="{{ block.settings.destop_img | image_url: width: 1820 }}"
+                    >
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="{{ block.settings.destop_img | image_url: width: 1600 }}"
+                    >
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="{{ block.settings.destop_img | image_url: width: 1350 }}"
+                    >
+                    <source media="(min-width: 767px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+                    <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+                    <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+                    <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+                    <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 400 }}">
+                    <img
+                      src="{{ block.settings.destop_img | image_url }}"
+                      alt="{{ block.settings.destop_img.alt | default: block.settings.heading | escape }}"
+                      width="{{ block.settings.destop_img.width }}"
+                      loading="eager"
+                      height="{{ block.settings.destop_img.width | divided_by: block.settings.destop_img.aspect_ratio | round }}"
+                    >
+                  </picture>
+                {%- endif -%}
+              </div>
+
+              <div class="hero-banner-wrapper">
+                <div class="hero-banner-wrap">
+                  <div class="group-star-wrap">
+                    {% if block.settings.group_star != blank %}
+                      <div class="group-star">
+                        <img
+                          src="{{ block.settings.group_star | image_url }}"
+                          alt="{{ block.settings.group_star }}"
+                          width="{{ block.settings.group_star.width }}"
+                          height="{{ block.settings.group_star.height }}"
+                          loading="eager"
+                        >
+                      </div>
+                    {% endif %}
+                    {%- if block.settings.group_star_text != blank -%}
+                      <div class="group-star-text" style="color: {{ block.settings.text_color }}">{{ block.settings.group_star_text }}</div>
+                    {%- endif -%}
+                  </div>
+                  <div class="title-wrap">
+                    {%- if block.settings.title_text != blank -%}
+                      <h1 class="heading-font" style="color: {{ block.settings.text_color }}">{{ block.settings.title_text }}</h1>
+                    {%- endif -%}
+                  </div>
+                  <div class="icon-group-wrapper">
+                    {% for i in (1..4) %}
+                      {% assign icon_key = 'icon_' | append: i %}
+                      {% assign text_key = 'text_' | append: i %}
+
+                      {% assign icon = block.settings[icon_key] %}
+                      {% assign text = block.settings[text_key] %}
+                      {% if icon != blank or text != blank %}
+                        <div class="icon-text-wrapper">
+                          <div class="icon-wrap">
+                            {% if icon != blank %}
+                              <img src="{{ icon | image_url: width: 80 }}" alt="Icon {{ i }}">
+                            {% endif %}
+                          </div>
+                            {% if text != blank %}
+                              <div class="icon-text" style="color: {{ block.settings.text_color }}">{{ text }}</div>
+                            {% endif %}
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+
+                  <div class="button-wrap">
+                    {%- if block.settings.button_text != blank -%}
+                      <a
+                        class="dev-btn"
+                        data-add-btn
+                        href="{{ block.settings.btn_url }}"
+                        style="color: {{ block.settings.btn_text_color }}; background-color: {{ block.settings.btn_bg_color }};">{{ block.settings.button_text }}</a>
+                    {%- endif -%}
+                  </div>
+                  <div class="mobile-icon-text-wrapper">
+                     <div class="mobile-icon-text-wrap">
+                    {% if block.settings.mobile_icon != blank %}
+                      <div class="mobile-icon">
+                        <img
+                          src="{{ block.settings.mobile_icon | image_url }}"
+                          alt="{{ block.settings.mobile_icon }}"
+                          width="{{ block.settings.mobile_icon.width }}"
+                          height="{{ block.settings.mobile_icon.height }}"
+                          loading="eager"
+                        >
+                      </div>
+                    {% endif %}
+                    {%- if block.settings.mobile_icon_text != blank -%}
+                      <div class="mobile-icon-text" style="color: {{ block.settings.text_color }}">{{ block.settings.mobile_icon_text }}</div>
+                    {%- endif -%}
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  var swiper = new Swiper('.honey-banner-slide', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+  });
+</script>
+{% schema %}
+{
+  "name": "Hero Banner Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Banner Contain"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Hero Banner Block",
+      "settings": [
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
+        },
+        {
+          "type": "color",
+          "id": "btn_bg_color",
+          "label": "Btn BG Color"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Btn Text Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "destop_img",
+          "label": "Destop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_img",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "group_star",
+          "label": "Group Star"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "group_star_text",
+          "label": "Group Star Text"
+        },
+        {
+          "type": "richtext",
+          "id": "title_text",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "label": "Icon Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "label": "Icon Text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_3",
+          "label": "Icon Text 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "Icon 4"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_4",
+          "label": "Icon Text 4"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_icon",
+          "label": "Mobile Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "mobile_icon_text",
+          "label": "Mobile Icon Text"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner Section",
+      "category": "content"
+    }
+  ]
+}
+{% endschema %}

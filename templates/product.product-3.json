@@ -1,0 +1,2128 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "customproductbuilder": {
+      "type": "customproductbuilder",
+      "disabled": true,
+      "settings": {}
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "custom_css": [
+        ".breadcrumb_pr_wrap {margin-bottom: -50px;}"
+      ],
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": false,
+        "cl_bg": "#ffffff",
+        "cl_link": "#000000"
+      }
+    },
+    "main": {
+      "type": "main-product-new",
+      "blocks": {
+        "custom_liquid_R8CCiU": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<nav class=\"breadcrumbs\">\n  <a href=\"/\">Home</a>\n  {% if collection %}\n    &raquo; <a href=\"{{ collection.url }}\">{{ collection.title }}</a>\n  {% endif %}\n  {% if product %}\n    &raquo; <a href=\"{{ product.url }}\">{{ product.title }}</a>\n  {% endif %}\n</nav>\n\n<style>\n  .breadcrumbs {\n    font-family: Noto Sans, sans-serif;\n    font-size: 12px;\n    margin: 20px 0;\n    padding: 0;\n    display: flex;\n    align-items: center;\n    color: #22222;\n  }\n\n  .breadcrumbs a {\n    color: #222222;\n    text-decoration: none;\n    transition: color 0.3s ease;\n    padding: 0 5px;\n  }\n\n  .breadcrumbs a:hover {\n    color: #005bb5;\n    text-decoration: underline;\n  }\n\n\n  .breadcrumbs &raquo; {\n    margin: 0 5px;\n    color: #222222;\n  }\n</style>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "2",
+            "size_pr": 28,
+            "fw_pr": 500,
+            "lh_pr": 0,
+            "ls_pr": 1.5,
+            "pr_title_color": "#222222"
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "image": "{{ product.metafields.custom.award.value }}",
+            "wimg": 91,
+            "svg": "",
+            "height": 44
+          }
+        },
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{{product.metafields.custom.info}}"
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "1",
+            "tax_ship": false,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 18,
+            "fw_price_pr": 400,
+            "price_color": "#000000",
+            "price_sale_color": "#109533"
+          }
+        },
+        "custom_liquid_xG4qxj": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "des": "2",
+            "text": "",
+            "length": 18,
+            "readm": true,
+            "readm_txt": "Show More"
+          }
+        },
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"honey-features\">\n  <!-- 1st Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/bee-hive.png?v=1724952040\" alt=\"100% Raw Honey\">\n    <body>100% RAW HONEY</body>\n  </div>\n\n  <!-- 2nd Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/pure-water.png?v=1724935155\" alt=\"UNPASTEURIZED\">\n    <body>UNPASTEURIZED</body>\n  </div>\n\n  <!-- 3rd Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/trophy.png?v=1724935155\" alt=\"Award Winning\">\n    <body>AWARD WINNING</body>\n  </div>\n\n  <!-- 4th Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/heart-beat.png?v=1724952225\" alt=\"Maximum Nutrition\">\n    <body>MAXIMUM NUTRITION</body>\n  </div>\n</div>"
+          }
+        },
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9": {
+          "type": "html",
+          "settings": {
+            "page": "benefits"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "block",
+            "enable_fit_ratio_img": false,
+            "color_size": "small",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": true,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": true,
+            "button_style": "default",
+            "button_color": "primary",
+            "button_effect": "sweep-to-top",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "custom_liquid_AHjKNK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"subscriptions_app_embed_block\"></div>"
+          }
+        },
+        "html_3rcPqr": {
+          "type": "html",
+          "settings": {
+            "page": "pdp-text"
+          }
+        },
+        "custom_liquid_fgHWWJ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"grid product__media-logos\">\n  \n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/ISO.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                   <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/superbrand.png?v=1718805432\">\n                  </div>\n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/haccp.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n        \n              </div>"
+          }
+        },
+        "custom_liquid_9W7A4P": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'tabby-installments'%}"
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "show_options": false,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": false,
+            "show_barcode": false,
+            "show_available": false,
+            "show_category": false,
+            "show_tags": false
+          }
+        },
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"bigBox\">\n  \n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/free.png?v=1703242873\" alt=\"\">\n        <p class=\"item_text2\">Free Delivery in Dubai</p>\n    </div>\n\n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/returns.png?v=1703242796\" alt=\"\">\n        <p class=\"item_text2\">7 Days Returnable</p>\n    </div>\n\n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/48.png?v=1703242873\" alt=\"\">\n        <p class=\"item_text2\">Delivery within 48 hours</p>\n    </div>\n    \n</div>\n\n<style>\n    .bigBox {\n        justify-content: space-around;\n        display: flex;\n        text-align: center;\n        max-width: 600px; /* Adjust this value as needed */\n        margin: 0 auto; /* Center the icons within the container */\n    }\n\n    .box1 {\n        max-width: 135px;\n        padding: 10px 0; /* Reduced padding */\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: space-around;\n    }\n\n    .box1 img {\n        width: 70px;\n        padding: 10px;\n        mix-blend-mode: multiply;\n    }\n\n    .item_text2 {\n        width: 100%;\n        margin: 10px auto 0;\n        letter-spacing: 0;\n        font-weight: 400;\n        font-size: 12px !important;\n        text-align: center;\n        color: #000;\n        margin-top: 0;\n    }\n</style>"
+          }
+        },
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if  product.metafields.custom.ways %}<h2 style=\"color:#d29b74;text-align:center;\" >Ways to use {{product.title}}</h2>\n{% endif %}\n\n\n{{product.metafields.custom.ways}}\n\n\n<style>\n.img-inline img {\n    max-width: 60px;\n}\n    .ways-inline {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.img-inline {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.img-inline p {\n    padding: 0;\n    margin: 0;\n    color: #ce8f63;\n    font-weight: 500;\n    margin-left: 15px;\n    font-size: 1.5rem;\n}\n\n.ways-box {\n   \n    max-width: 650px;\n    margin-inline: 10px;\nmargin:0 auto;\n margin-top: 20px;\n}\n\n.ways-inline .green-tick {\n    width: 25px;\n}\n</style>"
+          }
+        },
+        "size_delivery_ask": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": true,
+            "page_dr": "delivery-return",
+            "ask": true,
+            "phone": true
+          }
+        },
+        "fce11158-f428-4965-b9df-a549ff610b11": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Collapsible tab",
+            "content": "",
+            "page": ""
+          }
+        },
+        "custom_liquid_tVUGja": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"grid product__media-logos\">\n                \n                \n               \n                \n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/ISO.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                   <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/superbrand.png?v=1718805432\">\n                  </div>\n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/haccp.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                \n                 \n              </div>"
+          }
+        },
+        "e36839f5-0847-44e2-97d3-2885597bd1ff": {
+          "type": "tab_add",
+          "disabled": true,
+          "settings": {
+            "title": "Additional Information"
+          }
+        },
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Custom tab",
+            "content": "",
+            "page": "wash-care"
+          }
+        },
+        "56e67368-7424-4d73-8f14-dacdda4c59be": {
+          "type": "tab_rivui",
+          "disabled": true,
+          "settings": {
+            "title": "Reviews",
+            "review_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'></div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      </div>\n      <!-- End of Judge.me code -->"
+          }
+        },
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3": {
+          "type": "store_pickup",
+          "disabled": true,
+          "settings": {}
+        },
+        "94011ade-ec25-4d68-b37a-70660ede49dd": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "1",
+            "social_style": "1",
+            "social_size": "extra_small",
+            "bd_radius": 0,
+            "use_color_set": true,
+            "icon_cl": "#222222",
+            "bg_cl": "#00badb",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        },
+        "07491781-28b2-43a7-81a4-35850443a8f1": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Raw vs other honey",
+            "custom_liquid": "<p>Some text here<p>"
+          }
+        },
+        "83791d2e-d63a-4387-9a46-02fd0881dc11": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "How to enjoy?",
+            "custom_liquid": "<p>{{product.metafields.custom.enjoy}}</p>"
+          }
+        },
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "tab_liquid_gKKgmq": {
+          "type": "tab_liquid",
+          "settings": {
+            "title": "Health Benefits",
+            "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
+          }
+        },
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
+          "type": "tab_des",
+          "settings": {
+            "title": "Product Details"
+          }
+        },
+        "tab_html_YdtJ8r": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Shipping Information",
+            "content": "",
+            "page": "delivery-information"
+          }
+        },
+        "tab_html_ccjh6C": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Refunds & Returns",
+            "content": "<p>You have 7 days to place a returns request. Learn more about our returns process <a href=\"https://sa.balqees.com/pages/return-refund-policy\" title=\"https://sa.balqees.com/pages/return-refund-policy\">here</a>.</p>",
+            "page": ""
+          }
+        },
+        "tab_liquid_VQgjnE": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Certification Breakdown",
+            "custom_liquid": "<div class=\"tab-content-desc-wp\">\n            <div class=\"content\">\n              <div class=\"content_item content-item-1\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_4.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Glyphosate Residue Free:</h4>\n                  <p>Every batch of Manukora honey is 3rd-party tested and verified free from any toxins, pesticides, and glyphosates. All traceable through our unique QR code system on each product.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-2\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_2.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Third Party Tested:</h4>\n                  <p>All our Mānuka honey undergo rigorous testing by independent labs to verify the MGO levels and potency of Mānuka while ensuring all other bioactive compounds are accounted for.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-3\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tab_3.png?v=1694553035\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Certified B Corporation:</h4>\n                  <p>Manukora is proudly B-Corp Certified. We've forged strong ties with expert beekeepers in remote New Zealand. Together, we're shaping a business that cares for bees, their homes, and fosters local community bonds.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-4\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_1.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Non GMO Verified:</h4>\n                  <p>Our Mānuka honey is ethically harvested and produced, all GMO-free verified by the Non-GMO Project.</p>\n                </div>\n              </div>\n            </div>\n          </div>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_R8CCiU",
+        "title",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b",
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92",
+        "price_review",
+        "custom_liquid_xG4qxj",
+        "description",
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d",
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9",
+        "form",
+        "custom_liquid_AHjKNK",
+        "html_3rcPqr",
+        "custom_liquid_fgHWWJ",
+        "custom_liquid_9W7A4P",
+        "meta",
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9",
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119",
+        "size_delivery_ask",
+        "fce11158-f428-4965-b9df-a549ff610b11",
+        "custom_liquid_tVUGja",
+        "e36839f5-0847-44e2-97d3-2885597bd1ff",
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
+        "56e67368-7424-4d73-8f14-dacdda4c59be",
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "07491781-28b2-43a7-81a4-35850443a8f1",
+        "83791d2e-d63a-4387-9a46-02fd0881dc11",
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3",
+        "tab_liquid_gKKgmq",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "tab_html_YdtJ8r",
+        "tab_html_ccjh6C",
+        "tab_liquid_VQgjnE"
+      ],
+      "custom_css": [
+        ".t4s-pr_trust_seal img.t4s-img-tr__img {max-width: 100px; position: absolute; right: 10px; top: 0;}",
+        ".t4s-product__media-wrapper {position: relative;}",
+        ".t4s-product__media-wrapper > .t4s-row {position: sticky; top: 8rem;}"
+      ],
+      "settings": {
+        "pr_layout": "default",
+        "product-view": "#ffffff",
+        "enable_sticky_info": false,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "small",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "default",
+        "btn_shape": "round",
+        "btn_cl": "primary",
+        "btn_size": "medium",
+        "btn_hidden_mobile": false,
+        "tabs_design": "accordion",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "inner",
+        "enable_first_tab": true,
+        "tabs_layout": "default",
+        "bg": "#ffffff",
+        "bg_mb": "#ffffff",
+        "product_list": [],
+        "sticky_mode": "2",
+        "sticky_show": "2",
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "custom_liquid_BdeizK": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_section_xmqN6X": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_WKxKPk": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "0px,0px,30px,0px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "html_TRxAYn": {
+          "type": "html",
+          "settings": {
+            "html_content": "<picture class=\"r-xlh6nj\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=820\" media=\"(max-width: 640px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=652\" media=\"(min-width: 641px) and (max-width: 820px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=1800\" media=\"(min-width: 821px) and (max-width: 1024px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=2048\" media=\"(min-width: 1025px)\"><img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456\" class=\"r-e57sr1\" loading=\"lazy\"></source></source></source></source></picture>\n<style>\n.r-xlh6nj {\n    top: 0px;\n    right: 0px;\n\n    z-index: 1;\n    position: absolute;\n    max-width: 400px;\n    min-width: 0;\n    transform: none;\n    flex-basis: auto;\n    min-height: 0;\n    object-fit: cover;\n    overflow-x: auto;\n    overflow-y: hidden;\n    align-items: center;\n    flex-shrink: 0;\n    pointer-events: none;\n}\n</style>",
+            "hidden_mobile": false
+          }
+        },
+        "custom_text_wnnXVM": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Nutritional Powerhouse",
+            "remove_br_tag": false,
+            "fontf": "2",
+            "text_cl": "#000000",
+            "text_fs": 32,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 28,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "custom_text_M6QX8m": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Mānuka is a powerful food that nourishes your overall health through its unique combination of antimicrobials (MGO), antioxidants, and prebiotics.",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 14,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 14,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "bl_col_QCPDKA": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "4",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "html_M8GNTA": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_content": "<div data-rid=\"ad9c50e2-e9be-443f-b931-d1fd44bab307\" data-replo-repeated-index=\".0.0.0.0.0\" class=\"r-pbdax5\">\n<div data-rid=\"090be0f1-2eba-418f-9191-e879890cf27c\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-z7qf96\">\n<div data-rid=\"b7eb3c8a-d2ca-4ebc-80f0-f410d7dad40b\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-11m4mpi alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>1</p></span></div>\n<div data-rid=\"cd8a21e2-57b1-43b2-be1c-deaef1505a95\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-2xfcd4 alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Immune Support</p></span></div>\n</div>\n<div data-rid=\"3ef2b721-dc3f-4fff-af1e-db408eeed4d5\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-d6i5xg\"><div data-rid=\"78ebc633-044a-46c6-8f42-83e0369c389f\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-1img0ww alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Mānuka honey stands out as an antioxidant-rich superfood; <strong>over 70% of these antioxidants are not found in any other honey or food.</strong> One of these is Leptosperin, a powerful compound from the nectar of the Mānuka tea tree.</p></span></div></div>\n</div>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_WKxKPk",
+        "html_TRxAYn",
+        "custom_text_wnnXVM",
+        "custom_text_M6QX8m",
+        "bl_col_QCPDKA",
+        "html_M8GNTA"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "10",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#cdbdb0",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "",
+        "mg_tb": ",,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".SectionID {\nposition:relative;\n}\n\np#b_custom_text_wnnXVM {\n    text-align: center;\n}\n\np#b_custom_text_M6QX8m {\n    text-align: center;\n    max-width: 500px;\n    margin: 0 auto;\n}\n\ndiv#b_html_TRxAYn {\n    position: relative;\n}"
+      }
+    },
+    "custom_section_d97fPR": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_zR93tr": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "html_8GqzRM": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_content": "<picture class=\"r-xlh6nj\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=820\" media=\"(max-width: 640px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=652\" media=\"(min-width: 641px) and (max-width: 820px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=1800\" media=\"(min-width: 821px) and (max-width: 1024px)\"><source srcset=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456&amp;width=2048\" media=\"(min-width: 1025px)\"><img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/headCopy_of_DSC02640__2__1__1_-removebg-preview.png?v=1708104456\" class=\"r-e57sr1\" loading=\"lazy\"></source></source></source></source></picture>\n<style>\n.r-xlh6nj {\n    top: 0px;\n    right: 0px;\n\n    z-index: 1;\n    position: absolute;\n    max-width: 400px;\n    min-width: 0;\n    transform: none;\n    flex-basis: auto;\n    min-height: 0;\n    object-fit: cover;\n    overflow-x: auto;\n    overflow-y: hidden;\n    align-items: center;\n    flex-shrink: 0;\n    pointer-events: none;\n}\n</style>",
+            "hidden_mobile": false
+          }
+        },
+        "custom_text_VjLCg8": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Nutritional Powerhouse",
+            "remove_br_tag": false,
+            "fontf": "2",
+            "text_cl": "#000000",
+            "text_fs": 32,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_PdHWax": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Mānuka is a powerful food that nourishes your overall health through its unique combination of antimicrobials (MGO), antioxidants, and prebiotics.",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 14,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "bl_col_zRTLDE": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "4",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,30px,30px,30px",
+            "padding_inner_tb": "30px,30px,30px,30px",
+            "padding_inner_mb": "30px,30px,30px,30px",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "html_3p83GW": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div data-rid=\"ad9c50e2-e9be-443f-b931-d1fd44bab307\" data-replo-repeated-index=\".0.0.0.0.0\" class=\"r-pbdax5\">\n<div data-rid=\"090be0f1-2eba-418f-9191-e879890cf27c\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-z7qf96\">\n<div data-rid=\"b7eb3c8a-d2ca-4ebc-80f0-f410d7dad40b\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-11m4mpi alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>1</p></span></div>\n<div data-rid=\"cd8a21e2-57b1-43b2-be1c-deaef1505a95\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-2xfcd4 alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Immune Support</p></span></div>\n</div>\n<div data-rid=\"3ef2b721-dc3f-4fff-af1e-db408eeed4d5\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-d6i5xg\"><div data-rid=\"78ebc633-044a-46c6-8f42-83e0369c389f\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-1img0ww alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Mānuka honey stands out as an antioxidant-rich superfood; <strong>over 70% of these antioxidants are not found in any other honey or food.</strong> One of these is Leptosperin, a powerful compound from the nectar of the Mānuka tea tree.</p></span></div></div>\n</div>",
+            "hidden_mobile": false
+          }
+        },
+        "bl_col_NyF8NT": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "4",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,30px,30px,30px",
+            "padding_inner_tb": "30px,30px,30px,30px",
+            "padding_inner_mb": "30px,30px,30px,30px",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "html_YphXXn": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div data-rid=\"ad9c50e2-e9be-443f-b931-d1fd44bab307\" data-replo-repeated-index=\".0.0.0.0.0\" class=\"r-pbdax5\">\n<div data-rid=\"090be0f1-2eba-418f-9191-e879890cf27c\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-z7qf96\">\n<div data-rid=\"b7eb3c8a-d2ca-4ebc-80f0-f410d7dad40b\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-11m4mpi alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>1</p></span></div>\n<div data-rid=\"cd8a21e2-57b1-43b2-be1c-deaef1505a95\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-2xfcd4 alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Immune Support</p></span></div>\n</div>\n<div data-rid=\"3ef2b721-dc3f-4fff-af1e-db408eeed4d5\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-d6i5xg\"><div data-rid=\"78ebc633-044a-46c6-8f42-83e0369c389f\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-1img0ww alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Mānuka honey stands out as an antioxidant-rich superfood; <strong>over 70% of these antioxidants are not found in any other honey or food.</strong> One of these is Leptosperin, a powerful compound from the nectar of the Mānuka tea tree.</p></span></div></div>\n</div>",
+            "hidden_mobile": false
+          }
+        },
+        "bl_col_VL93Bt": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "4",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,30px,30px,30px",
+            "padding_inner_tb": "30px,30px,30px,30px",
+            "padding_inner_mb": "30px,30px,30px,30px",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "html_t6riCm": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div data-rid=\"ad9c50e2-e9be-443f-b931-d1fd44bab307\" data-replo-repeated-index=\".0.0.0.0.0\" class=\"r-pbdax5\">\n<div data-rid=\"090be0f1-2eba-418f-9191-e879890cf27c\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-z7qf96\">\n<div data-rid=\"b7eb3c8a-d2ca-4ebc-80f0-f410d7dad40b\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-11m4mpi alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>1</p></span></div>\n<div data-rid=\"cd8a21e2-57b1-43b2-be1c-deaef1505a95\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-2xfcd4 alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Immune Support</p></span></div>\n</div>\n<div data-rid=\"3ef2b721-dc3f-4fff-af1e-db408eeed4d5\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-d6i5xg\"><div data-rid=\"78ebc633-044a-46c6-8f42-83e0369c389f\" data-replo-repeated-index=\".0.0.0.0.0.0.0\" class=\"r-1img0ww alchemy-rte\"><span contenteditable=\"false\" style=\"width:100%\"><p>Mānuka honey stands out as an antioxidant-rich superfood; <strong>over 70% of these antioxidants are not found in any other honey or food.</strong> One of these is Leptosperin, a powerful compound from the nectar of the Mānuka tea tree.</p></span></div></div>\n</div>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_zR93tr",
+        "html_8GqzRM",
+        "custom_text_VjLCg8",
+        "custom_text_PdHWax",
+        "bl_col_zRTLDE",
+        "html_3p83GW",
+        "bl_col_NyF8NT",
+        "html_YphXXn",
+        "bl_col_VL93Bt",
+        "html_t6riCm"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "10",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#cdbdb0",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "0,0,50px,",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".SectionID  .t4s-custom-section .t4s-col-inner {\n    border: 1px solid #000;\n}\n\np#b_custom_text_wnnXVM {\n    text-align: center;\n}\n\np#b_custom_text_M6QX8m {\n    text-align: center;\n    max-width: 500px;\n    margin: 0 auto;\n}\n\ndiv#b_html_TRxAYn {\n    position: relative;\n}"
+      }
+    },
+    "custom_html_EpqXbN": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "code": "<nav class=\"menu\">\n  <div class=\"menu__item\">\n    <div class=\"marquee\">\n      <div class=\"marquee__inner\">\n <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> UNPASTURIZED</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> 100% RAW HONEY</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> THE FINEST QUALITY</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> AWARD WINNING TASTE</span>\n       <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> MAXIMUM NUTRITIOUS VALUE</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> UNPASTURIZED</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> 100% RAW HONEY</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> THE FINEST QUALITY</span>\n        <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> AWARD WINNING TASTE</span>\n       <span> <svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" style=\"height:100%;width:var(--replo-svg-width, 100%)\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path><path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\"></path></svg> MAXIMUM NUTRITIOUS VALUE</span>\n      </div>\n    </div>\n  </div>\n</nav>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#f1e6b2",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".menu {\n\t-webkit-touch-callout: none;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\t-ms-user-select: none;\n\tuser-select: none;\n\tpadding: 2vh 0 2vh;\n\t--marquee-width: 100vw;\n\t--offset: 20vw;\n\t--move-initial: calc(-25% + var(--offset));\n\t--move-final: calc(-50% + var(--offset));\n\t--item-font-size: 10vw;\n\tcounter-reset: menu;\n}\n\n.marquee span svg {\n    width: 25px!important;\n    height: 25px!important;\n    margin-top: 3px;\n}\n\n.marquee span {\n    display: flex;\n    justify-content: center;\n    gap: 1rem;\n    align-content: center;\n    flex-wrap: nowrap;\n    letter-spacing: normal;\n}\n\n.marquee__inner {\n\toverflow: visible;\n\twidth: fit-content;\n\tdisplay: flex;\n\tposition: relative;\n\ttransform: translate3d(var(--move-initial), 0, 0);\n\tanimation: marquee 10s linear infinite; /* Changed from 5s to 10s */\n\tanimation-play-state: paused;\n\topacity: 0;\n\ttransition: opacity 0.1s;\n}\n\n.marquee .marquee__inner {\n\tanimation-play-state: running;\n\topacity: 1;\n\ttransition-duration: 0.4s;\n}\n\n.marquee span {\n\ttext-align: center;\n\twhite-space: nowrap;\n\tfont-size: 18px;\n\tpadding: 0 5vw;\n\tcolor: #000;\n\tletter-spacing: 1px;\n}\n\n@keyframes marquee {\n\t0% {\n\t\ttransform: translate3d(var(--move-initial), 0, 0);\n\t}\n\n\t100% {\n\t\ttransform: translate3d(var(--move-final), 0, 0);\n\t}\n}"
+      }
+    },
+    "1703245290a679a6fa": {
+      "type": "apps",
+      "blocks": {
+        "78365c34-af31-4c0d-a498-119bfafb430d": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "fce5de71-09c2-49d5-8650-a9428b206a9d": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "b4e73c21-ae19-4fc4-93a1-49128aab28db": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "0fa8dbce-4cd9-442b-beab-5c489ea0b257": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "526632a6-ec21-44cf-af5b-acb3503d49ae": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "30e89cd7-1eff-4698-a32c-0f707b0889d8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "78365c34-af31-4c0d-a498-119bfafb430d",
+        "fce5de71-09c2-49d5-8650-a9428b206a9d",
+        "b4e73c21-ae19-4fc4-93a1-49128aab28db",
+        "0fa8dbce-4cd9-442b-beab-5c489ea0b257",
+        "526632a6-ec21-44cf-af5b-acb3503d49ae",
+        "30e89cd7-1eff-4698-a32c-0f707b0889d8"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_section_TtRt8n": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_qbbPzH": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_GgDMDp": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Honey, like you've never tasted it",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "html_CFW87X": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div data-rid=\"697c99d5-4f72-4919-8827-d989ac987582\" data-replo-repeated-index=\".0.0.0.0.0.0\" class=\"r-1dyyjmd\">\n    <div class=\"r-184xpky\">\n        <div class=\"r-1ufq0s7\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" role=\"presentation\" style=\"width:var(--rsw, 100%);height:100%\" class=\"r-10xbg5e\">\n                <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path>\n                <path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\">\n                </path>\n            </svg></div>\n        <div class=\"r-x3jm18 alchemy-rte\"><span style=\"width:100%\">\n                <p>Packed with high levels of antioxidants &amp; prebiotics</p>\n            </span></div>\n    </div>\n    <div class=\"r-184xpky\">\n        <div class=\"r-1ufq0s7\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" role=\"presentation\" style=\"width:var(--rsw, 100%);height:100%\" class=\"r-10xbg5e\">\n                <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path>\n                <path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\">\n                </path>\n            </svg></div>\n        <div class=\"r-x3jm18 alchemy-rte\"><span style=\"width:100%\">\n                <p>Packed with high levels of antioxidants &amp; prebiotics</p>\n            </span></div>\n    </div>\n    <div class=\"r-184xpky\">\n        <div class=\"r-1ufq0s7\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 16 16\" width=\"1em\" height=\"1em\" fill=\"currentColor\" role=\"presentation\" style=\"width:var(--rsw, 100%);height:100%\" class=\"r-10xbg5e\">\n                <path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z\"></path>\n                <path d=\"M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z\">\n                </path>\n            </svg></div>\n        <div class=\"r-x3jm18 alchemy-rte\"><span style=\"width:100%\">\n                <p>Packed with high levels of antioxidants &amp; prebiotics</p>\n            </span></div>\n    </div>\n   \n</div>",
+            "hidden_mobile": false
+          }
+        },
+        "bl_col_JEC4gC": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "newsletter_XrGi8M": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "form_width": 0,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "small",
+            "btn_icon": false,
+            "input_cl": "#878787",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#56cfe1",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        },
+        "html_9T3Qxm": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_content": "<div class=\"r-1enbfof\"><video src=\"https://cdn.shopify.com/videos/c/o/v/0bd4d87036364d8480ef0c00f8a8dac4.mp4\" style=\"width:100%;height:100%;object-fit:var(--rof, inherit);object-position:var(--rop, inherit)\" preload=\"auto\" autoplay=\"\" muted=\"true\" loop=\"\" poster=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/Dream-dream-v1_1_-_frame_at_0m0s.jpg?v=1679861796\" playsinline=\"\" webkit-playsinline=\"\" x5-playsinline=\"\"></video></div>",
+            "hidden_mobile": false
+          }
+        },
+        "image_DfnAPB": {
+          "type": "image",
+          "settings": {
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 0,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_qbbPzH",
+        "custom_text_GgDMDp",
+        "html_CFW87X",
+        "bl_col_JEC4gC",
+        "newsletter_XrGi8M",
+        "html_9T3Qxm",
+        "image_DfnAPB"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".zohaan {margin: auto 0; justify-content: center; align-items: center;}"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#f4f2ec",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "30px,30px,30px,30px",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ""
+      }
+    },
+    "custom_liquid_Bdt4pr": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"menu\">\n  <h2>Ways To Use {{product.title}}</h2>\n  <div class=\"menu__item\">\n    <div class=\"marquee\">\n      <div class=\"marquee__inner\">\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/sauce.png?v=1724325716\" alt=\"Sauce\">\n          <h3>Sauce</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Marinating.png?v=1724325715\" alt=\"Marinating\">\n          <h3>Marinating</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/tea.png?v=1724325715\" alt=\"Tea\">\n          <h3>Tea</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/cheese.png?v=1724325715\" alt=\"Cheese\">\n          <h3>Cheese</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/warm.png?v=1724325715\" alt=\"Warm\">\n          <h3>Warm</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/raw.png?v=1724325715\" alt=\"Raw\">\n          <h3>Raw</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/toast.png?v=1724325715\" alt=\"Toast\">\n          <h3>Toast</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Smoothie.png?v=1724325714\" alt=\"Smoothie\">\n          <h3>Smoothie</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/baked.png?v=1724325715\" alt=\"Baked\">\n          <h3>Baked</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/breakfast.png?v=1724325714\" alt=\"Breakfast\">\n          <h3>Breakfast</h3>\n        </div>\n        <!-- Duplicate the items for seamless looping -->\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/sauce.png?v=1724325716\" alt=\"Sauce\">\n          <h3>Sauce</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Marinating.png?v=1724325715\" alt=\"Marinating\">\n          <h3>Marinating</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/tea.png?v=1724325715\" alt=\"Tea\">\n          <h3>Tea</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/cheese.png?v=1724325715\" alt=\"Cheese\">\n          <h3>Cheese</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/warm.png?v=1724325715\" alt=\"Warm\">\n          <h3>Warm</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/raw.png?v=1724325715\" alt=\"Raw\">\n          <h3>Raw</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/toast.png?v=1724325715\" alt=\"Toast\">\n          <h3>Toast</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Smoothie.png?v=1724325714\" alt=\"Smoothie\">\n          <h3>Smoothie</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/baked.png?v=1724325715\" alt=\"Baked\">\n          <h3>Baked</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/breakfast.png?v=1724325714\" alt=\"Breakfast\">\n          <h3>Breakfast</h3>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\nh2 {\n  text-align: center;\n  font-size: 30px !important;\nfont-weight: bold;\n  margin-bottom: 20px;\n  color: #222222 !important;\n}\n\n.menu__item {\n  text-align: center;\n}\n\n.marquee {\n  overflow: hidden;\n  white-space: nowrap;\n  position: relative;\n}\n\n.marquee__inner {\n  display: flex;\n  padding: 20px 0;\n  animation: marquee 20s linear infinite;\n  will-change: transform;\n}\n\n.marquee__item {\n  display: inline-block;\n  margin: 0 20px;\n  text-align: center;\n}\n\n.marquee__item img {\n  max-width: 80px;\n  height: auto;\n}\n\n.marquee__item h3 {\n  margin-top: 10px;\n  font-size: 1rem;\n  color: #D29B74;\n}\n\n@keyframes marquee {\n  0% { transform: translateX(0); }\n  100% { transform: translateX(-50%); }\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_section_TUhdV7": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_YLF6RG": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "8",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "0px,,0px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "image_ixeqPf": {
+          "type": "image",
+          "settings": {
+            "image_child": "{{ product.metafields.custom.infographic.value }}",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 700,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        },
+        "bl_col_VHqnFw": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_A7kkwh": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Honey in its purest form",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "html_pzXVXd": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_content": "<ul></ul>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_YLF6RG",
+        "image_ixeqPf",
+        "bl_col_VHqnFw",
+        "custom_text_A7kkwh",
+        "html_pzXVXd"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".zohaan {margin: auto 0; justify-content: center; align-items: center;}"
+      ],
+      "settings": {
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "0px,0px,0px,0px",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": "0px,0px,0px,0px",
+        "use_cus_css": true,
+        "code_cus_css": ""
+      }
+    },
+    "logo_list_dL73Fn": {
+      "type": "logo_list",
+      "blocks": {
+        "logo_item_t3FPmU": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/GT-22-3-star.png",
+            "url": ""
+          }
+        },
+        "logo_item_yLUHMz": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/GT_21_2-star.png",
+            "url": ""
+          }
+        },
+        "logo_item_e6ngxi": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/GT_20_1-star.png",
+            "url": ""
+          }
+        },
+        "logo_item_bMBdAQ": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_9Phtg4": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/GT-22-1-star.png",
+            "url": ""
+          }
+        },
+        "logo_item_jDc6jT": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_pEp7kU": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_CA7CnV": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_item_t3FPmU",
+        "logo_item_yLUHMz",
+        "logo_item_e6ngxi",
+        "logo_item_bMBdAQ",
+        "logo_item_9Phtg4",
+        "logo_item_jDc6jT",
+        "logo_item_pEp7kU",
+        "logo_item_CA7CnV"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "2",
+        "click_image": "data-goto",
+        "nav_thumbs": true,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_section_beRXcH": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_Lnb78G": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#e4e4e4"
+          }
+        },
+        "image_PYjfLz": {
+          "type": "image",
+          "settings": {
+            "image_child": "shopify://shop_images/Key_Difference.png",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 700,
+            "img_width_mb": 600,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_Lnb78G",
+        "image_PYjfLz"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "logo_list_iyFnhB": {
+      "type": "logo_list",
+      "blocks": {
+        "logo_item_LR9xxJ": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy.png",
+            "url": ""
+          }
+        },
+        "logo_item_DxYYA4": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_2.png",
+            "url": ""
+          }
+        },
+        "logo_item_pkg4yt": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_3.png",
+            "url": ""
+          }
+        },
+        "logo_item_xYXgkz": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-06.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_YCjPLW": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-01.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_RyURM9": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-09.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_m9mEAP": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-17.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_ahcqdx": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-10.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_GFipfp": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-13.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_TtNGgJ": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-11.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_DLdcFP": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-08.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_a8FWKN": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-20.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_mandKN": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-14.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_3qtWUn": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-05.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_ExCR4i": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-07.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_yDUEtg": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-16.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_bJMte9": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-12.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_item_LR9xxJ",
+        "logo_item_DxYYA4",
+        "logo_item_pkg4yt",
+        "logo_item_xYXgkz",
+        "logo_item_YCjPLW",
+        "logo_item_RyURM9",
+        "logo_item_m9mEAP",
+        "logo_item_ahcqdx",
+        "logo_item_GFipfp",
+        "logo_item_TtNGgJ",
+        "logo_item_DLdcFP",
+        "logo_item_a8FWKN",
+        "logo_item_mandKN",
+        "logo_item_3qtWUn",
+        "logo_item_ExCR4i",
+        "logo_item_yDUEtg",
+        "logo_item_bJMte9"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {{display: none; }}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Sweetening Tables of the Finest",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 50,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "2",
+        "click_image": "data-goto",
+        "nav_thumbs": true,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 2.5,
+        "au_hover": false,
+        "nav_btn": false,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "elessi",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "100px,,100px,",
+        "pd": "",
+        "mg_mb": "60px,,60px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "video_popup_inline_3cLztd": {
+      "type": "video_popup_inline",
+      "blocks": {
+        "custom_button_EqBgCj": {
+          "type": "custom_button",
+          "settings": {
+            "source": "2",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "file_link": "https://cdn.shopify.com/videos/c/o/v/6ac025792f7e4dffbc2076af8fe7ad50.mp4",
+            "au_video": true,
+            "loop_video": true,
+            "btn_close": true,
+            "source_btn": "btn_custom",
+            "click_action": "data-video-poster-btn",
+            "button_text": "See The Harvest",
+            "fontf": "2",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#d29b74",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#222222",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 18,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 40,
+            "button_pd_lr": 60,
+            "button_mgb": 3,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "custom_button_EqBgCj"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.t4s-btn {padding: 14px 24px; font-size: 18px; }}"
+      ],
+      "settings": {
+        "se_height": "t4s_ratio_cuspx",
+        "custom_dk": true,
+        "height_dk": 550,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "image": "shopify://shop_images/Screenshot_16-9-2024_193747.jpg",
+        "parallax": false,
+        "image_position": "0",
+        "link_img1": "",
+        "open_link": "_blank",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "auto",
+        "cv_pos": 80,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#222222",
+        "bg_opacity": 20,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "dc82fd1b-aec8-428d-802c-bd638646d842": {
+      "type": "testimonials",
+      "blocks": {
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Testimonials",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "ter_des": "1",
+        "cl_name": "#222222",
+        "cl_content": "#878787",
+        "cl_bd": "",
+        "cl_bg_item": "",
+        "bdr": 0,
+        "content_align": "text-start",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "100px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "accordion_3XHwAX": {
+      "type": "accordion",
+      "blocks": {
+        "accor_item_kFBh6p": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Does honey expire?",
+            "content": "<p>The short answer is, no, raw honey never goes off as long as it is stored correctly, which is at room temperature and out of direct sunlight. Archaeologists have even found 3,000-year-old honey whilst excavating tombs in Egypt, and it was perfectly edible! Despite this, we are required by law to put a best-before date on our jars which is usually 2 years from production.</p>"
+          }
+        },
+        "accor_item_GPgGcq": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "My honey has crystallised, what do i do?",
+            "content": "<p>Raw honey will naturally crystallise when it reaches cold temperatures. This happens as the glucose in the honey separates from the water forming crystals. Honey is still safe to eat when it has crystallised, however to return it back to its original form, place the jar in warm water for some time until it liquefies.</p>"
+          }
+        },
+        "accor_item_GFWXfz": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Why does the colour of my honey look different?",
+            "content": "<p>The colour, taste and consistency of each honey can vary slightly from harvest to harvest, as the nectar and pollen available for the bees to forage on varies throughout the seasons. This is the case with all varieties of single-origin honey since it is a natural product and not processed.</p>"
+          }
+        },
+        "accor_item_PjcTfz": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Does your honey contain pollen?",
+            "content": "<p>Yes, all our honey is unfiltered which means it will contain traces of pollen, propolis and occasionally small chunks of beeswax.</p>"
+          }
+        },
+        "accor_item_Ge8JPe": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Is your honey organic?",
+            "content": "<p>Some of our varieties are in fact certified Organic. Despite sourcing all of our raw honey from clean, remote locations, for some varieties, however, we cannot claim they are organic due to the complex nature of organic accreditation. For more information, read our blog post <a href=\"https://balqees.co.uk/blogs/about-raw-honey/is-raw-honey-the-same-as-organic-honey\" title=\"Is raw honey the same as organic honey?\">\"Is organic honey the same as raw honey?\".</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "accor_item_kFBh6p",
+        "accor_item_GPgGcq",
+        "accor_item_GFWXfz",
+        "accor_item_PjcTfz",
+        "accor_item_Ge8JPe"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Frequently Asked Questions",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "rgba(0,0,0,0)",
+        "content_align": "t4s-text-start",
+        "layout": "t4s-cus-width",
+        "custom_width": 700,
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": "0px,,50px,",
+        "pd": "50px,,50px,",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".t4s-accor-title .t4s-accor-item-nav {\n    background: transparent;\n    color: #fff;\n}\n\n.t4s-accor-title .t4s-accor-item-nav:before, .t4s-accor-title .t4s-accor-item-nav:after {\n    background-color: #fff;\n}\n\n.t4s-type-accordion>.t4s-tab-wrapper {\n    /* margin-top: 10px; */\n    padding-bottom: 10px;\n    margin-bottom: 0;\n}\n\n.t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav {\n    background-color: transparent;\n}\n\n.t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:after, .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:before {\n    background-color: #222;\n}\n\n.t4s-type-accordion .t4s-tab-wrapper.t4s-active .t4s-accor-title {\n    background-color: transparent!important;\n    border-bottom: 0;\n    \n}"
+      }
+    },
+    "44499bce-c3ca-4130-8cdc-0653b4b8f671": {
+      "type": "apps",
+      "blocks": {
+        "c76fadfd-d75e-4d07-a292-04700ac88fcc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "b2f4d25c-f67c-4a52-bad8-cd044c9c5a76": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "9239b73e-0840-412e-b8a5-0e9707dfdaba": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "843ea767-f3da-4af5-b4d1-aaf9771d4534": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "16931657-542b-4d50-9fb4-84481ac62641": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "17e280cd-e3fd-4426-bc6f-0adb932bcd16": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "c76fadfd-d75e-4d07-a292-04700ac88fcc",
+        "b2f4d25c-f67c-4a52-bad8-cd044c9c5a76",
+        "9239b73e-0840-412e-b8a5-0e9707dfdaba",
+        "843ea767-f3da-4af5-b4d1-aaf9771d4534",
+        "16931657-542b-4d50-9fb4-84481ac62641",
+        "17e280cd-e3fd-4426-bc6f-0adb932bcd16"
+      ],
+      "settings": {}
+    },
+    "logo_list_A8Uw6k": {
+      "type": "logo_list",
+      "blocks": {
+        "logo_item_8DhRAL": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy.png",
+            "url": ""
+          }
+        },
+        "logo_item_XMAwNN": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_2.png",
+            "url": ""
+          }
+        },
+        "logo_item_FxqQ6X": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_3.png",
+            "url": ""
+          }
+        },
+        "logo_item_RprXcb": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-06.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_NTzhNa": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-01.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_cnTtwB": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-09.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_maMnRe": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-17.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_63Vabk": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-10.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_grEzYF": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-13.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_6MdERy": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-11.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_QjjqYV": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-08.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_QcXDGE": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-20.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_448Pxa": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-14.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_PLz7dD": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-05.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_hRG4bB": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-07.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_Xp7rQ6": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-16.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_fGXMwX": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-12.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_item_8DhRAL",
+        "logo_item_XMAwNN",
+        "logo_item_FxqQ6X",
+        "logo_item_RprXcb",
+        "logo_item_NTzhNa",
+        "logo_item_cnTtwB",
+        "logo_item_maMnRe",
+        "logo_item_63Vabk",
+        "logo_item_grEzYF",
+        "logo_item_6MdERy",
+        "logo_item_QjjqYV",
+        "logo_item_QcXDGE",
+        "logo_item_448Pxa",
+        "logo_item_PLz7dD",
+        "logo_item_hRG4bB",
+        "logo_item_Xp7rQ6",
+        "logo_item_fGXMwX"
+      ],
+      "custom_css": [
+        "@media (min-width: 769px) {{display: none; }}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Sweetening Tables of Finest Hotels",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 50,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "2",
+        "click_image": "data-goto",
+        "nav_thumbs": true,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 2.5,
+        "au_hover": false,
+        "nav_btn": false,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "none",
+        "btn_cl": "primary",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "elessi",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": "."
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Discover the Buzz",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "6",
+        "show_vendor": true,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "4",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": ",,100px,",
+        "pd": "50px,,50px,",
+        "mg_mb": ",,0px,",
+        "pd_mb": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    }
+  },
+  "order": [
+    "customproductbuilder",
+    "breadcrumb",
+    "main",
+    "custom_liquid_BdeizK",
+    "custom_section_xmqN6X",
+    "custom_section_d97fPR",
+    "custom_html_EpqXbN",
+    "1703245290a679a6fa",
+    "custom_section_TtRt8n",
+    "custom_liquid_Bdt4pr",
+    "custom_section_TUhdV7",
+    "logo_list_dL73Fn",
+    "custom_section_beRXcH",
+    "logo_list_iyFnhB",
+    "video_popup_inline_3cLztd",
+    "dc82fd1b-aec8-428d-802c-bd638646d842",
+    "sidebar",
+    "accordion_3XHwAX",
+    "44499bce-c3ca-4130-8cdc-0653b4b8f671",
+    "logo_list_A8Uw6k",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

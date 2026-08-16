@@ -1,0 +1,432 @@
+<style>
+    /* Start CSS */
+    .power-mixture-section {
+      background-color: {{ section.settings.bg_color }};
+    }
+
+    .power-mixture-section .page-width {
+      max-width: 1370px;
+      padding: 0 15px;
+      margin: 0px auto;
+    }
+
+    .power-mixture-section .power-mixture-wrapper {
+      padding: 46px 0;
+
+    }
+
+    .power-mixture-section .question-faqs-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 68px;
+      border-radius: 25px;
+      background-color: #FFFFFF;
+    }
+    .faqs-block-wrap.open svg path:first-child{
+     display:none;
+    }
+
+    .power-mixture-section .image-wrapper {
+      width: 53.5%;
+    }
+
+    .power-mixture-section .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 1.06/1;
+      border-radius: 25px;
+    }
+
+    .power-mixture-section .question-faqs-wrap {
+      width: 46.5%;
+      padding-left: 60px;
+      padding-block: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+    .power-mixture-section .title-wrap h2 {
+      color: #000000;
+      margin: 0 0 4px;
+      letter-spacing: -2px;
+    }
+
+    .power-mixture-section .text-wrap {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: 0;
+      color: #000000;
+      padding-bottom: 70px;
+    }
+
+    .power-mixture-section .faqs-block-wrap {
+      border-bottom: 1px solid #000000;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .power-mixture-section .question-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .power-mixture-section .question-wrap h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .power-mixture-section .answer-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #000000;
+    }
+
+    .power-mixture-section .faqs-block-wrap.open .answer-text {
+      display: block;
+      transition: all 0.2s linear;
+    }
+
+    .power-mixture-section .question-wrap span {
+      display: block;
+    }
+
+    .power-mixture-section .answer-text p {
+      margin: 0;
+    }
+
+    .power-mixture-section .answer-text {
+      display: none;
+      margin-top: 5px;
+    }
+
+    /* Tablet & Destop View in 768px to 1200px */
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .power-mixture-section .power-mixture-wrapper {
+        padding: 24px 0;
+      }
+
+      .power-mixture-section .question-faqs-wrapper {
+        gap: 30px;
+      }
+
+      .power-mixture-section .text-wrap {
+        font-size: 16px;
+        padding-bottom: 10px;
+      }
+
+      .power-mixture-section .faqs-block-wrap {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+
+      .power-mixture-section .question-faqs-wrap {
+        padding-left: 30px;
+      }
+    }
+
+
+    /* Mobile View in 767px */
+    @media only screen and (max-width:767px) {
+      .power-mixture-section .page-width {
+        padding: 0;
+      }
+
+      .power-mixture-section .power-mixture-wrapper {
+        padding: 0;
+      }
+
+      .power-mixture-section .question-faqs-wrapper {
+        gap: 32px;
+        border-radius: 0;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding: 12px 15px 3px;
+      }
+
+      .power-mixture-section .image-wrapper {
+        width: 100%;
+      }
+
+      .power-mixture-section .question-faqs-wrap {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .power-mixture-section .image-wrap img {
+        aspect-ratio: 0;
+        border-radius: 5px;
+      }
+
+      .power-mixture-section .title-wrap h2 {
+        letter-spacing: -2px;
+        text-align:center;
+      }
+
+      .power-mixture-section .text-wrap {
+        font-size: 12px;
+        text-align:center;
+        padding-bottom: 14px;
+      }
+
+      .power-mixture-section .answer-text {
+        font-size: 12px;
+        line-height: 1.1;
+        margin-top: 10px;
+      }
+    }
+
+    /* End CSS */
+</style>
+<section class="power-mixture-section">
+  <div class="page-width">
+    <div class="power-mixture-wrapper">
+      <div class="question-faqs-wrapper">
+        <div class="question-faqs-wrap">
+          {%- liquid
+            assign pm_title = product.metafields.custom.power_mixture_title.value | default: product.metafields.custom.power_mixture_title
+            assign pm_text = product.metafields.custom.power_mixture_text.value | default: product.metafields.custom.power_mixture_text
+            assign pm_faqs = product.metafields.custom.power_mixture_faqs.value
+            assign pm_image = product.metafields.custom.power_mixture_image.value | default: product.metafields.custom.power_mixture_image
+            if product == blank
+              assign pm_title = nil
+              assign pm_text = nil
+              assign pm_faqs = nil
+              assign pm_image = nil
+            endif
+          -%}
+          <div class="title-wrap">
+            {%- if pm_title != blank -%}
+              <h2 class="heading-font">{{ pm_title }}</h2>
+            {%- elsif section.settings.title_text != blank -%}
+              <h2 class="heading-font">{{ section.settings.title_text }}</h2>
+            {%- endif -%}
+          </div>
+          {%- assign show_text = pm_text | default: section.settings.text -%}
+          {%- if show_text != blank -%}
+            <div class="text-wrap body-font">{{ show_text }}</div>
+          {%- endif -%}
+          <div class="faqs-block-wrapper">
+            {% if product != blank and pm_faqs != blank and pm_faqs.size > 0 %}
+              {% for ref in pm_faqs %}
+                {% assign faq = ref.value | default: ref %}
+                <div class="faqs-block-wrap {% if forloop.first %}open{% endif %}">
+                  <div class="question-wrap">
+                    {%- assign faq_title = faq.title | default: faq.dropdown_title -%}
+                    {%- if faq_title != blank -%}
+                      <h3 class="body-font">{{ faq_title }}</h3>
+                    {%- endif -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon-plus">
+                      <path d="M10 2.5 C10.1381 2.5 10.2706 2.55486 10.3687 2.65302 C10.4669 2.75118 10.5217 2.8837 10.5217 3.02174 V16.9783 C10.5217 17.1163 10.4669 17.2488 10.3687 17.347 C10.2706 17.4451 10.1381 17.5 10 17.5 C9.86193 17.5 9.7294 17.4451 9.63124 17.347 C9.53308 17.2488 9.47826 17.1163 9.47826 16.9783 V3.02174 C9.47826 2.8837 9.53308 2.75118 9.63124 2.65302 C9.7294 2.55486 9.86193 2.5 10 2.5Z" fill="#000"/>
+                      <path d="M2.5 10 C2.5 9.86193 2.55486 9.7294 2.65302 9.63124 C2.75118 9.53308 2.8837 9.47826 3.02174 9.47826 H16.9783 C17.1163 9.47826 17.2488 9.53308 17.347 9.63124 C17.4451 9.7294 17.5 9.86193 17.5 10 C17.5 10.1381 17.4451 10.2706 17.347 10.3687 C17.2488 10.4669 17.1163 10.5217 16.9783 10.5217 H3.02174 C2.8837 10.5217 2.75118 10.4669 2.65302 10.3687 C2.55486 10.2706 2.5 10.1381 2.5 10Z" fill="#000"/>
+                    </svg>
+                  </div>
+                  {%- assign faq_content = faq.content | default: faq.dropdown_content -%}
+                  {%- if faq_content != blank -%}
+                    <div class="answer-text body-font" {% if forloop.first %}style="display:block"{% endif %}>
+                      {{ faq_content }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {% endfor %}
+            {% else %}
+              {% for block in section.blocks %}
+                <div class="faqs-block-wrap  {% if forloop.first %}open{% endif %}">
+                  <div class="question-wrap">
+                    {%- if block.settings.question_text != blank -%}
+                      <h3 class="body-font">{{ block.settings.question_text }}</h3>
+                    {%- endif -%}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      class="icon-plus"
+                    >
+                      <path d="M10 2.5 C10.1381 2.5 10.2706 2.55486 10.3687 2.65302 C10.4669 2.75118 10.5217 2.8837 10.5217 3.02174 V16.9783 C10.5217 17.1163 10.4669 17.2488 10.3687 17.347 C10.2706 17.4451 10.1381 17.5 10 17.5 C9.86193 17.5 9.7294 17.4451 9.63124 17.347 C9.53308 17.2488 9.47826 17.1163 9.47826 16.9783 V3.02174 C9.47826 2.8837 9.53308 2.75118 9.63124 2.65302 C9.7294 2.55486 9.86193 2.5 10 2.5Z" fill="#000"/>
+                      <path d="M2.5 10 C2.5 9.86193 2.55486 9.7294 2.65302 9.63124 C2.75118 9.53308 2.8837 9.47826 3.02174 9.47826 H16.9783 C17.1163 9.47826 17.2488 9.53308 17.347 9.63124 C17.4451 9.7294 17.5 9.86193 17.5 10 C17.5 10.1381 17.4451 10.2706 17.347 10.3687 C17.2488 10.4669 17.1163 10.5217 16.9783 10.5217 H3.02174 C2.8837 10.5217 2.75118 10.4669 2.65302 10.3687 C2.55486 10.2706 2.5 10.1381 2.5 10Z" fill="#000"/>
+                    </svg>
+                  </div>
+                  {%- if block.settings.answer != blank -%}
+                    <div class="answer-text body-font" {% if forloop.first %}style="display:block"{% endif %}>
+                      {{ block.settings.answer }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <div class="image-wrap">
+            {%- liquid
+              assign pm_img = pm_image | default: section.settings.destop_img
+              assign pm_mobile_img = product.metafields.custom.power_mixture_image_mobile.value | default: product.metafields.custom.power_mixture_image_mobile | default: pm_img
+              if product == blank
+                assign pm_img = section.settings.destop_img
+                assign pm_mobile_img = section.settings.mobile_img | default: section.settings.destop_img
+              endif
+            -%}
+            {%- if pm_img != blank -%}
+              {%- liquid
+                assign mixMobileImage = pm_img
+                if pm_mobile_img != blank
+                  assign mixMobileImage = pm_mobile_img
+                endif
+              -%}
+              <picture>
+                <source media="(min-width: 1901px)" srcset="{{ pm_img | image_url: width: 2560 }}">
+                <source media="(min-width: 1700px)" srcset="{{ pm_img | image_url: width: 2020 }}">
+                <source media="(min-width: 1500px)" srcset="{{ pm_img | image_url: width: 1820 }}">
+                <source media="(min-width: 1200px)" srcset="{{ pm_img | image_url: width: 1600 }}">
+                <source media="(min-width: 768px)" srcset="{{ pm_img | image_url: width: 1350 }}">
+                <source media="(min-width: 767px)" srcset="{{ mixMobileImage | image_url: width: 1100 }}">
+                <source media="(min-width: 576px)" srcset="{{ mixMobileImage | image_url: width: 800 }}">
+                <source media="(min-width: 400px)" srcset="{{ mixMobileImage | image_url: width: 700 }}">
+                <source media="(min-width: 0)" srcset="{{ mixMobileImage | image_url: width: 600 }}">
+                <source media="(min-width: 0)" srcset="{{ mixMobileImage | image_url: width: 400 }}">
+                <img
+                  src="{{ pm_img | image_url }}"
+                  alt="{{ pm_img.alt | default: pm_title | default: section.settings.title_text | escape }}"
+                  width="{{ pm_img.width }}"
+                  loading="lazy"
+                  height="{{ pm_img.width | divided_by: pm_img.aspect_ratio | round }}"
+                >
+              </picture>
+            {%- elsif section.settings.destop_img != blank -%}
+              {%- liquid
+                assign mobileImage = section.settings.destop_img
+                if section.settings.mobile_img != blank
+                  assign mobileImage = section.settings.mobile_img
+                endif
+              -%}
+              <picture>
+                <source media="(min-width: 1901px)" srcset="{{ section.settings.destop_img | image_url: width: 2560 }}">
+                <source media="(min-width: 1700px)" srcset="{{ section.settings.destop_img | image_url: width: 2020 }}">
+                <source media="(min-width: 1500px)" srcset="{{ section.settings.destop_img | image_url: width: 1820 }}">
+                <source media="(min-width: 1200px)" srcset="{{ section.settings.destop_img | image_url: width: 1600 }}">
+                <source media="(min-width: 768px)" srcset="{{ section.settings.destop_img | image_url: width: 1350 }}">
+                <source media="(min-width: 767px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+                <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+                <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+                <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+                <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 400 }}">
+                <img
+                  src="{{ section.settings.destop_img | image_url }}"
+                  alt="{{ section.settings.destop_img.alt | default: section.settings.heading | escape }}"
+                  width="{{ section.settings.destop_img.width }}"
+                  loading="lazy"
+                  height="{{ section.settings.destop_img.width | divided_by: section.settings.destop_img.aspect_ratio | round }}"
+                >
+              </picture>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faqs-block-wrap');
+
+  function toggleItem(item) {
+    const answer = item.querySelector('.answer-text');
+
+    if (item.classList.contains('open')) {
+      item.classList.remove('open');
+      if (answer) answer.style.display = 'none';
+    } else {
+      faqItems.forEach((box) => {
+        box.classList.remove('open');
+        const ans = box.querySelector('.answer-text');
+        if (ans) ans.style.display = 'none';
+      });
+
+      item.classList.add('open');
+      if (answer) answer.style.display = 'block';
+    }
+  }
+
+  faqItems.forEach((item) => {
+    const header = item.querySelector('.question-wrap');
+
+    header.addEventListener('click', function (e) {
+      e.preventDefault();
+      toggleItem(item);
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Power Mixture Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Power Mixture Contain"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_text",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "destop_img",
+      "label": "Destop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Mobile Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Power Mixture Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "question_text",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Power Mixture Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,637 @@
+<style>
+.rarity-single-excellence-section {
+  position: relative;
+}
+.rarity-single-excellence-section .background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.rarity-single-excellence-section .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 2.03/1;
+}
+.rarity-single-excellence-section .blog-content {
+    max-width: 397px;
+    width: 100%;
+}
+.rarity-single-excellence-section .rarity-bg {
+  position: absolute;
+  inset: 0;
+}
+.rarity-single-excellence-section .rarity-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rarity-single-excellence-section .rarity-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 125px 16px 118px 16px;
+    display: flex;
+    justify-content: space-between;
+        gap: 50px;
+    align-items: center;
+}
+.rarity-single-excellence-section .rarity-map {
+    width: 48.17%;
+}
+.rarity-single-excellence-section .rarity-map img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.rarity-single-excellence-section .rarity-text {
+    width: 52%;
+}
+.rarity-single-excellence-section .rarity-text h2 {
+    margin: 0 0 32px 0;
+    color: #fff;
+    letter-spacing: -2px;
+        font-size: 48px;
+}
+.rarity-single-excellence-section .rarity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.rarity-single-excellence-section .rarity-item {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+.rarity-single-excellence-section .svg-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.rarity-single-excellence-section .svg-icon {
+    width: 100%;
+    max-width: 70px;
+    min-width: 70px;
+}
+.rarity-single-excellence-section .blog-title {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 7px;
+}
+.rarity-single-excellence-section .desc {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+}
+.rarity-single-excellence-section #BottomDesc {
+    display: none;
+}
+
+@media (min-width: 991px) and (max-width:1280px) {
+  .rarity-single-excellence-section .rarity-map { width: 51.17%; }
+  .rarity-single-excellence-section .rarity-text { width: 47%; }
+}
+
+@media (max-width: 991px) {
+.rarity-single-excellence-section { min-height: 100svh; }
+.rarity-single-excellence-section .rarity-map { display: none; }
+.rarity-single-excellence-section .rarity-text h2 {
+    margin: 0px 50px 24px 50px;
+    text-align: center;
+    letter-spacing: 0px;
+}
+.rarity-single-excellence-section .rarity-content { padding: 65px 16px 92px 16px; }
+.rarity-single-excellence-section .rarity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 121px 103px;
+    flex-direction: unset;
+    justify-content: center;
+    max-width: 357px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.rarity-single-excellence-section .rarity-text { width: 100%; }
+.rarity-single-excellence-section .blog-title { display: none; padding: 0; font-size: 18px; line-height: 1.10; }
+.rarity-single-excellence-section .blog-content { max-width: unset; width: unset; }
+.rarity-single-excellence-section .rarity-item.active .blog-title {
+    display: block;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 127px;
+    text-align: center;
+}
+.rarity-single-excellence-section .svg-icon { max-width: 71px; min-width: 71px; }
+.rarity-single-excellence-section .rarity-item:first-child { width: 55%; }
+.rarity-single-excellence-section .desc { display: none !important; }
+.rarity-single-excellence-section #BottomDesc {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+.rarity-single-excellence-section .rarity-item {
+    position: unset;
+    gap: 12px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+.rarity-item.active .svg-icon {
+  background-image: url("https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Group_10_1.png?v=1769575936");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+.rarity-item.active .svg-icon svg path { fill: #282828; }
+.rarity-single-excellence-section .rarity-item.active .svg-icon img { filter: brightness(0); }
+
+.rarity-single-excellence-section .rarity-list::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 29%;
+    width: 1px;
+    height: 138px;
+    z-index: 1;
+    transform: rotate(30deg);
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+.rarity-single-excellence-section .rarity-list::after {
+    content: "";
+    position: absolute;
+    top: 24%;
+    right: 32%;
+    width: 1px;
+    height: 140px;
+    z-index: 1;
+    transform: rotate(-30deg);
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+.rarity-single-excellence-section #BottomDesc::after {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 48%;
+    transform: translateX(-50%);
+    width: 143px;
+    height: 1px;
+    z-index: 1;
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+}
+
+/* ── Animações ── */
+@keyframes rarity-icon-in {
+  from { opacity: 0.3; transform: scale(0.88); }
+  to   { opacity: 1;   transform: scale(1); }
+}
+/* Texto sai subindo (para frente) */
+@keyframes rarity-desc-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-22px); }
+}
+/* Texto entra de baixo (para frente) */
+@keyframes rarity-desc-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Texto sai descendo (para trás) */
+@keyframes rarity-desc-out-reverse {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(22px); }
+}
+/* Texto entra de cima (para trás) */
+@keyframes rarity-desc-in-reverse {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Header entra de baixo */
+@keyframes rarity-header-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes rarity-line-draw {
+  from { clip-path: inset(0 0 100% 0); opacity: 0.4; }
+  to   { clip-path: inset(0 0 0% 0);   opacity: 1; }
+}
+@keyframes rarity-hline-draw {
+  from { clip-path: inset(0 50% 0 50%); opacity: 0.4; }
+  to   { clip-path: inset(0 0% 0 0%);   opacity: 1; }
+}
+@media (max-width: 991px) {
+  /* Título/heading fade-up */
+  .rarity-single-excellence-section .rarity-text h2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+  }
+  .rarity-single-excellence-section .rarity-text h2.header-visible {
+    animation: rarity-header-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  /* Ícone: fade-in suave */
+  .rarity-single-excellence-section .rarity-item.just-activated .svg-icon {
+    animation: rarity-icon-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  /* Descrição: saída subindo (para frente) */
+  .rarity-single-excellence-section #BottomDesc.leaving {
+    animation: rarity-desc-out 0.32s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  }
+  /* Descrição: saída descendo (para trás) */
+  .rarity-single-excellence-section #BottomDesc.leaving-reverse {
+    animation: rarity-desc-out-reverse 0.32s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  }
+  /* Descrição: entrada de baixo (para frente) */
+  .rarity-single-excellence-section #BottomDesc.animating {
+    animation: rarity-desc-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  /* Descrição: entrada de cima (para trás) */
+  .rarity-single-excellence-section #BottomDesc.animating-reverse {
+    animation: rarity-desc-in-reverse 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .rarity-single-excellence-section .rarity-list.lines-draw::before {
+    animation: rarity-line-draw 0.55s ease-out forwards;
+  }
+  .rarity-single-excellence-section .rarity-list.lines-draw::after {
+    animation: rarity-line-draw 0.55s ease-out 0.1s forwards;
+  }
+  .rarity-single-excellence-section #BottomDesc.animating::after,
+  .rarity-single-excellence-section #BottomDesc.animating-reverse::after {
+    animation: rarity-hline-draw 0.45s ease-out 0.22s both;
+  }
+}
+
+@media (max-width: 360px) {
+.rarity-single-excellence-section .rarity-text h2 { margin: 0px 24px 28px 24px; }
+.rarity-single-excellence-section .rarity-list { gap: 98px; }
+.rarity-single-excellence-section .rarity-list::before { height: 124px; }
+.rarity-single-excellence-section .rarity-list::after { top: 23%; right: 30%; width: 1px; height: 120px; }
+.rarity-single-excellence-section #BottomDesc::after { top: -34px; left: 50%; width: 121px; }
+}
+</style>
+
+<section class="rarity-single-excellence-section">
+    {%- liquid
+      assign rarity_bg_img = product.metafields.custom.rarity_background_image.value | default: product.metafields.custom.rarity_background_image
+      assign rarity_bg_mobile = product.metafields.custom.rarity_background_image_mobile.value | default: product.metafields.custom.rarity_background_image_mobile
+      if product == blank
+        assign rarity_bg_img = nil
+        assign rarity_bg_mobile = nil
+      endif
+      assign rarity_bg_desktop = rarity_bg_img | default: section.settings.destop_img
+      assign rarity_bg_mobile_img = rarity_bg_mobile | default: rarity_bg_desktop
+      if product == blank
+        assign rarity_bg_desktop = section.settings.destop_img
+        assign rarity_bg_mobile_img = section.settings.mobile_img | default: section.settings.destop_img
+      endif
+    -%}
+    <div class="background-image">
+      {%- if rarity_bg_desktop != blank -%}
+        {%- assign rarity_mobile_src = rarity_bg_mobile_img | default: rarity_bg_desktop -%}
+        <picture>
+          <source media="(min-width: 1901px)" srcset="{{ rarity_bg_desktop | image_url: width: 2560 }}">
+          <source media="(min-width: 1700px)" srcset="{{ rarity_bg_desktop | image_url: width: 2020 }}">
+          <source media="(min-width: 1500px)" srcset="{{ rarity_bg_desktop | image_url: width: 1820 }}">
+          <source media="(min-width: 1200px)" srcset="{{ rarity_bg_desktop | image_url: width: 1600 }}">
+          <source media="(min-width: 991px)" srcset="{{ rarity_bg_desktop | image_url: width: 1350 }}">
+          <source media="(min-width: 820px)" srcset="{{ rarity_bg_desktop | image_url: width: 1200 }}">
+          <source media="(min-width: 768px)" srcset="{{ rarity_mobile_src | image_url: width: 1100 }}">
+          <source media="(min-width: 576px)" srcset="{{ rarity_mobile_src | image_url: width: 800 }}">
+          <source media="(min-width: 400px)" srcset="{{ rarity_mobile_src | image_url: width: 700 }}">
+          <source media="(min-width: 0)" srcset="{{ rarity_mobile_src | image_url: width: 600 }}">
+          <img
+            src="{{ rarity_bg_desktop | image_url }}"
+            alt="{{ rarity_bg_desktop.alt | default: section.settings.heading | escape }}"
+            width="{{ rarity_bg_desktop.width }}"
+            loading="eager"
+            height="{{ rarity_bg_desktop.width | divided_by: rarity_bg_desktop.aspect_ratio | round }}"
+          >
+        </picture>
+      {%- elsif section.settings.destop_img != blank -%}
+        {%- liquid
+          assign mobileImage = section.settings.destop_img
+          if section.settings.mobile_img != blank
+            assign mobileImage = section.settings.mobile_img
+          endif
+        -%}
+        <picture>
+          <source media="(min-width: 1901px)" srcset="{{ section.settings.destop_img | image_url: width: 2560 }}">
+          <source media="(min-width: 1700px)" srcset="{{ section.settings.destop_img | image_url: width: 2020 }}">
+          <source media="(min-width: 1500px)" srcset="{{ section.settings.destop_img | image_url: width: 1820 }}">
+          <source media="(min-width: 1200px)" srcset="{{ section.settings.destop_img | image_url: width: 1600 }}">
+          <source media="(min-width: 991px)" srcset="{{ section.settings.destop_img | image_url: width: 1350 }}">
+          <source media="(min-width: 820px)" srcset="{{ section.settings.destop_img | image_url: width: 1200 }}">
+          <source media="(min-width: 768px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+          <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+          <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+          <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+          <img
+            src="{{ section.settings.destop_img | image_url }}"
+            alt="{{ section.settings.destop_img.alt | default: section.settings.heading | escape }}"
+            width="{{ section.settings.destop_img.width }}"
+            loading="eager"
+            height="{{ section.settings.destop_img.width | divided_by: section.settings.destop_img.aspect_ratio | round }}"
+          >
+        </picture>
+      {%- endif -%}
+    </div>
+  {%- liquid
+    assign rarity_heading = product.metafields.custom.rarity_heading.value | default: product.metafields.custom.rarity_heading
+    assign rarity_map_img = product.metafields.custom.rarity_map_image.value | default: product.metafields.custom.rarity_map_image
+    assign rarity_items_list = product.metafields.custom.rarity_items.value
+    if product == blank
+      assign rarity_heading = nil
+      assign rarity_map_img = nil
+      assign rarity_items_list = nil
+    endif
+    assign rarity_fallback_icon = section.blocks[0].settings.icon
+  -%}
+  <div class="rarity-content">
+    <div class="rarity-map">
+      {%- assign map_img = rarity_map_img | default: section.settings.map_image -%}
+      {% if map_img != blank %}
+        <img
+          src="{{ map_img | image_url }}"
+          alt="{{ map_img.alt | default: section.settings.heading | escape }}"
+          loading="lazy"
+          width="{{ map_img.width }}"
+          height="{{ map_img.height }}"
+        >
+      {% endif %}
+    </div>
+
+    <div class="rarity-text">
+      {%- assign show_rarity_heading = rarity_heading | default: section.settings.heading -%}
+      {% if show_rarity_heading != blank %}
+        <h2>{{ show_rarity_heading }}</h2>
+      {% endif %}
+
+      <div class="rarity-list">
+        {% if product != blank and rarity_items_list != blank and rarity_items_list.size > 0 %}
+          {% for ref in rarity_items_list %}
+            {% assign item = ref.value | default: ref %}
+            {%- assign item_title = item.title | default: item.Title -%}
+            {%- assign item_desc = item.description | default: item.Description -%}
+            <div class="rarity-item {% if forloop.first %}active{% endif %}">
+              <div class="svg-icon">
+                {% if rarity_fallback_icon != blank %}
+                  <img
+                    src="{{ rarity_fallback_icon | image_url }}"
+                    alt="{{ rarity_fallback_icon.alt | default: item_title | escape }}"
+                    loading="lazy"
+                    width="{{ rarity_fallback_icon.width }}"
+                    height="{{ rarity_fallback_icon.height }}"
+                  >
+                {% endif %}
+              </div>
+              <div class="blog-content">
+                {% if item_title != blank %}
+                  <div class="blog-title body-font">{{ item_title }}</div>
+                {% endif %}
+                {% if item_desc != blank %}
+                  <div class="desc body-font">{{ item_desc }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for block in section.blocks %}
+            <div class="rarity-item {% if forloop.first %}active{% endif %}">
+              <div class="svg-icon">
+                {% if block.settings.icon != blank %}
+                  <img
+                    src="{{ block.settings.icon | image_url }}"
+                    alt="{{ block.settings.icon.alt | default: block.settings.icon | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.icon.width }}"
+                    height="{{ block.settings.icon.height }}"
+                  >
+                {% endif %}
+              </div>
+              <div class="blog-content">
+                {% if block.settings.title != blank %}
+                  <div class="blog-title body-font">{{ block.settings.title }}</div>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <div class="desc body-font">{{ block.settings.description }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div id="BottomDesc" class="body-font"></div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".rarity-item");
+  const bottomDesc = document.getElementById("BottomDesc");
+  const rarityList = document.querySelector(".rarity-list");
+  const rarityH2 = document.querySelector(".rarity-single-excellence-section .rarity-text h2");
+  let descTimeout = null;
+  let isFirstActivation = true;
+
+  function triggerLines() {
+    if (!rarityList) return;
+    rarityList.classList.remove("lines-draw");
+    void rarityList.offsetWidth;
+    rarityList.classList.add("lines-draw");
+  }
+
+  function setDescContent(newContent, reverse) {
+    bottomDesc.innerHTML = newContent;
+    bottomDesc.classList.remove("animating", "animating-reverse", "leaving", "leaving-reverse");
+    void bottomDesc.offsetWidth;
+    bottomDesc.classList.add(reverse ? "animating-reverse" : "animating");
+  }
+
+  function activate(item, reverse) {
+    items.forEach(i => {
+      i.classList.remove("active");
+      i.classList.remove("just-activated");
+    });
+    item.classList.add("active");
+    void item.querySelector(".svg-icon").offsetWidth;
+    item.classList.add("just-activated");
+
+    const desc = item.querySelector(".desc");
+    const newContent = desc ? desc.innerHTML : "";
+    const isReverse = reverse === true;
+
+    if (isFirstActivation || !bottomDesc.innerHTML.trim()) {
+      setDescContent(newContent, false);
+      isFirstActivation = false;
+    } else {
+      if (descTimeout) clearTimeout(descTimeout);
+      bottomDesc.classList.remove("animating", "animating-reverse", "leaving", "leaving-reverse");
+      void bottomDesc.offsetWidth;
+      bottomDesc.classList.add(isReverse ? "leaving-reverse" : "leaving");
+      descTimeout = setTimeout(() => {
+        setDescContent(newContent, isReverse);
+        descTimeout = null;
+      }, 320);
+    }
+
+    triggerLines();
+  }
+
+  // Header: re-anima toda vez que a seção entra na tela (mobile/tablet)
+  if (rarityH2) {
+    const headerObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (window.innerWidth > 991) return;
+        if (entry.isIntersecting) {
+          rarityH2.classList.remove("header-visible");
+          void rarityH2.offsetWidth;
+          rarityH2.classList.add("header-visible");
+        } else {
+          rarityH2.classList.remove("header-visible");
+        }
+      });
+    }, { threshold: 0.1 });
+    headerObs.observe(rarityH2);
+  }
+
+  if (items.length) {
+    activate(items[0]);
+    setTimeout(triggerLines, 100);
+  }
+
+  items.forEach(item => {
+    item.querySelector(".svg-icon").addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) { e.preventDefault(); return; }
+      activate(item, false);
+    });
+  });
+
+  // ── Scroll natural (mobile/tablet): ordem das setas = topo → direita → esquerda
+  const blockEl = document.querySelector(".rarity-single-excellence-section .rarity-text");
+  let lastActiveIndex = 0;
+  const scrollOrder = [0, 2, 1];
+
+  function onScroll() {
+    if (window.innerWidth > 991 || !blockEl || !items.length) return;
+
+    const rect = blockEl.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const fullInView = rect.top >= 0 && rect.bottom <= vh;
+
+    if (!fullInView) return;
+
+    const visibleRange = Math.max(1, vh - rect.height);
+    const progress = Math.max(0, Math.min(1, 1 - rect.top / visibleRange));
+    const itemsArr = Array.from(items);
+    const n = itemsArr.length;
+    let targetIndex = 0;
+    if (n === 3) {
+      if (progress < 0.35) targetIndex = 0;
+      else if (progress < 0.75) targetIndex = 1;
+      else targetIndex = 2;
+    } else {
+      targetIndex = Math.min(n - 1, Math.floor(progress * n));
+    }
+    const newIndex = targetIndex > lastActiveIndex ? Math.min(n - 1, lastActiveIndex + 1)
+      : targetIndex < lastActiveIndex ? Math.max(0, lastActiveIndex - 1)
+      : lastActiveIndex;
+    if (newIndex !== lastActiveIndex) {
+      const goingBack = newIndex < lastActiveIndex;
+      lastActiveIndex = newIndex;
+      const domIndex = n === 3 ? scrollOrder[newIndex] : newIndex;
+      activate(itemsArr[domIndex], goingBack);
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Rarity & Single-Origin",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "destop_img",
+      "label": "Destop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Overlay Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Rarity & Single-Origin Excellence"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Rarity  Single Excellence Section"
+    }
+  ]
+}
+{% endschema %}

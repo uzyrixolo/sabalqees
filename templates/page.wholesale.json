@@ -1,0 +1,312 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "1_MjtwMa": {
+          "type": "1",
+          "settings": {
+            "heading": "",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 40,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "1_MjtwMa"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Artboard_3.png",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "image_text_RFcCP3": {
+      "type": "image_text",
+      "blocks": {
+        "bl_image_B7EeQ7": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/5_3.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "bl_text_6K4dRQ": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "center",
+            "sub_heading": "",
+            "sub_heading_2": "",
+            "heading": "Image with text",
+            "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "bl_image_B7EeQ7",
+        "bl_text_6K4dRQ"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "whole_sale_form_GBqgbc": {
+      "type": "whole-sale-form",
+      "blocks": {
+        "bl_form_iMUcjJ": {
+          "type": "bl_form",
+          "settings": {
+            "heading": "Get in touch",
+            "enable_phone": true,
+            "enable_full_btn": true,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark"
+          }
+        },
+        "bl_info_GUakt4": {
+          "type": "bl_info",
+          "disabled": true,
+          "settings": {
+            "heading": "CONTACT INFORMATION",
+            "text": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p><p><i class=\"las la-home fs__16\"></i> 184 Main Rd E, St Albans Victoria 3021, Australia</p><p><i class=\"las la-phone fs__16\"></i> 1800-123-222 / 1900-1570-230</p><p><i class=\"las la-envelope fs__16\"></i> contact@company.com</p><i class=\"las la-clock fs__16\"></i> Everyday 9:00-17:00"
+          }
+        }
+      },
+      "block_order": [
+        "bl_form_iMUcjJ",
+        "bl_info_GUakt4"
+      ],
+      "settings": {
+        "enable_map": false,
+        "map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.8939060848147!2d144.81158271584684!3d-37.74563313792195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65fa6debeb781%3A0xe1d23f5d1759961e!2s184%20Main%20Rd%20E%2C%20St%20Albans%20VIC%203021%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1618277125252!5m2!1svi!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "newsletter_gMNEKK": {
+      "type": "newsletter",
+      "blocks": {
+        "custom_text_M3KXdr": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Subscribe to our newsletter",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 30,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_p7iyaA": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "A short sentence describing what someone will receive by subscribing",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#878787",
+            "text_fs": 14,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 30,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "newsletter_VGbbf7": {
+          "type": "newsletter",
+          "settings": {
+            "form_width": 500,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "small",
+            "btn_icon": false,
+            "input_cl": "#878787",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#56cfe1",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        }
+      },
+      "block_order": [
+        "custom_text_M3KXdr",
+        "custom_text_p7iyaA",
+        "newsletter_VGbbf7"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "content_align": "all-center",
+        "news_overlay": "#000000",
+        "news_overlay_opacity": 0,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffeadc",
+        "cl_bg_gradient": "",
+        "parallax": false,
+        "mg": ",,0px,",
+        "pd": "50px,,50px,",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "image_text_RFcCP3",
+    "whole_sale_form_GBqgbc",
+    "sidebar-page",
+    "newsletter_gMNEKK"
+  ]
+}

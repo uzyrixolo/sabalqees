@@ -1,0 +1,55 @@
+{%- comment -%}
+  Brand typography parity with balqees.com: FuturaLT-Light (body/UI) + Geometria-Light (headings).
+  Rendered immediately after 'head_assets' so these declarations are last in the cascade and
+  therefore beat both head_assets' :root block and assets/new-dev.css.
+  Arabic: the two brand faces carry no Arabic glyphs, so a single shared Arabic family is
+  appended to the end of every stack (before the generic keyword, so it is actually reachable)
+  and pulled from Google Fonts only on Arabic locales.
+{%- endcomment -%}
+{%- assign t4s_lang_code = request.locale.iso_code | slice: 0, 2 | downcase -%}
+{%- if t4s_lang_code == 'ar' -%}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+{%- endif -%}
+{%- style -%}
+
+  @font-face {
+    font-family: 'FuturaLT-Light';
+    src: url({{ 'FuturaLT-Light.woff2' | asset_url }}) format('woff2'),
+         url({{ 'FuturaLT-Light.woff' | asset_url }}) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Geometria-Light';
+    src: url({{ 'Geometria-Light.woff2' | asset_url }}) format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+   --font-heading-family: "Cairo", "Rubik", sans-serif !important;
+    --font-body-family: "Cairo", "Rubik", sans-serif !important;
+    --font-family-1: "Cairo", "Rubik", sans-serif !important;
+    --font-family-2: "Cairo", "Rubik", sans-serif !important;
+    --font-family-3: "Cairo", "Rubik", sans-serif !important;
+  }
+
+  {%- comment -%}
+    assets/new-dev.css pins `body h1..h6` to "Baskervville", a family nothing on the page ever
+    loads, so every heading was falling through to the generic serif. Re-point the same selector
+    at the brand heading stack; equal specificity, later source order, no !important needed.
+  {%- endcomment -%}
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    font-family: var(--font-heading-family);
+  }
+
+{%- endstyle -%}

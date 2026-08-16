@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
+          "type": "1",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 50,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/background.jpg",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "18b8c96c-8750-4737-9c2a-2268a415f710": {
+      "type": "custom-html",
+      "settings": {
+        "code": "<div class=\"row\">\n            \n              \n              <div class=\" col-md-12 col-sm-12 col-xs-12\">\n                \n                  <div class=\"html-widget content _widget clearfix\">\n<style type=\"text/css\">\n \n .rewards-body p, .rewards-body li, .rewards-body table { font-size: 1.8rem; }\n .rewards-body a { color: #c4a422; font-weight: 600; }\n .rewards-body h2 { text-align: center; margin-top: 50px; margin-bottom: 50px; }\n .rewards-body ul { list-style-type: disc;}\n .rewards-body ul li { list-style-position: inside; }\n .rewards-body table { border: 2px #ffc000 solid; border-collapse: collapse; }\n .rewards-body table td { border: 2px #000 solid; font-size: 1.75rem; text-align: center; }\n .rewards-body table tr:first-child td { text-align: center; }\n .rewards-body table td:nth-child(4) { text-align: left; }\n .rewards-body .banner { margin-bottom: 30px; }\n .rewards-body .rewards-cta { margin-bottom: 80px; }\n\n</style>\n<div class=\"rewards-body row\">\n<div class=\"col-md-12 col-sm-12 col-xs-12\">\n\n</div>\n<img class=\"banner\" src=\"https://t.infibeam.com/img/shrd/html_widget_images/88/00/248/24df29ae6ace6_rewardsbanner.jpg.999xx.jpg\" width=\"100%\" height=\"auto\" title=\"\">\n<div class=\"col-md-12 col-sm-12 col-xs-12\">\n<h3>Earning Points</h3>\n<ul>\n<li>Enjoy earning points with every transaction.</li>\n<li>Points may not be awarded on discounted or promotional items.</li>\n</ul>\n<br>\n<h3>Redeeming Points</h3>\n<ul>\n<li>Points may be redeemed at any participating stores.</li>\n<li>Points collected from a purchase can be redeemed from the next purchase onwards.</li>\n</ul>\n<br>\n<h3>Points Expiration</h3>\n<ul>\n<li>Points collected will expire in 365 days from date of purchase.</li>\n<li>You will be notified via SMS or Email one month before expiration.</li>\n</ul>\n<br>\n<table border=\"0\" cellspacing=\"0\">\n<colgroup width=\"140\"></colgroup> <colgroup width=\"260\"></colgroup> <colgroup width=\"85\"></colgroup> <colgroup width=\"411\"></colgroup>\n<tbody>\n<tr>\n<td align=\"center\" valign=\"middle\" height=\"65\"><strong>Tier Level</strong></td>\n<td align=\"center\" valign=\"middle\"><strong>Spend per year</strong></td>\n<td align=\"center\" valign=\"middle\"><strong>Cashback</strong></td>\n<td align=\"center\" valign=\"middle\"><strong>Extra Benefits</strong></td>\n</tr>\n<tr>\n<td align=\"center\" valign=\"middle\" height=\"80\"><strong>New Bee</strong></td>\n<td align=\"center\" valign=\"middle\">SAR 0 – SAR 2,999</td>\n<td align=\"center\" valign=\"middle\">10%</td>\n<td align=\"left\" valign=\"middle\">\n<ul>\n<li>Double points on first purchase upon joining Balqees Rewards.</li>\n<li>Double points on first purchase during your birthday month.</li>\n</ul>\n</td>\n</tr>\n<tr>\n<td align=\"center\" valign=\"middle\" height=\"65\"><strong>Sweet Bee</strong></td>\n<td align=\"center\" valign=\"middle\">SAR 3,000 – SAR 7,999</td>\n<td align=\"center\" valign=\"middle\">15%</td>\n<td align=\"left\" valign=\"middle\">\n<ul>\n<li>Double points on first purchase during your birthday month.</li>\n</ul>\n</td>\n</tr>\n<tr>\n<td align=\"center\" valign=\"middle\" height=\"65\"><strong>Royal Bee</strong></td>\n<td align=\"center\" valign=\"middle\">SAR 8,000 and over</td>\n<td align=\"center\" valign=\"middle\">20%</td>\n<td align=\"left\" valign=\"middle\">\n<ul>\n<li>Double points on first purchase during your birthday month.</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<br><br>\n<p class=\"rewards-cta\">For more information, write to us at <a href=\"mailto:rewards@sa.balqees.com\">rewards@sa.balqees.com</a>.</p>\n</div>\n</div>\n</div>\n                \n              </div>\n            \n          </div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "18b8c96c-8750-4737-9c2a-2268a415f710"
+  ]
+}

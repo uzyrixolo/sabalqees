@@ -1,0 +1,265 @@
+<style>
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .article-title {
+    font-size: 28px;
+    color: #252525;
+    margin-bottom: 20px;
+  }
+  .article-meta {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .read-time {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  .read-time-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  .article-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+  }
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    margin-bottom:0;
+  }
+
+  .step-content .article-content img {margin-bottom:-20px}
+  .tips-warnings {
+    background-color: #f9f9f9;
+    border-left: 4px solid #d49576;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  .tips-warnings h3 {
+    margin-top: 0;
+    color: #252525;
+  }
+  .product-recommendations {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .product-recommendations h2 {
+    font-size: 20px;
+    color: #252525;
+    margin-bottom: 15px;
+  }
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+  }
+  .product-details h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+  }
+  .product-details p {
+    font-size: 17px;
+    color: #666;
+    margin: 0 0 5px 0;
+  }
+  .product-link {
+    color: #d49576;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .product-link:hover {
+    text-decoration: underline;
+  }
+  
+  .step {
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .step-title {
+    font-size: 22px;
+    color: #252525;
+    margin: 0;
+    padding: 15px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+  }
+  .step-number {
+    background-color: #93c47d;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .step-content {
+    padding: 20px;
+  }
+  .step-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+  .article-content p {
+    font-size: 16px;
+    color: #000;
+}
+  .wiki {
+    margin-top: 4rem;
+}
+.t4s-main-article
+.t4s-container-wrap {
+    background: #f5f5f5 !important;
+}
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      gap: 30px;
+    }
+    .main-content {
+      flex: 1;
+    }
+    .sidebar {
+      width: 300px;
+    }
+    .product-recommendations {
+      position: sticky;
+      top: 100px;
+    }
+  }
+</style>
+
+<div class="container">
+  <main class="main-content">
+    <article>
+      <h1 class="article-title">{{ article.title }}</h1>
+      <div class="article-meta">
+        Published on {{ article.published_at | date: "%B %d, %Y" }} • {{ shop.name }}
+        <div class="read-time">
+          <svg class="read-time-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          {% assign word_count = article.content | strip_html | split: ' ' | size %}
+          {% assign read_time = word_count | divided_by: 200.0 | ceil %}
+          {{ read_time }} min read
+        </div>
+      </div>
+      
+      {% if article.image %}
+        <img src="{{ article.image | img_url: '1200x' }}" alt="{{ article.title }}" class="article-image">
+      {% endif %}
+      
+      <div class="article-content">
+
+
+        {{ article.content }}
+      </div>
+      
+      <div class="tips-warnings">
+        <h3>Tips</h3>
+        <ul>
+          <li>Start with a small amount of raw honey and adjust to taste</li>
+          <li>Choose high-quality, local raw honey for maximum benefits</li>
+          <li>Stir the honey well into hot coffee to ensure it dissolves completely</li>
+        </ul>
+        
+        <h3>Warnings</h3>
+        <ul>
+          <li>If you have diabetes, consult with your doctor before adding honey to your diet</li>
+          <li>Raw honey should not be given to infants under 1 year old due to the risk of botulism</li>
+          <li>While honey has many benefits, it's still a form of sugar, so consume in moderation</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+  
+  <aside class="sidebar">
+    <div class="product-recommendations">
+      <h2>Recommended Products</h2>
+      {% assign honey_collection = collections['Immunity'] %}
+      {% for product in honey_collection.products limit: 3 %}
+        <div class="product-item">
+          <img src="{{ product.featured_image | img_url: '160x160', crop: 'center' }}" alt="{{ product.title }}" class="product-image">
+          <div class="product-details">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price | money }}</p>
+            <a href="{{ product.url }}" class="product-link">View Product</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </aside>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+    
+    function adjustSidebar() {
+      if (window.innerWidth >= 768) {
+        const sidebarHeight = sidebar.offsetHeight;
+        const mainContentHeight = mainContent.offsetHeight;
+        
+        if (sidebarHeight < mainContentHeight) {
+          sidebar.style.position = 'sticky';
+          sidebar.style.top = '7rem';
+        } else {
+          sidebar.style.position = 'static';
+        }
+      } else {
+        sidebar.style.position = 'static';
+      }
+    }
+    
+    window.addEventListener('resize', adjustSidebar);
+    adjustSidebar();
+  });
+</script>

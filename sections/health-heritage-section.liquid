@@ -1,0 +1,209 @@
+<style>
+.health-heritage-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.health-heritage-section .background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.health-heritage-section h2{
+    text-align:center;
+    color:#fff;
+    margin:0;
+}
+.health-heritage-section .review-text {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.health-heritage-section .btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.health-heritage-section .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 2.03/1;
+}
+
+.health-heritage-section .section-heading {
+    margin: 0 0 0px 0;
+    text-align: center;
+    font-size:48px;
+}
+
+.health-heritage-section .contain-wrapper {
+    position: relative;
+    padding: 97px 20px 117px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 367px;
+}
+
+
+@media only screen and (max-width:767px) {
+    .health-heritage-section .contain-wrapper {
+    position: relative;
+    padding: 58px 18px 98px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 218px;
+}
+.health-heritage-section .review-text {
+    font-size: 16px;
+    padding: 4px 33px 0;
+}
+
+
+
+
+
+}
+
+@media only screen and (max-width:360px) {
+.health-heritage-section .review-text {
+
+    padding: 4px 18px 0;
+}
+.health-heritage-section .contain-wrapper {
+    position: relative;
+    padding: 58px 15px 98px 15px;
+}
+.health-heritage-section .section-heading {
+    font-size: 28px;
+}
+}
+</style>
+<section class="health-heritage-section">
+  <div class="background-image">
+    {% comment %} {%- if section.settings.destop_img != blank -%}
+      {%- liquid
+        assign mobileImage = section.settings.destop_img
+        if section.settings.mobile_img != blank
+          assign mobileImage = section.settings.mobile_img
+        endif
+      -%}
+      <picture>
+        <source media="(min-width: 1901px)" srcset="{{ section.settings.destop_img | image_url: width: 2560 }}">
+        <source media="(min-width: 1700px)" srcset="{{ section.settings.destop_img | image_url: width: 2020 }}">
+        <source media="(min-width: 1500px)" srcset="{{ section.settings.destop_img | image_url: width: 1820 }}">
+        <source media="(min-width: 1200px)" srcset="{{ section.settings.destop_img | image_url: width: 1600 }}">
+        <source media="(min-width: 991px)" srcset="{{ section.settings.destop_img | image_url: width: 1350 }}">
+        <source media="(min-width: 820px)" srcset="{{ section.settings.destop_img | image_url: width: 1200 }}">
+        <source media="(min-width: 768px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+        <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+        <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+        <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+        <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 400 }}">
+        <img
+          src="{{ section.settings.destop_img | image_url }}"
+          alt="{{ section.settings.destop_img.alt | default: section.settings.heading | escape }}"
+          width="{{ section.settings.destop_img.width }}"
+          loading="eager"
+          height="{{ section.settings.destop_img.width | divided_by: section.settings.destop_img.aspect_ratio | round }}"
+        >
+      </picture>
+    {%- endif -%} {% endcomment %}
+      {% if section.settings.destop_img != blank %}
+                      <img
+                        src="{{ section.settings.destop_img | image_url }}"
+                        alt="{{ section.settings.destop_img.alt | default: section.settings.destop_img | escape }}"
+                        loading="lazy"
+                        width="{{ section.settings.destop_img.width }}"
+                        height="{{ section.settings.destop_img.height }}"
+                      >
+                    {% endif %}
+  </div>
+  <div class="contain-wrapper">
+    <div class="title-wrap">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="section-heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {% if section.settings.review_text != blank %}
+        <div class="review-text body-font">{{ section.settings.review_text }}</div>
+      {% endif %}
+    </div>
+    <div class="btn-wrapper">
+      {% if section.settings.btn_txt != blank %}
+        <a
+          class="dev-btn"
+          href="{{ section.settings.btn_url }}"
+          style=" background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+        >
+          {{ section.settings.btn_txt }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+ 
+</section>
+{% schema %}
+{
+  "name": "Health Heritage Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image With Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "destop_img",
+      "label": "Destop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Add Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "review_text",
+      "label": "Add Text"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button background color"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Health Heritage Section"
+    }
+  ]
+}
+{% endschema %}

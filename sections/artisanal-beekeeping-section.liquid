@@ -1,0 +1,688 @@
+<style>
+
+.artianal-beekeeping-section{
+    position: relative;
+    background-color: {{ section.settings.bg_color }};
+    padding:84px 0 52px;
+}
+.artianal-beekeeping-section .background-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius:5px;
+    aspect-ratio:1.71/1;
+}
+.artianal-beekeeping-section .page-width {
+    max-width: 1371px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.artianal-beekeeping-section .artisan-header h2 {
+    margin: 0 0 16px;
+    text-align: center;
+}
+.artianal-beekeeping-section .background-image{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+.artianal-beekeeping-section .artisan-feature{
+    width:33%;
+}
+.artianal-beekeeping-section .artisan-overlay {
+    position: relative;
+    padding: 354px 125px 81px 125px;
+}
+.artianal-beekeeping-section .artisan-image-wrap {
+  position: relative;
+}
+ .artianal-beekeeping-section .artian-wrapper{
+     display:flex;
+    justify-content:space-Between;
+    gap:87px;
+}
+.artianal-beekeeping-section .svg-img {
+    max-width:141px;
+    width:100%;
+    margin:0 auto;
+}
+.artianal-beekeeping-section .svg-img img{
+     width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.artianal-beekeeping-section .blog-title {
+    font-size: 48px;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 0;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom:40px;
+}
+.artianal-beekeeping-section .sub-heading {
+    font-size: 16px;
+    line-height: 1.35;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 44px;
+}
+.artianal-beekeeping-section .artisan-title{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #fff;
+    font-weight: 700;
+    padding:9px 0 5px 0;
+    margin-bottom:5px;
+    border-bottom:1px solid #fff;
+     text-align:center;
+}
+.artianal-beekeeping-section .artisan-desc{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #fff;
+    font-weight: 400;
+    text-align:center;
+}
+.artianal-beekeeping-section #mobileBottomDesc {
+    display: none;
+}
+@media (min-width: 991px) and (max-width:1300px) {
+    .artianal-beekeeping-section .artisan-overlay {
+    position: relative;
+    padding: 284px 40px 61px 40px;
+}
+.artianal-beekeeping-section .svg-img {
+    max-width: 130px;
+}
+.artianal-beekeeping-section .artian-wrapper {
+    gap: 50px;
+}
+.artianal-beekeeping-section .blog-title {
+    font-size: 42px;
+}
+}
+@media (min-width: 768px) and (max-width:991px) {
+  .artianal-beekeeping-section .artisan-overlay {
+    position: relative;
+    padding: 284px 30px 61px 30px;
+}
+.artianal-beekeeping-section .svg-img {
+    max-width: 115px;
+}
+.artianal-beekeeping-section .artian-wrapper {
+    gap: 36px;
+}
+.artianal-beekeeping-section .blog-title {
+    font-size: 34px;
+    padding-bottom: 40px;
+}
+.artianal-beekeeping-section .artisan-title {
+    font-size: 15px;
+}
+.artianal-beekeeping-section .artisan-desc {
+    font-size: 15px;
+}
+}
+
+@media (max-width: 767px) {
+
+.artianal-beekeeping-section {
+    padding: 0;
+    min-height: 100svh;
+}
+.artianal-beekeeping-section .page-width {
+      padding: 0;
+    position: relative;
+}
+.artianal-beekeeping-section .artisan-header h2 {
+    margin: 0 0 2px;
+    text-align: center;
+    line-height: 0.90;
+}
+.artianal-beekeeping-section .artisan-header {
+    position: relative;
+    z-index: 11;
+    padding: 58px 16px 160px 16px;
+}
+.artianal-beekeeping-section .artisan-overlay {
+    position: relative;
+    padding: 0px 24px 65px 24px;
+    top: -180px;
+}
+.artianal-beekeeping-section .blog-title {
+    display: none;
+}
+.artianal-beekeeping-section .svg-img {
+    max-width: 71px;
+    min-width: 71px;
+}
+.artianal-beekeeping-section .artisan-feature:first-child {
+   width: 55%;
+}
+.artianal-beekeeping-section .artian-wrapper {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 75px 0 12px;
+    justify-content: center;
+    gap: 105px 110px;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+.artianal-beekeeping-section .background-image img {
+    border-radius: 0;
+}
+.artianal-beekeeping-section .artisan-image-wrap {
+    position: unset;
+}
+.artianal-beekeeping-section .artisan-title {
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    margin: 0;
+    line-height: 1;
+}
+.artianal-beekeeping-section #mobileBottomDesc {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 80px;
+}
+.artianal-beekeeping-section .artisan-feature {
+    position: unset;
+}
+.artianal-beekeeping-section .artisan-title {
+  display: none;
+}
+.artianal-beekeeping-section .artisan-feature.active .artisan-title {
+    display: block;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 127px;
+}
+.artianal-beekeeping-section .artisan-desc {
+  display: none !important;
+}
+.artianal-beekeeping-section .mobile-bottom-desc {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+.artianal-beekeeping-section .artisan-feature.active .svg-img {
+  background-image:url("https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Group_10_1.png?v=1769575936");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:72px;
+  height: 72px;
+  display: block;
+}
+.artianal-beekeeping-section .artisan-feature.active .svg-img svg path {
+  fill: #282828;
+}
+.artianal-beekeeping-section .artisan-feature.active .svg-img img {
+    filter: brightness(0);
+}
+.artianal-beekeeping-section .artian-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 37%;
+    left: 29%;
+    width: 1px;
+    height: 138px;
+    z-index: 1;
+    transform: rotate(30deg);
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+.artianal-beekeeping-section .artian-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 36%;
+    right: 28%;
+    width: 1px;
+    height: 140px;
+    z-index: 1;
+    transform: rotate(-30deg);
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+.artianal-beekeeping-section #mobileBottomDesc::after {
+    content: "";
+    position: absolute;
+    top: -46px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 147px;
+    height: 1px;
+    z-index: 1;
+    border: 1px solid #fff;
+    border-style: dashed;
+}
+}
+
+/* ── Animações ── */
+@keyframes artisan-icon-in {
+  from { opacity: 0.3; transform: scale(0.88); }
+  to   { opacity: 1;   transform: scale(1); }
+}
+@keyframes artisan-desc-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-22px); }
+}
+@keyframes artisan-desc-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes artisan-desc-out-reverse {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(22px); }
+}
+@keyframes artisan-desc-in-reverse {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes artisan-title-up {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 12px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes artisan-header-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes artisan-line-draw {
+  from { clip-path: inset(0 0 100% 0); opacity: 0.4; }
+  to   { clip-path: inset(0 0 0% 0);   opacity: 1; }
+}
+@keyframes artisan-hline-draw {
+  from { clip-path: inset(0 50% 0 50%); opacity: 0.4; }
+  to   { clip-path: inset(0 0% 0 0%);   opacity: 1; }
+}
+@media (max-width: 767px) {
+  .artianal-beekeeping-section .artisan-header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+  }
+  .artianal-beekeeping-section .artisan-header.header-visible {
+    animation: artisan-header-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .artianal-beekeeping-section .artisan-feature.just-activated .svg-img {
+    animation: artisan-icon-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .artianal-beekeeping-section .artisan-feature.just-activated .artisan-title {
+    animation: artisan-title-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .artianal-beekeeping-section #mobileBottomDesc.leaving {
+    animation: artisan-desc-out 0.32s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  }
+  .artianal-beekeeping-section #mobileBottomDesc.leaving-reverse {
+    animation: artisan-desc-out-reverse 0.32s cubic-bezier(0.4, 0, 0.8, 1) forwards;
+  }
+  .artianal-beekeeping-section #mobileBottomDesc.animating {
+    animation: artisan-desc-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .artianal-beekeeping-section #mobileBottomDesc.animating-reverse {
+    animation: artisan-desc-in-reverse 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .artianal-beekeeping-section .artian-wrapper.lines-draw::before {
+    animation: artisan-line-draw 0.55s ease-out forwards;
+  }
+  .artianal-beekeeping-section .artian-wrapper.lines-draw::after {
+    animation: artisan-line-draw 0.55s ease-out 0.1s forwards;
+  }
+  .artianal-beekeeping-section #mobileBottomDesc.animating::after,
+  .artianal-beekeeping-section #mobileBottomDesc.animating-reverse::after {
+    animation: artisan-hline-draw 0.45s ease-out 0.22s both;
+  }
+}
+
+@media (max-width: 375px) {
+  .artianal-beekeeping-section .artian-wrapper {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 86px;
+}
+.artianal-beekeeping-section .artian-wrapper::before {
+    top: 40%;
+    left: 30%;
+    width: 1px;
+    height: 108px;
+}
+.artianal-beekeeping-section .artian-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 31%;
+    width: 1px;
+    height: 108px;
+}
+.artianal-beekeeping-section .artisan-title {
+    font-size: 16px;
+}
+.artianal-beekeeping-section #mobileBottomDesc::after {
+    width: 115px;
+}
+}
+</style>
+
+<section class="artianal-beekeeping-section">
+    <div class="page-width">
+  <div class="artisan-header">
+     {%- if section.settings.heading != blank -%}
+    <h2>{{ section.settings.heading }}</h2>
+     {% endif %}
+     {%- if section.settings.subheading != blank -%}
+    <div class="sub-heading body-font">{{ section.settings.subheading }}</div>
+     {% endif %}
+  </div>
+
+  <div class="artisan-image-wrap">
+     {%- if section.settings.bg_img != blank -%}
+        <div class="background-image">
+            {%- liquid
+              assign mobileImage = section.settings.bg_img
+              if section.settings.bg_image_mobile != blank
+                assign mobileImage = section.settings.bg_image_mobile
+              endif
+            -%}
+            <picture>
+              <source media="(min-width: 1901px)" srcset="{{ section.settings.bg_img | image_url: width: 2560 }}">
+              <source media="(min-width: 1700px)" srcset="{{ section.settings.bg_img | image_url: width: 2020 }}">
+              <source media="(min-width: 1500px)" srcset="{{ section.settings.bg_img | image_url: width: 1820 }}">
+              <source media="(min-width: 1200px)" srcset="{{ section.settings.bg_img | image_url: width: 1600 }}">
+              <source media="(min-width: 991px)" srcset="{{ section.settings.bg_img | image_url: width: 1350 }}">
+              <source media="(min-width: 790px)" srcset="{{ section.settings.bg_img | image_url: width: 1250 }}">
+              <source media="(min-width: 768px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+              <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+              <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+              <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+              <img
+                src="{{ section.settings.bg_img | image_url }}"
+                alt="{{ section.settings.bg_img.alt | default: section.settings.heading | escape }}"
+                width="{{ section.settings.bg_img.width }}"
+                height="{{ section.settings.bg_img.width | divided_by: section.settings.bg_img.aspect_ratio | round }}"
+                loading="eager">
+            </picture>
+        </div>
+    {% endif %}
+
+    <div class="artisan-overlay">
+        {% if section.settings.title != blank %}
+        <div class="blog-title heading-font">{{ section.settings.title }}</div>
+        {% endif %}
+    <div class="artian-wrapper">
+      {% for block in section.blocks %}
+     <div class="artisan-feature {% if forloop.first %}active{% endif %}"
+     data-desc="{{ block.settings.text | escape }}">
+
+        <div class="svg-img">
+          {% if block.settings.icon != blank %}
+                    {%- liquid
+              assign mobileImage = block.settings.icon
+              if block.settings.icon_image_mobile != blank
+                assign mobileImage = block.settings.icon_image_mobile
+              endif
+            -%}
+            <picture>
+              <source media="(min-width: 1901px)" srcset="{{ block.settings.icon | image_url: width: 2560 }}">
+              <source media="(min-width: 1700px)" srcset="{{ block.settings.icon | image_url: width: 2020 }}">
+              <source media="(min-width: 1500px)" srcset="{{ block.settings.icon | image_url: width: 1820 }}">
+              <source media="(min-width: 1200px)" srcset="{{ block.settings.icon | image_url: width: 1600 }}">
+              <source media="(min-width: 991px)" srcset="{{ block.settings.icon | image_url: width: 1350 }}">
+              <source media="(min-width: 790px)" srcset="{{ block.settings.icon | image_url: width: 1250 }}">
+              <source media="(min-width: 768px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+              <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+              <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+              <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+              <img
+                src="{{ block.settings.icon | image_url }}"
+                alt="{{ block.settings.icon.alt | default: block.settings.heading | escape }}"
+                width="{{ block.settings.icon.width }}"
+                height="{{ block.settings.icon.width | divided_by: block.settings.icon.aspect_ratio | round }}"
+                loading="eager">
+            </picture>
+          {% endif %}
+          </div>
+           {%- if block.settings.title != blank -%}
+          <div class="artisan-title body-font">{{ block.settings.title }}</div>
+           {% endif %}
+           {%- if block.settings.text != blank -%}
+          <div class="artisan-desc body-font">{{ block.settings.text }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="mobile-bottom-desc body-font" id="mobileBottomDesc"></div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector(".artianal-beekeeping-section");
+  const features = document.querySelectorAll(".artisan-feature");
+  const bottomDesc = document.getElementById("mobileBottomDesc");
+  const wrapper = document.querySelector(".artian-wrapper");
+  const artisanHeader = document.querySelector(".artisan-header");
+  let descTimeout = null;
+  let isFirstActivation = true;
+  let lastActiveIndex = 0;
+
+  function triggerLines() {
+    if (!wrapper) return;
+    wrapper.classList.remove("lines-draw");
+    void wrapper.offsetWidth;
+    wrapper.classList.add("lines-draw");
+  }
+
+  function setDescContent(newContent, reverse) {
+    bottomDesc.innerHTML = newContent;
+    bottomDesc.classList.remove("animating", "animating-reverse", "leaving", "leaving-reverse");
+    void bottomDesc.offsetWidth;
+    bottomDesc.classList.add(reverse ? "animating-reverse" : "animating");
+  }
+
+  function activate(feature, reverse) {
+    features.forEach(f => {
+      f.classList.remove("active");
+      f.classList.remove("just-activated");
+    });
+    feature.classList.add("active");
+    void feature.querySelector(".svg-img").offsetWidth;
+    feature.classList.add("just-activated");
+
+    const desc = feature.querySelector(".artisan-desc");
+    const newContent = desc ? desc.innerHTML : "";
+    const isReverse = reverse === true;
+
+    if (isFirstActivation || !bottomDesc.innerHTML.trim()) {
+      setDescContent(newContent, false);
+      isFirstActivation = false;
+    } else {
+      if (descTimeout) clearTimeout(descTimeout);
+      bottomDesc.classList.remove("animating", "animating-reverse", "leaving", "leaving-reverse");
+      void bottomDesc.offsetWidth;
+      bottomDesc.classList.add(isReverse ? "leaving-reverse" : "leaving");
+      descTimeout = setTimeout(() => {
+        setDescContent(newContent, isReverse);
+        descTimeout = null;
+      }, 320);
+    }
+
+    triggerLines();
+  }
+
+  // Header: re-anima toda vez que a seção entra na tela
+  if (artisanHeader) {
+    const headerObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (window.innerWidth > 767) return;
+        if (entry.isIntersecting) {
+          artisanHeader.classList.remove("header-visible");
+          void artisanHeader.offsetWidth;
+          artisanHeader.classList.add("header-visible");
+        } else {
+          artisanHeader.classList.remove("header-visible");
+        }
+      });
+    }, { threshold: 0.1 });
+    headerObs.observe(artisanHeader);
+  }
+
+  if (features.length) {
+    activate(features[0]);
+    setTimeout(triggerLines, 100);
+  }
+
+  features.forEach(feature => {
+    feature.addEventListener("click", function (e) {
+      if (window.innerWidth <= 767) { e.preventDefault(); return; }
+      activate(feature, false);
+    });
+  });
+
+  // ── Scroll natural (mobile): ordem das setas = topo → direita → esquerda
+  const overlay = document.querySelector(".artisan-overlay");
+  const scrollOrder = [0, 2, 1];
+
+  function onScroll() {
+    if (window.innerWidth > 767 || !overlay || !features.length) return;
+
+    const rect = overlay.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const fullInView = rect.top >= 0 && rect.bottom <= vh;
+
+    if (!fullInView) return;
+
+    const visibleRange = Math.max(1, vh - rect.height);
+    const progress = Math.max(0, Math.min(1, 1 - rect.top / visibleRange));
+    applyProgress(progress);
+  }
+
+  function applyProgress(progress) {
+    const featuresArr = Array.from(features);
+    const n = featuresArr.length;
+    if (n === 0) return;
+    let targetIndex = 0;
+    if (n === 3) {
+      if (progress < 0.35) targetIndex = 0;
+      else if (progress < 0.75) targetIndex = 1;
+      else targetIndex = 2;
+    } else {
+      targetIndex = Math.min(n - 1, Math.floor(progress * n));
+    }
+    const newIndex = targetIndex > lastActiveIndex ? Math.min(n - 1, lastActiveIndex + 1)
+      : targetIndex < lastActiveIndex ? Math.max(0, lastActiveIndex - 1)
+      : lastActiveIndex;
+    if (newIndex !== lastActiveIndex) {
+      const goingBack = newIndex < lastActiveIndex;
+      lastActiveIndex = newIndex;
+      const domIndex = n === 3 ? scrollOrder[newIndex] : newIndex;
+      activate(featuresArr[domIndex], goingBack);
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Artisanal Beekeeping",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Select Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Select Mobile Background"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Add Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image_mobile",
+          "label": "Icon Image Mobile"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Artisanal Beekeeping Section",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}

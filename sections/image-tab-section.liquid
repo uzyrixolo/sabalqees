@@ -1,0 +1,612 @@
+<style>
+.image-tab-section {
+    padding: 0 0 57px 0;
+    position: relative;
+    background-color: {{section.settings.bg_color }};
+    overflow: hidden;
+}
+
+.image-tab-section .page-width {
+    max-width: 1370px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.image-tab-section .image-tab-row {
+    display: flex;
+    position: relative;
+    gap: 68px;
+}
+
+.image-tab-section ul {
+    padding: 0;
+}
+
+.image-tab-section .heading {
+    margin: 0 0 20px 0;
+    color: #000;
+}
+
+.image-tab-section .left-slide-tab {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 27px;
+}
+
+.image-tab-section .right-slide-tab {
+    width: 55%;
+}
+
+.image-tab-section .sub-text {
+    color: #000;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000000;
+}
+
+.image-tab-section .tab-image-block {
+    max-width: 485px;
+    width: 100%;
+}
+
+.image-tab-section .image-tab-images .image-tab-panel {
+    overflow: hidden;
+    height: 100%;
+}
+
+.image-tab-section .image-tab-list a.active .text-wrapper {
+    color: #000;
+    font-weight: 700;
+}
+
+.image-tab-section .tab-image-block .image-tab-images {
+    min-height: 100%;
+}
+
+.image-tab-section .image-tab-panel img {
+    border-radius: 5px;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.image-tab-section .answer-wrap {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.25;
+    font-weight: 400;
+    display: none;
+    letter-spacing: 0;
+    transition: all 0.3s ease-in-out;
+    padding-top: 5px;
+}
+
+.image-tab-section .text-wrap-content {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.image-tab-section p {
+    margin: 0;
+}
+
+
+.image-tab-section .heading-wrapper {
+    padding-bottom: 50px;
+}
+
+.image-tab-section .image-tab-list {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.image-tab-section .text-wrapper {
+    font-size: 32px;
+    letter-spacing: 0;
+    position: relative;
+    cursor: pointer;
+    line-height: 1.2;
+    color: #00000040;
+    font-weight: 700;
+}
+
+.image-tab-section .desktop-only {
+    display: block;
+}
+
+.image-tab-section .image-tab-list a {
+    text-decoration: none;
+    cursor: auto;
+}
+
+
+.image-tab-section .btn-wrapper {
+    max-width: 296px;
+    padding-top: 23px;
+}
+
+.image-tab-section p {
+    margin: 0;
+}
+
+.image-tab-section .image-tab-list a.active .answer-wrap {
+    display: block;
+}
+
+.image-tab-section .mobile-only {
+    display: none;
+}
+
+.image-tab-section .btn-wrapper-mobile {
+    display: none;
+}
+
+.image-tab-section .image-tab-list-template--24774357844344__image_tab_section_MTegEe li:nth-last-child(-n+3) {
+    display: none;
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .image-tab-section .image-tab-row {
+        gap: 40px;
+    }
+
+    .image-tab-section .heading-wrapper {
+        padding-bottom: 25px;
+    }
+
+    .image-tab-section .text-wrapper {
+        font-size: 24px;
+    }
+
+    .image-tab-section .text-wrap-content {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .image-tab-section .heading {
+        margin: 0 0 15px 0;
+    }
+
+    .image-tab-section .sub-text {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+
+    .image-tab-section .left-slide-tab {
+        padding-top: 15px;
+    }
+}
+
+@media(max-width:991px) {
+    .image-tab-section .mobile-only {
+        display: block;
+    }
+
+    .image-tab-section .heading {
+        margin: 0 0 5px 0;
+    }
+
+    .image-tab-section .image-tab-images,
+    .left-slide-tab {
+        display: none !important;
+    }
+
+    .image-tab-section {
+        padding: 43px 0 52px 0;
+    }
+
+    .image-tab-section .image-tab-list-template--24774357844344__image_tab_section_MTegEe li:nth-last-child(-n+3) {
+        display: block;
+    }
+
+    .image-tab-section .sub-text {
+        font-size: 16px;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .image-tab-section .swiper {
+        padding-inline: 12px;
+    }
+
+    .image-tab-section .mobile-only {
+        display: block;
+        text-align: center;
+    }
+
+    .image-tab-section .image-tab-mobile img {
+        width: 100%;
+        border-radius: 5px;
+        height: 100%;
+        display: block;
+    }
+
+    .image-tab-section .left-slide-tab {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .image-tab-section .heading-wrapper {
+        padding-bottom: 24px;
+    }
+
+    .image-tab-section .page-width {
+        padding: 0;
+    }
+
+    .image-tab-section .right-slide-tab {
+        width: 100%;
+    }
+
+    .image-tab-section .mobile-tab-content {
+        padding-top: 28px;
+        padding-inline: 22px;
+    }
+
+    .image-tab-section .mobile-heading {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 1.25;
+        color: #000;
+        letter-spacing: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid;
+        margin-bottom: 5px;
+    }
+
+    .image-tab-section .mobile-btn-wrapper {
+        max-width: 344px;
+        margin: 24px auto 0;
+    }
+
+    .image-tab-section .btn-wrapper-mobile {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-tab-section .mobile-answer {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 1.25;
+        color: #000;
+    }
+
+    .image-tab-section .swiper-button-prev:after,
+    .image-tab-section .swiper-button-next:after {
+        content: 'next';
+        display: none;
+    }
+
+    .image-tab-section .swiper-button-next:after,
+    .image-tab-section .swiper-button-prev:after {
+        content: 'next';
+        display: none;
+    }
+
+    .image-tab-section .swiper-button-next,
+    .image-tab-section .swiper-button-prev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .image-tab-section .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+        gap: 20px;
+        width: 100%;
+        height: 14px;
+    }
+}
+</style>
+<section class="image-tab-section">
+  <div class="page-width">
+    <!-- 🔥 MOBILE HEADING (ONLY MOBILE) -->
+    <div class="heading-wrapper mobile-only">
+      {% if section.settings.heading != blank %}
+        <h2 class="heading heading-font">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.sub_text != blank %}
+        <div class="sub-text body-font">{{ section.settings.sub_text }}</div>
+      {% endif %}
+    </div>
+    <div class="image-tab-row">
+      <div class="right-slide-tab">
+        <!-- DESKTOP IMAGES -->
+        <div class="image-tab-images">
+          {%- for block in section.blocks -%}
+            <div class="image-tab-panel fade" data-image-id="image-tab-{{ block.id }}-{{ forloop.index }}">
+              {% if block.settings.slide_image != blank %}
+                <img
+                  src="{{ block.settings.slide_image | image_url }}"
+                  alt="{{ block.settings.heading }}"
+                  width="{{ block.settings.slide_image.width }}"
+                  height="{{ block.settings.slide_image.height }}"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+          {%- endfor -%}
+        </div>
+        <!-- MOBILE SWIPER -->
+        <div class="image-tab-mobile swiper mobile-only">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div
+                class="swiper-slide"
+                data-heading="{{ block.settings.heading | escape }}"
+                data-answer="{{ block.settings.answer | escape }}"
+              >
+                <img
+                  src="{{ block.settings.slide_image | image_url }}"
+                  alt="{{ block.settings.heading }}"
+                  width="{{ block.settings.slide_image.width }}"
+                  height="{{ block.settings.slide_image.height }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endfor %}
+          </div>
+          <div class="slider-controls">
+            <div
+              class="swiper-button-prev swiper-{{ section.id }}"
+              style="transform: rotate(360deg); left: 0px; right: 0; position: relative; top: 0; margin: 0;"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="14" viewBox="0 0 48 14" fill="none">
+                <path d="M47.3985 7.60388H2.60773C6.51008 10.3281 8.68616 12.8848 8.78874 13.0064C9.00328 13.2609 8.97151 13.6416 8.71814 13.857C8.60526 13.9531 8.46712 14 8.32982 14C8.1591 14 7.98951 13.9275 7.87049 13.7865C7.84301 13.7541 5.07355 10.5053 0.283607 7.51271C0.10717 7.40247 0 7.20876 0 7.00007C0 6.79149 0.107273 6.59767 0.283607 6.48744C5.07355 3.49478 7.84301 0.246056 7.87029 0.213754C8.08473 -0.040668 8.46416 -0.0725606 8.71804 0.14279C8.97161 0.358141 9.00338 0.739107 8.78874 0.993734C8.68627 1.11536 6.51008 3.67198 2.60773 6.39627H47.3985C47.7307 6.39627 48 6.66659 48 7.00007C48 7.33356 47.7307 7.60388 47.3985 7.60388Z" fill="black"/>
+              </svg>
+            </div>
+            <div
+              class="swiper-button-next swiper-{{ section.id }}"
+              style="left: 0px; right: 0; position: relative; top: 0; margin: 0;"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="14" viewBox="0 0 48 14" fill="none">
+                <path d="M0.60154 7.60388H45.3923C41.4899 10.3281 39.3138 12.8848 39.2113 13.0064C38.9967 13.2609 39.0285 13.6416 39.2819 13.857C39.3947 13.9531 39.5329 14 39.6702 14C39.8409 14 40.0105 13.9275 40.1295 13.7865C40.157 13.7541 42.9264 10.5053 47.7164 7.51271C47.8928 7.40247 48 7.20876 48 7.00007C48 6.79149 47.8927 6.59767 47.7164 6.48744C42.9264 3.49478 40.157 0.246056 40.1297 0.213754C39.9153 -0.040668 39.5358 -0.0725606 39.282 0.14279C39.0284 0.358141 38.9966 0.739107 39.2113 0.993734C39.3137 1.11536 41.4899 3.67198 45.3923 6.39627H0.60154C0.269304 6.39627 0 6.66659 0 7.00007C0 7.33356 0.269304 7.60388 0.60154 7.60388Z" fill="black"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-tab-content mobile-only">
+          <div class="mobile-heading body-font"></div>
+          <div class="mobile-answer body-font"></div>
+        </div>
+        <div class="btn-wrapper-mobile">
+          {% if section.settings.btn_txt != blank %}
+            <a
+              class="dev-btn"
+              href="{{ section.settings.btn_url }}"
+              style=" background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+            >
+              {{ section.settings.btn_txt }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <!-- LEFT CONTENT (DESKTOP ONLY) -->
+      <div class="left-slide-tab">
+        <div class="heading-wrapper desktop-only">
+          {% if section.settings.heading != blank %}
+            <h2 class="heading heading-font">{{ section.settings.heading }}</h2>
+          {% endif %}
+          {% if section.settings.sub_text != blank %}
+            <div class="sub-text body-font">{{ section.settings.sub_text }}</div>
+          {% endif %}
+        </div>
+        <div class="tab-image-block">
+          <ul class="image-tab-list image-tab-list-{{ section.id }}">
+            {%- for block in section.blocks -%}
+              <li>
+                <a href="#" data-id="image-tab-{{ block.id }}-{{ forloop.index }}">
+                  <div class="text-wrap-content">
+                    <div class="text-wrapper body-font">{{ block.settings.heading }}</div>
+                    <div class="answer-wrap body-font">{{ block.settings.answer }}</div>
+                  </div>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        <div class="btn-wrapper">
+          {% if section.settings.btn_txt != blank %}
+            <a
+              class="dev-btn"
+              href="{{ section.settings.btn_url }}"
+              style=" background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+            >
+              {{ section.settings.btn_txt }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.innerWidth > 991) return;
+
+  const swiper = new Swiper('.image-tab-mobile', {
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    spaceBetween: 10,
+    loop:true,
+    navigation: {
+      nextEl: '.swiper-button-next.swiper-{{ section.id }}',
+      prevEl: '.swiper-button-prev.swiper-{{ section.id }}',
+    },
+    on: {
+      init: function () {
+        updateContent(this.slides[this.activeIndex]);
+      },
+      slideChange: function () {
+        updateContent(this.slides[this.activeIndex]);
+      },
+    },
+  });
+
+  function updateContent(slide) {
+    document.querySelector('.mobile-heading').innerHTML = slide.dataset.heading;
+    document.querySelector('.mobile-answer').innerHTML = slide.dataset.answer;
+  }
+
+  setTimeout(() => {
+    swiper.update();
+    swiper.slideTo(0, 0);
+  }, 100);
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.image-tab-section').forEach((section) => {
+      const links = section.querySelectorAll('.image-tab-list a');
+      const panels = section.querySelectorAll('.image-tab-panel');
+      const panelContainer = section.querySelector('.image-tab-images');
+
+      if (!links.length || !panels.length) return;
+
+      const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+
+      const showPanel = (id, activeLink) => {
+        const mobile = isMobile();
+        const activeLi = activeLink.closest('li');
+
+        panels.forEach((p) => {
+          if (p.dataset.imageId === id) {
+            if (mobile && activeLi) {
+              // On mobile: show image just after the active tab item
+              activeLi.after(p); // or: activeLi.appendChild(p);
+              p.style.display = 'block';
+            } else if (panelContainer) {
+              // On desktop: keep images in the right column
+              if (p.parentElement !== panelContainer) {
+                panelContainer.appendChild(p);
+              }
+              p.style.display = 'flex';
+            }
+          } else {
+            p.style.display = 'none';
+          }
+        });
+
+        links.forEach((l) => l.classList.toggle('active', l === activeLink));
+      };
+
+      section.addEventListener('click', (e) => {
+        const link = e.target.closest('.image-tab-list a');
+        if (!link || !section.contains(link)) return;
+        e.preventDefault();
+
+        const id = link.getAttribute('data-id');
+        if (!id) return;
+
+        showPanel(id, link);
+      });
+
+      // Initial active tab
+      const first =
+        Array.from(links).find((a) => {
+          const id = a.getAttribute('data-id');
+          return Array.from(panels).some((p) => p.dataset.imageId === id);
+        }) || links[0];
+
+      if (first) showPanel(first.getAttribute('data-id'), first);
+
+      // Re-position active panel on resize (switching mobile/desktop)
+      window.addEventListener('resize', () => {
+        const active = section.querySelector('.image-tab-list a.active');
+        if (!active) return;
+        const id = active.getAttribute('data-id');
+        if (!id) return;
+        showPanel(id, active);
+      });
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Image Tab Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Select Background Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub_text",
+      "label": "Add Sub Text"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button background color"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab-block",
+      "name": "Tab Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Add Name"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Add Answer"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Select Slide Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Tab section"
+    }
+  ]
+}
+{% endschema %}

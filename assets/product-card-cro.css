@@ -1,0 +1,144 @@
+.t4s-product-title.titan{
+    line-height: 1;
+    padding: 15px 0 10px;
+}
+.t4s-product-title.titan a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    font-family: Aeonik;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+/* .featured-collection-cro .image-with-review {
+    position: relative;
+} */
+.featured-collection-cro .star-rating-badge {
+    /* position: absolute;
+    top: 5px;
+    left: 10px; */
+}
+.featured-collection-cro .jdgm-preview-badge .jdgm-star.jdgm-star {
+    color: #d29b74;
+    font-size: 11px;
+}
+span.jdgm-prev-badge__text {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+}
+.pdp-cro-short-desc{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    font-family: Aeonik;
+    padding: 0px;
+}
+.t4s-product-price del{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    font-family: Aeonik;
+    letter-spacing: 0;
+    line-height: 1.2;
+    display: inline-block;
+    margin-right: 10px;
+}
+.t4s-product-price ins,.t4s-product-price{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    font-family: Aeonik;
+    letter-spacing: 0;
+    line-height: 1.2;
+    display: inline-block;
+}
+.t4s-product-price .t4s-price-from{
+    display: none;
+}
+.t4s-product-badge{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    background: #F00;
+    padding: 0px 10px;
+    color: #ffff;
+}
+.t4s-pr-item-btn.t4s-pr-addtocart{
+    font-size: 16px;
+    font-weight: 700;
+}
+.t4s-pr-item-btn.t4s-pr-addtocart svg{
+    display: none;
+}
+.t4s-pr-item-btn.t4s-pr-addtocart{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Aeonik !important;
+    text-transform: uppercase;
+    text-align: center;
+    background: #000;
+    border-radius: 30px;
+    display: block;
+    padding: 10px 0;
+    margin: 15px 0 0;
+}
+.pr_img_effect_0 .t4s-product-img img{
+    border-radius: 8px;
+}
+.t4s-product-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.t4s-product-btns.t4s-product-info__btns {
+    margin-top: auto;
+}
+.t4s-product-info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.t4s-product.t4s-pr-grid {
+    height: 100%;
+}
+.swiper-slide.products-grid-tab-collection {
+    height: auto;
+}
+@media(max-width:991px){
+    .t4s-product-price ins,.t4s-product-price,.t4s-product-title.titan,.t4s-product-title.titan a,.t4s-product-price del,.pdp-cro-short-desc{
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .t4s-product-title.titan{
+        padding: 10px 0 7px;
+    }
+    .pdp-cro-short-desc{
+        padding: 0 0 7px;
+    }
+    .t4s-pr-item-btn.t4s-pr-addtocart{
+    font-size: 12px;
+    padding: 4px 0;
+    margin: 10px 0 0;
+}
+.featured-collection-cro .jdgm-preview-badge .jdgm-star.jdgm-star {
+    color: #d29b74;
+    font-size: 8px;
+}
+span.jdgm-prev-badge__text {
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+}
+.featured-collection-cro .star-rating-badge {
+    /* position: absolute;
+    top: 5px;
+    left: 5px; */
+}
+}

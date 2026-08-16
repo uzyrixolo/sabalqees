@@ -1,0 +1,60 @@
+<script>
+    var shop = "{{shop.domain}}";
+    window.ubLoyalty =
+        {
+            enabled : true,
+            appUrl:"https://shopify-integration.datanuum.com/",
+            apiToken:"4puJIQRaLrgl0XNmFqsf",
+            isActive:false,
+            shop:shop,
+            page_type: "{{request.page_type}}",
+            ubDialoguePosition : "right",
+            cart:{
+                total : "{{cart.total_price | money_without_currency}}",
+                discount : "{{cart.total_discount | money_without_currency}}",
+                currency : "{{cart.currency.iso_code}}"
+            },
+            product:{
+                id:"{{product.id}}"
+            }
+        };
+    {% if customer != nil and customer.has_account %}
+        window.ubLoyalty.customer = {
+                        id: "{{customer.id}}",
+                        email: "{{customer.email}}",
+                        phone: "{{customer.phone}}",
+                        name: "{{customer.name}}"
+                };
+        window.ubLoyalty.isActive =  true;  
+    {% endif %}
+</script>
+<div class="ub-trk-actionContainer"></div>
+{% if customer != nil and customer.has_account %}
+<div class="ub-lyt-actionContainer right-bottom">
+    <div class="ub-lyt-panel">
+        <div id="ubUserFrameHolder"></div>
+        <div id="ubUserFrameLoadingMessage"></div>
+    </div>
+    <div class="ub-lyt-btn-container right-bottom">
+        <div class="ub-lyt-button-amount" id="urbanbuz_loyalty_balance"><span class="ub-spinner small"></span></div>
+        <div class="ub-lyt-button-main">
+            <img src="{{'wallet.svg' | asset_url }}" class="ub-lyt-wallet">
+        </div>
+    </div>
+</div>
+<style>
+.ub-lyt-actionContainer{display:none}
+.ub-lyt-wallet{width:27px;position:fixed;top:13px;left:18px}.ub-lyt-actionContainer{z-index:9999;position:fixed;}
+.ub-lyt-actionContainer .right-bottom,.ub-lyt-actionContainer.right-bottom{bottom:2em;right:4em;float:right!important}
+.ub-lyt-actionContainer .left-bottom,.ub-lyt-actionContainer.left-bottom{bottom:2em;left:2em;float:left!important}
+.ub-lyt-button-amount{height:35px;min-width:60px;padding-left:0;line-height:37px;background-color:#d15d36;border-radius:0 5px 5px 0;margin-left:50px;margin-top:12px;color:#fff;font-weight:700;box-shadow:2px 1px 1px rgba(0,0,0,.16),6px 3px 6px rgba(0,0,0,.23);overflow:visible;text-align:center;animation:all .6s linear infinite}
+div.ub-lyt-actionContainer li{liub-lyt-style:none}.ub-lyt-panel{margin-bottom:2%;background-color:#f2edf3;color:#fff;border:2px solid #eee;box-shadow:-4px -1px 6px rgba(0,0,0,.16),0 3px 8px rgba(0,0,0,.23);border-radius:5px;display:none;font-family:Roboto;font-size:15px;width:350px;margin-right:-48px;height:380px}
+.ub-lyt-panel-header{background-color:#fff;color:#000;padding:3px}.ub-lyt-panel-contents{padding:15px}.ub-lyt-button-main{font-size:24px;color:#fff;font-size:24px;text-align:center;line-height:60px;cursor:pointer}
+.ub-lyt-btn-container{background:#d15d36;width:60px;height:60px;border-radius:100%;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);-webkit-animation:bummer .5s;animation:bummer .5s;-webkit-transform:scale(0,0);transform:scale(0,0);-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;cursor:pointer}
+.rotateForward{animation-name:rotateF;animation-duration:.65s;animation-iteration-count:1}@keyframes rotateF{from{transform:rotate(0);-ms-transform:rotate(0);-webkit-transform:rotate(0)}to{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg)}}
+.rotateBackward{animation-name:rotateB;animation-duration:.65s;animation-iteration-count:1}@keyframes rotateB{from{transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg)}to{transform:rotate(0);-ms-transform:rotate(0);-webkit-transform:rotate(0)}}
+@-webkit-keyframes bummer{100%{-webkit-transform:scale(1,1)}}@keyframes bummer{100%{transform:scale(1,1)}}@keyframes spinner{to{transform:rotate(360deg)}}.ub-spinner:before{content:'';box-sizing:border-box;position:absolute;width:40px;height:40px;margin-top:0;margin-left:0;border-radius:50%;border:7px solid #ccc;border-top-color:#6e8ec3;animation:spinner .6s linear infinite;display:inline-block}
+#ubUserFrameLoadingMessage.ub-spinner{position:absolute;top:135px;right:144px}.ub-spinner.small:before{width:20px;height:20px}.ub-spinner.small{position:absolute;margin-top:8px;left:70px}
+.left-bottom #ubUserFrameLoadingMessage.ub-spinner {right: auto;left: 144px;}
+</style>
+{% endif %}

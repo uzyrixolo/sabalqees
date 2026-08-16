@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bundle-builder": {
+      "type": "bundle-builder",
+      "blocks": {
+        "combo_1": {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Starter Bundle",
+            "tea_count": 1,
+            "honey_label": "250g",
+            "discount_percent": 10
+          }
+        },
+        "combo_2": {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Duo Bundle",
+            "tea_count": 2,
+            "honey_label": "400g",
+            "discount_percent": 15
+          }
+        },
+        "combo_3": {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Family Bundle",
+            "tea_count": 3,
+            "honey_label": "1kg",
+            "discount_percent": 20
+          }
+        }
+      },
+      "block_order": [
+        "combo_1",
+        "combo_2",
+        "combo_3"
+      ],
+      "settings": {
+        "heading": "Build Your Bundle",
+        "subheading": "Mix & match your favourite teas with our signature honey — the more you bundle, the more you save.",
+        "tea_collection": "african-teas",
+        "honey_collection": "everyday-honey"
+      }
+    }
+  },
+  "order": [
+    "bundle-builder"
+  ]
+}

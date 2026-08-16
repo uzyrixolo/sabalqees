@@ -1,0 +1,673 @@
+{{ 'bundle-builder.css' | asset_url | stylesheet_tag }}
+
+<div class="bundle-builder" id="BundleBuilder" data-section-id="{{ section.id }}">
+  <!-- HERO -->
+  <div class="bb-hero">
+    <div class="bb-hero__inner">
+      <h1 class="bb-hero__title">{{ section.settings.heading }}</h1>
+      <p class="bb-hero__subtitle">{{ section.settings.subheading }}</p>
+    </div>
+  </div>
+
+  <!-- COMBO TIER SELECTOR -->
+  <div class="bb-container">
+    <div class="bb-step bb-step--active" data-step="tier">
+      <h2 class="bb-step__title">Choose Your Combo</h2>
+      <p class="bb-step__desc">Select a combo tier to get started</p>
+
+      <div class="bb-tiers">
+        {% for block in section.blocks %}
+          {% if block.type == 'combo_tier' %}
+            <button
+              class="bb-tier"
+              data-tier="{{ block.id }}"
+              data-tea-count="{{ block.settings.tea_count }}"
+              data-honey-size="{{ block.settings.honey_label }}"
+              data-discount="{{ block.settings.discount_percent }}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="bb-tier__badge">{{ block.settings.discount_percent }}% OFF</div>
+              <div class="bb-tier__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" fill="currentColor" opacity=".1"/><path d="M16 24l6 6 10-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </div>
+              <h3 class="bb-tier__name">{{ block.settings.tier_name }}</h3>
+              <p class="bb-tier__detail">
+                {{ block.settings.tea_count }} Tea{% if block.settings.tea_count > 1 %}s{% endif %}
+                + {{ block.settings.honey_label }} Honey Jar
+              </p>
+              <div class="bb-tier__discount">Save {{ block.settings.discount_percent }}%</div>
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- TEA SELECTION -->
+    <div class="bb-step" data-step="tea" style="display:none;">
+      <div class="bb-step__header">
+        <button class="bb-back" data-back="tier">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <h2 class="bb-step__title">Pick Your Teas</h2>
+        <p class="bb-step__desc">Select <span class="bb-tea-count-label">1</span> tea(s) from our collection</p>
+      </div>
+
+      <div class="bb-selections">
+        <div class="bb-slots" id="bbTeaSlots"></div>
+      </div>
+
+      <div class="bb-products" id="bbTeaProducts">
+        {% assign tea_collection = collections[section.settings.tea_collection] %}
+        {% for product in tea_collection.products %}
+          <button
+            class="bb-product-card"
+            data-product-id="{{ product.id }}"
+            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+            data-title="{{ product.title | escape }}"
+            data-price="{{ product.price }}"
+            data-image="{{ product.featured_image | image_url: width: 400 }}"
+            data-type="tea"
+          >
+            <div class="bb-product-card__img-wrap">
+              <img
+                src="{{ product.featured_image | image_url: width: 400 }}"
+                alt="{{ product.title | escape }}"
+                loading="lazy"
+                width="200"
+                height="200"
+              >
+              <div class="bb-product-card__check">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <h4 class="bb-product-card__title">{{ product.title }}</h4>
+            <p class="bb-product-card__price">{{ product.price | money }}</p>
+          </button>
+        {% endfor %}
+      </div>
+
+      <div class="bb-step__footer">
+        <button class="bb-btn bb-btn--primary" id="bbTeaNext" disabled>
+          Next: Choose Honey Jar
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- HONEY SELECTION -->
+    <div class="bb-step" data-step="honey" style="display:none;">
+      <div class="bb-step__header">
+        <button class="bb-back" data-back="tea">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <h2 class="bb-step__title">Choose Your Honey Jar</h2>
+        <p class="bb-step__desc">Pick a <span class="bb-honey-size-label"></span> honey jar</p>
+      </div>
+
+      <div class="bb-products" id="bbHoneyProducts">
+        {% assign honey_collection = collections[section.settings.honey_collection] %}
+        {% for product in honey_collection.products %}
+          {% for variant in product.variants %}
+            <button
+              class="bb-product-card"
+              data-product-id="{{ product.id }}"
+              data-variant-id="{{ variant.id }}"
+              data-title="{{ product.title | escape }} - {{ variant.title | escape }}"
+              data-price="{{ variant.price }}"
+              data-image="{{ variant.image.src | image_url: width: 400 | default: product.featured_image | image_url: width: 400 }}"
+              data-size="{{ variant.title | downcase }}"
+              data-type="honey"
+            >
+              <div class="bb-product-card__img-wrap">
+                <img
+                  src="{{ variant.image.src | image_url: width: 400 | default: product.featured_image | image_url: width: 400 }}"
+                  alt="{{ product.title | escape }} - {{ variant.title | escape }}"
+                  loading="lazy"
+                  width="200"
+                  height="200"
+                >
+                <div class="bb-product-card__check">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M7 12.5l3.5 3.5 6.5-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <h4 class="bb-product-card__title">{{ product.title }}</h4>
+              <p class="bb-product-card__variant">{{ variant.title }}</p>
+              <p class="bb-product-card__price">{{ variant.price | money }}</p>
+            </button>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
+      <div class="bb-step__footer">
+        <button class="bb-btn bb-btn--primary" id="bbHoneyNext" disabled>
+          Review Your Bundle
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- REVIEW & ADD TO CART -->
+    <div class="bb-step" data-step="review" style="display:none;">
+      <div class="bb-step__header">
+        <button class="bb-back" data-back="honey">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <h2 class="bb-step__title">Your Bundle</h2>
+        <p class="bb-step__desc">Review your selections before adding to cart</p>
+      </div>
+
+      <div class="bb-review" id="bbReview">
+        <div class="bb-review__tier">
+          <span class="bb-review__tier-name" id="bbReviewTierName"></span>
+          <span class="bb-review__tier-discount" id="bbReviewDiscount"></span>
+        </div>
+        <div class="bb-review__items" id="bbReviewItems"></div>
+        <div class="bb-review__totals">
+          <div class="bb-review__subtotal">
+            <span>Subtotal</span>
+            <span id="bbSubtotal"></span>
+          </div>
+          <div class="bb-review__savings">
+            <span>Bundle Discount (applied at checkout)</span>
+            <span id="bbSavings"></span>
+          </div>
+          <div class="bb-review__total">
+            <span>Estimated Total</span>
+            <span id="bbTotal"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bb-step__footer">
+        <button class="bb-btn bb-btn--primary bb-btn--cart" id="bbAddToCart">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M1 1h3.27l1.45 11.63A2 2 0 007.7 14h9.6a2 2 0 001.98-1.67L21 5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/></svg>
+          Add Bundle to Cart
+        </button>
+        <p class="bb-discount-note">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1a7 7 0 100 14A7 7 0 008 1z" stroke="currentColor" stroke-width="1.2"/><path d="M8 5v3M8 10.5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Discount is automatically applied by Shopify at checkout
+        </p>
+      </div>
+    </div>
+
+    <!-- SUCCESS OVERLAY -->
+    <div class="bb-success" id="bbSuccess" style="display:none;">
+      <div class="bb-success__inner">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/><path d="M20 33l8 8 16-18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Bundle Added to Cart!</h3>
+        <p>Your discount will be applied automatically.</p>
+        <div class="bb-success__actions">
+          <a href="/cart" class="bb-btn bb-btn--primary">View Cart</a>
+          <button class="bb-btn bb-btn--secondary" id="bbBuildAnother">Build Another Bundle</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="bb-progress">
+      <div class="bb-progress__step bb-progress__step--active" data-progress="tier">
+        <span class="bb-progress__dot">1</span>
+        <span class="bb-progress__label">Combo</span>
+      </div>
+      <div class="bb-progress__line"></div>
+      <div class="bb-progress__step" data-progress="tea">
+        <span class="bb-progress__dot">2</span>
+        <span class="bb-progress__label">Teas</span>
+      </div>
+      <div class="bb-progress__line"></div>
+      <div class="bb-progress__step" data-progress="honey">
+        <span class="bb-progress__dot">3</span>
+        <span class="bb-progress__label">Honey</span>
+      </div>
+      <div class="bb-progress__line"></div>
+      <div class="bb-progress__step" data-progress="review">
+        <span class="bb-progress__dot">4</span>
+        <span class="bb-progress__label">Review</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const builder = document.getElementById('BundleBuilder');
+  if (!builder) return;
+
+  const state = {
+    tier: null,
+    teaCount: 0,
+    honeySize: '',
+    discountPercent: 0,
+    tierName: '',
+    selectedTeas: [],
+    selectedHoney: null,
+    maxTeas: 0
+  };
+
+  const moneyFormat = window.Shopify?.money_format || '{{ shop.money_format }}';
+
+  function formatMoney(cents) {
+    const amount = (cents / 100).toFixed(2);
+    const raw = moneyFormat.replace(/\{\{\s*amount\s*\}\}/, amount)
+                           .replace(/\{\{\s*amount_no_decimals\s*\}\}/, Math.round(cents / 100))
+                           .replace(/\{\{\s*amount_with_comma_separator\s*\}\}/, amount.replace('.', ','))
+                           .replace(/\{\{\s*amount_no_decimals_with_comma_separator\s*\}\}/, Math.round(cents / 100));
+    const tmp = document.createElement('div');
+    tmp.innerHTML = raw;
+    return tmp.textContent || tmp.innerText || raw;
+  }
+
+  // Step navigation
+  function showStep(stepName) {
+    builder.querySelectorAll('.bb-step').forEach(s => {
+      s.style.display = 'none';
+      s.classList.remove('bb-step--active');
+    });
+    const target = builder.querySelector(`[data-step="${stepName}"]`);
+    if (target) {
+      target.style.display = '';
+      target.classList.add('bb-step--active');
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Update progress
+    const steps = ['tier', 'tea', 'honey', 'review'];
+    const idx = steps.indexOf(stepName);
+    builder.querySelectorAll('.bb-progress__step').forEach((el, i) => {
+      el.classList.toggle('bb-progress__step--active', i <= idx);
+      el.classList.toggle('bb-progress__step--done', i < idx);
+    });
+  }
+
+  // Tier selection
+  builder.querySelectorAll('.bb-tier').forEach(btn => {
+    btn.addEventListener('click', () => {
+      builder.querySelectorAll('.bb-tier').forEach(b => b.classList.remove('bb-tier--selected'));
+      btn.classList.add('bb-tier--selected');
+
+      state.tier = btn.dataset.tier;
+      state.teaCount = parseInt(btn.dataset.teaCount, 10);
+      state.maxTeas = state.teaCount;
+      state.honeySize = btn.dataset.honeySize;
+      state.discountPercent = parseInt(btn.dataset.discount, 10);
+      state.tierName = btn.querySelector('.bb-tier__name').textContent;
+      state.selectedTeas = [];
+      state.selectedHoney = null;
+
+      builder.querySelector('.bb-tea-count-label').textContent = state.teaCount;
+      builder.querySelector('.bb-honey-size-label').textContent = state.honeySize;
+
+      renderTeaSlots();
+      clearProductSelections('tea');
+      clearProductSelections('honey');
+      updateTeaNextBtn();
+
+      showStep('tea');
+    });
+  });
+
+  // Tea slots
+  function renderTeaSlots() {
+    const container = document.getElementById('bbTeaSlots');
+    container.innerHTML = '';
+    for (let i = 0; i < state.maxTeas; i++) {
+      const slot = document.createElement('div');
+      slot.className = 'bb-slot bb-slot--empty';
+      slot.dataset.index = i;
+      slot.innerHTML = `
+        <div class="bb-slot__img">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 6v20M6 16h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <span class="bb-slot__label">Tea ${i + 1}</span>
+      `;
+      slot.addEventListener('click', () => {
+        if (state.selectedTeas[i]) {
+          state.selectedTeas.splice(i, 1);
+          renderTeaSlots();
+          syncTeaCardStates();
+          updateTeaNextBtn();
+        }
+      });
+      container.appendChild(slot);
+    }
+    state.selectedTeas.forEach((tea, i) => {
+      const slot = container.children[i];
+      if (slot && tea) {
+        slot.classList.remove('bb-slot--empty');
+        slot.classList.add('bb-slot--filled');
+        slot.innerHTML = `
+          <div class="bb-slot__img">
+            <img src="${tea.image}" alt="${tea.title}" width="60" height="60">
+            <button class="bb-slot__remove" aria-label="Remove">&times;</button>
+          </div>
+          <span class="bb-slot__label">${tea.title}</span>
+        `;
+        slot.querySelector('.bb-slot__remove').addEventListener('click', (e) => {
+          e.stopPropagation();
+          state.selectedTeas.splice(i, 1);
+          renderTeaSlots();
+          syncTeaCardStates();
+          updateTeaNextBtn();
+        });
+      }
+    });
+  }
+
+  function syncTeaCardStates() {
+    const selectedIds = state.selectedTeas.map(t => t.variantId);
+    builder.querySelectorAll('#bbTeaProducts .bb-product-card').forEach(card => {
+      card.classList.toggle('bb-product-card--selected', selectedIds.includes(card.dataset.variantId));
+    });
+  }
+
+  function clearProductSelections(type) {
+    const containerId = type === 'tea' ? 'bbTeaProducts' : 'bbHoneyProducts';
+    builder.querySelectorAll(`#${containerId} .bb-product-card`).forEach(c => {
+      c.classList.remove('bb-product-card--selected');
+    });
+    if (type === 'honey') {
+      document.getElementById('bbHoneyNext').disabled = true;
+    }
+  }
+
+  function updateTeaNextBtn() {
+    document.getElementById('bbTeaNext').disabled = state.selectedTeas.length < state.maxTeas;
+  }
+
+  // Tea product click
+  builder.querySelectorAll('#bbTeaProducts .bb-product-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const variantId = card.dataset.variantId;
+      const existingIdx = state.selectedTeas.findIndex(t => t.variantId === variantId);
+
+      if (existingIdx > -1) {
+        state.selectedTeas.splice(existingIdx, 1);
+      } else {
+        if (state.selectedTeas.length >= state.maxTeas) {
+          state.selectedTeas.pop();
+        }
+        state.selectedTeas.push({
+          productId: card.dataset.productId,
+          variantId: card.dataset.variantId,
+          title: card.dataset.title,
+          price: parseInt(card.dataset.price, 10),
+          image: card.dataset.image
+        });
+      }
+
+      renderTeaSlots();
+      syncTeaCardStates();
+      updateTeaNextBtn();
+    });
+  });
+
+  // Honey product click
+  builder.querySelectorAll('#bbHoneyProducts .bb-product-card').forEach(card => {
+    card.addEventListener('click', () => {
+      builder.querySelectorAll('#bbHoneyProducts .bb-product-card').forEach(c => c.classList.remove('bb-product-card--selected'));
+      card.classList.add('bb-product-card--selected');
+
+      state.selectedHoney = {
+        productId: card.dataset.productId,
+        variantId: card.dataset.variantId,
+        title: card.dataset.title,
+        price: parseInt(card.dataset.price, 10),
+        image: card.dataset.image
+      };
+
+      document.getElementById('bbHoneyNext').disabled = false;
+    });
+  });
+
+  function filterHoneyBySize() {
+    const size = state.honeySize.toLowerCase();
+    builder.querySelectorAll('#bbHoneyProducts .bb-product-card').forEach(card => {
+      const variantSize = (card.dataset.size || '').toLowerCase();
+      const match = variantSize.includes(size);
+      card.style.display = match ? '' : 'none';
+      if (!match) card.classList.remove('bb-product-card--selected');
+    });
+    state.selectedHoney = null;
+    document.getElementById('bbHoneyNext').disabled = true;
+  }
+
+  // Next buttons
+  document.getElementById('bbTeaNext').addEventListener('click', () => {
+    filterHoneyBySize();
+    showStep('honey');
+  });
+  document.getElementById('bbHoneyNext').addEventListener('click', () => {
+    renderReview();
+    showStep('review');
+  });
+
+  // Back buttons
+  builder.querySelectorAll('.bb-back').forEach(btn => {
+    btn.addEventListener('click', () => showStep(btn.dataset.back));
+  });
+
+  // Review
+  function renderReview() {
+    document.getElementById('bbReviewTierName').textContent = state.tierName;
+    document.getElementById('bbReviewDiscount').textContent = state.discountPercent + '% OFF';
+
+    const itemsContainer = document.getElementById('bbReviewItems');
+    itemsContainer.innerHTML = '';
+
+    let subtotal = 0;
+
+    state.selectedTeas.forEach(tea => {
+      subtotal += tea.price;
+      itemsContainer.innerHTML += `
+        <div class="bb-review__item">
+          <img src="${tea.image}" alt="${tea.title}" width="60" height="60">
+          <div class="bb-review__item-info">
+            <span class="bb-review__item-title">${tea.title}</span>
+            <span class="bb-review__item-tag">Tea</span>
+          </div>
+          <span class="bb-review__item-price">${formatMoney(tea.price)}</span>
+        </div>
+      `;
+    });
+
+    if (state.selectedHoney) {
+      subtotal += state.selectedHoney.price;
+      itemsContainer.innerHTML += `
+        <div class="bb-review__item">
+          <img src="${state.selectedHoney.image}" alt="${state.selectedHoney.title}" width="60" height="60">
+          <div class="bb-review__item-info">
+            <span class="bb-review__item-title">${state.selectedHoney.title}</span>
+            <span class="bb-review__item-tag">Honey Jar</span>
+          </div>
+          <span class="bb-review__item-price">${formatMoney(state.selectedHoney.price)}</span>
+        </div>
+      `;
+    }
+
+    const savings = Math.round(subtotal * state.discountPercent / 100);
+    const total = subtotal - savings;
+
+    document.getElementById('bbSubtotal').textContent = formatMoney(subtotal);
+    document.getElementById('bbSavings').textContent = '-' + formatMoney(savings);
+    document.getElementById('bbTotal').textContent = formatMoney(total);
+  }
+
+  // Add to cart
+  document.getElementById('bbAddToCart').addEventListener('click', async () => {
+    const btn = document.getElementById('bbAddToCart');
+    btn.disabled = true;
+    btn.classList.add('bb-btn--loading');
+
+    const items = [];
+
+    state.selectedTeas.forEach(tea => {
+      items.push({
+        id: parseInt(tea.variantId, 10),
+        quantity: 1,
+        properties: {
+          '_bundle_tier': state.tierName,
+          '_bundle_discount': state.discountPercent + '%',
+          '_bundle_type': 'tea'
+        }
+      });
+    });
+
+    if (state.selectedHoney) {
+      items.push({
+        id: parseInt(state.selectedHoney.variantId, 10),
+        quantity: 1,
+        properties: {
+          '_bundle_tier': state.tierName,
+          '_bundle_discount': state.discountPercent + '%',
+          '_bundle_type': 'honey'
+        }
+      });
+    }
+
+    try {
+      const response = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items })
+      });
+
+      if (!response.ok) throw new Error('Cart error');
+
+      // Update cart count in header
+      const cartResponse = await fetch('/cart.js');
+      const cart = await cartResponse.json();
+      document.querySelectorAll('.cart-count-bubble, [data-cart-count], .cart-count').forEach(el => {
+        el.textContent = cart.item_count;
+      });
+
+      // Show success
+      document.getElementById('bbSuccess').style.display = 'flex';
+      builder.querySelectorAll('.bb-step').forEach(s => s.style.display = 'none');
+    } catch (err) {
+      alert('Something went wrong adding to cart. Please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.classList.remove('bb-btn--loading');
+    }
+  });
+
+  // Build another
+  document.getElementById('bbBuildAnother').addEventListener('click', () => {
+    state.tier = null;
+    state.selectedTeas = [];
+    state.selectedHoney = null;
+    builder.querySelectorAll('.bb-tier').forEach(b => b.classList.remove('bb-tier--selected'));
+    clearProductSelections('tea');
+    clearProductSelections('honey');
+    document.getElementById('bbSuccess').style.display = 'none';
+    showStep('tier');
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Bundle Builder",
+  "tag": "section",
+  "class": "bundle-builder-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Build Your Bundle"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Mix & match your favourite teas with our signature honey — the more you bundle, the more you save."
+    },
+    {
+      "type": "collection",
+      "id": "tea_collection",
+      "label": "Tea Collection"
+    },
+    {
+      "type": "collection",
+      "id": "honey_collection",
+      "label": "Honey Collection"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "combo_tier",
+      "name": "Combo Tier",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tier_name",
+          "label": "Tier Name",
+          "default": "Combo 1"
+        },
+        {
+          "type": "range",
+          "id": "tea_count",
+          "label": "Number of Teas",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "honey_label",
+          "label": "Honey Size Label",
+          "default": "250g",
+          "info": "Display label for the honey jar size (e.g. 250g, 400g, 1kg)"
+        },
+        {
+          "type": "range",
+          "id": "discount_percent",
+          "label": "Discount Percentage",
+          "min": 5,
+          "max": 50,
+          "step": 5,
+          "default": 10
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Builder",
+      "blocks": [
+        {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Starter Bundle",
+            "tea_count": 1,
+            "honey_label": "250g",
+            "discount_percent": 10
+          }
+        },
+        {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Duo Bundle",
+            "tea_count": 2,
+            "honey_label": "400g",
+            "discount_percent": 15
+          }
+        },
+        {
+          "type": "combo_tier",
+          "settings": {
+            "tier_name": "Family Bundle",
+            "tea_count": 3,
+            "honey_label": "1kg",
+            "discount_percent": 20
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

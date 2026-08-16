@@ -1,0 +1,180 @@
+<style>
+  .enjoy-foods-section {
+      background-color: {{ section.settings.bg_color }};
+  }
+
+  .enjoy-foods-section .page-width {
+      max-width: 1020px;
+      padding: 0 20px;
+      margin: 0 auto;
+  }
+
+  .enjoy-foods-section .shop-benefit-wrapper {
+      padding: 72px 0 119px;
+  }
+
+  .enjoy-foods-section .heading-wrap h2 {
+      color: #000000;
+      text-align: center;
+      margin: 0 0 28px 0;
+  }
+
+  .enjoy-foods-section .text-wrap {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #000000;
+      text-align: center;
+  }
+
+  .enjoy-foods-section .block-wrap {
+      width: 25%;
+  }
+
+  .enjoy-foods-section .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 0.8 / 1;
+  }
+
+  .enjoy-foods-section .block-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+
+  .enjoy-foods-section .image-text-wrap {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #000000;
+      text-align: center;
+      margin-top: 9px;
+  }
+
+  @media only screen and (max-width:767px) {
+      .enjoy-foods-section .shop-benefit-wrapper {
+          padding: 40px 0 54px 0;
+      }
+
+      .enjoy-foods-section .block-wrapper {
+          gap: 36px 10px;
+          flex-wrap: wrap;
+      }
+
+      .enjoy-foods-section .block-wrap {
+          width: 48%;
+      }
+
+      .enjoy-foods-section .heading-wrap h2 {
+          margin: 0 0 10px 0;
+      }
+
+      .enjoy-foods-section .image-text-wrap {
+          font-size: 14px;
+          margin-top: 10px;
+      }
+  }
+</style>
+<section class="enjoy-foods-section">
+  <div class="page-width">
+    <div class="shop-benefit-wrapper">
+      <div class="title-wrapper">
+        <div class="heading-wrap">
+          {%- if section.settings.title != blank -%}
+            <h2 class="section-heading heading-font">{{ section.settings.title }}</h2>
+          {% endif %}
+        </div>
+      </div>
+      <div class="block-wrapper">
+        {% for block in section.blocks %}
+          <div class="block-wrap">
+            <a href="{{ block.settings.collection_link }}">
+              {%- if block.settings.image != blank -%}
+                <div class="image-wrap">
+                  <img
+                    srcset="
+                      {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 800 }} 360w,{%- endif -%}
+                      {%- if block.settings.image.width >= 520 -%}{{ block.settings.image | image_url: width: 1100 }} 520w,{%- endif -%}
+                      {%- if block.settings.image.width >= 650 -%}{{ block.settings.image | image_url: width: 1300 }} 650w,{%- endif -%}
+                      {%- if block.settings.image.width >= 780 -%}{{ block.settings.image | image_url: width: 1600 }} 780w,{%- endif -%}
+                      {%- if block.settings.image.width >= 900 -%}{{ block.settings.image | image_url: width: 1800 }} 900w,{%- endif -%}
+                      {%- if block.settings.image.width >= 1000 -%}{{ block.settings.image | image_url: width: 2000 }} 1000w,{%- endif -%}
+                    "
+                    src="{{ block.settings.image | image_url: width: 50 }}"
+                    sizes="(min-width: 768px) 187px, 0"
+                    alt="{{ block.settings.image.alt | default: section.settings.heading | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.image.width | divided_by: 3 }}"
+                    height="{{ block.settings.image.height | divided_by: 3 }}"
+                  >
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.image_text != blank -%}
+                <div class="image-text-wrap body-font">
+                  {{ block.settings.image_text }}
+                </div>
+              {%- endif -%}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Enjoy Foods Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Enjoy Foods Section"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Enjoy Foods Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_text",
+          "label": "Image Text"
+        },
+        {
+          "type": "url",
+          "id": "collection_link",
+          "label": "Collection Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Enjoy Foods Section",
+      "category": "content"
+    }
+  ]
+}
+{% endschema %}

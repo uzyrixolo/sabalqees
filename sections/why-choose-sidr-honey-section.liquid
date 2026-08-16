@@ -1,0 +1,503 @@
+{% style %}
+  .why-choose-section {
+    padding: 80px 20px;
+    background-color: {{ section.settings.bg_color | default: '#F0EFEA' }};
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  .why-choose-section * {
+    box-sizing: border-box; 
+  }
+
+  .why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .why-choose-header {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .why-choose-header h2 {
+    font-size: 46px;
+    color: #000;
+    margin: 0 0 12px;
+    font-weight: 400;
+    font-family: serif;
+  }
+  
+  .why-choose-header p {
+    font-size: 16px;
+    color: #000;
+    margin: 0 0 24px 0;
+    opacity: 0.8;
+  }
+
+  /* Table Grid Layout */
+  .compare-table-wrapper {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    margin-top: 20px;
+    scroll-behavior: smooth;
+  }
+
+  .compare-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    max-width: 260px;
+    padding-top: 30px; 
+    padding-bottom: 35px;
+  }
+
+  .compare-col-labels {
+    flex: 0.9;
+    max-width: 220px;
+  }
+
+  /* Column Headers (Images & Titles) */
+  .col-header {
+    height: 250px;
+    flex: 0 0 250px; /* Strict lock */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 25px;
+    position: relative;
+  }
+  
+  .col-image-wrap {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+  }
+
+  .col-image-wrap img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .img-highlight img {
+    max-height: 160px;
+    margin-top: -20px;
+    z-index: 2;
+  }
+
+  .img-generic img {
+    max-height: 140px;
+  }
+
+  .col-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: #000;
+  }
+
+  /* Highlight Column Card (Product 1) */
+  .col-highlight {
+    {% if section.settings.p1_bg_image != blank %}
+      background-image: url('{{ section.settings.p1_bg_image | image_url: width: 600 }}');
+      background-size: cover;
+      background-position: center;
+    {% else %}
+      background: {{ section.settings.p1_bg | default: 'linear-gradient(180deg, #8A5A19 0%, #3B2006 100%)' }};
+    {% endif %}
+    border-radius: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .col-highlight .col-title {
+    color: #fff;
+  }
+
+  /* Static Rows Alignment */
+  .row-item {
+    height: 70px; 
+    flex: 0 0 70px; /* Strict lock */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.3;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin: 0 5px;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .compare-col-labels .row-item {
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .col-highlight .row-item {
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .compare-col:not(.col-highlight):not(.compare-col-labels) .row-item {
+    color: #000;
+    font-weight: 400;
+  }
+
+  .row-item:last-child {
+    border-bottom: none !important;
+  }
+
+  /* Carousel Navigation (Hidden on Desktop) */
+  .carousel-controls {
+    display: none;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .carousel-btn {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #000;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+  }
+
+  .carousel-btn:hover {
+    background: #f9f9f9;
+  }
+
+  .carousel-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  /* =========================================
+     MOBILE RESPONSIVE TWEAKS 
+     ========================================= */
+  @media (max-width: 991px) {
+    .why-choose-section {
+      padding: 50px 10px; /* Reduced outer padding */
+    }
+
+    .why-choose-header h2 {
+      font-size: 32px;
+    }
+
+    .compare-table-wrapper {
+      overflow-x: auto;
+      padding: 0 10px 20px 0; 
+      -webkit-overflow-scrolling: touch;
+      gap: 10px; /* Reduced gap to fit cards better */
+      scrollbar-width: none; 
+      -ms-overflow-style: none; 
+      scroll-snap-type: x mandatory;
+      
+      /* Accounts for sticky column (130px) + gap (10px) */
+      scroll-padding-left: 140px; 
+    }
+    
+    .compare-table-wrapper::-webkit-scrollbar {
+      display: none; 
+    }
+
+    .compare-col {
+      scroll-snap-align: start; 
+      /* 100vw (screen width) minus label width (130px), gap (10px), and margins (20px) */
+      min-width: calc(100vw - 160px); 
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
+
+    /* Keep Labels Sticky */
+    .compare-col-labels {
+      min-width: 130px; /* Shrunk width for mobile */
+      flex: 0 0 130px;
+      position: sticky;
+      left: 0;
+      background-color: {{ section.settings.bg_color | default: '#F0EFEA' }};
+      z-index: 10;
+      padding-right: 5px;
+      padding-left: 0;
+      scroll-snap-align: none;
+    }
+
+    /* Shrink Heights & Fonts to prevent mobile wrapping issues */
+    .col-header {
+      height: 220px;
+      flex: 0 0 220px;
+      padding-bottom: 15px;
+    }
+    
+    .row-item {
+      height: 60px;
+      flex: 0 0 60px;
+      font-size: 13px; /* Smaller font on mobile */
+      padding: 0 2px;
+    }
+
+    .col-title {
+      font-size: 15px;
+    }
+
+    .img-highlight img { max-height: 130px; }
+    .img-generic img { max-height: 110px; }
+
+    .col-highlight {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .carousel-controls {
+      display: flex;
+    }
+  }
+{% endstyle %}
+
+<section class="why-choose-section">
+  <div class="why-choose-container">
+    
+    <div class="why-choose-header">
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p>{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    <div class="compare-table-wrapper" id="compare-carousel-{{ section.id }}">
+      
+      <div class="compare-col compare-col-labels">
+        <div class="col-header"></div>
+        <div class="col-body">
+          <div class="row-item">Raw and unfiltered</div>
+          <div class="row-item">Origin</div>
+          <div class="row-item">Sugar content</div>
+          <div class="row-item">Harvesting methods</div>
+          <div class="row-item">Lab-tested authenticity</div>
+          <div class="row-item">Flavor complexity</div>
+        </div>
+      </div>
+
+      <div class="compare-col col-highlight">
+        <div class="col-header">
+          <div class="col-image-wrap img-highlight">
+            {% if section.settings.raw_image != blank %}
+              <img src="{{ section.settings.raw_image | image_url: width: 400 }}" alt="Premium Product" loading="lazy">
+            {% elsif product != blank and product.featured_image != blank %}
+              <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title | escape }}" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="col-title">
+            {% if section.settings.raw_title == 'DEFAULT' or section.settings.raw_title == blank or section.settings.raw_title contains '{{ product.title }}' %}
+              {{ product.title | default: "Premium Raw Honey" }}
+            {% else %}
+              {{ section.settings.raw_title | newline_to_br }}
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-body">
+          <div class="row-item">Raw, unfiltered</div>
+          <div class="row-item">Verified origin</div>
+          <div class="row-item">Never added</div>
+          <div class="row-item">Traditional methods</div>
+          <div class="row-item">Independently tested</div>
+          <div class="row-item">Rich, layered</div>
+        </div>
+      </div>
+
+      <div class="compare-col">
+        <div class="col-header">
+          <div class="col-image-wrap img-generic">
+            {% if section.settings.generic_image != blank %}
+              <img src="{{ section.settings.generic_image | image_url: width: 300 }}" alt="Generic Honey" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="col-title">
+            {{ section.settings.generic_title | newline_to_br }}
+          </div>
+        </div>
+        <div class="col-body">
+          <div class="row-item">Often filtered</div>
+          <div class="row-item">Claimed origin</div>
+          <div class="row-item">Not guaranteed</div>
+          <div class="row-item">Unverified methods</div>
+          <div class="row-item">Sometimes tested</div>
+          <div class="row-item">Mild-moderate</div>
+        </div>
+      </div>
+
+      <div class="compare-col">
+        <div class="col-header">
+          <div class="col-image-wrap img-generic">
+            {% if section.settings.supermarket_image != blank %}
+              <img src="{{ section.settings.supermarket_image | image_url: width: 300 }}" alt="Supermarket Honey" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="col-title">
+            {{ section.settings.supermarket_title | newline_to_br }}
+          </div>
+        </div>
+        <div class="col-body">
+          <div class="row-item">Micro-filtered</div>
+          <div class="row-item">Blended sources</div>
+          <div class="row-item">Commonly added</div>
+          <div class="row-item">Industrial extraction</div>
+          <div class="row-item">Not disclosed</div>
+          <div class="row-item">Flat, uniform</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn prev-btn" aria-label="Previous Product">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+      </button>
+      <button class="carousel-btn next-btn" aria-label="Next Product">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.getElementById('compare-carousel-{{ section.id }}');
+    const prevBtn = wrapper.parentElement.querySelector('.prev-btn');
+    const nextBtn = wrapper.parentElement.querySelector('.next-btn');
+
+    if (wrapper && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        // Calculate gap based on screen size (10px on mobile, 30px on desktop)
+        const gap = window.innerWidth <= 991 ? 10 : 30;
+        const colWidth = wrapper.querySelector('.compare-col:not(.compare-col-labels)').offsetWidth + gap;
+        wrapper.scrollBy({ left: -colWidth, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const gap = window.innerWidth <= 991 ? 10 : 30;
+        const colWidth = wrapper.querySelector('.compare-col:not(.compare-col-labels)').offsetWidth + gap;
+        wrapper.scrollBy({ left: colWidth, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Why Choose Raw Sidr Honey",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Overall Section Background",
+      "default": "#F0EFEA"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Raw Sidr Honey"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover the difference between authentic raw honey and processed alternatives"
+    },
+    {
+      "type": "header",
+      "content": "Card 1 Setup (Premium Product)"
+    },
+    {
+      "type": "image_picker",
+      "id": "raw_image",
+      "label": "Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "p1_bg_image",
+      "label": "Card Custom Background Image"
+    },
+    {
+      "type": "color_background",
+      "id": "p1_bg",
+      "label": "Fallback Card Gradient Background",
+      "default": "linear-gradient(180deg, #8A5A19 0%, #3B2006 100%)"
+    },
+    {
+      "type": "textarea",
+      "id": "raw_title",
+      "label": "Title Text",
+      "default": "DEFAULT",
+      "info": "Type 'DEFAULT' to pull the product page title automatically."
+    },
+    {
+      "type": "header",
+      "content": "Card 2 Setup (Generic Raw)"
+    },
+    {
+      "type": "image_picker",
+      "id": "generic_image",
+      "label": "Bottle Image"
+    },
+    {
+      "type": "textarea",
+      "id": "generic_title",
+      "label": "Title Text",
+      "default": "Generic Raw\nHoney"
+    },
+    {
+      "type": "header",
+      "content": "Card 3 Setup (Generic Supermarket)"
+    },
+    {
+      "type": "image_picker",
+      "id": "supermarket_image",
+      "label": "Bottle Image"
+    },
+    {
+      "type": "textarea",
+      "id": "supermarket_title",
+      "label": "Title Text",
+      "default": "Generic\nSupermarket Honey"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Sidr Honey Section"
+    }
+  ]
+}
+{% endschema %}

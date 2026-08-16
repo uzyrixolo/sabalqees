@@ -1,0 +1,327 @@
+{% comment %}
+  WhatsApp Popup Snippet
+  Usage: {% render 'whatsapp-popup' %}
+  
+  Customize the phone numbers and labels in the variables below
+{% endcomment %}
+
+{% assign support_number = '+971565365554' %}
+{% assign sales_number = '+97148803440' %}
+{% assign support_label = 'Balqees Customer Support' %}
+{% assign sales_label = 'Balqees Sales' %}
+
+<style>
+  .whatsapp-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .whatsapp-popup-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .whatsapp-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    width: 90%;
+    max-width: 420px;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .whatsapp-popup.active {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  .whatsapp-popup-header {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 24px;
+    position: relative;
+  }
+
+  .whatsapp-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: background 0.2s;
+  }
+
+  .whatsapp-popup-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .whatsapp-popup-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .whatsapp-popup-title svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .whatsapp-popup-subtitle {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    opacity: 0.95;
+    font-weight: 400;
+  }
+
+  .whatsapp-popup-body {
+    padding: 24px;
+  }
+
+  .whatsapp-popup-info {
+    background: #f0f2f5;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #667781;
+    margin-bottom: 20px;
+  }
+
+  .whatsapp-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .whatsapp-contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: white;
+    border: 2px solid #e9edef;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+  }
+
+  .whatsapp-contact-item:hover {
+    border-color: #25D366;
+    background: #f0fdf4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
+  }
+
+  .whatsapp-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .whatsapp-contact-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .whatsapp-contact-avatar svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+
+  .whatsapp-contact-details {
+    flex: 1;
+  }
+
+  .whatsapp-contact-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111b21;
+    margin: 0 0 2px 0;
+  }
+
+  .whatsapp-contact-label {
+    font-size: 13px;
+    color: #667781;
+    margin: 0;
+  }
+
+  .whatsapp-contact-arrow {
+    color: #25D366;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 480px) {
+    .whatsapp-popup {
+      width: 95%;
+      max-width: none;
+    }
+
+    .whatsapp-popup-header {
+      padding: 20px;
+    }
+
+    .whatsapp-popup-body {
+      padding: 20px;
+    }
+  }
+</style>
+
+<!-- Popup Overlay -->
+<div class="whatsapp-popup-overlay" id="whatsappOverlay"></div>
+
+<!-- Popup Container -->
+<div class="whatsapp-popup" id="whatsappPopup">
+  <!-- Header -->
+  <div class="whatsapp-popup-header">
+    <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Close">
+      ✕
+    </button>
+    <h2 class="whatsapp-popup-title">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0C7.164 0 0 7.164 0 16c0 2.832.744 5.492 2.044 7.792L0 32l8.424-2.02A15.923 15.923 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
+        <path d="M25.232 22.584c-.332.936-1.952 1.716-2.692 1.82-.74.104-1.412.332-4.768-.996-4.288-1.692-7.056-6.036-7.268-6.316-.212-.28-1.732-2.304-1.732-4.396 0-2.092 1.096-3.12 1.484-3.544.388-.424.848-.532 1.132-.532.284 0 .568.004.816.016.264.012.616-.1.964.736.348.836 1.188 2.9 1.292 3.112.104.212.176.46.036.74-.14.28-.212.456-.424.704-.212.248-.444.552-.636.74-.212.212-.432.44-.184.864.248.424 1.104 1.82 2.372 2.948 1.632 1.452 3.008 1.904 3.436 2.116.428.212.676.176.924-.104.248-.28 1.064-1.244 1.348-1.672.284-.428.568-.356.956-.212.388.144 2.464 1.164 2.888 1.376.424.212.708.316.812.492.104.176.104 1.016-.228 1.952z" fill="white"/>
+      </svg>
+      Start a Conversation
+    </h2>
+    <p class="whatsapp-popup-subtitle">Hi! Click one of our members below to chat on WhatsApp</p>
+  </div>
+
+  <!-- Body -->
+  <div class="whatsapp-popup-body">
+    <div class="whatsapp-popup-info">
+      The team typically replies in a few minutes.
+    </div>
+
+    <div class="whatsapp-contact-list">
+      <!-- Customer Support Contact -->
+      <a 
+        href="https://wa.me/{{ support_number }}" 
+        target="_blank" 
+        class="whatsapp-contact-item"
+        rel="noopener noreferrer"
+      >
+        <div class="whatsapp-contact-info">
+          <div class="whatsapp-contact-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.46-.01z"/>
+            </svg>
+          </div>
+          <div class="whatsapp-contact-details">
+            <p class="whatsapp-contact-name">{{ support_label }}</p>
+            <p class="whatsapp-contact-label">Customer Support</p>
+          </div>
+        </div>
+        <svg class="whatsapp-contact-arrow" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+        </svg>
+      </a>
+
+      <!-- Sales Contact -->
+      <a 
+        href="https://wa.me/{{ sales_number }}" 
+        target="_blank" 
+        class="whatsapp-contact-item"
+        rel="noopener noreferrer"
+      >
+        <div class="whatsapp-contact-info">
+          <div class="whatsapp-contact-avatar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.46-.01z"/>
+            </svg>
+          </div>
+          <div class="whatsapp-contact-details">
+            <p class="whatsapp-contact-name">{{ sales_label }}</p>
+            <p class="whatsapp-contact-label">Sales Inquiries</p>
+          </div>
+        </div>
+        <svg class="whatsapp-contact-arrow" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Get elements
+    const overlay = document.getElementById('whatsappOverlay');
+    const popup = document.getElementById('whatsappPopup');
+    const closeBtn = document.getElementById('whatsappClose');
+
+    // Function to open popup
+    window.openWhatsAppPopup = function() {
+      overlay.classList.add('active');
+      popup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    // Function to close popup
+    function closePopup() {
+      overlay.classList.remove('active');
+      popup.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePopup);
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', closePopup);
+    }
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && popup.classList.contains('active')) {
+        closePopup();
+      }
+    });
+
+    // Prevent popup click from closing
+    if (popup) {
+      popup.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+  })();
+</script>

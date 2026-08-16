@@ -1,0 +1,704 @@
+{% comment %}
+  Section: Artisanal Beekeeping Hero
+  Desktop: full-width hero image, 3 feature columns fade up on scroll
+  Mobile:  triangle icon layout, cycles through features with dashed connector lines
+  Figma: Balqees Honey — nodes 339:10349 (desktop), 339:9401 / 339:11850 / 339:11966 (mobile)
+{% endcomment %}
+
+{% assign feature_blocks = section.blocks | where: 'type', 'feature' %}
+
+<section class="bq-bk" id="bq-bk-{{ section.id }}">
+
+  <!-- ── Intro (above image, desktop only) ── -->
+  <div class="bq-bk__intro">
+    {% if section.settings.heading != blank %}
+      <h2 class="bq-bk__intro-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.subtext != blank %}
+      <p class="bq-bk__intro-sub">{{ section.settings.subtext }}</p>
+    {% endif %}
+  </div>
+
+  <!-- ── Hero card ── -->
+  <div class="bq-bk__card">
+
+    <!-- Background -->
+    <div class="bq-bk__bg">
+      {% if section.settings.bg_image != blank %}
+        <img
+          src="{{ section.settings.bg_image | image_url: width: 1600 }}"
+          alt="{{ section.settings.bg_image.alt | escape }}"
+          class="bq-bk__bg-img"
+          loading="lazy"
+        >
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'bq-bk__bg-img bq-bk__placeholder' }}
+      {% endif %}
+      <div class="bq-bk__bg-overlay"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         DESKTOP: heading + 3 feature columns
+    ══════════════════════════════════════ -->
+    <div class="bq-bk__desktop-content">
+      {% if section.settings.card_heading != blank %}
+        <div class="bq-bk__card-heading-wrap">
+          <h3 class="bq-bk__card-heading">{{ section.settings.card_heading }}</h3>
+        </div>
+      {% endif %}
+
+      <div class="bq-bk__features-desktop">
+        {% for block in feature_blocks %}
+          <div class="bq-bk__feature-col" data-animate-col {{ block.shopify_attributes }}>
+            {% if block.settings.icon != blank %}
+              <div class="bq-bk__col-icon">
+                <img
+                  src="{{ block.settings.icon | image_url: width: 200 }}"
+                  alt="{{ block.settings.icon.alt | escape }}"
+                  width="142" height="142" loading="lazy"
+                >
+              </div>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <p class="bq-bk__col-title">{{ block.settings.title }}</p>
+            {% endif %}
+            <div class="bq-bk__col-divider"></div>
+            {% if block.settings.description != blank %}
+              <p class="bq-bk__col-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         MOBILE: triangle icon carousel
+    ══════════════════════════════════════ -->
+    <div class="bq-bk__mobile-content">
+
+      <!-- Triangle icon cluster -->
+      <div class="bq-bk__triangle" aria-hidden="true">
+        <!-- Top icon (active feature) -->
+        <div class="bq-bk__tri-icon bq-bk__tri-icon--top" data-tri-top>
+          {% for block in feature_blocks %}
+            <div class="bq-bk__tri-slot{% if forloop.first %} is-active{% endif %}" data-tri-slot="{{ forloop.index0 }}">
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | image_url: width: 160 }}" alt="" width="73" height="73" loading="lazy">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Dashed connector lines (SVG) -->
+        <svg class="bq-bk__tri-lines" viewBox="0 0 390 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="195" y1="73" x2="87"  y2="175" stroke="white" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+          <line x1="195" y1="73" x2="303" y2="175" stroke="white" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+          <line x1="87"  y1="175" x2="303" y2="175" stroke="white" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+        </svg>
+
+        <!-- Bottom-left icon -->
+        <div class="bq-bk__tri-icon bq-bk__tri-icon--bl">
+          {% assign prev_index = feature_blocks.size | minus: 1 %}
+          {% for block in feature_blocks %}
+            <div class="bq-bk__tri-slot{% if forloop.index0 == prev_index %} is-active{% endif %}" data-tri-bl="{{ forloop.index0 }}">
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | image_url: width: 120 }}" alt="" width="73" height="73" loading="lazy">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Bottom-right icon -->
+        <div class="bq-bk__tri-icon bq-bk__tri-icon--br">
+          {% for block in feature_blocks %}
+            <div class="bq-bk__tri-slot{% if forloop.index == 2 %} is-active{% endif %}" data-tri-br="{{ forloop.index0 }}">
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | image_url: width: 120 }}" alt="" width="73" height="73" loading="lazy">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Active feature label + description -->
+      <div class="bq-bk__mobile-text">
+        {% for block in feature_blocks %}
+          <div class="bq-bk__mobile-slide{% if forloop.first %} is-active{% endif %}" data-mobile-slide="{{ forloop.index0 }}">
+            {% if block.settings.title != blank %}
+              <p class="bq-bk__mobile-title">{{ block.settings.title }}</p>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p class="bq-bk__mobile-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Dot indicators -->
+      <div class="bq-bk__dots" role="tablist">
+        {% for block in feature_blocks %}
+          <button
+            class="bq-bk__dot{% if forloop.first %} is-active{% endif %}"
+            data-dot="{{ forloop.index0 }}"
+            aria-label="{{ block.settings.title | escape }}"
+          ></button>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Base ── */
+  .bq-bk {
+    background: #fff;
+    padding: 60px 40px 80px;
+    box-sizing: border-box;
+  }
+
+  /* ── Intro ── */
+  .bq-bk__intro {
+    text-align: center;
+    max-width: 940px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bq-bk__intro-heading {
+    font-family: 'Baskervville', 'Baskerville', Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.12;
+    color: #000;
+    margin: 0;
+  }
+
+  .bq-bk__intro-sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    margin: 0;
+  }
+
+  /* ── Hero card ── */
+  .bq-bk__card {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 1340px;
+    margin: 0 auto;
+    min-height: 785px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  /* Background */
+  .bq-bk__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .bq-bk__bg-img,
+  .bq-bk__placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bq-bk__bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 46%, rgba(0,0,0,0.55) 77%);
+  }
+
+  /* ════════════════════════════
+     DESKTOP layout
+  ════════════════════════════ */
+  .bq-bk__desktop-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bq-bk__mobile-content { display: none; }
+
+  .bq-bk__card-heading-wrap {
+    text-align: center;
+    padding: 0 40px 20px;
+  }
+
+  .bq-bk__card-heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.12;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  /* Feature columns */
+  .bq-bk__features-desktop {
+    display: flex;
+    justify-content: center;
+    padding: 20px 60px 50px;
+    gap: 0;
+  }
+
+  .bq-bk__feature-col {
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 0 20px;
+    /* Animate in */
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .bq-bk__feature-col.is-visible { opacity: 1; transform: translateY(0); }
+  .bq-bk__feature-col:nth-child(2) { transition-delay: 0.15s; }
+  .bq-bk__feature-col:nth-child(3) { transition-delay: 0.30s; }
+
+  .bq-bk__col-icon {
+    width: 142px;
+    height: 142px;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+  }
+
+  .bq-bk__col-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .bq-bk__col-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .bq-bk__col-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.5);
+    margin: 2px 0;
+  }
+
+  .bq-bk__col-desc {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ════════════════════════════
+     MOBILE layout
+  ════════════════════════════ */
+  @media (max-width: 767px) {
+    .bq-bk {
+      padding: 0;
+      background: #e9ebea;
+    }
+
+    .bq-bk__intro {
+      padding: 40px 30px 24px;
+      margin: 0;
+    }
+
+    .bq-bk__intro-heading { font-size: 32px; line-height: 1.05; }
+    .bq-bk__intro-sub     { font-size: 16px; }
+
+    .bq-bk__card {
+      border-radius: 0;
+      min-height: 520px;
+      justify-content: flex-end;
+    }
+
+    .bq-bk__desktop-content { display: none; }
+    .bq-bk__mobile-content  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 40px;
+    }
+
+    /* Triangle cluster */
+    .bq-bk__triangle {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 16px;
+    }
+
+    .bq-bk__tri-lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Icon positions */
+    .bq-bk__tri-icon {
+      position: absolute;
+    }
+
+    .bq-bk__tri-icon--top {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 73px;
+      height: 73px;
+    }
+
+    .bq-bk__tri-icon--bl {
+      bottom: 0;
+      left: calc(50% - 108px);
+      width: 73px;
+      height: 73px;
+    }
+
+    .bq-bk__tri-icon--br {
+      bottom: 0;
+      right: calc(50% - 108px);
+      width: 73px;
+      height: 73px;
+    }
+
+    /* Individual icon slots */
+    .bq-bk__tri-slot {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.5s ease, background 0.4s ease, transform 0.4s ease;
+      transform: scale(0.85);
+    }
+
+    .bq-bk__tri-slot.is-active {
+      opacity: 1;
+      transform: scale(1);
+      background: rgba(255,255,255,0.25);
+    }
+
+    .bq-bk__tri-slot img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Bottom icons always dimly visible */
+    .bq-bk__tri-icon--bl .bq-bk__tri-slot,
+    .bq-bk__tri-icon--br .bq-bk__tri-slot {
+      opacity: 0;
+    }
+
+    .bq-bk__tri-icon--bl .bq-bk__tri-slot.is-active,
+    .bq-bk__tri-icon--br .bq-bk__tri-slot.is-active {
+      opacity: 0.55;
+      transform: scale(0.9);
+    }
+
+    /* Feature text */
+    .bq-bk__mobile-text {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding: 0 20px;
+      min-height: 120px;
+    }
+
+    .bq-bk__mobile-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 0 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .bq-bk__mobile-slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .bq-bk__mobile-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .bq-bk__mobile-desc {
+      font-size: 16px;
+      color: #fff;
+      margin: 0;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    /* Dot indicators */
+    .bq-bk__dots {
+      display: flex;
+      gap: 8px;
+      margin-top: 130px;
+    }
+
+    .bq-bk__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.4);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .bq-bk__dot.is-active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+  }
+
+  /* ── Tablet ── */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .bq-bk__card           { min-height: 600px; }
+    .bq-bk__card-heading   { font-size: 36px; }
+    .bq-bk__features-desktop { padding: 20px 30px 40px; }
+    .bq-bk__feature-col    { max-width: 240px; }
+    .bq-bk__col-icon       { width: 100px; height: 100px; }
+    .bq-bk__intro-heading  { font-size: 36px; }
+    .bq-bk__dots           { display: none; }
+  }
+</style>
+
+<script>
+(function () {
+  var section = document.getElementById('bq-bk-{{ section.id }}');
+  if (!section) return;
+
+  var DURATION = {{ section.settings.cycle_duration | default: 3500 }};
+  var total    = {{ feature_blocks.size }};
+
+  /* ── Desktop: scroll fade-up ── */
+  var cols = section.querySelectorAll('[data-animate-col]');
+  if (cols.length && 'IntersectionObserver' in window) {
+    var colObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          colObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cols.forEach(function (el) { colObs.observe(el); });
+  } else {
+    cols.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ── Mobile: triangle carousel ── */
+  if (window.innerWidth >= 768) return; // desktop handled above
+
+  var slides    = Array.from(section.querySelectorAll('[data-mobile-slide]'));
+  var dots      = Array.from(section.querySelectorAll('[data-dot]'));
+  var topSlots  = Array.from(section.querySelectorAll('[data-tri-top] .bq-bk__tri-slot'));
+  var blSlots   = Array.from(section.querySelectorAll('[data-tri-bl]'));    // NodeList of named attrs doesn't exist; use class
+  var brSlots   = Array.from(section.querySelectorAll('[data-tri-br]'));
+
+  // Re-query using data attributes set on slots
+  var allBlSlots = Array.from(section.querySelectorAll('.bq-bk__tri-icon--bl .bq-bk__tri-slot'));
+  var allBrSlots = Array.from(section.querySelectorAll('.bq-bk__tri-icon--br .bq-bk__tri-slot'));
+
+  var current = 0;
+  var timer   = null;
+
+  function activate(idx) {
+    var prev = (idx - 1 + total) % total;
+    var next = (idx + 1) % total;
+
+    // Slides + dots
+    slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+    dots.forEach(function (d, i)   { d.classList.toggle('is-active', i === idx); });
+
+    // Top icon = current
+    topSlots.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+
+    // BL = previous feature
+    allBlSlots.forEach(function (s, i) { s.classList.toggle('is-active', i === prev); });
+
+    // BR = next feature
+    allBrSlots.forEach(function (s, i) { s.classList.toggle('is-active', i === next); });
+
+    current = idx;
+  }
+
+  function startCycle() {
+    clearInterval(timer);
+    timer = setInterval(function () {
+      activate((current + 1) % total);
+    }, DURATION);
+  }
+
+  // Dot click
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      activate(parseInt(dot.dataset.dot, 10));
+      startCycle(); // reset timer
+    });
+  });
+
+  // Init
+  activate(0);
+
+  // Run only when visible
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) startCycle();
+        else clearInterval(timer);
+      });
+    }, { threshold: 0.2 });
+    obs.observe(section);
+  } else {
+    startCycle();
+  }
+
+  // Pause on hover
+  section.addEventListener('mouseenter', function () { clearInterval(timer); });
+  section.addEventListener('mouseleave', startCycle);
+
+  // Touch swipe support
+  var touchStartX = 0;
+  section.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  section.addEventListener('touchend', function (e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      activate(diff > 0 ? (current + 1) % total : (current - 1 + total) % total);
+      startCycle();
+    }
+  }, { passive: true });
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Artisanal Beekeeping Hero",
+  "tag": "section",
+  "class": "bq-section-bk-hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Intro heading (above image)",
+      "default": "Our Commitment to Artisanal Beekeeping"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Intro subtext",
+      "default": "We're proud to honor our partnerships with local beekeepers who use traditional, sustainable practices to produce some of the world's purest honey."
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "card_heading",
+      "label": "Heading on image (desktop)",
+      "default": "Why We Partner with Artisanal Beekeepers"
+    },
+    {
+      "type": "range",
+      "id": "cycle_duration",
+      "label": "Mobile auto-cycle speed (ms)",
+      "min": 2000,
+      "max": 7000,
+      "step": 500,
+      "default": 3500
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Ethical Beekeeping"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Our beekeepers use sustainable practices that avoid harmful chemicals, overharvesting, and sugar substitutes, keeping bee health the priority."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Artisanal Beekeeping Hero",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Ethical Beekeeping",
+            "description": "Our beekeepers use sustainable practices that avoid harmful chemicals, overharvesting, and sugar substitutes, keeping bee health the priority."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Support for Local Communities",
+            "description": "By partnering with local beekeepers and cooperatives, we help support families in rural communities and preserve traditional beekeeping methods."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "100% Pure Honey",
+            "description": "Sourced from clean, flower-rich environments that produce honey with greater depth of flavour, character, and natural integrity."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

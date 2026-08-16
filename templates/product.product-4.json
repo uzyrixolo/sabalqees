@@ -1,0 +1,2032 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "customproductbuilder": {
+      "type": "customproductbuilder",
+      "disabled": true,
+      "settings": {}
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "custom_css": [
+        ".breadcrumb_pr_wrap {margin-bottom: -50px;}"
+      ],
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": false,
+        "cl_bg": "#ffffff",
+        "cl_link": "#000000"
+      }
+    },
+    "main": {
+      "type": "main-product-new",
+      "blocks": {
+        "custom_liquid_R8CCiU": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<nav class=\"breadcrumbs\">\n  <a href=\"/\">Home</a>\n  {% if collection %}\n    &raquo; <a href=\"{{ collection.url }}\">{{ collection.title }}</a>\n  {% endif %}\n  {% if product %}\n    &raquo; <a href=\"{{ product.url }}\">{{ product.title }}</a>\n  {% endif %}\n</nav>\n\n<style>\n  .breadcrumbs {\n    font-family: Noto Sans, sans-serif;\n    font-size: 12px;\n    margin: 20px 0;\n    padding: 0;\n    display: flex;\n    align-items: center;\n    color: #22222;\n  }\n\n  .breadcrumbs a {\n    color: #222222;\n    text-decoration: none;\n    transition: color 0.3s ease;\n    padding: 0 5px;\n  }\n\n  .breadcrumbs a:hover {\n    color: #005bb5;\n    text-decoration: underline;\n  }\n\n\n  .breadcrumbs &raquo; {\n    margin: 0 5px;\n    color: #222222;\n  }\n</style>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "capitalize",
+            "fnt_df_pr": "2",
+            "size_pr": 28,
+            "fw_pr": 500,
+            "lh_pr": 0,
+            "ls_pr": 1.5,
+            "pr_title_color": "#222222"
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "image": "{{ product.metafields.custom.award.value }}",
+            "wimg": 91,
+            "svg": "",
+            "height": 44
+          }
+        },
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{{product.metafields.custom.info}}"
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "1",
+            "tax_ship": false,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 18,
+            "fw_price_pr": 400,
+            "price_color": "#000000",
+            "price_sale_color": "#109533"
+          }
+        },
+        "custom_liquid_xG4qxj": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
+          }
+        },
+        "judge_me_reviews_review_snippet_widget_ydBGzY": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "des": "2",
+            "text": "",
+            "length": 30,
+            "readm": true,
+            "readm_txt": "Show More"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "block",
+            "enable_fit_ratio_img": false,
+            "color_size": "small",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": true,
+            "pr_btn_round": 10,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": true,
+            "button_style": "default",
+            "button_color": "primary",
+            "button_effect": "sweep-to-top",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"honey-features\">\n  <!-- 1st Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/bee-hive.png?v=1724952040\" alt=\"100% Raw Honey\">\n    <body>100% RAW HONEY</body>\n  </div>\n\n  <!-- 2nd Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/pure-water.png?v=1724935155\" alt=\"UNPASTEURIZED\">\n    <body>UNPASTEURIZED</body>\n  </div>\n\n  <!-- 3rd Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/trophy.png?v=1724935155\" alt=\"Award Winning\">\n    <body>AWARD WINNING</body>\n  </div>\n\n  <!-- 4th Feature -->\n  <div class=\"feature-item\">\n    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/heart-beat.png?v=1724952225\" alt=\"Maximum Nutrition\">\n    <body>MAXIMUM NUTRITION</body>\n  </div>\n</div>"
+          }
+        },
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "page": "benefits"
+          }
+        },
+        "custom_liquid_AHjKNK": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"subscriptions_app_embed_block\"></div>"
+          }
+        },
+        "custom_liquid_fgHWWJ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"grid product__media-logos\">\n  \n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/ISO.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                   <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/superbrand.png?v=1718805432\">\n                  </div>\n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/haccp.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n        \n              </div>"
+          }
+        },
+        "html_3rcPqr": {
+          "type": "html",
+          "settings": {
+            "page": "pdp-text-2"
+          }
+        },
+        "custom_liquid_9W7A4P": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'tabby-installments'%}\n{% render 'tiktok-video' %}"
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "show_options": false,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": false,
+            "show_barcode": false,
+            "show_available": false,
+            "show_category": false,
+            "show_tags": false
+          }
+        },
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"bigBox\">\n  \n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/free.png?v=1703242873\" alt=\"\">\n        <p class=\"item_text2\">Free Delivery in Dubai</p>\n    </div>\n\n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/returns.png?v=1703242796\" alt=\"\">\n        <p class=\"item_text2\">7 Days Returnable</p>\n    </div>\n\n    <div class=\"box1\"> \n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/48.png?v=1703242873\" alt=\"\">\n        <p class=\"item_text2\">Delivery within 48 hours</p>\n    </div>\n    \n</div>\n\n<style>\n    .bigBox {\n        justify-content: space-around;\n        display: flex;\n        text-align: center;\n        max-width: 600px; /* Adjust this value as needed */\n        margin: 0 auto; /* Center the icons within the container */\n    }\n\n    .box1 {\n        max-width: 135px;\n        padding: 10px 0; /* Reduced padding */\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: space-around;\n    }\n\n    .box1 img {\n        width: 70px;\n        padding: 10px;\n        mix-blend-mode: multiply;\n    }\n\n    .item_text2 {\n        width: 100%;\n        margin: 10px auto 0;\n        letter-spacing: 0;\n        font-weight: 400;\n        font-size: 12px !important;\n        text-align: center;\n        color: #000;\n        margin-top: 0;\n    }\n</style>"
+          }
+        },
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if  product.metafields.custom.ways %}<h2 style=\"color:#d29b74;text-align:center;\" >Ways to use {{product.title}}</h2>\n{% endif %}\n\n\n{{product.metafields.custom.ways}}\n\n\n<style>\n.img-inline img {\n    max-width: 60px;\n}\n    .ways-inline {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.img-inline {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.img-inline p {\n    padding: 0;\n    margin: 0;\n    color: #ce8f63;\n    font-weight: 500;\n    margin-left: 15px;\n    font-size: 1.5rem;\n}\n\n.ways-box {\n   \n    max-width: 650px;\n    margin-inline: 10px;\nmargin:0 auto;\n margin-top: 20px;\n}\n\n.ways-inline .green-tick {\n    width: 25px;\n}\n</style>"
+          }
+        },
+        "size_delivery_ask": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": true,
+            "page_dr": "delivery-return",
+            "ask": true,
+            "phone": true
+          }
+        },
+        "fce11158-f428-4965-b9df-a549ff610b11": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Collapsible tab",
+            "content": "",
+            "page": ""
+          }
+        },
+        "custom_liquid_tVUGja": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"grid product__media-logos\">\n                \n                \n               \n                \n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/ISO.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                   <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/superbrand.png?v=1718805432\">\n                  </div>\n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/haccp.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                \n                 \n              </div>"
+          }
+        },
+        "e36839f5-0847-44e2-97d3-2885597bd1ff": {
+          "type": "tab_add",
+          "disabled": true,
+          "settings": {
+            "title": "Additional Information"
+          }
+        },
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Custom tab",
+            "content": "",
+            "page": "wash-care"
+          }
+        },
+        "56e67368-7424-4d73-8f14-dacdda4c59be": {
+          "type": "tab_rivui",
+          "disabled": true,
+          "settings": {
+            "title": "Reviews",
+            "review_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'></div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      </div>\n      <!-- End of Judge.me code -->"
+          }
+        },
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3": {
+          "type": "store_pickup",
+          "disabled": true,
+          "settings": {}
+        },
+        "94011ade-ec25-4d68-b37a-70660ede49dd": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "1",
+            "social_style": "1",
+            "social_size": "extra_small",
+            "bd_radius": 0,
+            "use_color_set": true,
+            "icon_cl": "#222222",
+            "bg_cl": "#00badb",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        },
+        "07491781-28b2-43a7-81a4-35850443a8f1": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Raw vs other honey",
+            "custom_liquid": "<p>Some text here<p>"
+          }
+        },
+        "83791d2e-d63a-4387-9a46-02fd0881dc11": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "How to enjoy?",
+            "custom_liquid": "<p>{{product.metafields.custom.enjoy}}</p>"
+          }
+        },
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "tab_liquid_gKKgmq": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Health Benefits",
+            "custom_liquid": "<p><strong>{{product.metafields.custom.line}}</strong></p><div class=\"product__description\">\n                    <div class=\"rte\"><div class=\"metafield-rich_text_field\">{{product.metafields.custom.info}}</div></div>\n                  </div>"
+          }
+        },
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
+          "type": "tab_des",
+          "settings": {
+            "title": "Product Details"
+          }
+        },
+        "tab_html_YdtJ8r": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Shipping Information",
+            "content": "",
+            "page": "delivery-information"
+          }
+        },
+        "tab_html_ccjh6C": {
+          "type": "tab_html",
+          "settings": {
+            "title": "Refunds & Returns",
+            "content": "<p>You have 7 days to place a returns request. Learn more about our returns process <a href=\"https://sa.balqees.com/pages/return-refund-policy\" title=\"https://sa.balqees.com/pages/return-refund-policy\">here</a>.</p>",
+            "page": ""
+          }
+        },
+        "tab_liquid_VQgjnE": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Certification Breakdown",
+            "custom_liquid": "<div class=\"tab-content-desc-wp\">\n            <div class=\"content\">\n              <div class=\"content_item content-item-1\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_4.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Glyphosate Residue Free:</h4>\n                  <p>Every batch of Manukora honey is 3rd-party tested and verified free from any toxins, pesticides, and glyphosates. All traceable through our unique QR code system on each product.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-2\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_2.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Third Party Tested:</h4>\n                  <p>All our Mānuka honey undergo rigorous testing by independent labs to verify the MGO levels and potency of Mānuka while ensuring all other bioactive compounds are accounted for.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-3\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tab_3.png?v=1694553035\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Certified B Corporation:</h4>\n                  <p>Manukora is proudly B-Corp Certified. We've forged strong ties with expert beekeepers in remote New Zealand. Together, we're shaping a business that cares for bees, their homes, and fosters local community bonds.</p>\n                </div>\n              </div>\n              <div class=\"content_item content-item-4\">\n                <img src=\"https://cdn.shopify.com/s/files/1/0005/4447/3203/files/logo_product_tabs_1.png?v=1694547276\" alt=\"\">\n                <div class=\"content_text\">\n                  <h4>Non GMO Verified:</h4>\n                  <p>Our Mānuka honey is ethically harvested and produced, all GMO-free verified by the Non-GMO Project.</p>\n                </div>\n              </div>\n            </div>\n          </div>"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_R8CCiU",
+        "title",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b",
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92",
+        "price_review",
+        "custom_liquid_xG4qxj",
+        "judge_me_reviews_review_snippet_widget_ydBGzY",
+        "description",
+        "form",
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d",
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9",
+        "custom_liquid_AHjKNK",
+        "custom_liquid_fgHWWJ",
+        "html_3rcPqr",
+        "custom_liquid_9W7A4P",
+        "meta",
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9",
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119",
+        "size_delivery_ask",
+        "fce11158-f428-4965-b9df-a549ff610b11",
+        "custom_liquid_tVUGja",
+        "e36839f5-0847-44e2-97d3-2885597bd1ff",
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
+        "56e67368-7424-4d73-8f14-dacdda4c59be",
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "07491781-28b2-43a7-81a4-35850443a8f1",
+        "83791d2e-d63a-4387-9a46-02fd0881dc11",
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3",
+        "tab_liquid_gKKgmq",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "tab_html_YdtJ8r",
+        "tab_html_ccjh6C",
+        "tab_liquid_VQgjnE"
+      ],
+      "custom_css": [
+        ".t4s-pr_trust_seal img.t4s-img-tr__img {max-width: 100px; position: absolute; right: 10px; top: 0;}",
+        ".t4s-product__media-wrapper {position: relative;}",
+        ".t4s-product__media-wrapper > .t4s-row {position: sticky; top: 8rem;}",
+        ".wayfx-product__photo-grid-item-2 {order: 2;}",
+        ".is--tab-design__accordion .t4s-tab-content {}",
+        ".is--tab-design__accordion .t4s-tab-content ul {padding: 0; list-style: disc !important;}",
+        ".is--tab-design__accordion .t4s-tab-content ul li p {padding: 0; margin: 0;}"
+      ],
+      "settings": {
+        "pr_layout": "default",
+        "product-view": "#efeeee",
+        "enable_sticky_info": true,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "large",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "none",
+        "zoom_tp": "external",
+        "enable_zoom_icon": false,
+        "enable_zoom_click_mb": false,
+        "enable_video_looping": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "tabs_design": "accordion",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "inner",
+        "enable_first_tab": false,
+        "tabs_layout": "default",
+        "bg": "rgba(0,0,0,0)",
+        "bg_mb": "rgba(0,0,0,0)",
+        "product_list": [],
+        "sticky_mode": "2",
+        "sticky_show": "2",
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "custom_liquid_Bdt4pr": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"menu\">\n  <h2>Ways To Use {{product.title}}</h2>\n  <div class=\"menu__item\">\n    <div class=\"marquee\">\n      <div class=\"marquee__inner\">\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/sauce.png?v=1724325716\" alt=\"Sauce\">\n          <h3>Sauce</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Marinating.png?v=1724325715\" alt=\"Marinating\">\n          <h3>Marinating</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/tea.png?v=1724325715\" alt=\"Tea\">\n          <h3>Tea</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/cheese.png?v=1724325715\" alt=\"Cheese\">\n          <h3>Cheese</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/warm.png?v=1724325715\" alt=\"Warm\">\n          <h3>Warm</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/raw.png?v=1724325715\" alt=\"Raw\">\n          <h3>Raw</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/toast.png?v=1724325715\" alt=\"Toast\">\n          <h3>Toast</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Smoothie.png?v=1724325714\" alt=\"Smoothie\">\n          <h3>Smoothie</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/baked.png?v=1724325715\" alt=\"Baked\">\n          <h3>Baked</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/breakfast.png?v=1724325714\" alt=\"Breakfast\">\n          <h3>Breakfast</h3>\n        </div>\n        <!-- Duplicate the items for seamless looping -->\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/sauce.png?v=1724325716\" alt=\"Sauce\">\n          <h3>Sauce</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Marinating.png?v=1724325715\" alt=\"Marinating\">\n          <h3>Marinating</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/tea.png?v=1724325715\" alt=\"Tea\">\n          <h3>Tea</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/cheese.png?v=1724325715\" alt=\"Cheese\">\n          <h3>Cheese</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/warm.png?v=1724325715\" alt=\"Warm\">\n          <h3>Warm</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/raw.png?v=1724325715\" alt=\"Raw\">\n          <h3>Raw</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/toast.png?v=1724325715\" alt=\"Toast\">\n          <h3>Toast</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/Smoothie.png?v=1724325714\" alt=\"Smoothie\">\n          <h3>Smoothie</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/baked.png?v=1724325715\" alt=\"Baked\">\n          <h3>Baked</h3>\n        </div>\n        <div class=\"marquee__item\">\n          <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/breakfast.png?v=1724325714\" alt=\"Breakfast\">\n          <h3>Breakfast</h3>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<style>\nh2 {\n  text-align: center;\n  font-size: 30px !important;\nfont-weight: bold;\n  margin-bottom: 20px;\n  color: #222222 !important;\n}\n\n.menu__item {\n  text-align: center;\n}\n\n.marquee {\n  overflow: hidden;\n  white-space: nowrap;\n  position: relative;\n}\n\n.marquee__inner {\n  display: flex;\n  padding: 20px 0;\n  animation: marquee 20s linear infinite;\n  will-change: transform;\n}\n\n.marquee__item {\n  display: inline-block;\n  margin: 0 20px;\n  text-align: center;\n}\n\n.marquee__item img {\n  max-width: 80px;\n  height: auto;\n}\n\n.marquee__item h3 {\n  margin-top: 10px;\n  font-size: 1rem;\n  color: #D29B74;\n}\n\n@keyframes marquee {\n  0% { transform: translateX(0); }\n  100% { transform: translateX(-50%); }\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_section_q3p9B4": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_cPg4Dw": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "0px,0px,0px,0px",
+            "padding_inner_tb": "0px,0px,0px,0px",
+            "padding_inner_mb": "0px,0px,0px,0px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "image_JkpYKX": {
+          "type": "image",
+          "settings": {
+            "image_child": "shopify://shop_images/Balqees_vs_commercial_honey.webp",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 800,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 0,
+            "mgb_mb": 0
+          }
+        },
+        "bl_col_Fabx44": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_J497z3": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Sweetest Health Fix",
+            "remove_br_tag": false,
+            "fontf": "3",
+            "text_cl": "#000000",
+            "text_fs": 30,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 22,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_LtP3Mz": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "A truly special and unprocessed gem that will captivate your senses and boost your heart and gut health. It also provides relief from cold and cough as a natural remedy.",
+            "remove_br_tag": false,
+            "fontf": "2",
+            "text_cl": "#000000",
+            "text_fs": 18,
+            "text_lh": 26,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_button_XwceMF": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "SEE OTHER FLAVOURS",
+            "button_link": "shopify://collections/newest-products",
+            "target_link": "_self",
+            "fontf": "1",
+            "button_icon_w": 15,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#d29b74",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#222222",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 40,
+            "button_pd_lr": 30,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 12,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_cPg4Dw",
+        "image_JkpYKX",
+        "bl_col_Fabx44",
+        "custom_text_J497z3",
+        "custom_text_LtP3Mz",
+        "custom_button_XwceMF"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#d99b74",
+        "cl_bg_gradient": "",
+        "mg": "50px,,,",
+        "pd": ",,0px,",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": "-20px,,0px,",
+        "pd_mb": ",,0px,",
+        "use_cus_css": true,
+        "code_cus_css": ""
+      }
+    },
+    "custom_section_TUhdV7": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_VHqnFw": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "image_ixeqPf": {
+          "type": "image",
+          "settings": {
+            "image_child": "{{ product.metafields.custom.centered_img.value }}",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 700,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        },
+        "bl_col_YLF6RG": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "0px,,0px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_A7kkwh": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Honey in its purest form",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "liquid_AjBpAk": {
+          "type": "liquid",
+          "settings": {
+            "liquid_content": "<div class=\"t4s-container\">\n  <div class=\"t4s-row zohaan t4s-gx-md-30 t4s-gy-md-30 t4s-gx-30 t4s-gy-30 desktop\">\n    {% assign additional_infos = product.metafields.custom.additional_info.value %}\n    {% assign additional_infoheadings = product.metafields.custom.additional_infoheading.value %}\n\n    {% for info in additional_infos %}\n    {% assign infoheading = additional_infoheadings[forloop.index0] %}\n    \n    <div class=\"t4s-custom-col t4s-col-item t4s-col-lg-6 t4s-col-md-6 t4s-col-12\">\n      <div class=\"t4s-col-inner t4s-ver-center-false \n      {% cycle 't4s-text-lg-left t4s-text-md-left t4s-text-left', 't4s-text-lg-right t4s-text-md-right t4s-text-right' %}\">\n        <div class=\"t4s-w-100\">\n          <h3 class=\"sides  feature-heading side-text-{{ forloop.index }}\">{{ infoheading }}</h3>\n          <p class=\"sides side-text-{{ forloop.index }}\">\n            {{ info }}\n          </p>\n        </div>\n      </div>\n    </div>\n    {% endfor %}\n  </div>\n</div>",
+            "hidden_mobile": true
+          }
+        },
+        "liquid_xqLPP8": {
+          "type": "liquid",
+          "settings": {
+            "liquid_content": "<div class=\"t4s-container\">\n  <div class=\"t4s-row zohaan t4s-gx-md-30 t4s-gy-md-30 t4s-gx-30 t4s-gy-30 mobile\">\n    {% assign additional_infos = product.metafields.custom.additional_info.value %}\n    {% assign additional_infoheadings = product.metafields.custom.additional_infoheading.value %}\n\n    {% for info in additional_infos %}\n    {% assign infoheading = additional_infoheadings[forloop.index0] %}\n    \n    <div class=\"t4s-custom-col t4s-col-item t4s-col-lg-6 t4s-col-md-6 t4s-col-12\">\n      <div class=\"t4s-col-inner t4s-ver-center-false \n      {% cycle 't4s-text-lg-left t4s-text-md-left t4s-text-left', 't4s-text-lg-right t4s-text-md-right t4s-text-right' %}\">\n        <div class=\"t4s-w-100\">\n          <h3 class=\"sides  feature-heading side-text-{{ forloop.index }}\">{{ infoheading }}</h3>\n          <p class=\"sides side-text-{{ forloop.index }}\">\n            {{ info }}\n          </p>\n        </div>\n      </div>\n    </div>\n    {% endfor %}\n  </div>\n</div>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_VHqnFw",
+        "image_ixeqPf",
+        "bl_col_YLF6RG",
+        "custom_text_A7kkwh",
+        "liquid_AjBpAk",
+        "liquid_xqLPP8"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".zohaan {margin: auto 0; justify-content: center; align-items: center; position: relative;}",
+        ".mob-4 {margin-bottom: 4rem;}"
+      ],
+      "settings": {
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "0",
+        "space_v_item_mb": "0",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "radial-gradient(rgba(210, 155, 116, 1), rgba(210, 155, 116, 1) 53%, rgba(210, 155, 116, 1) 96.763%)",
+        "mg": ",,0px,",
+        "pd": "50px,0px,20px,0px",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": "0px,0px,0px,0px",
+        "use_cus_css": true,
+        "code_cus_css": ""
+      }
+    },
+    "custom_liquid_JEWidD": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"separator2\"></div>\n\n<style>\n\n\n.separator2 {\n    background-color: #D29B74);\n    height: 32px;\n    position: relative;\n    width: 100%;\ntransform: rotate(180deg);\n}\n\n.separator2:before {\n    background-color: #D29B74;\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "logo_list_iyFnhB": {
+      "type": "logo_list",
+      "blocks": {
+        "logo_item_LR9xxJ": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy.png",
+            "url": ""
+          }
+        },
+        "logo_item_DxYYA4": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_2.png",
+            "url": ""
+          }
+        },
+        "logo_item_pkg4yt": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_3.png",
+            "url": ""
+          }
+        },
+        "logo_item_xYXgkz": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-06.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_YCjPLW": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-01.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_RyURM9": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-09.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_m9mEAP": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-17.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_ahcqdx": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-10.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_GFipfp": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-13.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_TtNGgJ": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-11.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_DLdcFP": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-08.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_a8FWKN": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-20.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_mandKN": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-14.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_3qtWUn": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-05.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_ExCR4i": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-07.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_yDUEtg": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-16.jpg",
+            "url": ""
+          }
+        },
+        "logo_item_bJMte9": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-12.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_item_LR9xxJ",
+        "logo_item_DxYYA4",
+        "logo_item_pkg4yt",
+        "logo_item_xYXgkz",
+        "logo_item_YCjPLW",
+        "logo_item_RyURM9",
+        "logo_item_m9mEAP",
+        "logo_item_ahcqdx",
+        "logo_item_GFipfp",
+        "logo_item_TtNGgJ",
+        "logo_item_DLdcFP",
+        "logo_item_a8FWKN",
+        "logo_item_mandKN",
+        "logo_item_3qtWUn",
+        "logo_item_ExCR4i",
+        "logo_item_yDUEtg",
+        "logo_item_bJMte9"
+      ],
+      "custom_css": [],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Sweetening Tables of the Finest",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 50,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "2",
+        "click_image": "data-goto",
+        "nav_thumbs": true,
+        "col_dk": "6",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 2.5,
+        "au_hover": false,
+        "nav_btn": false,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "elessi",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "100px,,100px,",
+        "pd": "",
+        "mg_mb": "60px,,60px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_section_beRXcH": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_Lnb78G": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "liquid_FU44Me": {
+          "type": "liquid",
+          "settings": {
+            "liquid_content": "<div class=\"wayfx-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"218\" height=\"34\" fill=\"none\" viewBox=\"0 0 218 34\"><path fill=\"#FFBA53\" d=\"M20.1559.730074 24.1136 12.0296l12.3659.1381c1.0641.0119 1.5046 1.3195.6511 1.9315l-9.9211 7.1206 3.6852 11.3846c.3166.9796-.8356 1.7867-1.7042 1.1934l-10.0877-6.899-10.08908 6.8976c-.86725.5934-2.02084-.215-1.70422-1.1934l3.6851-11.3845-9.92107-7.1206c-.85349-.612-.41298-1.9196.65113-1.9315l12.36594-.1381L18.0483.728746c.3414-.97172 1.7676-.97172 2.1076.001328Z\"></path><path fill=\"#FFBA53\" d=\"M65.1146.729952 69.0723 12.0295l12.366.1381c1.0641.0119 1.5046 1.3195.6511 1.9315l-9.9211 7.1206 3.6851 11.3845c.3166.9797-.8356 1.7868-1.7042 1.1934l-10.0877-6.8989-10.089 6.8976c-.8673.5934-2.0209-.215-1.7043-1.1934l3.6852-11.3845-9.9211-7.1207c-.8535-.6119-.413-1.9195.6511-1.9315l12.3659-.138L63.007.728624c.3414-.97172 1.7676-.97172 2.1076.001328Z\"></path><path fill=\"#FFBA53\" d=\"m110.071.729952 3.957 11.299548 12.366.1381c1.064.0119 1.505 1.3195.651 1.9315l-9.921 7.1206 3.685 11.3845c.317.9797-.835 1.7868-1.704 1.1934l-10.088-6.8989-10.0886 6.8976c-.8673.5934-2.0208-.215-1.7042-1.1934l3.6848-11.3845-9.9208-7.1207c-.8535-.6119-.413-1.9195.6511-1.9315l12.3657-.138L107.963.728624c.341-.97172 1.768-.97172 2.108.001328Z\"></path><path fill=\"#FFBA53\" d=\"m155.029.729952 3.957 11.299548 12.366.1381c1.064.0119 1.505 1.3195.651 1.9315l-9.921 7.1206 3.685 11.3845c.317.9797-.835 1.7868-1.704 1.1934l-10.087-6.8989-10.09 6.8976c-.867.5934-2.02-.215-1.704-1.1934l3.685-11.3845-9.921-7.1207c-.853-.6119-.413-1.9195.651-1.9315l12.366-.138L152.921.728624c.341-.97172 1.768-.97172 2.108.001328Z\"></path><path fill=\"#FFBA53\" d=\"m199.985.729952 3.957 11.299548 12.366.1381c1.064.0119 1.505 1.3195.651 1.9315l-9.921 7.1206 3.685 11.3845c.317.9797-.835 1.7868-1.704 1.1934l-10.087-6.8989-10.089 6.8976c-.868.5934-2.021-.215-1.705-1.1934l3.685-11.3845-9.921-7.1207c-.853-.6119-.413-1.9195.651-1.9315l12.366-.138L197.877.728624c.341-.97172 1.768-.97172 2.108.001328Z\"></path></svg>\n    <h2 class=\"test-heading\">Join 100,000+ Customers Who Love Balqees</h2>\n    <p class=\"test-text\">Let's hear what some of them have to say.</p>\n  </div>",
+            "hidden_mobile": false
+          }
+        },
+        "image_PYjfLz": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_child": "shopify://shop_images/Key_Difference.png",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 700,
+            "img_width_mb": 600,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_Lnb78G",
+        "liquid_FU44Me",
+        "image_PYjfLz"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "",
+        "mg": "0px,,0px,",
+        "pd": "",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "50px,50px,50px,50px",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "dc82fd1b-aec8-428d-802c-bd638646d842": {
+      "type": "testimonials",
+      "blocks": {
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Balqees has completely changed my perspective on honey. I used to think all honey was the same, but their raw honey is on a whole different level. The rich flavor and smooth texture show the true care and quality that goes into every jar. I love knowing that my purchase supports sustainable practices and helps beekeepers around the world.</p>",
+            "title": "Samantha",
+            "pos": "Verified Customer",
+            "rating": 0
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>I’ve been a loyal customer of Balqees for years now, and it’s clear why they’re the best. Their honey is the purest I’ve ever tasted—natural and untouched by any additives. The company’s commitment to ethical beekeeping and supporting local communities really resonates with me. It feels good knowing my purchase makes a positive impact</p>",
+            "title": "Saul",
+            "pos": "Verified Customer",
+            "rating": 0
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Balqees has set the standard for premium honey. The fact that they work closely with independent beekeepers and follow sustainable practices really speaks to their values. Each jar is packed with natural goodness, and it’s incredible to support a brand that prioritizes both the environment and the people behind the product.</p>",
+            "title": "Mohammad",
+            "pos": "Verified Customer",
+            "rating": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "ter_des": "2",
+        "cl_name": "#222222",
+        "cl_content": "#878787",
+        "cl_bd": "",
+        "cl_bg_item": "#ffffff",
+        "bdr": 0,
+        "content_align": "text-center",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "20",
+        "space_v_item": "20",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "",
+        "mg": "0px,,0px,",
+        "pd": "0px,,50px",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_section_N7BJiX": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_a3wR4q": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": true,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "0px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "liquid_pAWA7L": {
+          "type": "liquid",
+          "settings": {
+            "liquid_content": "<div class=\"jdgm-verified-by-judgeme\"><style>.jdgm-verified-by-judgeme { text-align: center; }.jdgm-carousel-wrapper .jdgm-verified-wrapper { color: #D09D77; }.jdgm-carousel-wrapper .jdgm-verified-wrapper .jdgm-svg__mono svg path { fill: #fffff; }.jdgm-carousel-wrapper .jdgm-verified-wrapper .jdgm-svg__mono svg circle { fill: #ffffff; }</style><div class=\"jdgm-verified-wrapper\"><div class=\"jdgm-verified-by\"><span class=\"jdgm-verified-by__text\">Verified by</span><span class=\"jdgm-verified-by__image\"><span class=\"jdgm-svg__mono\" role=\"img\" aria-label=\"Judge.me Logo\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"60\" viewBox=\"0 0 92 23\" fill=\"#ffffff\">\n  <path d=\"M0 0v23h22.781V0H0zm9.996 3.412h5.146v10.949c0 2.877-2.296 5.227-5.146 5.227S4.85 17.237 4.85 14.361h2.973c0 1.206.979 2.195 2.174 2.195s2.176-.989 2.176-2.195V6.412H9.996v-3z\" fill=\"#fff\"></path>\n  <g clip-path=\"url(#B)\" fill=\"#fff\">\n    <path d=\"M33.476 12.407a7.65 7.65 0 0 1-.121 1.381 3.13 3.13 0 0 1-.463 1.186 2.43 2.43 0 0 1-.977.829c-.422.208-.975.311-1.66.311a3.43 3.43 0 0 1-2.025-.581c-.551-.387-.907-.992-1.069-1.817l1.004-.249a1.48 1.48 0 0 1 .728.015 1.5 1.5 0 0 1 .636.361c.181.168.417.261.662.261a.86.86 0 0 0 .599-.196 1.16 1.16 0 0 0 .314-.488c.068-.204.108-.416.121-.632l.022-.632V5.564h1.031a1.18 1.18 0 0 1 .842.356 1.23 1.23 0 0 1 .349.859l.006 5.629zm7.647 3.445h-1.309a.37.37 0 0 1-.263-.112c-.07-.072-.109-.168-.109-.269v-.578h-.029a2.37 2.37 0 0 1-.291.408 1.95 1.95 0 0 1-.436.363 2.45 2.45 0 0 1-.582.261 2.38 2.38 0 0 1-.713.102c-.453.018-.903-.07-1.318-.255a1.9 1.9 0 0 1-.784-.704 2.8 2.8 0 0 1-.371-1.062c-.064-.437-.095-.879-.093-1.321V9.17c0-.101.039-.198.109-.269a.37.37 0 0 1 .264-.112h1.392a.37.37 0 0 1 .263.112c.07.071.109.168.109.269v3.079l.022.632a2.05 2.05 0 0 0 .128.604.94.94 0 0 0 .376.482.91.91 0 0 0 .587.142 1.29 1.29 0 0 0 .669-.148 1.03 1.03 0 0 0 .393-.406 1.68 1.68 0 0 0 .177-.574 4.99 4.99 0 0 0 .044-.669V9.17a.38.38 0 0 1 .11-.269.37.37 0 0 1 .264-.112h1.391a.37.37 0 0 1 .264.112c.07.071.109.168.109.269v6.301c0 .05-.01.1-.028.146s-.046.088-.081.124-.076.063-.121.083-.094.029-.143.029zm9.737-.698l-.301.402a1.08 1.08 0 0 1-.361.305 1.06 1.06 0 0 1-.453.119 1.07 1.07 0 0 1-.84-.368l-.595-.684h-.028a2.45 2.45 0 0 1-.336.386 2.58 2.58 0 0 1-.484.356 2.94 2.94 0 0 1-.612.261 2.36 2.36 0 0 1-.692.102 3.51 3.51 0 0 1-1.396-.27 3.11 3.11 0 0 1-1.076-.755 3.37 3.37 0 0 1-.691-1.155 4.29 4.29 0 0 1-.243-1.468 4.55 4.55 0 0 1 .221-1.426 3.91 3.91 0 0 1 .627-1.198 3.09 3.09 0 0 1 .991-.836 2.78 2.78 0 0 1 1.327-.311 3.59 3.59 0 0 1 1.247.211 1.99 1.99 0 0 1 .948.719h.029v-4.05c0-.167.065-.327.181-.445a.61.61 0 0 1 .436-.184h.947a.61.61 0 0 1 .42.168.63.63 0 0 1 .195.415l.669 9.274c.01.155-.035.308-.128.431zm-2.55-2.832a1.85 1.85 0 0 0-.449-1.295c-.291-.329-.72-.494-1.261-.494s-.962.165-1.261.494a2.08 2.08 0 0 0 0 2.588c.3.329.72.494 1.261.494s.963-.165 1.261-.494c.309-.355.47-.819.449-1.293zm10.947 2.937c0 1.335-.355 2.327-.991 3.044-1.505 1.701-4.124 1.108-4.839.826-1.107-.436-2.63-1.498-2.775-2.239-.05-.253.097-.556.291-.823a1.39 1.39 0 0 1 .477-.389c.185-.092.388-.14.594-.142 1.389.082 1.018 1.885 3.2 1.885.679 0 1.139-.162 1.447-.486a1.72 1.72 0 0 0 .354-.574 1.74 1.74 0 0 0 .108-.669v-.682h-.028a2.04 2.04 0 0 1-.919.719 2.92 2.92 0 0 1-1.034.211 3.53 3.53 0 0 1-1.396-.268 3.11 3.11 0 0 1-1.076-.756 3.38 3.38 0 0 1-.691-1.155 4.25 4.25 0 0 1-.243-1.468c0-.465.075-.926.221-1.366a3.75 3.75 0 0 1 .627-1.177 3.16 3.16 0 0 1 .991-.822c.411-.213.866-.32 1.326-.311a3.25 3.25 0 0 1 .834.101 3.2 3.2 0 0 1 .676.262 2.47 2.47 0 0 1 .514.356 2.23 2.23 0 0 1 .342.384h.029v-.713a.22.22 0 0 1 .062-.153.21.21 0 0 1 .15-.063 1.73 1.73 0 0 1 .672.136 1.75 1.75 0 0 1 .569.388 1.79 1.79 0 0 1 .38.581 1.82 1.82 0 0 1 .133.685l-.004 4.68zm-5.382-2.979a1.73 1.73 0 0 0 .126.658c.084.208.209.398.365.557a1.89 1.89 0 0 0 .543.384 1.54 1.54 0 0 0 .676.148 1.57 1.57 0 0 0 .671-.148 1.88 1.88 0 0 0 .548-.384c.157-.159.281-.348.366-.557s.129-.432.129-.657a1.74 1.74 0 0 0-.129-.657c-.085-.208-.209-.397-.366-.557s-.345-.291-.548-.386a1.59 1.59 0 0 0-.671-.148c-.233-.002-.464.049-.676.148a1.89 1.89 0 0 0-.543.386 1.72 1.72 0 0 0-.498 1.21l.006.003zm12.971 2.061c.05.038.092.087.122.143a.46.46 0 0 1 .053.182c.005.064-.005.128-.027.188a.45.45 0 0 1-.101.159 3.45 3.45 0 0 1-.956.649c-.51.239-1.064.363-1.625.363a4.29 4.29 0 0 1-1.504-.263c-.452-.162-.869-.414-1.225-.741-.35-.328-.629-.726-.82-1.17a4.03 4.03 0 0 1 0-3.052 3.5 3.5 0 0 1 .82-1.17 3.6 3.6 0 0 1 1.225-.749 4.29 4.29 0 0 1 1.504-.261 3.35 3.35 0 0 1 1.347.261c.394.167.745.423 1.027.749a3.43 3.43 0 0 1 .649 1.17 4.81 4.81 0 0 1 .228 1.526v.05a.64.64 0 0 1-.183.447c-.116.118-.274.185-.439.185h-4.34a1.74 1.74 0 0 0 .56.989c.296.251.671.383 1.056.371a1.59 1.59 0 0 0 .89-.239 2.7 2.7 0 0 0 .236-.178c.126-.113.286-.18.454-.188a.74.74 0 0 1 .471.141l.577.436zm-1.421-2.818a1.29 1.29 0 0 0-.082-.51 1.27 1.27 0 0 0-.275-.434c-.123-.13-.272-.232-.437-.3s-.341-.099-.519-.093c-.215-.004-.428.035-.627.116a1.63 1.63 0 0 0-.464.297 1.33 1.33 0 0 0-.291.423 1.42 1.42 0 0 0-.122.501l2.816.002zm25.858 2.818c.05.038.092.087.122.143a.45.45 0 0 1 .053.182.46.46 0 0 1-.027.188.45.45 0 0 1-.101.159 3.45 3.45 0 0 1-.956.649c-.51.239-1.064.363-1.625.363a4.29 4.29 0 0 1-1.504-.263c-.452-.162-.869-.414-1.225-.741-.35-.328-.629-.726-.82-1.17a4.03 4.03 0 0 1 0-3.052 3.5 3.5 0 0 1 .82-1.17 3.61 3.61 0 0 1 1.225-.749 4.29 4.29 0 0 1 1.504-.261 3.35 3.35 0 0 1 1.347.261c.394.167.745.423 1.027.749a3.43 3.43 0 0 1 .649 1.17A4.82 4.82 0 0 1 92 12.327v.05a.64.64 0 0 1-.183.447c-.116.118-.274.185-.439.185h-4.341a1.74 1.74 0 0 0 .56.989c.296.251.671.383 1.056.371a1.59 1.59 0 0 0 .89-.239 2.7 2.7 0 0 0 .236-.178c.126-.113.286-.18.454-.188a.74.74 0 0 1 .471.141l.578.436zm-1.421-2.818a1.29 1.29 0 0 0-.082-.51 1.27 1.27 0 0 0-.275-.434c-.123-.13-.272-.232-.437-.3s-.341-.099-.519-.093c-.214-.004-.428.035-.627.116a1.63 1.63 0 0 0-.464.297 1.33 1.33 0 0 0-.291.423c-.069.159-.112.328-.122.501l2.816.002zm-20.959 3.079c-.001-.179.033-.357.099-.523.063-.161.158-.307.278-.429a1.26 1.26 0 0 1 .421-.283 1.36 1.36 0 0 1 1.018 0 1.28 1.28 0 0 1 .698.712c.134.336.134.711 0 1.047a1.28 1.28 0 0 1-.271.43 1.24 1.24 0 0 1-.422.282 1.34 1.34 0 0 1-1.018 0c-.158-.064-.302-.161-.422-.283s-.214-.269-.278-.428c-.068-.166-.103-.344-.105-.524zm4.235-5.813h.767a.92.92 0 0 1 .358.073.93.93 0 0 1 .304.207.96.96 0 0 1 .203.31.97.97 0 0 1 .071.365h.029a1.78 1.78 0 0 1 .291-.406 2.05 2.05 0 0 1 .436-.363c.182-.112.378-.2.582-.262a2.44 2.44 0 0 1 .713-.101 2.66 2.66 0 0 1 1.29.304 1.93 1.93 0 0 1 .85.959 2.32 2.32 0 0 1 .897-.973 2.65 2.65 0 0 1 1.297-.297 2.59 2.59 0 0 1 1.175.239 1.94 1.94 0 0 1 .756.654 2.82 2.82 0 0 1 .399.974 5.7 5.7 0 0 1 .121 1.198v3.814a.36.36 0 0 1-.103.253c-.066.067-.155.105-.248.105H81.89a.35.35 0 0 1-.249-.104c-.033-.033-.059-.073-.076-.116s-.027-.09-.027-.137V11.74a1.66 1.66 0 0 0-.207-.851c-.138-.237-.38-.356-.727-.356a1.4 1.4 0 0 0-.62.123c-.16.077-.297.195-.399.343a1.41 1.41 0 0 0-.214.509 2.77 2.77 0 0 0-.064.609v3.366c0 .098-.039.192-.107.261a.36.36 0 0 1-.257.108h-1.412a.37.37 0 0 1-.139-.028.35.35 0 0 1-.117-.08.37.37 0 0 1-.079-.12.38.38 0 0 1-.028-.141v-3.366l-.014-.464c-.008-.178-.042-.355-.1-.523a1 1 0 0 0-.278-.421.81.81 0 0 0-.563-.175 1.29 1.29 0 0 0-.669.148 1.03 1.03 0 0 0-.393.406 1.68 1.68 0 0 0-.177.575 4.93 4.93 0 0 0-.044.667v3.16a.36.36 0 0 1-.103.253c-.066.067-.155.105-.248.105h-1.437c-.093 0-.182-.038-.248-.105a.36.36 0 0 1-.103-.253V9.147a.36.36 0 0 1 .101-.251c.064-.067.152-.105.244-.107z\"></path>\n  </g>\n  <defs>\n    <linearGradient id=\"A\" x1=\"11.391\" y1=\"0\" x2=\"11.391\" y2=\"23\" gradientUnits=\"userSpaceOnUse\">\n      <stop stop-color=\"#399\"></stop>\n      <stop offset=\"1\" stop-color=\"#2d8396\"></stop>\n    </linearGradient>\n    <clipPath id=\"B\">\n      <path fill=\"#fff\" transform=\"translate(27.162 4.865)\" d=\"M0 0h64.838v14.596H0z\"></path>\n    </clipPath>\n  </defs>\n</svg></span></span></div></div></div>",
+            "hidden_mobile": false
+          }
+        },
+        "image_NiMaGi": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_child": "shopify://shop_images/Key_Difference.png",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 700,
+            "img_width_mb": 600,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 20,
+            "mgb_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_a3wR4q",
+        "liquid_pAWA7L",
+        "image_NiMaGi"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "",
+        "mg": "0px,-32,0px,",
+        "pd": "",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_liquid_TYRV9K": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"separator2\"></div>\n\n<style>\n\n\n.separator2 {\n    background-color: #D29B74);\n    height: 32px;\n    position: relative;\n    width: 100%;\ntransform: rotate(180deg);\nz-index:10;\n}\n\n.separator2:before {\n    background-color: #D29B74;\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\nz-index:10;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,-32px,",
+        "pd": "",
+        "mg_mb": ",,-32px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "video_popup_inline_GikaXF": {
+      "type": "video_popup_inline",
+      "blocks": {
+        "custom_button_EqBgCj": {
+          "type": "custom_button",
+          "settings": {
+            "source": "2",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "file_link": "https://cdn.shopify.com/videos/c/o/v/6ac025792f7e4dffbc2076af8fe7ad50.mp4",
+            "au_video": true,
+            "loop_video": true,
+            "btn_close": true,
+            "source_btn": "btn_custom",
+            "click_action": "data-video-poster-btn",
+            "button_text": "See The Harvest",
+            "fontf": "2",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#d29b74",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#222222",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 18,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 40,
+            "button_pd_lr": 60,
+            "button_mgb": 3,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 7,
+            "button_mh_mb": 50,
+            "button_pd_lr_mb": 36,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "custom_button_EqBgCj"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.t4s-btn {padding: 14px 24px; font-size: 18px; }}"
+      ],
+      "settings": {
+        "se_height": "t4s_ratio_cuspx",
+        "custom_dk": true,
+        "height_dk": 550,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 400,
+        "image": "shopify://shop_images/Screenshot_16-9-2024_193747.jpg",
+        "parallax": false,
+        "image_position": "0",
+        "link_img1": "",
+        "open_link": "_blank",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "auto",
+        "cv_pos": 80,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#222222",
+        "bg_opacity": 20,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,-32px,",
+        "pd": "",
+        "mg_mb": ",,-32px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "accordion_3XHwAX": {
+      "type": "accordion",
+      "blocks": {
+        "accor_item_kFBh6p": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Does honey expire?",
+            "content": "<p>The short answer is, no, raw honey never goes off as long as it is stored correctly, which is at room temperature and out of direct sunlight. Archaeologists have even found 3,000-year-old honey whilst excavating tombs in Egypt, and it was perfectly edible! Despite this, we are required by law to put a best-before date on our jars which is usually 2 years from production.</p>"
+          }
+        },
+        "accor_item_GPgGcq": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "My honey has crystallised, what do i do?",
+            "content": "<p>Raw honey will naturally crystallise when it reaches cold temperatures. This happens as the glucose in the honey separates from the water forming crystals. Honey is still safe to eat when it has crystallised, however to return it back to its original form, place the jar in warm water for some time until it liquefies.</p>"
+          }
+        },
+        "accor_item_GFWXfz": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Why does the colour of my honey look different?",
+            "content": "<p>The colour, taste and consistency of each honey can vary slightly from harvest to harvest, as the nectar and pollen available for the bees to forage on varies throughout the seasons. This is the case with all varieties of single-origin honey since it is a natural product and not processed.</p>"
+          }
+        },
+        "accor_item_PjcTfz": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Does your honey contain pollen?",
+            "content": "<p>Yes, all our honey is unfiltered which means it will contain traces of pollen, propolis and occasionally small chunks of beeswax.</p>"
+          }
+        },
+        "accor_item_Ge8JPe": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Is your honey organic?",
+            "content": "<p>Some of our varieties are in fact certified Organic. Despite sourcing all of our raw honey from clean, remote locations, for some varieties, however, we cannot claim they are organic due to the complex nature of organic accreditation. For more information, read our blog post <a href=\"https://balqees.co.uk/blogs/about-raw-honey/is-raw-honey-the-same-as-organic-honey\" title=\"Is raw honey the same as organic honey?\">\"Is organic honey the same as raw honey?\".</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "accor_item_kFBh6p",
+        "accor_item_GPgGcq",
+        "accor_item_GFWXfz",
+        "accor_item_PjcTfz",
+        "accor_item_Ge8JPe"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Frequently Asked Questions",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#222222",
+        "content_cl": "#878787",
+        "bg_content_cl": "rgba(0,0,0,0)",
+        "content_align": "t4s-text-start",
+        "layout": "t4s-cus-width",
+        "custom_width": 700,
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_bg_gradient": "",
+        "mg": "60px,,50px,",
+        "pd": "50px,,50px,",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".t4s-accor-title .t4s-accor-item-nav {\n    background: transparent;\n    color: #fff;\n}\n\n.t4s-accor-title .t4s-accor-item-nav:before, .t4s-accor-title .t4s-accor-item-nav:after {\n    background-color: #fff;\n}\n\n.t4s-type-accordion>.t4s-tab-wrapper {\n    /* margin-top: 10px; */\n    padding-bottom: 10px;\n    margin-bottom: 0;\n}\n\n.t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav {\n    background-color: transparent;\n}\n\n.t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:after, .t4s-tab-wrapper.t4s-active .t4s-accor-title .t4s-accor-item-nav:before {\n    background-color: #222;\n}\n\n.t4s-type-accordion .t4s-tab-wrapper.t4s-active .t4s-accor-title {\n    background-color: transparent!important;\n    border-bottom: 0;\n    \n}"
+      }
+    },
+    "custom_liquid_nHPT6B": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"separator5\"></div>\n\n<style>\n:root {\n    --bg-color: #f16c7b;\n    --divider-color: #EEDDC5;\n}\n\n.separator5 {\n    background-color: var(--bg-color, #EEDDC5);\n    height: 32px;\n    position: relative;\n    width: 100%;\ntransform: rotate(180deg);\n\n}\n\n.separator5:before {\n    background-color: #fff;\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_liquid_GdgcKL": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"separator\"></div>\n\n<style>\n:root {\n    --bg-color: #EEDDC5;\n    --divider-color: #EEDDC5;\n}\n\n.separator {\n    background-color: var(--bg-color, #EEDDC5);\n    height: 32px;\n    position: relative;\n    width: 100%;\ntransform: rotate(180deg);\n}\n\n.separator:before {\n    background-color: var(--divider-color, #EEDDC5);\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_section_d97fPR": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_VL93Bt": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "20px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "image_wQCWkD": {
+          "type": "image",
+          "settings": {
+            "image_child": "shopify://shop_images/banner2.gif",
+            "img_link": "",
+            "open_link": "_self",
+            "img_width": 0,
+            "img_width_mb": 0,
+            "img_align": "center",
+            "img_align_tb": "center",
+            "img_align_mobile": "center",
+            "b_effect": "none",
+            "hidden_mobile": false,
+            "mgb": 0,
+            "mgb_mb": 0
+          }
+        },
+        "bl_col_zR93tr": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_VjLCg8": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Taste honey in its purest form",
+            "remove_br_tag": false,
+            "fontf": "3",
+            "text_cl": "#000000",
+            "text_fs": 40,
+            "text_lh": 48,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 32,
+            "text_lh_mb": 40,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_PdHWax": {
+          "type": "custom_text",
+          "settings": {
+            "text": "raw, unprocessed, and unfiltered",
+            "remove_br_tag": false,
+            "fontf": "2",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "liquid_AGjJp3": {
+          "type": "liquid",
+          "settings": {
+            "liquid_content": "<ul class=\"rtnu-social-icons\">\n            <li>\n              <a href=\"#\" target=\"_blank\"><svg class=\"rtnu-icon-tiktok\" xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" fill=\"none\" viewBox=\"0 0 40 40\"><path fill=\"currentColor\" d=\"M32.359 3.16211H7.10348c-2.17476 0-3.9454 1.77066-3.9454 3.94544V32.3634c0 2.1747 1.77064 3.9454 3.9454 3.9454H32.359c2.1748 0 3.9454-1.7707 3.9454-3.9454V7.10755c0-2.17478-1.7706-3.94544-3.9454-3.94544ZM29.2052 17.6232c-.1791.0166-.3583.025-.5416.025-2.0706 0-3.8912-1.0624-4.9494-2.6706v9.1033c0 3.7162-3.0122 6.7326-6.7285 6.7326-3.7162 0-6.7326-3.0164-6.7326-6.7326 0-3.7163 3.0164-6.7285 6.7326-6.7285.1375 0 .275.0125.4166.0208v3.3163c-.1416-.0166-.2749-.0416-.4166-.0416-1.8998 0-3.4371 1.5373-3.4371 3.433 0 1.8998 1.5373 3.4371 3.4371 3.4371 1.8957 0 3.5705-1.4957 3.5705-3.3913 0-.075.0333-15.46514.0333-15.46514H23.76c.2999 2.83304 2.5872 5.07034 5.4452 5.27444v3.6872Z\"></path></svg></a>\n            </li>\n            <li>\n              <a href=\"https://www.instagram.com/balqeesrawhoney/\" target=\"_blank\"><svg class=\"rtnu-icon-instagram\" xmlns=\"http://www.w3.org/2000/svg\" width=\"41\" height=\"40\" fill=\"none\" viewBox=\"0 0 41 40\"><path fill=\"currentColor\" d=\"M13.6232 2.36633c-5.65772 0-10.26138 4.60371-10.26138 10.26147v14.2069c0 5.6578 4.60366 10.2615 10.26138 10.2615H27.83c5.6577 0 10.2613-4.6037 10.2613-10.2615V12.6278c0-5.65776-4.6036-10.26147-10.2613-10.26147H13.6232Zm16.5732 6.31604c.8707 0 1.579.70826 1.579 1.57903 0 .8666-.7083 1.579-1.579 1.579-.8666 0-1.579-.7124-1.579-1.579 0-.87077.7124-1.57903 1.579-1.57903Zm-9.4698 2.36643c4.7911 0 8.6824 3.8913 8.6824 8.6825 0 4.7912-3.8913 8.6824-8.6824 8.6824-4.7912 0-8.6824-3.8912-8.6824-8.6824s3.8912-8.6825 8.6824-8.6825Zm0 1.579c-3.9163 0-7.1034 3.1872-7.1034 7.1035 0 3.9162 3.1871 7.1034 7.1034 7.1034 3.9162 0 7.1034-3.1872 7.1034-7.1034 0-3.9163-3.1872-7.1035-7.1034-7.1035Z\"></path></svg></a>\n            </li>\n            <li>\n              <a href=\"#\" target=\"_blank\"><svg class=\"rtnu-icon-facebook\" xmlns=\"http://www.w3.org/2000/svg\" width=\"41\" height=\"40\" fill=\"none\" viewBox=\"0 0 41 40\"><path fill=\"currentColor\" d=\"M33.3537 3.15833H8.09537c-2.17917 0-3.94583 1.76666-3.94583 3.94583V32.3625c0 2.1792 1.76666 3.9458 3.94583 3.9458H33.3537c2.1792 0 3.9458-1.7666 3.9458-3.9458V7.10416c0-2.17917-1.7666-3.94583-3.9458-3.94583ZM30.1954 14.9958h-1.5792c-1.6875 0-2.3667.3959-2.3667 1.5792v2.3708h3.9459l-.7875 3.9459h-3.1584v11.8375h-3.9458V22.8917h-3.1583v-3.9459h3.1583V16.575c0-3.1583 1.5792-5.525 4.7375-5.525 2.2875 0 3.1542.7917 3.1542.7917v3.1541Z\"></path></svg></a>\n            </li>\n          </ul>\n\n<style>\n .rtnu-social-icons {\n    align-items: center;\n    display: flex;\n    gap: 16px;\n    justify-content: center;\n    list-style: none;\n    margin: 12px 0;\n    padding: 0;\nmargin-top:3rem;\n}\n    .rtnu-customer-reviews .rtnu-social-icons {\n        margin: 24px 0;\n    }\n .rtnu-social-icons a {\n    color: #D29B74;\n}\n    .rtnu-customer-reviews a{\n        font-size: 22px;\n        line-height: 30px;\n        margin-inline: auto;\n        max-width: 400px;\n        padding: 0;\ncolor:#000;\n    }\n</style>\n<p class=\"rtnu-customer-reviews\"><a href=\"https://www.instagram.com/balqeesrawhoney/\" target=\"_blank\">@balqeesrawhoney</a></p>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_VL93Bt",
+        "image_wQCWkD",
+        "bl_col_zR93tr",
+        "custom_text_VjLCg8",
+        "custom_text_PdHWax",
+        "liquid_AGjJp3"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "20",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "0,0,50px,",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": "-30px,,0px,",
+        "pd_mb": "20px,20px.20px,20px",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "custom_liquid_eFahQb": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"separator2\"></div>\n\n<style>\n\n\n.separator2 {\n    background-color: #D29B74);\n    height: 32px;\n    position: relative;\n    width: 100%;\ntransform: rotate(180deg);\n}\n\n.separator2:before {\n    background-color: #D29B74;\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "custom_css": [
+        ".t4s-product .t4s-product-rating {display: none;}"
+      ],
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "We Think You'll Love These Too",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": true,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "4",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "rgba(0,0,0,0)",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "50px,,50px,",
+        "mg_mb": ",,0px,",
+        "pd_mb": ""
+      }
+    },
+    "background_video_peg4ea": {
+      "type": "background_video",
+      "blocks": {
+        "custom_text_9fMfDf": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Why Choose Our Raw Honey?",
+            "remove_br_tag": false,
+            "fontf": "3",
+            "text_cl": "#ffffff",
+            "text_fs": 30,
+            "text_lh": 43,
+            "text_fw": 800,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_text_6W9MMQ": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Balqees is a raw honey shop that became one of the most popular purveyors of premium raw honey around the Middle East. Due to our passion for the product and proven success, we have now expanded our range across the UK and the globe. \n<br><br>\nWe collaborate with independent beekeepers and beekeeping cooperatives around the world that follow sustainable and ethical practices. With every purchase, it will contribute to supporting beekeepers and their families in rural communities locally and internationally.\n<br><br>\nAll our raw honey comes straight from the hive. We do not heat-treat or micro-filter the honey, and none of our beekeepers or apiculturists feed sugar solutions or supplements to their bees. We are dedicated to sourcing the purest and most natural raw honey on the planet.",
+            "remove_br_tag": false,
+            "fontf": "1",
+            "text_cl": "#ffffff",
+            "text_fs": 19,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "custom_button_cPyp8w": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "custom_text_9fMfDf",
+        "custom_text_6W9MMQ",
+        "custom_button_cPyp8w"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratio16_9",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "source": "2",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "file_link": "https://cdn.shopify.com/videos/c/o/v/9f5e74cf8ce248e999732f0d0257d38a.mp4",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "auto",
+        "cv_pos": 50,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,-32px,",
+        "pd": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "1747125912aeb1e414": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_qTtNch": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_qTtNch"
+      ],
+      "settings": {}
+    },
+    "custom_liquid_Yqqymk": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"separator4\"></div>\n\n<style>\n\n\n.separator4 {\n    background-color:  #D29B74);\n    height: 32px;\n    position: relative;\n    width: 100%;\n\n}\n\n.separator4:before {\n    background-color: #D29B74;\n    content: \"\";\n    display: block;\n    height: 100%;\n    -webkit-mask-image: url(/cdn/shop/files/section-divider.svg?v=1712857082);\n    mask-image: url(/cdn/shop/files/section-divider.svg);\n    -webkit-mask-size: contain;\n    mask-size: contain;\n    position: absolute;\n    width: 100%;\n}\n</style>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_section_fMwnnb": {
+      "type": "custom-section",
+      "blocks": {
+        "bl_col_4DVg4H": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "10px,,10px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "custom_text_VfB6zh": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Keep in touch",
+            "remove_br_tag": false,
+            "fontf": "3",
+            "text_cl": "#000000",
+            "text_fs": 35,
+            "text_lh": 0,
+            "text_fw": 600,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 25,
+            "hidden_mobile": false,
+            "text_fs_mb": 30,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_cPNEgi": {
+          "type": "custom_text",
+          "settings": {
+            "text": "10% OFF ON YOUR FIRST ORDER",
+            "remove_br_tag": true,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 20,
+            "text_lh": 28,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 24,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "bl_col_GFyGaE": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "0px,,30px",
+            "bg_cl": "rgba(0,0,0,0)"
+          }
+        },
+        "newsletter_PGDTkd": {
+          "type": "newsletter",
+          "settings": {
+            "form_width": 0,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "medium",
+            "btn_icon": false,
+            "input_cl": "#222222",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#eeddc5",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        },
+        "custom_text_XdfJLN": {
+          "type": "custom_text",
+          "settings": {
+            "text": "By clicking 'sign up' you are opting in to marketing. You can unsubscribe at any time. Privacy Policy.",
+            "remove_br_tag": false,
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 14,
+            "text_lh": 28,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 11,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "bl_col_4DVg4H",
+        "custom_text_VfB6zh",
+        "custom_text_cPNEgi",
+        "bl_col_GFyGaE",
+        "newsletter_PGDTkd",
+        "custom_text_XdfJLN"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#d29b74",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "50px,50px,50px,50px",
+        "mg_tb": ",,0px,",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "20px,20px,20px,20px",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "customproductbuilder",
+    "breadcrumb",
+    "main",
+    "custom_liquid_Bdt4pr",
+    "custom_section_q3p9B4",
+    "custom_section_TUhdV7",
+    "custom_liquid_JEWidD",
+    "logo_list_iyFnhB",
+    "custom_section_beRXcH",
+    "dc82fd1b-aec8-428d-802c-bd638646d842",
+    "custom_section_N7BJiX",
+    "custom_liquid_TYRV9K",
+    "sidebar",
+    "video_popup_inline_GikaXF",
+    "accordion_3XHwAX",
+    "custom_liquid_nHPT6B",
+    "custom_liquid_GdgcKL",
+    "custom_section_d97fPR",
+    "custom_liquid_eFahQb",
+    "product-recommendations",
+    "background_video_peg4ea",
+    "recently-viewed-products",
+    "1747125912aeb1e414",
+    "custom_liquid_Yqqymk",
+    "custom_section_fMwnnb"
+  ]
+}

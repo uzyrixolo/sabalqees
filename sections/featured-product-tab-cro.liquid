@@ -1,0 +1,227 @@
+{{ 'product-card-cro.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .featured-collection-cro .t4s-product-img{
+        padding-bottom: 100%;
+    }
+  .featured-collection-cro{
+    background: #E8E3DA;
+    padding: 68px 0 109px;
+}
+.featured-collection-cro .swiper-button-next:after,
+.featured-collection-cro .swiper-button-next:before,
+.featured-collection-cro .swiper-button-prev:after,
+.featured-collection-cro .swiper-button-prev:before{
+        display: none;
+    }
+
+  .featured-collection-cro .swiper-button-next,
+  .featured-collection-cro .swiper-button-prev{
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 5.56px 27.78px 0px #00000026;
+    border-radius: 50px;
+    background: #fff;
+    z-index: 9999;
+    margin-top: -60px;
+}
+.featured-collection-cro .swiper-button-next svg,.featured-collection-cro .swiper-button-prev svg{
+    height: 16px;
+    width: 20px;
+}
+.featured-collection-cro .page-width{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.featured-collection-cro .heading-wrapper{
+    width: 100%;
+    padding: 0 0 30px;
+    text-align: center;
+}
+.featured-collection-cro .heading-wrapper h2{
+    font-size: 48px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 0 5px;
+    font-family: Baskervville,serif;
+}
+.featured-pdp-tabs-main-desc{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    font-family: Aeonik;
+}
+@media(max-width: 991px){
+    .featured-collection-cro .heading-wrapper h2{
+        font-size: 32px;
+    }
+    .featured-collection-cro .heading-wrapper{
+        padding: 0 0 21px;
+    }
+    .featured-pdp-tabs-main-desc{
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    .featured-collection-cro{
+        padding: 40px 0 47px;
+    }
+    .featured-collection-cro .swiper-button-next, .featured-collection-cro .swiper-button-prev{
+        height: 30px;
+        width: 30px;
+    }
+    .featured-collection-cro .swiper-button-next svg, .featured-collection-cro .swiper-button-prev svg{
+        width: 12px;
+        height: auto;
+    }
+    .t4s-product-badge{
+        padding: 0 5px;
+        font-size: 11px;
+    }
+}
+
+</style>
+
+
+<div class="featured-collection-cro" style="background:{{ section.settings.bg_color }};">
+  <div class="page-width">
+
+    <div class="heading-wrapper">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.desc != blank %}
+          <div class="featured-pdp-tabs-main-desc">{{ section.settings.desc }}</div>
+        {% endif %}
+    </div>
+
+    <div class="featured-products">
+
+      {% assign collection = collections[section.settings.single_collection] %}
+      {% assign product_limit = section.settings.product_limit %}
+
+      {% if collection and collection.products.size > 0 %}
+
+        <div class="swiper product-grid-swiper product-grid">
+          <div class="swiper-wrapper">
+            {% for product in collection.products limit: product_limit %}
+               
+              <div class="swiper-slide products-grid-tab-collection">
+                {%- render 'product-card-cro',
+                  product:product,
+                  prefix_url:prefix_url,
+                  isGrowaveWishlist:isGrowaveWishlist,
+                  show_img:show_img,
+                  show_vendor:show_vendor,
+                  enable_pr_color:enable_pr_color,
+                  show_cl_type:show_cl_type,
+                  get_color:get_color,
+                  enable_pr_size:enable_pr_size,
+                  pr_size_pos:pr_size_pos,
+                  get_size:get_size,
+                  show_size_type:show_size_type,
+                  price_varies_style:price_varies_style,
+                  app_review:app_review,
+                  enable_rating:enable_rating,
+                  use_countdown:use_countdown,
+                  imgatt:imgatt,
+                  show_list_btns:false
+                -%}
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+              <path d="M-0.000165211 8.33368C-0.000165191 8.11267 0.087632 7.90071 0.243913 7.74443C0.400191 7.58815 0.612155 7.50035 0.833169 7.50035L17.155 7.50035L11.0769 1.42327C10.9995 1.34584 10.9381 1.25392 10.8962 1.15276C10.8543 1.0516 10.8327 0.943178 10.8327 0.833682C10.8327 0.724187 10.8543 0.615764 10.8962 0.514602C10.9381 0.413442 10.9995 0.321525 11.0769 0.2441C11.1543 0.166673 11.2463 0.105258 11.3474 0.0633556C11.4486 0.0214531 11.557 -0.000115179 11.6665 -0.000115169C11.776 -0.00011516 11.8844 0.0214531 11.9856 0.0633557C12.0867 0.105258 12.1787 0.166673 12.2561 0.2441L19.7561 7.7441C19.8336 7.82149 19.895 7.9134 19.937 8.01457C19.9789 8.11573 20.0005 8.22417 20.0005 8.33368C20.0005 8.4432 19.9789 8.55164 19.937 8.6528C19.895 8.75397 19.8336 8.84587 19.7561 8.92327L12.2561 16.4233C12.0997 16.5796 11.8876 16.6675 11.6665 16.6675C11.4454 16.6675 11.2333 16.5796 11.0769 16.4233C10.9205 16.2669 10.8327 16.0548 10.8327 15.8337C10.8327 15.6125 10.9205 15.4005 11.0769 15.2441L17.155 9.16702L0.833169 9.16702C0.612155 9.16702 0.400191 9.07922 0.243912 8.92294C0.0876319 8.76666 -0.00016523 8.5547 -0.000165211 8.33368Z" fill="black"/>
+            </svg>
+          </div>
+
+          <div class="swiper-button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none" style="transform: rotate(180deg);">
+              <path d="M-0.000165211 8.33368C-0.000165191 8.11267 0.087632 7.90071 0.243913 7.74443C0.400191 7.58815 0.612155 7.50035 0.833169 7.50035L17.155 7.50035L11.0769 1.42327C10.9995 1.34584 10.9381 1.25392 10.8962 1.15276C10.8543 1.0516 10.8327 0.943178 10.8327 0.833682C10.8327 0.724187 10.8543 0.615764 10.8962 0.514602C10.9381 0.413442 10.9995 0.321525 11.0769 0.2441C11.1543 0.166673 11.2463 0.105258 11.3474 0.0633556C11.4486 0.0214531 11.557 -0.000115179 11.6665 -0.000115169C11.776 -0.00011516 11.8844 0.0214531 11.9856 0.0633557C12.0867 0.105258 12.1787 0.166673 12.2561 0.2441L19.7561 7.7441C19.8336 7.82149 19.895 7.9134 19.937 8.01457C19.9789 8.11573 20.0005 8.22417 20.0005 8.33368C20.0005 8.4432 19.9789 8.55164 19.937 8.6528C19.895 8.75397 19.8336 8.84587 19.7561 8.92327L12.2561 16.4233C12.0997 16.5796 11.8876 16.6675 11.6665 16.6675C11.4454 16.6675 11.2333 16.5796 11.0769 16.4233C10.9205 16.2669 10.8327 16.0548 10.8327 15.8337C10.8327 15.6125 10.9205 15.4005 11.0769 15.2441L17.155 9.16702L0.833169 9.16702C0.612155 9.16702 0.400191 9.07922 0.243912 8.92294C0.0876319 8.76666 -0.00016523 8.5547 -0.000165211 8.33368Z" fill="black"/>
+            </svg>
+          </div>
+
+        </div>
+
+      {% else %}
+        <p>No products found.</p>
+      {% endif %}
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.product-grid-swiper');
+  sliders.forEach(function (sliderEl) {
+    new Swiper(sliderEl, {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        499: { slidesPerView: 2, spaceBetween: 12 },
+        767: { slidesPerView: 3, spaceBetween: 12 },
+        1100: { slidesPerView: 4, spaceBetween: 12 },
+        1300: { slidesPerView: 4, spaceBetween: 30 },
+      }
+    });
+  });
+});
+</script>
+
+{% schema %}
+
+{
+  "name": "Featured Collection CRO",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "collection",
+      "id": "single_collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "label": "Product Limit",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection CRO"
+    }
+  ]
+}
+
+{% endschema %}
+
+
+

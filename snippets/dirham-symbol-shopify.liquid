@@ -1,0 +1,31 @@
+{% comment %}
+  Shopify Snippet: Store currency price
+
+  KSA store (sa.balqees.com): this snippet previously rendered the new
+  UAE Dirham symbol. It now renders the shop's own currency format
+  (Saudi Riyal / SAR) so prices are consistent across the storefront.
+
+  Class names are intentionally unchanged (.dirham-price / .dirham-amount)
+  so existing theme CSS keeps applying.
+
+  Usage:
+  {% render 'dirham-symbol-shopify', amount: product.price %}
+
+  Parameters:
+  - amount: The price amount in cents (required)
+  - show_decimals: true/false (optional, default: true)
+  - class: Additional CSS classes (optional)
+{% endcomment %}
+
+{% liquid
+  assign show_decimals = show_decimals | default: true
+  assign formatted_amount = amount | money
+
+  if show_decimals == false
+    assign formatted_amount = amount | money | remove: '.00'
+  endif
+%}
+
+<span class="dirham-price {{ class }}">
+  <span class="dirham-amount">{{ formatted_amount }}</span>
+</span>

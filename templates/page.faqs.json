@@ -1,0 +1,320 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "18952756-58af-4afa-a0cc-b1b54300fb8b": {
+          "type": "1",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 40,
+            "text_lh": 20,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "cc993342-0dd0-41d6-a6c4-a5f3c87e6f96": {
+          "type": "3",
+          "disabled": true,
+          "settings": {
+            "breadcrumb_color": "#f2f2f2",
+            "brc_mgb": 5
+          }
+        }
+      },
+      "block_order": [
+        "18952756-58af-4afa-a0cc-b1b54300fb8b",
+        "cc993342-0dd0-41d6-a6c4-a5f3c87e6f96"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/bg60.jpg",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#d29b74",
+        "overlay": 0,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "10add950-44ec-4c40-9118-60a69fd7802b": {
+          "type": "shipping",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "8f7503bd-aa35-442d-9ad3-d06f2b9d865c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "Talk about your brand",
+            "text_html": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "10add950-44ec-4c40-9118-60a69fd7802b",
+        "8f7503bd-aa35-442d-9ad3-d06f2b9d865c"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "d2d6bedb-4b3b-496c-8ec5-05912c3f7b06": {
+      "type": "accordion",
+      "blocks": {
+        "3c28054c-9602-484d-845f-755ba0979dec": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "Do you pasteurise or filter your honey?",
+            "content": "<p>All our honey is extracted from the honeycombs of the hives and then strained to remove any impurities like beeswax and dead bees. This method of extraction used at Balqees retains the maximum content of bioflavonoids, vitamins and minerals and of course, natural sugars of fructose and glucose. </p><p>We do not heat-treat or micro-filter the honey, and none of our beekeepers or apiculturists feed sugar solutions or supplements to their bees.</p>"
+          }
+        },
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "My honey has crystallised, what do i do?",
+            "content": "<p>Raw honey will naturally crystallise when it reaches cold temperatures. This happens as the glucose in the honey separates from the water. Honey is still safe to eat even when it has crystallised, however, to return it back to its original form, place the jar in a warm water bath and allow it to liquefy.</p>"
+          }
+        },
+        "4aa7b718-b64c-40d2-b925-f96c7eb44c1a": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "What's the difference between \"raw honey\" and the regular honey i get at the supermarket?",
+            "content": "<p>Raw honey is honey that’s been taken straight from the hive without any additives or processing. It’s extracted from the honeycombs of the hives and then strained to remove any impurities like beeswax and dead bees</p><p>Commercial honey production, however, involves several more steps such as pasteurisation and ultrafiltration. Honey is heated to high temperatures to give it a smoother consistency, however, degenerates many of the beneficial enzymes present in the honey. Ultrafiltration is another process which further refines the honey to make it more transparent and smoother, but strips the honey of its pollen and other beneficial nutrients, making it extremely difficult to trace the source of the honey.</p><p>To keep up with the demand for honey, commercial producers have also been found to mix honey with sugar syrup. A huge amount of this fake honey is imported into the UK from various countries, often being labelled as “a blend of non-EU honey” or “a blend of EU and non-EU honey” making it impossible for the consumer to identify the source. </p>"
+          }
+        },
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "How do I check on an order I have placed?",
+            "content": "<p>The best way to keep up to date with the status of your order is to visit the Track My Order page. You can also click the link in your dispatch email, which you will receive as soon as your order has been dispatched from our warehouse.</p><p></p><p>If you have not received a confirmation email within 24 hours or dispatch email within three working days after ordering, please check your junk/spam folder and any secondary email addresses you may have used before contacting us.</p><p></p><p>If you have placed your order for next day delivery, confirmation and dispatch emails should be received on the same day.</p><p>If you have an account, you can track your most recent orders by visiting the Track My Order page or the My Orders page in the My Account section.<br/><strong>Please note:</strong> the courier may not post tracking information online for up to 24 hours after the order is dispatched.</p>"
+          }
+        },
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-2": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "Where is my confirmation/dispatch email?",
+            "content": "<p>You will recieve a confirmation email/SMS once your order has been processed. Once your order has been dispatched you will receive another email/SMS with details on how to track it.</p>"
+          }
+        },
+        "f4c086ef-ddcf-4b2c-bc04-b6e3a76e8e83": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "Do you accept international orders?",
+            "content": "<p>At the moment we only cater for orders in the UK, however we will be accepting international orders in the near future.</p>"
+          }
+        },
+        "acf7ce9b-def0-49ed-a791-d79829b95f20": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "Is it safe to use my credit card?",
+            "content": "<p>At sa.balqees.com, we understand how important security is to you. When you order online with us, we use Secure Socket Layer (SSL) encryption technology. This is the most advanced consumer online security technique to date. You can be assured that your order will be placed safely and securely.</p><p>In order for encryption to take place, your browser must have the SSL protocol. </p>"
+          }
+        },
+        "bdd67eb2-e48d-49e4-85cc-9f1aee269bc0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "What is your return policy?",
+            "content": "<p>We hope you are delighted with your order. However if for any reason you're not entirely satisfied with your goods, you may return any item in its original condition for a full refund within 14 days of delivery. For more information please see <a href=\"/pages/returns-refunds\" title=\"Returns & Refunds\">Returns & Refunds.</a></p>"
+          }
+        },
+        "febaaffa-a4eb-4ba0-94b3-2f1e483bad2a": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "How do I use a discount code?",
+            "content": "<p>Any promotional codes authorised by us will be able to be used at the payment section of the checkout.</p>"
+          }
+        },
+        "4ca8aa52-39e8-454a-8a9e-2a3c474a9841": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "question_mark",
+            "title": "Does anyone else see the information that I provide to sa.balqees.com?",
+            "content": "<p>We respect your privacy. The information you provide will not be given to any third party without your express consent. Read our <a href=\"/pages/privacy\" title=\"Privacy\">Privacy Policy</a> for additional information.</p>"
+          }
+        },
+        "a503a4d8-04d4-4084-abc3-6bf24f2b4794": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "How do I unsubscribe from email?",
+            "content": "<p>If you are a Registered Member of Balqees Online, go to My Account, and click on 'View' or 'View Account Profile' under 'Account Profile'. If you have an account with Balqees, you may click on the link provided on the monthly newsletter to be removed from the mailing list.</p>"
+          }
+        },
+        "f42f9ee8-136e-4ea6-9233-f3d2b0bf1767": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "How do I get Balqees samples?",
+            "content": ""
+          }
+        },
+        "b1effbf9-5209-4b8b-8b38-364bb768cdbe": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "Can you mail out samples on request?",
+            "content": "<p>Balqees are unable to mail out samples on request.<br/>Please be advised that sample sizes of our products are not available for sale or general distribution. Samples are only available through online offers and at checkout with purchases where applicable, or at our retail store counter during promotional events.</p><p>We would like to suggest visiting one of our counters, where our representatives will be happy to demonstrate our products and aid you in deciding if the products are right for you.</p>"
+          }
+        },
+        "12309f2d-0a3c-45bc-9923-d86d2f131354": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "Why is my favourite product discontinued? What can I use now?",
+            "content": "<p>Decisions to discontinue or introduce a product or size are made in response to consumer preferences and purchasing patterns throughout the country. If your favourite product has been discontinued please visit your nearest Balqees where a Stylist will be happy to provide alternative recommendations.</p>"
+          }
+        },
+        "49680111-9be9-4291-a6ae-8bc5dc649c4c": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "What should I do if I have a complaint?",
+            "content": "<p>Please visit the Contact Us section if you have a complaint.</p>"
+          }
+        },
+        "c33d54c2-bfe6-4db2-97a3-f620bf222a6c": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "Do I get the Balqees bag if I order online?",
+            "content": "<p>Gift bags will no longer be automatically delivered to our customers when placing an order online. Should you wish to have a gift bag with your order, please visit your nearby Balqees where one of our Stylists will happily provide a bag for you. Please ensure that you present your online order confirmation to the Stylist to avoid disappointment. T</p>"
+          }
+        },
+        "52dfbb18-ad30-436c-a28a-eddb8752fe43": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "question_mark",
+            "title": "Can you send me a gift bag or can I get one from store?",
+            "content": "<p>Gift bags will no longer be automatically delivered to our customers when placing an order online. Should you wish to have a gift bag with your order, please visit your nearest Balqees where one of our Stylists will happily provide a bag for you. Please ensure that you present your online order confirmation to the Stylist to avoid disappointment. To find your nearest Balqees please visit our Store Locator page </p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "3c28054c-9602-484d-845f-755ba0979dec",
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-0",
+        "4aa7b718-b64c-40d2-b925-f96c7eb44c1a",
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-1",
+        "template--16915337642259__d2d6bedb-4b3b-496c-8ec5-05912c3f7b06-16689573380e6a3037-2",
+        "f4c086ef-ddcf-4b2c-bc04-b6e3a76e8e83",
+        "acf7ce9b-def0-49ed-a791-d79829b95f20",
+        "bdd67eb2-e48d-49e4-85cc-9f1aee269bc0",
+        "febaaffa-a4eb-4ba0-94b3-2f1e483bad2a",
+        "4ca8aa52-39e8-454a-8a9e-2a3c474a9841",
+        "a503a4d8-04d4-4084-abc3-6bf24f2b4794",
+        "f42f9ee8-136e-4ea6-9233-f3d2b0bf1767",
+        "b1effbf9-5209-4b8b-8b38-364bb768cdbe",
+        "12309f2d-0a3c-45bc-9923-d86d2f131354",
+        "49680111-9be9-4291-a6ae-8bc5dc649c4c",
+        "c33d54c2-bfe6-4db2-97a3-f620bf222a6c",
+        "52dfbb18-ad30-436c-a28a-eddb8752fe43"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Find your answer here:",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "2",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "layout": "t4s-cus-width",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "d2d6bedb-4b3b-496c-8ec5-05912c3f7b06"
+  ]
+}

@@ -1,0 +1,414 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
+          "type": "1",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 50,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/bg60.jpg",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "b6537b01-5d07-4064-90e1-4eaec4bba208": {
+      "type": "feature_columns",
+      "blocks": {
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/08635a551cf6a_dubaimunicipalityhealthcertificateinspectionreporte01.jpg.999xx.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/c89a0783c8c02_doc07072107072021110914e.jpg.999xx_dc2a3dda-a3b8-4d3b-83c6-e72cc95abddf.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/4cc41a87ee180_958741.jpg.999xx_461000b8-b828-43f1-a341-2a9511df7660.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "dd483219-dba0-4b0d-83da-a3c99785f8d5": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/51635bf10d1a2_958761.jpg.999xx_549a102b-25c4-4a76-a4e0-65f7eb3c1720.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "e8e27371-8319-4e73-a780-feabfe2d7c09": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/2e48487f135ba_958781.jpg.999xx_077c8653-c11e-4503-ae02-2f1dc89296e0.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "341a3c87-206e-4b74-8f70-4bc9427b47f2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/3c328fde8e161_958791.jpg.999xx_43bd1184-861c-41ec-b45b-1bbac17b8afd.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "a280db2d-01b1-4b46-9ae8-0b844e865098": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/561dc39bfd306_1189861.jpg.999xx_729c7cc0-9750-48d9-b7ed-de3fff1e8c2b.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "88f650b7-2187-4031-b97f-958b491f21d8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/f139bff64417d_1190071.jpg.999xx.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "55b3827a-22f8-46f4-9634-802727521eb1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/09ac39d759ade_1190081.jpg.999xx_a8d505d5-be89-49e8-b1c0-3bf89ac4c414.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "bf73e4c4-87ad-42e3-901a-3f7a99007dfc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/e292463dcdba8_1190091.jpg.999xx.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "8bd211e8-a2df-4ffb-8c67-c47f32a6852b": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/5bf85d118aa90_diplomagoldenmedalforlycheehoneycompagniedumieltiny.jpg.999xx_657246b7-fb92-49d7-8516-0c36cf13fc11.jpg",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "08ea0afa-eb88-4aee-afca-733cd13aeb5b": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "3b5e1db9-d008-4566-8c3e-9d06d674386e": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "d3724ac9-5b0f-4bd4-a3ce-6fa166f65062": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        }
+      },
+      "block_order": [
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-0",
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-1",
+        "template--16957832167699__b6537b01-5d07-4064-90e1-4eaec4bba208-1668512010b7cb6fed-2",
+        "dd483219-dba0-4b0d-83da-a3c99785f8d5",
+        "e8e27371-8319-4e73-a780-feabfe2d7c09",
+        "341a3c87-206e-4b74-8f70-4bc9427b47f2",
+        "a280db2d-01b1-4b46-9ae8-0b844e865098",
+        "88f650b7-2187-4031-b97f-958b491f21d8",
+        "55b3827a-22f8-46f4-9634-802727521eb1",
+        "bf73e4c4-87ad-42e3-901a-3f7a99007dfc",
+        "8bd211e8-a2df-4ffb-8c67-c47f32a6852b",
+        "08ea0afa-eb88-4aee-afca-733cd13aeb5b",
+        "3b5e1db9-d008-4566-8c3e-9d06d674386e",
+        "d3724ac9-5b0f-4bd4-a3ce-6fa166f65062"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 6,
+        "text_align": "center",
+        "pos_text": "default",
+        "fs_title": 22,
+        "fs_text": 14,
+        "fs_title_mb": 22,
+        "fs_text_mb": 12,
+        "image_ratio": "rationt",
+        "image_size": "contain",
+        "image_position": "8",
+        "img_effect": "none",
+        "b_effect": "none",
+        "layout_des": "1",
+        "space_h_item": "6",
+        "space_v_item": "6",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "b6537b01-5d07-4064-90e1-4eaec4bba208"
+  ]
+}

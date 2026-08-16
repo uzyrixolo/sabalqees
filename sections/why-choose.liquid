@@ -1,0 +1,783 @@
+<style>
+  .why-choose-sidr-honey-section {
+      padding: 58px 0 78px;
+  }
+  .why-choose-sidr-honey-section .page-width {
+      max-width: 1212px;
+      padding: 0 16px;
+      margin: 0 auto;
+  }
+  .why-choose-sidr-honey-section .why-choose-wrapper{
+      display:flex;
+      justify-content:space-between;
+  }
+
+  .why-choose-sidr-honey-section .why-sidr-left h2 {
+   color:#000;
+    margin: 0px;
+  }
+  .why-choose-sidr-honey-section .sub-text {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0;
+      font-weight: 400;
+      color: #000;
+      padding: 12px 0 12px 0;
+  }
+  .why-choose-sidr-honey-section .compare-card-wrap.left-blog {
+      width: 56%;
+  }
+  .why-choose-sidr-honey-section .compare-card-wrap.right-blog {
+      width: 46%;
+  }
+  .why-choose-sidr-honey-section .raw_image-wrap.left-img {
+      min-width: 429px;
+      width: 100%;
+      max-width: 429px;
+      margin-right: -156px;
+      margin-bottom: -28px;
+      position: relative;
+  }
+  .why-choose-sidr-honey-section .raw_image-wrap.right-img {
+      min-width: 353px;
+      width: 100%;
+      max-width: 353px;
+      margin-left: -61px;
+      margin-bottom: -28px;
+      position: relative;
+  }
+  .why-choose-sidr-honey-section .why-sidr-right {
+      display: flex;
+      margin-left: -102px;
+      width: 77.5%;
+  }
+  .why-choose-sidr-honey-section .why-sidr-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+  }
+  .why-choose-sidr-honey-section .right-block {
+      background: linear-gradient(180deg, #E8E3DA 0%, #FFFFFF 100%);
+      padding: 34px 20px 20px;
+       max-width:250px;
+       min-width:250px;
+      width: 100%;
+          height: 100%;
+      border-radius: 6.53px;
+      margin-left: -121px;
+  }
+  .why-choose-sidr-honey-section .left-block {
+      background: linear-gradient(179.98deg, #E8E3DA -39.7%, #BC7F54 99.98%);
+      padding: 34px 16px 20px 16px;
+       max-width:250px;
+        min-width:250px;
+      width: 100%;
+          height: 100%;
+      border-radius: 6.53px;
+  }
+  .why-choose-sidr-honey-section .compare-card-wrap {
+      display: flex;
+      align-items: end;
+  }
+  .why-choose-sidr-honey-section .raw_image-wrap img{
+      width:auto;
+      height:100%;
+      display:block;
+      object-fit:cover;
+  }
+  .why-choose-sidr-honey-section .svg-with-text {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: center;
+  }
+  .why-choose-sidr-honey-section .left-title {
+      font-size: 21px;
+      line-height: 1;
+      letter-spacing: 0;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      padding-bottom: 18px;
+  }
+  .why-choose-sidr-honey-section .right-title {
+      font-size: 21px;
+      line-height: 1;
+      letter-spacing: 0;
+      text-align: center;
+      color: #000;
+      font-weight: 400;
+      padding-bottom: 18px;
+  }
+
+  .why-choose-sidr-honey-section .check-svg img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+  }
+  .why-choose-sidr-honey-section .cross-svg img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+  }
+  .why-choose-sidr-honey-section .left-desc {
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #fff;
+      font-weight: 700;
+  }
+  .why-choose-sidr-honey-section .right-desc {
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #00000080;
+      font-weight: 400;
+  }
+  .why-choose-sidr-honey-section .left-block .svg-with-text {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+       min-height: 58px;
+      border-bottom: 1px solid #fff;
+  }
+  .why-choose-sidr-honey-section .right-block .svg-with-text {
+       padding-bottom: 5px;
+      padding-top: 5px;
+      border-bottom: 1px solid  #00000080;
+      min-height: 58px;
+  }
+  .why-choose-sidr-honey-section .mobile-pro-image img{
+        width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+  }
+  .why-choose-sidr-honey-section .mobile-pro-image{
+    max-width:150px;
+    width:100%;
+    margin:0 auto;
+  }
+  .why-choose-sidr-honey-section .mobile-pro-image{
+    display:none;
+  }
+   @media screen and ( min-width:992px ) and ( max-width:1200px ){
+  .why-choose-sidr-honey-section .raw_image-wrap.left-img {
+      min-width: 325px;
+      margin-right: -156px;
+  }
+  .why-choose-sidr-honey-section .raw_image-wrap.right-img {
+      min-width: 303px;
+      margin-left: -71px;
+  }
+  }
+    @media (max-width: 991px) {
+  .why-choose-sidr-honey-section .compare-card-wrap.left-blog {
+      width: 100%;
+  }
+  .why-choose-sidr-honey-section .compare-card-wrap.right-blog {
+      width: 100%;
+  }
+
+    .why-choose-sidr-honey-section .raw_image-wrap{
+      display:none;
+    }
+  .why-choose-sidr-honey-section .why-sidr-right {
+      display: flex;
+      margin-left: 0;
+      width: 100%;
+      gap: 10px;
+  }
+  .why-choose-sidr-honey-section .right-block {
+      padding: 0px 7px 5px;
+      margin-left: 0;
+      min-width:unset;
+      max-width: 290px;
+  }
+  .why-choose-sidr-honey-section .left-block {
+      padding: 0px 7px 5px;
+       min-width:unset;
+      max-width: 290px;
+  }
+
+  .why-choose-sidr-honey-section .btn-wrapper {
+      display: none;
+  }
+  .why-choose-sidr-honey-section .compare-card-wrap {
+      width: 50%;
+      justify-content: center;
+  }
+  .why-choose-sidr-honey-section .why-choose-wrapper {
+      flex-direction: column;
+  }
+  .why-choose-sidr-honey-section .why-sidr-left {
+      width: 100%;
+  }
+  .why-choose-sidr-honey-section {
+      padding: 43px 0 43px;
+  }
+  .why-choose-sidr-honey-section .why-sidr-left h2 {
+      color: #000;
+      margin: 0px 0 5px 0;
+      text-align: center;
+      max-width: 260px;
+      width: 100%;
+      margin-inline: auto;
+  }
+  .why-choose-sidr-honey-section .sub-text {
+      padding: 0 0px 8px 0;
+      max-width: 317px;
+      margin: 0 auto;
+      text-align: center;
+  }
+  .why-choose-sidr-honey-section .left-title {
+      font-size: 16px;
+      padding-top: 7px;
+
+  }
+  .why-choose-sidr-honey-section .right-title {
+      font-size: 16px;
+      padding-top: 10px;
+
+  }
+  .why-choose-sidr-honey-section .mobile-pro-image {
+      display: block;
+  }
+  .why-choose-sidr-honey-section .left-block .svg-with-text {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      min-height:46px;
+  }
+  .why-choose-sidr-honey-section .right-block .svg-with-text {
+      padding-bottom:5px;
+      margin-bottom: 5px;
+      min-height:46px;
+  }
+  .why-choose-sidr-honey-section .left-desc {
+      font-size: 12px;
+  }
+  .why-choose-sidr-honey-section .right-desc {
+      font-size: 12px;
+
+  }
+  .why-choose-sidr-honey-section .check-svg {
+      min-width: 16px;
+      width: 100%;
+      height: 100%;
+      max-width: 16px;
+  }
+  .why-choose-sidr-honey-section .cross-svg {
+      min-width: 16px;
+      width: 100%;
+      height: 100%;
+      max-width: 16px;
+  }
+  .why-choose-sidr-honey-section .page-width {
+      padding: 0 10px;
+
+  }
+  }
+@media (max-width: 380px) {
+    .why-choose-sidr-honey-section .right-desc,
+    .why-choose-sidr-honey-section .left-desc{
+      font-size: 11px;
+  }
+}
+
+/* =========================================================
+   RTL SUPPORT
+   ========================================================= */
+
+/* Desktop RTL */
+html[dir="rtl"] .why-choose-sidr-honey-section,
+body[dir="rtl"] .why-choose-sidr-honey-section,
+.why-choose-sidr-honey-section:dir(rtl) {
+  direction: rtl;
+}
+
+{% comment %} html[dir="rtl"] .why-choose-sidr-honey-section .why-choose-wrapper,
+body[dir="rtl"] .why-choose-sidr-honey-section .why-choose-wrapper,
+.why-choose-sidr-honey-section:dir(rtl) .why-choose-wrapper {
+  flex-direction: row-reverse;
+} {% endcomment %}
+
+
+/* ---------------------------------------------------------
+   RIGHT COMPARISON AREA
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+body[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+.why-choose-sidr-honey-section:dir(rtl) .why-sidr-right {
+  margin-left: 0;
+  margin-right: -102px;
+}
+
+
+/* Mirror comparison cards */
+{% comment %} html[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+body[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+.why-choose-sidr-honey-section:dir(rtl) .why-sidr-right {
+  flex-direction: row-reverse;
+} {% endcomment %}
+
+
+/* ---------------------------------------------------------
+   RAW HONEY IMAGE
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+.why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.left-img {
+  margin-right: 0;
+  margin-left: -156px;
+}
+
+
+/* ---------------------------------------------------------
+   GENERIC HONEY IMAGE
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+.why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.right-img {
+  margin-left: 0;
+  margin-right: -61px;
+}
+
+
+/* ---------------------------------------------------------
+   CARDS
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+body[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+.why-choose-sidr-honey-section:dir(rtl) .right-block {
+  margin-left: 0;
+  margin-right: -121px;
+}
+
+
+/* ---------------------------------------------------------
+   CARD CONTENT
+   --------------------------------------------------------- */
+
+html[dir="rtl"] .why-choose-sidr-honey-section .left-block,
+html[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+body[dir="rtl"] .why-choose-sidr-honey-section .left-block,
+body[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+.why-choose-sidr-honey-section:dir(rtl) .left-block,
+.why-choose-sidr-honey-section:dir(rtl) .right-block {
+  direction: rtl;
+}
+
+
+/* Icon + text:
+   RTL naturally puts icon on the right */
+html[dir="rtl"] .why-choose-sidr-honey-section .svg-with-text,
+body[dir="rtl"] .why-choose-sidr-honey-section .svg-with-text,
+.why-choose-sidr-honey-section:dir(rtl) .svg-with-text {
+  direction: rtl;
+  text-align: right;
+}
+
+
+/* Arabic text alignment */
+html[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+html[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+body[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+body[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+.why-choose-sidr-honey-section:dir(rtl) .left-desc,
+.why-choose-sidr-honey-section:dir(rtl) .right-desc {
+  text-align: right;
+}
+
+
+/* Titles stay centered */
+html[dir="rtl"] .why-choose-sidr-honey-section .left-title,
+html[dir="rtl"] .why-choose-sidr-honey-section .right-title,
+body[dir="rtl"] .why-choose-sidr-honey-section .left-title,
+body[dir="rtl"] .why-choose-sidr-honey-section .right-title,
+.why-choose-sidr-honey-section:dir(rtl) .left-title,
+.why-choose-sidr-honey-section:dir(rtl) .right-title {
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+  body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+  .why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.left-img {
+    margin-right: 0;
+    margin-left: -156px;
+  }
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+  body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+  .why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.right-img {
+    margin-left: 0;
+    margin-right: -71px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+  html[dir="rtl"] .why-choose-sidr-honey-section,
+  body[dir="rtl"] .why-choose-sidr-honey-section,
+  .why-choose-sidr-honey-section:dir(rtl) {
+    direction: rtl;
+  }
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .why-choose-wrapper,
+  body[dir="rtl"] .why-choose-sidr-honey-section .why-choose-wrapper,
+  .why-choose-sidr-honey-section:dir(rtl) .why-choose-wrapper {
+    flex-direction: column;
+  }
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+  body[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-right,
+  .why-choose-sidr-honey-section:dir(rtl) .why-sidr-right {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: row-reverse;
+  }
+
+
+  /* Cards remain 50/50 on mobile */
+  html[dir="rtl"] .why-choose-sidr-honey-section .compare-card-wrap,
+  body[dir="rtl"] .why-choose-sidr-honey-section .compare-card-wrap,
+  .why-choose-sidr-honey-section:dir(rtl) .compare-card-wrap {
+    width: 50%;
+  }
+
+
+  /* Remove desktop negative offsets */
+  html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+  html[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+  body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.left-img,
+  body[dir="rtl"] .why-choose-sidr-honey-section .raw_image-wrap.right-img,
+  .why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.left-img,
+  .why-choose-sidr-honey-section:dir(rtl) .raw_image-wrap.right-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* Remove card overlap on mobile */
+  html[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+  body[dir="rtl"] .why-choose-sidr-honey-section .right-block,
+  .why-choose-sidr-honey-section:dir(rtl) .right-block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* Arabic text */
+  html[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+  html[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+  body[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+  body[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+  .why-choose-sidr-honey-section:dir(rtl) .left-desc,
+  .why-choose-sidr-honey-section:dir(rtl) .right-desc {
+    text-align: right;
+    direction: rtl;
+  }
+
+
+  /* Keep icons properly positioned */
+  html[dir="rtl"] .why-choose-sidr-honey-section .svg-with-text,
+  body[dir="rtl"] .why-choose-sidr-honey-section .svg-with-text,
+  .why-choose-sidr-honey-section:dir(rtl) .svg-with-text {
+    flex-direction: row;
+    direction: rtl;
+  }
+
+
+  /* Heading/subheading */
+  html[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-left h2,
+  body[dir="rtl"] .why-choose-sidr-honey-section .why-sidr-left h2,
+  .why-choose-sidr-honey-section:dir(rtl) .why-sidr-left h2 {
+    text-align: center;
+  }
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .sub-text,
+  body[dir="rtl"] .why-choose-sidr-honey-section .sub-text,
+  .why-choose-sidr-honey-section:dir(rtl) .sub-text {
+    text-align: center;
+    direction: rtl;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL SCREENS
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+  html[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+  html[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+  body[dir="rtl"] .why-choose-sidr-honey-section .left-desc,
+  body[dir="rtl"] .why-choose-sidr-honey-section .right-desc,
+  .why-choose-sidr-honey-section:dir(rtl) .left-desc,
+  .why-choose-sidr-honey-section:dir(rtl) .right-desc {
+    text-align: right;
+    direction: rtl;
+  }
+
+}
+</style>
+
+<section class="why-choose-sidr-honey-section" style="background: {{ section.settings.bg_color }}">
+  <div class="page-width">
+    <div class="why-choose-wrapper">
+      <!-- LEFT CONTENT -->
+      <div class="why-sidr-left">
+        {% if section.settings.heading %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.subheading %}
+          <div class="sub-text body-font">{{ section.settings.subheading }}</div>
+        {% endif %}
+
+        <div class="btn-wrapper">
+          {% if section.settings.btn_txt != blank %}
+            <a
+              class="dev-btn" data-add-btn
+              href="{{ section.settings.btn_url }}"
+              style=" background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+            >
+              {{ section.settings.btn_txt }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <!-- RIGHT COMPARISON -->
+      <div class="why-sidr-right">
+        <!-- RAW SIDR -->
+        <div class="compare-card-wrap left-blog">
+          <div class="raw_image-wrap left-img">
+            {% if section.settings.raw_image %}
+              <img
+                src="{{ section.settings.raw_image | image_url }}"
+                alt="{{ section.settings.raw_image.alt | default: section.settings.raw_image | escape }}"
+                loading="lazy"
+                width="{{ section.settings.raw_image.width }}"
+                height="{{ section.settings.raw_image.height }}"
+              >
+            {% endif %}
+          </div>
+          <div class="left-block">
+            <div class="mobile-pro-image">
+              {% if section.settings.raw_mobile_image %}
+                <img
+                  src="{{ section.settings.raw_mobile_image | image_url }}"
+                  alt="{{ section.settings.raw_mobile_image.alt | default: section.settings.raw_mobile_image | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.raw_mobile_image.width }}"
+                  height="{{ section.settings.raw_mobile_image.height }}"
+                >
+              {% endif %}
+            </div>
+            <div class="left-title body-font">{{ section.settings.raw_title }}</div>
+            {% for block in section.blocks %}
+              {% if block.type == 'left_point' %}
+                <div class="svg-with-text">
+                  <div class="check-svg">
+                    {% if block.settings.check_svg != blank %}
+                      <img
+                        src="{{ block.settings.check_svg | image_url }}"
+                        alt="{{ block.settings.check_svg.alt | default: block.settings.check_svg | escape }}"
+                        loading="lazy"
+                        width="{{ block.settings.check_svg.width }}"
+                        height="{{ block.settings.check_svg.height }}"
+                      >
+                    {% endif %}
+                  </div>
+                  {% if block.settings.text != blank %}
+                    <div class="left-desc body-font">{{ block.settings.text }}</div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <!-- GENERIC -->
+        <div class="compare-card-wrap right-blog">
+          <div class="raw_image-wrap right-img">
+            {% if section.settings.generic_image %}
+              <img
+                src="{{ section.settings.generic_image | image_url }}"
+                alt="{{ section.settings.generic_image.alt | default: section.settings.generic_image | escape }}"
+                loading="lazy"
+                width="{{ section.settings.generic_image.width }}"
+                height="{{ section.settings.generic_image.height }}"
+              >
+            {% endif %}
+          </div>
+          <div class="right-block">
+            <div class="mobile-pro-image">
+              {% if section.settings.generic_mobile_image %}
+                <img
+                  src="{{ section.settings.generic_mobile_image | image_url }}"
+                  alt="{{ section.settings.generic_mobile_image.alt | default: section.settings.generic_mobile_image | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.generic_mobile_image.width }}"
+                  height="{{ section.settings.generic_mobile_image.height }}"
+                >
+              {% endif %}
+            </div>
+            <div class="right-title body-font">{{ section.settings.generic_title }}</div>
+            {% for block in section.blocks %}
+              {% if block.type == 'right_point' %}
+                <div class="svg-with-text">
+                  <div class="cross-svg">
+                    {% if block.settings.cross_svg != blank %}
+                      <img
+                        src="{{ block.settings.cross_svg | image_url }}"
+                        alt="{{ block.settings.cross_svg.alt | default: block.settings.cross_svg | escape }}"
+                        loading="lazy"
+                        width="{{ block.settings.cross_svg.width }}"
+                        height="{{ block.settings.cross_svg.height }}"
+                      >
+                    {% endif %}
+                  </div>
+                  {% if block.settings.text != blank %}
+                    <div class="right-desc body-font">{{ block.settings.text }}</div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Why Choose Raw Sidr Honey",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button background color"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color"
+    },
+    {
+      "type": "image_picker",
+      "id": "raw_image",
+      "label": "Raw honey Desktop image"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "raw_mobile_image",
+      "label": "Raw honey image Mobile"
+    },
+
+    {
+      "type": "inline_richtext",
+      "id": "raw_title",
+      "label": "Raw honey title"
+    },
+    {
+      "type": "image_picker",
+      "id": "generic_image",
+      "label": "Generic honey Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "generic_mobile_image",
+      "label": "Generic honey Mobile image"
+    },
+
+    {
+      "type": "inline_richtext",
+      "id": "generic_title",
+      "label": "Generic honey title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_point",
+      "name": "Left honey point",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "check_svg",
+          "label": "Add Check Svg image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Point text"
+        }
+      ]
+    },
+    {
+      "type": "right_point",
+      "name": "Right honey point",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "cross_svg",
+          "label": "Add Svg Cross Svg"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Point text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose Sidr Honey old"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,412 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "d6f7d25a-49a8-488e-86bf-38bd572a314b": {
+          "type": "1",
+          "settings": {
+            "heading": "",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 50,
+            "text_lh": 20,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": true,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "d6f7d25a-49a8-488e-86bf-38bd572a314b"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_specify_image": false,
+        "parallax": false,
+        "color": "#d29b74",
+        "overlay": 100,
+        "padding": 100,
+        "paddingmb": 69,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "1c076658-8baf-4cd2-9856-587e6f21a6f1": {
+      "type": "image_text",
+      "blocks": {
+        "template--21389293617427__1c076658-8baf-4cd2-9856-587e6f21a6f1-bl_text-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "text_size": "60,18",
+            "txt_align": "center",
+            "sub_heading": "Introducing",
+            "sub_heading_2": "Your Culinary Partner",
+            "heading": "Balqees Honey",
+            "text": "",
+            "subhd_color": "#222222",
+            "hd_color": "#d29b74",
+            "des_color": "#000000",
+            "use_shadow": false,
+            "button_label": "Contact Us",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--21389293617427__1c076658-8baf-4cd2-9856-587e6f21a6f1-bl_text-1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".SectionID  .t4s-image-text-des p {\n\n    line-height: 24px!important;\n    font-size: 14px;\n    font-weight: 400!important;\n    letter-spacing: 1.5px!important;\n    text-align: justify!important;\n    font-family: var(--font-family-2);\ntext-align-last: left;\n}\n.SectionID \n.t4s-image-text-des.t4-fs-md-18.t4s-fs-15 {\n    display: none;\n}"
+      }
+    },
+    "511e2e8e-0f9d-430b-8cc9-1772de3d6f9d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "6ff012fa-a362-45e7-88cd-d4e58bdc22d2": {
+      "type": "logo_list",
+      "blocks": {
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-1": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-19.jpg",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-2": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_2.png",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-3": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-05.jpg",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-4": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-06.jpg",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-5": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-16.jpg",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-6": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-13.jpg",
+            "url": ""
+          }
+        },
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-7": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-15.jpg",
+            "url": ""
+          }
+        },
+        "644961f9-d7a9-4726-be16-eeefb61cf476": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-11.jpg",
+            "url": ""
+          }
+        },
+        "3b7e7b59-becc-4c50-a4f2-37251e3abc6d": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-08.jpg",
+            "url": ""
+          }
+        },
+        "18558dbf-4e5f-402e-90dc-8ca73872451f": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-10.jpg",
+            "url": ""
+          }
+        },
+        "537eaec4-9a90-4249-a5cc-44f92d17c134": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-14.jpg",
+            "url": ""
+          }
+        },
+        "e9aea9fa-93b0-47a7-8e47-17c29b5086be": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-12.jpg",
+            "url": ""
+          }
+        },
+        "28710ca1-733a-4fa7-98ce-fa731ce999f1": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2.png",
+            "url": ""
+          }
+        },
+        "84b4c5f9-edf3-4fb6-86c0-39b7e2f8a63a": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-20.jpg",
+            "url": ""
+          }
+        },
+        "3bcfdb48-f394-43d3-8ac9-6610a5b5bc14": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-07.jpg",
+            "url": ""
+          }
+        },
+        "3674321d-a8ba-4445-8106-78895953c631": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-17.jpg",
+            "url": ""
+          }
+        },
+        "335fc616-1977-4911-a44e-2cc4d8defa78": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy_3.png",
+            "url": ""
+          }
+        },
+        "6c016dbe-b904-4cd3-b1cf-daaa66d2df62": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-18.jpg",
+            "url": ""
+          }
+        },
+        "fbc27532-e13e-4cad-8ad8-920c6a262b85": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/Artboard_2_copy.png",
+            "url": ""
+          }
+        },
+        "c325abf0-cc24-4237-889d-097e48032fe1": {
+          "type": "logo_item",
+          "settings": {
+            "image": "shopify://shop_images/brands-09.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-1",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-2",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-3",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-4",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-5",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-6",
+        "template--21389293617427__6ff012fa-a362-45e7-88cd-d4e58bdc22d2-logo_item-7",
+        "644961f9-d7a9-4726-be16-eeefb61cf476",
+        "3b7e7b59-becc-4c50-a4f2-37251e3abc6d",
+        "18558dbf-4e5f-402e-90dc-8ca73872451f",
+        "537eaec4-9a90-4249-a5cc-44f92d17c134",
+        "e9aea9fa-93b0-47a7-8e47-17c29b5086be",
+        "28710ca1-733a-4fa7-98ce-fa731ce999f1",
+        "84b4c5f9-edf3-4fb6-86c0-39b7e2f8a63a",
+        "3bcfdb48-f394-43d3-8ac9-6610a5b5bc14",
+        "3674321d-a8ba-4445-8106-78895953c631",
+        "335fc616-1977-4911-a44e-2cc4d8defa78",
+        "6c016dbe-b904-4cd3-b1cf-daaa66d2df62",
+        "fbc27532-e13e-4cad-8ad8-920c6a262b85",
+        "c325abf0-cc24-4237-889d-097e48032fe1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "1",
+        "click_image": "data-goto",
+        "nav_thumbs": false,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": true,
+        "code_cus_css": ".t4s_ratio.t4s-child-lazyloaded {\n    max-width: 185px!important;\n    margin-bottom: 30px!important;\n}"
+      }
+    },
+    "1648884254eae8e0bd": {
+      "type": "contact-form",
+      "blocks": {
+        "23a3855b-3ae4-459c-9b7e-f80d209a498e": {
+          "type": "bl_info",
+          "disabled": true,
+          "settings": {
+            "heading": "CONTACT INFORMATION",
+            "text": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.</p><p><i class=\"las la-home fs__16\"></i> 184 Main Rd E, St Albans Victoria 3021, Australia</p><p><i class=\"las la-phone fs__16\"></i> 1800-123-222 / 1900-1570-230</p><p><i class=\"las la-envelope fs__16\"></i> contact@company.com</p><i class=\"las la-clock fs__16\"></i> Everyday 9:00-17:00"
+          }
+        },
+        "1648884254cd155bea-0": {
+          "type": "bl_form",
+          "settings": {
+            "heading": "Tell Us Your Requirements",
+            "enable_phone": true,
+            "enable_full_btn": true,
+            "button_style": "default",
+            "btn_size": "medium",
+            "btn_cl": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "23a3855b-3ae4-459c-9b7e-f80d209a498e",
+        "1648884254cd155bea-0"
+      ],
+      "settings": {
+        "enable_map": false,
+        "map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14462.663524790752!2d55.1594821!3d25.0114668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffc5091ed9827b5f!2sIntellectual%20Capital%20Arabia%20General%20Trading%20LLC!5e0!3m2!1sen!2s!4v1669545905285!5m2!1sen!2s\" width=\"800\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "1c076658-8baf-4cd2-9856-587e6f21a6f1",
+    "511e2e8e-0f9d-430b-8cc9-1772de3d6f9d",
+    "main",
+    "6ff012fa-a362-45e7-88cd-d4e58bdc22d2",
+    "1648884254eae8e0bd",
+    "sidebar-page"
+  ]
+}

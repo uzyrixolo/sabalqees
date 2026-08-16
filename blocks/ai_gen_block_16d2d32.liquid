@@ -1,0 +1,481 @@
+{% doc %}
+  @prompt
+    black background text marquee with svg separator ; looping endlessly with customized speed and settings text blocks can be added, Separator style ; image will be uploaded there and it will use as a separator with balanced spacing between two sentences, separator is with the word right now I need it between two sentences evenly
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-marquee-container-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    overflow: hidden;
+    padding: {{ block.settings.padding_vertical }}px 0;
+    display: block;
+  }
+
+  .ai-marquee-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: ai-marquee-scroll-{{ ai_gen_id }} {{ block.settings.animation_speed }}s linear infinite;
+  
+
+
+
+  }
+
+  .ai-marquee-content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    gap: {{ block.settings.separator_spacing }}px;
+  }
+
+  .ai-marquee-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    letter-spacing: {{ block.settings.letter_spacing }}px;
+    text-transform: {{ block.settings.text_transform }};
+  }
+
+  .ai-marquee-separator-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: {{ block.settings.separator_size }}px;
+    height: {{ block.settings.separator_size }}px;
+    flex-shrink: 0;
+  }
+
+  .ai-marquee-separator-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.separator_color }};
+  }
+
+  .ai-marquee-separator-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+@keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    {% if request.locale.iso_code == 'ar' %}
+      transform: translateX(50%);
+    {% else %}
+      transform: translateX(-50%);
+    {% endif %}
+  }
+}
+
+  .ai-marquee-wrapper-{{ ai_gen_id }}:hover {
+    animation-play-state: {% if block.settings.pause_on_hover %}paused{% else %}running{% endif %};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-marquee-text-{{ ai_gen_id }} {
+      font-size: 16px;
+    }
+
+    .ai-marquee-separator-{{ ai_gen_id }} {
+      width: {{ block.settings.separator_size | times: 0.8 }}px;
+      height: {{ block.settings.separator_size | times: 0.8 }}px;
+    }
+
+    .ai-marquee-content-{{ ai_gen_id }} {
+      gap: {{ block.settings.separator_spacing | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<marquee-block-{{ ai_gen_id }} class="ai-marquee-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-marquee-wrapper-{{ ai_gen_id }}">
+    {% comment %} First set of content {% endcomment %}
+    <div class="ai-marquee-content-{{ ai_gen_id }}">
+      {% for i in (1..10) %}
+        {% liquid
+          assign text_key = 'text_' | append: i
+          assign text_value = block.settings[text_key]
+        %}
+        {% if text_value != blank %}
+          <span class="ai-marquee-text-{{ ai_gen_id }}">{{ text_value }}</span>
+          
+          <div class="ai-marquee-separator-{{ ai_gen_id }}">
+            {% if block.settings.separator_style == 'custom' and block.settings.separator_image %}
+              <img 
+                src="{{ block.settings.separator_image | image_url: width: 100 }}" 
+                alt="Separator"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            {% elsif block.settings.separator_style == 'star' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'circle' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'diamond' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l10 10-10 10L2 12 12 2z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'heart' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'arrow' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'flower' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2c-1.1 0-2 .9-2 2 0 .74.4 1.38 1 1.72V7h-1c-1.1 0-2 .9-2 2v1.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2 .74 0 1.38-.4 1.72-1H12v1.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2s2-.9 2-2c0-.74-.4-1.38-1-1.72V13h1.28c.34.6.98 1 1.72 1 1.1 0 2-.9 2-2 0-.74-.4-1.38-1-1.72V9c0-1.1-.9-2-2-2h-1V5.72c.6-.34 1-.98 1-1.72 0-1.1-.9-2-2-2zm0 2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+              </svg>
+            {% else %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% comment %} Duplicate content for seamless loop {% endcomment %}
+    <div class="ai-marquee-content-{{ ai_gen_id }}">
+      {% for i in (1..10) %}
+        {% liquid
+          assign text_key = 'text_' | append: i
+          assign text_value = block.settings[text_key]
+        %}
+        {% if text_value != blank %}
+          <span class="ai-marquee-text-{{ ai_gen_id }}">{{ text_value }}</span>
+          
+          <div class="ai-marquee-separator-{{ ai_gen_id }}">
+            {% if block.settings.separator_style == 'custom' and block.settings.separator_image %}
+              <img 
+                src="{{ block.settings.separator_image | image_url: width: 100 }}" 
+                alt="Separator"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            {% elsif block.settings.separator_style == 'star' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'circle' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'diamond' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l10 10-10 10L2 12 12 2z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'heart' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'arrow' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+              </svg>
+            {% elsif block.settings.separator_style == 'flower' %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2c-1.1 0-2 .9-2 2 0 .74.4 1.38 1 1.72V7h-1c-1.1 0-2 .9-2 2v1.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2 .74 0 1.38-.4 1.72-1H12v1.28c-.6.34-1 .98-1 1.72 0 1.1.9 2 2 2s2-.9 2-2c0-.74-.4-1.38-1-1.72V13h1.28c.34.6.98 1 1.72 1 1.1 0 2-.9 2-2 0-.74-.4-1.38-1-1.72V9c0-1.1-.9-2-2-2h-1V5.72c.6-.34 1-.98 1-1.72 0-1.1-.9-2-2-2zm0 2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+              </svg>
+            {% else %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</marquee-block-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class MarqueeBlock{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupMarquee();
+      }
+
+      setupMarquee() {
+        const wrapper = this.querySelector('.ai-marquee-wrapper-{{ ai_gen_id }}');
+        if (!wrapper) return;
+
+        const content = wrapper.querySelector('.ai-marquee-content-{{ ai_gen_id }}');
+        if (!content) return;
+
+        const contentWidth = content.offsetWidth;
+        wrapper.style.width = (contentWidth * 2) + 'px';
+      }
+    }
+
+    customElements.define('marquee-block-{{ ai_gen_id }}', MarqueeBlock{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Text marquee",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "font_weight",
+      "label": "Font weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "Letter spacing",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Separator"
+    },
+    {
+      "type": "select",
+      "id": "separator_style",
+      "label": "Separator style",
+      "options": [
+        {
+          "value": "custom",
+          "label": "Custom image"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        },
+        {
+          "value": "diamond",
+          "label": "Diamond"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "arrow",
+          "label": "Arrow"
+        },
+        {
+          "value": "flower",
+          "label": "Flower"
+        }
+      ],
+      "default": "star"
+    },
+    {
+      "type": "image_picker",
+      "id": "separator_image",
+      "label": "Custom separator image",
+      "info": "Only used when separator style is set to 'Custom image'"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator color",
+      "default": "#ffffff",
+      "info": "Only applies to SVG separators"
+    },
+    {
+      "type": "range",
+      "id": "separator_size",
+      "label": "Separator size",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "separator_spacing",
+      "label": "Separator spacing",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40,
+      "info": "Space between text and separator"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "label": "Animation speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Text blocks"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Text 1",
+      "default": "Premium Honey"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Text 2",
+      "default": "100% Natural"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Text 3",
+      "default": "World Sourced"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Text 4",
+      "default": "Gift Ready"
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Text 5"
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "Text 6"
+    },
+    {
+      "type": "text",
+      "id": "text_7",
+      "label": "Text 7"
+    },
+    {
+      "type": "text",
+      "id": "text_8",
+      "label": "Text 8"
+    },
+    {
+      "type": "text",
+      "id": "text_9",
+      "label": "Text 9"
+    },
+    {
+      "type": "text",
+      "id": "text_10",
+      "label": "Text 10"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text marquee"
+    }
+  ]
+}
+{% endschema %}

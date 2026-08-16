@@ -1,0 +1,37 @@
+
+<div id="collection-buttons">
+  {% assign desiredCategories = "all-products,bundles,subscription" | split: ',' %}
+  {% for collection in collections %}
+    {% if desiredCategories contains collection.handle %}
+      <button class="collection-button grow-aov__icon grow-aov__icon--products" data-handle="{{ collection.handle }}">{{ collection.title }}</button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div id="collection-products">
+  <!-- The content of this div will be replaced with the products of the selected collection -->
+  {% render 'collection-products' %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all collection buttons
+    var collectionButtons = document.querySelectorAll('.collection-button');
+
+    // Add click event listener to each button
+    collectionButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Get the handle of the selected collection
+        var collectionHandle = button.getAttribute('data-handle');
+
+        // Fetch products for the selected collection
+        fetch('/collections/' + collectionHandle + '?view=collection-products')
+          .then(response => response.text())
+          .then(data => {
+            // Replace the content of #collection-products with the fetched products
+            document.getElementById('collection-products').innerHTML = data;
+          });
+      });
+    });
+  });
+</script>

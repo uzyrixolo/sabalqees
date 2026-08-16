@@ -1,0 +1,304 @@
+
+:root{
+  
+    --growaov-border-radius: 7px;
+    --growaov-branding: 0,0,0;
+    --growaov-badge-bg-color-1: 242,186,83;
+    --growaov-badge-bg-color-2: 203,131,18;
+    --growaov-checkout-button-bg: 170,18,30;
+    --growaov-checkout-button-primary: 255,255,255;
+    --growaov-collections-active-bg-color1: 161,40,36;
+    --growaov-collections-active-bg-color2: 204,58,53;
+    --growaov-collections-header-bg: 255,249,238;
+    --growaov-collections-header-primary: 0,0,0;
+    --growaov-collections-nav-bg: 43,34,17;
+    --growaov-collections-nav-primary: 255,255,255;
+    --growaov-collections-nav-button-bg: 170,18,30;
+    --growaov-collections-nav-button-primary: 255,255,255;
+    --growaov-collections-nav-inactive-button-primary: 255,255,255;
+    --growaov-collections-body-bg: 255,249,238;
+    --growaov-collections-bundle-sidebar-bg: 255,255,255;
+    --growaov-collections-form-bg: 255,255,255;
+    --growaov-collections-form-primary: 61,55,45;
+    --growaov-collections-form-badge-bg: 151,210,160;
+    --growaov-collections-form-badge-primary: 0,0,0;
+    --growaov-collections-filter-primary: 19,24,40;
+    --growaov-collections-filter-inactive: 199,197,195;
+    --growaov-collections-filter-active: 170,18,30;
+    --growaov-collections-filter-active-checkmark: 255,255,255;
+    --growaov-collections-product-bg: 255,255,255;
+    --growaov-collections-product-review: 255,174,52;
+    --growaov-collections-product-primary: 0,0,0;
+    --growaov-collections-product-button-bg: 170,18,30;
+    --growaov-collections-product-button-primary: 255,255,255;
+    --growaov-collections-product-slide-bg: 243,235,222;
+    --growaov-collections-product-slide-primary: 0,0,0;
+    --growaov-collections-product-slide-accent: 170,18,30;
+    --growaov-collections-product-variant-bg: 240,241,244;
+    --growaov-collections-product-variant-primary: 0,0,0;
+    --growaov-collections-product-proof-bg-image: url(https://cdn.shopify.com/s/files/1/1775/1825/files/testimonial-bg_700x700.jpg?v=1630514127);
+    --growaov-collections-product-proof-bg-color: 0,0,0;
+    --growaov-collections-product-proof-primary: 255,255,255;
+    --growaov-collections-product-proof-verified: 33,173,100;
+}
+}
+.grow-aov-collection__nav {
+    background: rgba(var(--growaov-collections-nav-bg),1);
+    position: relative;
+    z-index: 3
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav {
+        padding:24px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav {
+        padding:0
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs {
+    opacity: 1;
+    transition: all .2s
+}
+
+.grow-aov-collection__nav.grow-aov-collection__nav--disabled .grow-aov-collection__tabs {
+    opacity: .6;
+    pointer-events: none
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs {
+        padding-top:30px;
+        padding-bottom: 15px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%
+    }
+
+    .grow-aov-collection__nav .grow-aov-collection__tabs::-webkit-scrollbar {
+        width: 0
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul {
+        justify-content:center;
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs ul li {
+    margin-left: 6px;
+    margin-right: 6px;
+    text-align: center
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li {
+        margin-left:4px;
+        margin-right: 4px;
+        width: 100%
+    }
+
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li:first-child {
+        margin-left: 16px
+    }
+
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li:last-child {
+        padding-right: 16px
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs ul li button {
+    align-items: center;
+    background: transparent;
+    border: 1px solid #00000050;
+    border-radius: 56px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    text-align: center;
+    transition: all .3s;
+    white-space: nowrap
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button {
+        font-size:16px;
+        height: 46px;
+        min-width: 161px;
+        padding-left: 34px;
+        padding-right: 34px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button {
+        font-size:14px;
+        height: 36px;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%
+    }
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon {
+        margin-right:8px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon {
+        margin-right:6px
+    }
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--box {
+        font-size:18px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--box {
+        font-size:13px
+    }
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--subscription {
+        font-size:15px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--subscription {
+        font-size:12px
+    }
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--products {
+        font-size:16px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__tabs ul li button .grow-aov__icon--products {
+        font-size:12px
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs ul li button:hover {
+    background: rgba(var(--growaov-collections-nav-inactive-button-primary),.1);.grow-aov-collection__nav .grow-aov-collection__tabs
+    border-color: rgba(var(--growaov-collections-nav-inactive-button-primary),1)
+}
+
+.grow-aov-collection__nav .grow-aov-collection__tabs ul li.grow-aov-collection__selected-tab button {
+   background: #fff;
+    border-color: transparent;
+    box-shadow: 0 3px 5px rgba(0,0,0,.24);
+    color: #d29975;
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features {
+        margin-top:43px;
+        margin-bottom: 18px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features {
+        padding-bottom:15px
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__nav-features ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features ul {
+        flex-wrap:wrap
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__nav-features ul li {
+    align-items: center;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features ul li {
+        margin-top:6px;
+        margin-bottom: 6px;
+        width: 100%
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__image {
+    margin-right: 12px
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__image {
+        text-align:center;
+        width: 24px
+    }
+}
+
+.grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__image img {
+    max-height: 24px;
+    max-width: 24px;
+    vertical-align: middle
+}
+
+.grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__text {
+    color: rgba(var(--growaov-collections-nav-primary),.9);
+    font-weight: 500;
+    line-height: 18px
+}
+
+@media (min-width: 768px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__text {
+        font-size:16px
+    }
+}
+
+@media (max-width: 767px) {
+    .grow-aov-collection__nav .grow-aov-collection__nav-features ul li .grow-aov__text {
+        font-size:14px
+    }
+}
+
+  .grow-aov-collection__nav .grow-aov-collection__tabs ul li.grow-aov-collection__selected-tab button {
+    background: #d29a73;
+    border-color: 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,.24);
+    color: #ffffff;
+}
+.grow-aov-collection__nav {
+    background-color: #f3f3f3!important;
+}

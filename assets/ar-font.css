@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Arabic typography for the KSA storefront.
+   Loaded from layout/theme.liquid ONLY when request.locale.iso_code starts
+   with "ar", so English / LTR rendering is completely untouched.
+
+   Why this file exists: snippets/head_assets.liquid loads the theme fonts
+   (Aeonik / Rubik / Baskerville) through the Google Fonts v1 endpoint
+   (fonts.googleapis.com/css?family=...), which serves the Latin subset only.
+   Arabic glyphs therefore fell back to an arbitrary system font.
+   Rubik ships a full Arabic subset - this file loads it (css2 endpoint,
+   which serves every available subset with unicode-range) and applies an
+   Arabic-aware stack.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --font-family-ar: 'Rubik', 'Noto Sans Arabic', 'Noto Naskh Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+/* ---- 1. Re-point the theme's own font variables inside the Arabic scope ----
+   head_assets.liquid defines --font-family-1|2|3 from the theme settings
+   fnt_fm_sp1/2/3 (raleway_n4, raleway_n4, libre_baskerville_n4) and derives
+   --font-body-family / --font-heading-family / --font-button-family from them.
+   None of those faces ship Arabic glyphs, so any element consuming them fell
+   back to the OS default Arabic serif - which is the calligraphic/handwritten
+   look seen on the storefront. Remap the base three AND the derived three,
+   scoped to an ar / RTL root so English rendering is untouched. */
+html[lang^="ar"],
+html[dir="rtl"],
+html.rtl_true,
+:root:has(html[lang^="ar"]) {
+  --font-family-1: var(--font-family-ar);
+  --font-family-2: var(--font-family-ar);
+  --font-family-3: var(--font-family-ar);
+  --font-body-family: var(--font-family-ar);
+  --font-heading-family: var(--font-family-ar);
+  --font-button-family: var(--font-family-ar);
+}
+
+/* ---- 2. Explicit element rules, for anything that hard-codes a family ---- */
+html[lang^="ar"] body,
+html[dir="rtl"] body,
+html[lang^="ar"] h1, html[lang^="ar"] h2, html[lang^="ar"] h3,
+html[lang^="ar"] h4, html[lang^="ar"] h5, html[lang^="ar"] h6,
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3,
+html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6,
+html[lang^="ar"] p, html[lang^="ar"] a, html[lang^="ar"] li,
+html[lang^="ar"] td, html[lang^="ar"] th, html[lang^="ar"] label,
+html[lang^="ar"] blockquote, html[lang^="ar"] legend,
+html[dir="rtl"] p, html[dir="rtl"] a, html[dir="rtl"] li,
+html[dir="rtl"] td, html[dir="rtl"] th, html[dir="rtl"] label,
+html[dir="rtl"] blockquote, html[dir="rtl"] legend,
+html[lang^="ar"] button, html[lang^="ar"] input, html[lang^="ar"] optgroup,
+html[lang^="ar"] select, html[lang^="ar"] textarea,
+html[dir="rtl"] button, html[dir="rtl"] input, html[dir="rtl"] optgroup,
+html[dir="rtl"] select, html[dir="rtl"] textarea {
+  font-family: var(--font-family-ar);
+}
+
+/* Theme-specific hooks observed in this theme (t4s / Kalles).
+   These carry !important in the theme's own inline <style>, so they need
+   !important here to be overridden. Scoped to ar / RTL only. */
+html[lang^="ar"] .t4s_as_title,
+html[lang^="ar"] .t4s_as_link,
+html[lang^="ar"] .t4s_as_button,
+html[lang^="ar"] .t4s-fnt-fm-1,
+html[lang^="ar"] .t4s-fnt-fm-2,
+html[lang^="ar"] .t4s-fnt-fm-3,
+html[lang^="ar"] .t4s-product-title,
+html[lang^="ar"] .t4s-section-title,
+html[lang^="ar"] .t4s-btn,
+html[lang^="ar"] .t4s-product-form__submit,
+html[lang^="ar"] .t4s-nav__link,
+html[lang^="ar"] .t4s-menu-item > a,
+html[dir="rtl"] .t4s_as_title,
+html[dir="rtl"] .t4s_as_link,
+html[dir="rtl"] .t4s_as_button,
+html[dir="rtl"] .t4s-fnt-fm-1,
+html[dir="rtl"] .t4s-fnt-fm-2,
+html[dir="rtl"] .t4s-fnt-fm-3,
+html[dir="rtl"] .t4s-product-title,
+html[dir="rtl"] .t4s-section-title,
+html[dir="rtl"] .t4s-btn,
+html[dir="rtl"] .t4s-product-form__submit,
+html[dir="rtl"] .t4s-nav__link,
+html[dir="rtl"] .t4s-menu-item > a {
+  font-family: var(--font-family-ar) !important;
+}
+
+/* ---- 3. Tracking ----
+   The theme applies Latin letter-spacing to body + headings
+   (settings.bd_lspacing / settings.hd_lspacing). Letter-spacing breaks
+   Arabic joining and looks wrong, so reset it in the Arabic scope.
+   Icon fonts are untouched: no font-family is applied to <i>/<span>/[class*="icon"]. */
+html[lang^="ar"] *,
+html[dir="rtl"] * {
+  letter-spacing: normal !important;
+}
+
+/* ---- 4. Arabic-Indic vs Western digits ----
+   Keep prices and numerals in Latin digits (Rubik covers both) so currency
+   and SKU formatting stays consistent with the rest of the store. */
+html[lang^="ar"] .t4s-price,
+html[lang^="ar"] .dirham-price,
+html[lang^="ar"] .dirham-amount,
+html[dir="rtl"] .t4s-price,
+html[dir="rtl"] .dirham-price,
+html[dir="rtl"] .dirham-amount {
+  font-family: var(--font-family-ar);
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}

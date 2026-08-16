@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
+          "type": "1",
+          "settings": {
+            "heading": "",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 50,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": true,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Artboard_3.png",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "c3d6eac0-dacb-4746-a74a-2e89fc654ac1": {
+      "type": "shipping",
+      "blocks": {
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-0": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "map-maker",
+            "icon": "tractor",
+            "title": "UK",
+            "text": "<p><a href=\"https://balqees.co.uk\" title=\"balqees.co.uk\">balqees.co.uk</a></p>"
+          }
+        },
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-1": {
+          "type": "shipping",
+          "settings": {
+            "icon_themes": "map-maker",
+            "icon": "life-ring",
+            "title": "Middle East",
+            "text": "<p><a href=\"https://sa.balqees.com\" title=\"sa.balqees.com\">sa.balqees.com</a></p>"
+          }
+        },
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-2": {
+          "type": "shipping",
+          "disabled": true,
+          "settings": {
+            "icon_themes": "refesh",
+            "icon": "undo-alt",
+            "title": "30 DAYS RETURN",
+            "text": "<p>Simply return it within 30 days for an exchange.</p>"
+          }
+        },
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-3": {
+          "type": "shipping",
+          "disabled": true,
+          "settings": {
+            "icon_themes": "door-lock",
+            "icon": "lock",
+            "title": "100% PAYMENT SECURE",
+            "text": "<p>We ensure secure payment with PEV</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-0",
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-1",
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-2",
+        "template--17157306450220__c3d6eac0-dacb-4746-a74a-2e89fc654ac1-167077965063a0b8e3-3"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "Please note, if you change country you may lose any items saved in your wishlist or bag.",
+        "tophead_mb": 50,
+        "content_align": "text-center",
+        "align_vertical": false,
+        "design_padding": "1",
+        "source": "themes_icon",
+        "icon_des": "deafult",
+        "icon_size": "medium",
+        "col_dk": "2",
+        "col_tb": "2",
+        "col_mb": "1",
+        "border": false,
+        "cl_bd": "#dddddd",
+        "cl_ic": "#9e9e9e",
+        "cl_hd": "#222222",
+        "cl_cot": "#878787",
+        "bg_item": "#ffffff",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "carousel_mobile": true,
+        "dots_cl": "dark",
+        "dots_round": true,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": ",,50px",
+        "mg_tb": ",,10px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "c3d6eac0-dacb-4746-a74a-2e89fc654ac1"
+  ]
+}

@@ -1,0 +1,667 @@
+{% doc %}
+  @prompt
+    main heading then below it. display all collections in circular media and below it its title. not all collections which will be selected. make everything fully customisable and on phone it will be carousel, option to add custom title and image.\
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collections-showcase-{{ ai_gen_id }} {
+    width: 100%;
+    display: block;
+    padding: 40px 20px;
+  }
+
+  .ai-collections-showcase__container-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-collections-showcase__heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+  }
+
+  .ai-collections-showcase__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+  }
+
+  .ai-collections-showcase__item-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-collections-showcase__link-{{ ai_gen_id }} {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ai-collections-showcase__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: {{ block.settings.title_spacing }}px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: {{ block.settings.placeholder_bg_color }};
+  }
+
+  .ai-collections-showcase__image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform {{ block.settings.hover_animation_duration }}s ease;
+  }
+
+  {% if block.settings.enable_hover_effect %}
+    .ai-collections-showcase__link-{{ ai_gen_id }}:hover .ai-collections-showcase__image-{{ ai_gen_id }} {
+      transform: scale({{ block.settings.hover_scale }});
+    }
+  {% endif %}
+
+  .ai-collections-showcase__placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-collections-showcase__placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-collections-showcase__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+    transition: color {{ block.settings.hover_animation_duration }}s ease;
+  }
+
+  {% if block.settings.enable_hover_effect %}
+    .ai-collections-showcase__link-{{ ai_gen_id }}:hover .ai-collections-showcase__title-{{ ai_gen_id }} {
+      color: {{ block.settings.title_hover_color }};
+    }
+  {% endif %}
+
+  @media screen and (max-width: 749px) {
+    .ai-collections-showcase__grid-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-collections-showcase__carousel-{{ ai_gen_id }} {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-collections-showcase__carousel-track-{{ ai_gen_id }} {
+      display: flex;
+      gap: {{ block.settings.grid_gap }}px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 20px;
+    }
+
+    .ai-collections-showcase__carousel-track-{{ ai_gen_id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-collections-showcase__carousel-item-{{ ai_gen_id }} {
+      flex: 0 0 calc((100% - {{ block.settings.grid_gap }}px) / {{ block.settings.columns_mobile }});
+      scroll-snap-align: start;
+    }
+.ai-collections-showcase__heading-{{ ai_gen_id }} {
+  font-size: 36px;
+}
+
+.ai-collections-showcase__title-{{ ai_gen_id }} {
+  font-size: {{ block.settings.title_size | times: 0.9 }}px;
+  text-align: center;
+}
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-collections-showcase__carousel-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<collections-showcase-{{ ai_gen_id }}
+  class="ai-collections-showcase-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collections-showcase__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-collections-showcase__heading-{{ ai_gen_id }}">
+        {{ block.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="ai-collections-showcase__grid-{{ ai_gen_id }}">
+      {% for i in (1..8) %}
+        {% liquid
+          assign collection_key = 'collection_' | append: i
+          assign custom_title_key = 'custom_title_' | append: i
+          assign custom_image_key = 'custom_image_' | append: i
+          assign custom_link_key = 'custom_link_' | append: i
+          
+          assign collection = block.settings[collection_key]
+          assign custom_title = block.settings[custom_title_key]
+          assign custom_image = block.settings[custom_image_key]
+          assign custom_link = block.settings[custom_link_key]
+          
+          assign display_title = collection.title
+          assign display_image = collection.image
+          assign display_url = collection.url
+          
+          if custom_title != blank
+            assign display_title = custom_title
+          endif
+          
+          if custom_image != blank
+            assign display_image = custom_image
+          endif
+          
+          if custom_link != blank
+            assign display_url = custom_link
+          endif
+        %}
+
+        {% if collection != blank %}
+          <div class="ai-collections-showcase__item-{{ ai_gen_id }}">
+            <a
+              href="{{ display_url }}"
+              class="ai-collections-showcase__link-{{ ai_gen_id }}"
+            >
+              <div class="ai-collections-showcase__image-wrapper-{{ ai_gen_id }}">
+                {% if display_image %}
+                  <img
+                    src="{{ display_image | image_url: width: 500 }}"
+                    alt="{{ display_image.alt | default: display_title | escape }}"
+                    class="ai-collections-showcase__image-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="500"
+                    height="500"
+                  >
+                {% else %}
+                  <div class="ai-collections-showcase__placeholder-{{ ai_gen_id }}">
+                    {{ 'collection-1' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+              <h3 class="ai-collections-showcase__title-{{ ai_gen_id }}">
+                {{ display_title }}
+              </h3>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="ai-collections-showcase__carousel-{{ ai_gen_id }}">
+      <div class="ai-collections-showcase__carousel-track-{{ ai_gen_id }}">
+        {% for i in (1..8) %}
+          {% liquid
+            assign collection_key = 'collection_' | append: i
+            assign custom_title_key = 'custom_title_' | append: i
+            assign custom_image_key = 'custom_image_' | append: i
+            assign custom_link_key = 'custom_link_' | append: i
+            
+            assign collection = block.settings[collection_key]
+            assign custom_title = block.settings[custom_title_key]
+            assign custom_image = block.settings[custom_image_key]
+            assign custom_link = block.settings[custom_link_key]
+            
+            assign display_title = collection.title
+            assign display_image = collection.image
+            assign display_url = collection.url
+            
+            if custom_title != blank
+              assign display_title = custom_title
+            endif
+            
+            if custom_image != blank
+              assign display_image = custom_image
+            endif
+            
+            if custom_link != blank
+              assign display_url = custom_link
+            endif
+          %}
+
+          {% if collection != blank %}
+            <div class="ai-collections-showcase__carousel-item-{{ ai_gen_id }}">
+              <a
+                href="{{ display_url }}"
+                class="ai-collections-showcase__link-{{ ai_gen_id }}"
+              >
+                <div class="ai-collections-showcase__image-wrapper-{{ ai_gen_id }}">
+                  {% if display_image %}
+                    <img
+                      src="{{ display_image | image_url: width: 500 }}"
+                      alt="{{ display_image.alt | default: display_title | escape }}"
+                      class="ai-collections-showcase__image-{{ ai_gen_id }}"
+                      loading="lazy"
+                      width="500"
+                      height="500"
+                    >
+                  {% else %}
+                    <div class="ai-collections-showcase__placeholder-{{ ai_gen_id }}">
+                      {{ 'collection-1' | placeholder_svg_tag }}
+                    </div>
+                  {% endif %}
+                </div>
+                <h3 class="ai-collections-showcase__title-{{ ai_gen_id }}">
+                  {{ display_title }}
+                </h3>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</collections-showcase-{{ ai_gen_id }}>
+
+{% schema %}
+{
+  "name": "Collections showcase",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by category"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#222222"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Spacing below heading",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Collection 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection_1",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_1",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_1",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_1",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection_2",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_2",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_2",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_2",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection_3",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_3",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_3",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_3",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 4"
+    },
+    {
+      "type": "collection",
+      "id": "collection_4",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_4",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_4",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_4",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 5"
+    },
+    {
+      "type": "collection",
+      "id": "collection_5",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_5",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_5",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_5",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 6"
+    },
+    {
+      "type": "collection",
+      "id": "collection_6",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_6",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_6",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_6",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 7"
+    },
+    {
+      "type": "collection",
+      "id": "collection_7",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_7",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_7",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_7",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Collection 8"
+    },
+    {
+      "type": "collection",
+      "id": "collection_8",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_title_8",
+      "label": "Custom title"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image_8",
+      "label": "Custom image"
+    },
+    {
+      "type": "url",
+      "id": "custom_link_8",
+      "label": "Custom link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Space between items",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Collection title"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#222222"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Space between image and title",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Hover effects"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_hover_effect",
+      "label": "Enable hover effects",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "hover_scale",
+      "label": "Image scale on hover",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.1,
+      "default": 1.1
+    },
+    {
+      "type": "color",
+      "id": "title_hover_color",
+      "label": "Title hover color",
+      "default": "#d29b74"
+    },
+    {
+      "type": "range",
+      "id": "hover_animation_duration",
+      "label": "Animation duration",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": "s",
+      "default": 0.3
+    },
+    {
+      "type": "header",
+      "content": "Image placeholder"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_bg_color",
+      "label": "Placeholder background",
+      "default": "#f5f5f5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections showcase"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

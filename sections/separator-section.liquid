@@ -1,0 +1,48 @@
+{% schema %}
+{
+  "name": "Separator Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator Color",
+      "default": "#fdfdf9"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="separator-wrapper">
+  <div class="separator" style="--separator-color: {{ settings.separator_color }};">
+    <svg class="separator-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="xMidYMid meet">
+      <mask id="separator-mask">
+        <rect width="100%" height="100%" fill="white" />
+        <image href="https://rhealsuperfoods.com/cdn/shop/files/section-divider.svg" x="0" y="0" width="100%" height="100%" />
+      </mask>
+      <rect width="100%" height="100%" fill="var(--separator-color)" mask="url(#separator-mask)" />
+    </svg>
+  </div>
+</div>
+<style>
+.separator-wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+
+.separator {
+  display: block;
+  height: 10px; /* Adjust height as needed */
+  position: relative;
+  width: 100%;
+}
+
+.separator-svg path {
+  fill: var(--separator-color, #fdfdf9); /* Default color */
+}
+
+</style>

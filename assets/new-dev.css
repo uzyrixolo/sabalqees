@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Aeonik';
+    src: url('https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Aeonik-Bold.woff2?v=1769229964') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Aeonik-Bold.woff?v=1769229964') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Aeonik-Regular.woff2?v=1769229965') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Aeonik-Regular.woff?v=1769229964') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/*===========================
+=       FONT SETUP          =
+===========================*/
+.heading-font {
+ /* font-family: "Baskervville", serif; */
+ font-size:48px;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+     font-family: "Baskervville", serif;
+}
+
+body h2,
+body .h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.35px;
+  font-weight: 400;
+}
+
+/*===========================
+=        BUTTON STYLE       =
+===========================*/
+
+.dev-btn {
+    /* font-family: 'Aeonik'; */
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+    padding: 19px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-flex;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.dev-btn:hover {
+  opacity: 0.85;
+}
+
+/*===========================
+=     RESPONSIVE HEADINGS   =
+===========================*/
+
+@media (max-width: 1200px) {
+  body h2,
+  body .h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  body h2,
+  body .h2 {
+    font-size: 32px;
+  }
+
+}

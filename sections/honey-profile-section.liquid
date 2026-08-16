@@ -1,0 +1,397 @@
+<style>
+  .honey-profile-section {
+    background: {{ section.settings.section_bg }};
+    padding: 46px 0 46px;
+  }
+  .honey-profile-section .page-width {
+    max-width: 1370px;
+    padding: 0 16px;
+    margin: 0 auto;
+    border-radius: 25px;
+  }
+  .honey-profile-section .honey-profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 25px;
+  }
+  .honey-profile-section .honey-profile-content {
+    width: 50%;
+    padding: 58px 20px 50px 59px;
+  }
+  .honey-profile-section h2 {
+    color: #000;
+    margin: 0px;
+  }
+  .honey-profile-section .honey-subtitle {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+    padding-bottom: 25px;
+    margin-bottom: 28px;
+    padding-top: 6px;
+    border-bottom: 1px solid #000;
+    max-width: 491px;
+    width: 100%;
+  }
+  .honey-profile-section .block-title {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .honey-profile-section .desc {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #000;
+    font-weight: 400;
+    max-width: 450px;
+  }
+
+  .honey-profile-section .block-icon img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    height:14px;
+    width:14px;
+  }
+  
+  /* NEW: Color Swatch CSS */
+  .honey-profile-section .honey-color-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .honey-profile-section .honey-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .honey-profile-section .block-desc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .honey-profile-section .honey-profile-image {
+    width: 51.5%;
+  }
+  .honey-profile-section .honey-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 25px;
+    aspect-ratio: 1.63/1;
+  }
+  .honey-profile-section .honey-profile-wrapper.is-reversed {
+    flex-direction: row-reverse;
+  }
+  @media screen and ( min-width:768px ) and ( max-width:991px ){
+    .honey-profile-section .honey-profile-content {
+      width: 50%;
+      padding: 28px 20px 28px 35px;
+    }
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .honey-profile-section {
+      padding: 9px 0 25px;
+    }
+    .honey-profile-section .desc {
+      max-width: 100%;
+    }
+    .honey-profile-section .honey-profile-image img {
+      aspect-ratio: 1/1;
+    }
+    .honey-profile-section .honey-profile-wrapper {
+      flex-direction: column-reverse;
+      gap: 25px;
+      background: unset;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    .honey-profile-section .honey-profile-wrapper.is-reversed {
+      flex-direction: column-reverse;
+    }
+    .honey-profile-section .honey-blocks {
+      gap: 28px;
+    }
+    .honey-profile-section .honey-profile-image img {
+      border-radius:5px;
+    }
+    .honey-profile-section .honey-profile-content {
+      width: 100%;
+      padding: 40px 22px 45px 22px;
+      background: #fff;
+      border-radius: 5px;
+    }
+    .honey-profile-section .honey-profile-image {
+      width: 100%;
+    }
+    .honey-profile-section .honey-subtitle {
+      font-size: 12px;
+      line-height: 1;
+      padding-bottom: 22px;
+      margin-bottom: 18px;
+      max-width: unset;
+    }
+    .honey-profile-section .desc{
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+</style>
+
+<section class="honey-profile-section">
+  <div class="page-width">
+    {%- liquid
+      assign hp_title = product.metafields.custom.honey_profile_title.value | default: product.metafields.custom.honey_profile_title
+      assign hp_subtitle = product.metafields.custom.honey_profile_subtitle.value | default: product.metafields.custom.honey_profile_subtitle
+      assign hp_image = product.metafields.custom.honey_profile_image.value | default: product.metafields.custom.honey_profile_image
+      assign hp_image_mobile = product.metafields.custom.honey_profile_image_mobile.value | default: product.metafields.custom.honey_profile_image_mobile
+      assign hp_items = product.metafields.custom.honey_profile_items.value
+      
+      if product == blank
+        assign hp_title = nil
+        assign hp_subtitle = nil
+        assign hp_image = nil
+        assign hp_image_mobile = nil
+        assign hp_items = nil
+      endif
+    -%}
+    <div class="honey-profile-wrapper {% if section.settings.reverse_layout %}is-reversed{% endif %}">
+
+      <div class="honey-profile-content">
+        {%- assign show_heading = hp_title | default: section.settings.heading -%}
+        {% if show_heading != blank %}
+          <h2 class="heading-font">{{ show_heading }}</h2>
+        {% endif %}
+        
+        {%- assign show_subtitle = hp_subtitle | default: section.settings.subheading -%}
+        {% if show_subtitle != blank %}
+          <div class="honey-subtitle body-font">{{ show_subtitle }}</div>
+        {% endif %}
+
+        <div class="honey-blocks">
+          {% if product != blank and hp_items != blank and hp_items.size > 0 %}
+            {% for ref in hp_items %}
+              {% assign item = ref.value | default: ref %}
+              <div class="honey-info-block">
+                <div class="block-title body-font">
+                  {{ item.title }}
+                </div>
+                
+                {% if item.color_swatch != blank or item.icon != blank or item.description != blank %}
+                  <div class="block-desc">
+                    
+                    {% if item.color_swatch != blank %}
+                      <div class="honey-color-swatch" style="background-color: {{ item.color_swatch }};"></div>
+                    {% elsif item.icon != blank %}
+                      <div class="block-icon">
+                        <img
+                          src="{{ item.icon | image_url }}"
+                          alt="{{ item.icon.alt | default: item.title | escape }}"
+                          loading="lazy"
+                          {% if item.icon.width %}width="{{ item.icon.width }}"{% endif %}
+                          {% if item.icon.height %}height="{{ item.icon.height }}"{% endif %}
+                        >
+                      </div>
+                    {% endif %}
+                    
+                    {% if item.description != blank %}
+                      <div class="desc body-font">{{ item.description }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+            
+          {% else %}
+            {% for block in section.blocks %}
+              <div class="honey-info-block">
+                <div class="block-title body-font">
+                  {{ block.settings.title }}
+                </div>
+                
+                {% if block.settings.color_swatch != blank or block.settings.icon != blank or block.settings.description != blank %}
+                  <div class="block-desc">
+                    
+                    {% if block.settings.color_swatch != blank and block.settings.color_swatch != 'rgba(0,0,0,0)' %}
+                      <div class="honey-color-swatch" style="background-color: {{ block.settings.color_swatch }};"></div>
+                    {% elsif block.settings.icon != blank %}
+                      <div class="block-icon">
+                        <img
+                          src="{{ block.settings.icon | image_url }}"
+                          alt="{{ block.settings.icon.alt | default: block.settings.icon | escape }}"
+                          loading="lazy"
+                          width="{{ block.settings.icon.width }}"
+                          height="{{ block.settings.icon.height }}"
+                        >
+                      </div>
+                    {% endif %}
+                    
+                    {% if block.settings.description != blank %}
+                      <div class="desc body-font">{{ block.settings.description }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="honey-profile-image">
+        {%- liquid
+          assign hp_img = hp_image | default: section.settings.destop_img
+          assign hp_mobile_img = hp_image_mobile | default: hp_img
+          if product == blank
+            assign hp_img = section.settings.destop_img
+            assign hp_mobile_img = section.settings.mobile_img | default: section.settings.destop_img
+          endif
+        -%}
+        
+        {%- if hp_img != blank -%}
+          {%- assign profileMobileImg = hp_mobile_img | default: hp_img -%}
+          <picture>
+            <source media="(min-width: 1901px)" srcset="{{ hp_img | image_url: width: 2560 }}">
+            <source media="(min-width: 1700px)" srcset="{{ hp_img | image_url: width: 2020 }}">
+            <source media="(min-width: 1500px)" srcset="{{ hp_img | image_url: width: 1820 }}">
+            <source media="(min-width: 1200px)" srcset="{{ hp_img | image_url: width: 1600 }}">
+            <source media="(min-width: 991px)" srcset="{{ hp_img | image_url: width: 1350 }}">
+            <source media="(min-width: 820px)" srcset="{{ hp_img | image_url: width: 1200 }}">
+            <source media="(min-width: 768px)" srcset="{{ profileMobileImg | image_url: width: 1100 }}">
+            <source media="(min-width: 576px)" srcset="{{ profileMobileImg | image_url: width: 800 }}">
+            <source media="(min-width: 400px)" srcset="{{ profileMobileImg | image_url: width: 700 }}">
+            <source media="(min-width: 0)" srcset="{{ profileMobileImg | image_url: width: 600 }}">
+            <source media="(min-width: 0)" srcset="{{ profileMobileImg | image_url: width: 400 }}">
+            <img
+              src="{{ hp_img | image_url }}"
+              alt="{{ hp_img.alt | default: show_heading | escape }}"
+              width="{{ hp_img.width }}"
+              loading="eager"
+              height="{{ hp_img.width | divided_by: hp_img.aspect_ratio | round }}"
+            >
+          </picture>
+        {%- elsif section.settings.destop_img != blank -%}
+          {%- liquid
+            assign mobileImage = section.settings.destop_img
+            if section.settings.mobile_img != blank
+              assign mobileImage = section.settings.mobile_img
+            endif
+          -%}
+          <picture>
+            <source media="(min-width: 1901px)" srcset="{{ section.settings.destop_img | image_url: width: 2560 }}">
+            <source media="(min-width: 1700px)" srcset="{{ section.settings.destop_img | image_url: width: 2020 }}">
+            <source media="(min-width: 1500px)" srcset="{{ section.settings.destop_img | image_url: width: 1820 }}">
+            <source media="(min-width: 1200px)" srcset="{{ section.settings.destop_img | image_url: width: 1600 }}">
+            <source media="(min-width: 991px)" srcset="{{ section.settings.destop_img | image_url: width: 1350 }}">
+            <source media="(min-width: 820px)" srcset="{{ section.settings.destop_img | image_url: width: 1200 }}">
+            <source media="(min-width: 768px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+            <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+            <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+            <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+            <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 400 }}">
+            <img
+              src="{{ section.settings.destop_img | image_url }}"
+              alt="{{ section.settings.destop_img.alt | default: section.settings.heading | escape }}"
+              width="{{ section.settings.destop_img.width }}"
+              loading="eager"
+              height="{{ section.settings.destop_img.width | divided_by: section.settings.destop_img.aspect_ratio | round }}"
+            >
+          </picture>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Honey Profile",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Background color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "image_picker",
+      "id": "destop_img",
+      "label": "Right Destop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Right Mobile Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_layout",
+      "label": "Content on right side",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "profile_item",
+      "name": "Profile Item",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "color",
+          "id": "color_swatch",
+          "label": "Color Swatch",
+          "info": "Displays a colored circle. Overrides the icon if selected."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon / Dot image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Honey Profile Section",
+      "blocks": [
+        { "type": "profile_item" },
+        { "type": "profile_item" },
+        { "type": "profile_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

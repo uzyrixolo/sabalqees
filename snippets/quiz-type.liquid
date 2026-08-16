@@ -1,0 +1,1546 @@
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+  --color-primary-hs: 25, 51%;
+  --color-primary-l: 64%;
+  --color-text: #111111;
+  --color-danger: #ff5252;
+  --font-primary: "Open Sans", sans-serif;
+  --slide-easing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font-primary);
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.form-content__question, .form-slide, .form-slider, .section__aside__bg, html,
+body {
+  width: 100%;
+}
+
+.section__main, .section {
+  height: 550px;
+  height: 550px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  display: block;
+} */
+
+a,
+button {
+  font-family: inherit;
+}
+
+/* Reset autofill input style */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  -webkit-box-shadow: 0 0 0px 100rem transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+.section {
+  overflow: hidden;
+  width:100%;
+}
+.section__aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsl(var(--color-primary-hs), 80%);
+}
+@media (max-width: 767.98px) {
+  .section__aside {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section__aside {
+    right: 0;
+    height: -moz-calc(var(--vh, 1vh) * 30);
+    height: calc(var(--vh, 1vh) * 30);
+    background-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  }
+}
+@media (min-width: 992px) {
+  .section__aside {
+    right: 50%;
+    bottom: 0;
+  }
+}
+.section__aside__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 100%;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+@media (min-width: 992px) {
+  .section__aside__bg {
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section__main {
+    margin-top: 0;
+    margin-top: 0;
+    height: -moz-calc(var(--vh, 1vh) * 70);
+    height: calc(var(--vh, 1vh) * 70);
+  }
+
+  .form-navigation {
+
+right:20px;
+
+}
+}
+@media (min-width: 992px) {
+  .section__main {
+    /* margin-left: 50%; */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position:relative;
+  }
+
+}
+.form-content__question__option__text {
+    font-family: 'Red Hat Display';
+}
+.intro {
+    text-align: center;
+}
+
+/* .intro h2 {
+    margin-top: 2rem;
+} */
+.form-slider {
+  counter-reset: questionNumber;
+  overflow: visible;
+  position: relative;
+  height: 575px;
+}
+.form-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(calc(var(--slide-index, 0) * 100%));
+     -moz-transform: translateY(-moz-calc(var(--slide-index, 0) * 100%));
+      -ms-transform: translateY(calc(var(--slide-index, 0) * 100%));
+       -o-transform: translateY(calc(var(--slide-index, 0) * 100%));
+          transform: translateY(calc(var(--slide-index, 0) * 100%));
+  -webkit-transition: visibility 0.6s linear, opacity 0.6s linear, -webkit-transform 0.8s var(--slide-easing-function);
+  transition: visibility 0.6s linear, opacity 0.6s linear, -webkit-transform 0.8s var(--slide-easing-function);
+  -o-transition: visibility 0.6s linear, opacity 0.6s linear, -o-transform 0.8s var(--slide-easing-function);
+  -moz-transition: visibility 0.6s linear, opacity 0.6s linear, transform 0.8s var(--slide-easing-function), -moz-transform 0.8s var(--slide-easing-function);
+  transition: visibility 0.6s linear, opacity 0.6s linear, transform 0.8s var(--slide-easing-function);
+  transition: visibility 0.6s linear, opacity 0.6s linear, transform 0.8s var(--slide-easing-function), -webkit-transform 0.8s var(--slide-easing-function), -moz-transform 0.8s var(--slide-easing-function), -o-transform 0.8s var(--slide-easing-function);
+}
+.form-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+.form-navigation {
+    position: relative;
+    bottom: 7.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    /* background-color: #ffffff; */
+    border-radius: 5px;
+    justify-content: flex-end;
+}
+.form-navigation__btn {
+  width: 4rem;
+  aspect-ratio: 4/3.5;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  line-height: 0;
+  color: #ffffff;
+  background-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+@media (hover: hover) {
+  .form-navigation__btn:hover, .form-navigation__btn:focus-visible {
+    background-color: hsl(var(--color-primary-hs), 55%);
+  }
+}
+.form-navigation__btn:active {
+  background-color: hsl(var(--color-primary-hs), 25%);
+}
+.form-navigation__btn:disabled {
+  background-color: hsl(var(--color-primary-hs), 85%);
+  cursor: not-allowed;
+}
+.form-navigation__btn--up {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.form-navigation__btn--down {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.form-content {
+  overflow: none;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+   align-items: center;
+}
+
+@media(max-width:1025px){
+
+    .form-content {
+        align-items: flex-start;
+    }
+}
+.form-content__question {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+  /* margin-top: auto; */
+  /* margin-bottom: auto; */
+}
+.form-content__question__count {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  line-height: 1;
+  padding-top: 5px;
+}
+@media (min-width: 576px) {
+  .form-content__question__count {
+    font-size: 2rem;
+  }
+}
+.form-content__question__count::before {
+  counter-increment: questionNumber;
+  content: counter(questionNumber);
+}
+.form-content__question__count__arrow {
+  font-size: 1.3em;
+}
+.form-content__question__main {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+     -moz-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.form-content__question__title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 576px) {
+  .form-content__question__title {
+    font-size: 2.4rem;
+  }
+}
+.text-left{
+
+text-align:center;
+}
+.form-content__question__input {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  background-color: #ffffff;
+  -webkit-transition: border 0.1s ease-out 0s, -webkit-box-shadow 0.1s ease-out 0s;
+  transition: border 0.1s ease-out 0s, -webkit-box-shadow 0.1s ease-out 0s;
+  -o-transition: border 0.1s ease-out 0s, box-shadow 0.1s ease-out 0s;
+  -moz-transition: border 0.1s ease-out 0s, box-shadow 0.1s ease-out 0s;
+  transition: border 0.1s ease-out 0s, box-shadow 0.1s ease-out 0s;
+  transition: border 0.1s ease-out 0s, box-shadow 0.1s ease-out 0s, -webkit-box-shadow 0.1s ease-out 0s;
+  margin-bottom: 1rem;
+  border: 0;
+  border-bottom: 1px solid hsl(var(--color-primary-hs), 85%);
+  padding-bottom: 5px;
+}
+@media (min-width: 576px) {
+  .form-content__question__input {
+    font-size: 2.8rem;
+  }
+}
+.form-content__question__input--textarea {
+  resize: none;
+  overflow: hidden;
+}
+.form-content__question__input--select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230445af' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-position: -moz-calc(100% - 1.5rem) center;
+  background-position: calc(100% - 1.5rem) center;
+  background-repeat: no-repeat;
+}
+.form-content__question__input--select option {
+  font-size: 0.8em;
+}
+.form-content__question__input--number {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.form-content__question__input:focus {
+  border-bottom-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  -webkit-box-shadow: 0 1px 0 hsl(var(--color-primary-hs), var(--color-primary-l));
+          box-shadow: 0 1px 0 hsl(var(--color-primary-hs), var(--color-primary-l));
+}
+.form-content__question__input::-webkit-input-placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__input:-moz-placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__input::-moz-placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__input:-ms-input-placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__input::-ms-input-placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__input::placeholder {
+  opacity: 1;
+  color: hsl(var(--color-primary-hs), 85%);
+}
+.form-content__question__option {
+  display: block;
+}
+.form-content__question__option-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+.form-content__question__option__input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+}
+.form-content__question__option__input:checked ~ .form-content__question__option__text {
+  border-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+}
+.form-content__question__option__input:checked ~ .form-content__question__option__text::before {
+  background-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  border-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-check-lg' viewBox='0 0 16 16'%3E%3Cpath d='M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center;
+}
+.form-content__question__option__input:focus-visible ~ .form-content__question__option__text {
+  background-color: hsl(var(--color-primary-hs), 88%);
+}
+.form-content__question__option__text {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px;
+  gap: 8px;
+  color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: 1px solid hsl(var(--color-primary-hs), 70%);
+  background-color: hsl(var(--color-primary-hs), 96%);
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 19rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.form-content__question__option__text::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  aspect-ratio: 1;
+  background-color: #ffffff;
+  border: 1px solid hsl(var(--color-primary-hs), 70%);
+  border-radius: 3px;
+  font-family: bootstrap-icons !important;
+}
+@media (hover: hover) {
+  .form-content__question__option__text:hover, .form-content__question__option__text:focus-visible {
+    background-color: hsl(var(--color-primary-hs), 88%);
+  }
+}
+.form-content__question__option__text:active {
+  background-color: hsl(var(--color-primary-hs), 88%);
+}
+.form-content__question__btn {
+  color: #ffffff;
+  background-color: hsl(var(--color-primary-hs), var(--color-primary-l));
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.8rem 1.3rem;
+  font-family: var(--font-primary);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  margin-top: 1.5rem;
+}
+@media (hover: hover) {
+  .form-content__question__btn:hover, .form-content__question__btn:focus-visible {
+    background-color: hsl(var(--color-primary-hs), 55%);
+  }
+}
+.form-content__question__btn:active {
+  background-color: hsl(var(--color-primary-hs), 25%);
+}
+.form-content__question__btn:disabled {
+  background-color: hsl(var(--color-primary-hs), 85%);
+  cursor: not-allowed;
+}/*# sourceMappingURL=style.css.map */
+    </style>
+<style>
+.justify-content-center{
+justify-content:center;
+align-items:center;
+}
+.form-container {
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+form#honeyQuiz {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #quizContainer {
+    max-width: 600px;
+    margin: 0 auto;
+  min-height:50vh;
+    background-color: #f9f9f9; /* Changed background for a softer look */
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for more depth */
+    border-radius: 10px; /* Slightly rounded corners */
+    font-family: 'Arial', sans-serif; /* Updated font for better readability */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    /* margin-bottom: 20px; /* Added more spacing below the headings */ */
+    font-size: 24px; /* Increased font size for better visibility */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #555; /* Softer color for labels */
+    font-weight: 600; /* Slightly bolder labels for clarity */
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for input fields */
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 6px; /* More rounded corners */
+    font-size: 16px; /* Increased font size */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Added subtle inner shadow */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Slightly larger checkboxes and radio buttons */
+    cursor: pointer;
+}
+
+button {
+    /* display: block; */
+    /* width: 100%; */
+    padding: 12px; /* Increased padding for buttons */
+    background-color: #d29b74; /* Changed button color for better contrast */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold; /* Bolder font for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #000; /* Darker shade for hover effect */
+}
+
+.quiz-image {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 20px; /* Spacing below images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+  max-width:450px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px; /* Uniform font size for text */
+    color: #666; /* Softer color for descriptive text */
+    /* margin-bottom: 20px; /* Spacing below paragraphs */ */
+}
+
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+label {
+
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: var(--sampler-theme-border-radius);
+    background-color: rgba(35, 31, 32, 0.1);
+    box-shadow: rgba(35, 31, 32, 0.6) 0px 0px 0px 1px inset;
+    color: rgb(35, 31, 32);
+    max-width: 100%;
+    height: inherit;
+    min-height: 40px;
+    outline: 0px;
+    padding-block: 4px;
+    transition-duration: 0.1s;
+    transition-property: background-color, color, border-color, opacity, box-shadow;
+    transition-timing-function: ease-out;
+    width: 100%;
+    word-break: break-word;
+    cursor: pointer;
+border-radius:20px;
+    opacity: 1;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-left: 15px;
+}
+
+.t4s_frm_input:focus, input:not([type=submit]):not([type=checkbox]):focus, select:focus, textarea:focus {
+    color: red;
+    border-color: red;
+    outline: red;
+}
+
+button.next-step {
+    width: 185px;
+    max-width: 160px;
+    border-radius: 50px;
+    background-color: #cb9069;
+margin: 0 auto;
+    margin-top: 20px;
+  
+
+}
+.checkbox-item label img {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.checkbox-item label {
+    width: 225px;
+    margin-top
+    </style>
+
+  <style>
+        .quiz-step {
+            margin: 20px;
+        }
+        .checkbox-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between checkboxes */
+        }
+        .checkbox-item {
+            display: flex;
+            flex-direction: column; /* Stack image and label vertically */
+            align-items: center;
+            position: relative;
+            width: calc(20% - 10px); /* 4 items per row with gap */
+            box-sizing: border-box;
+        }
+        .checkbox-item input[type="checkbox"] {
+            display: none; /* Hide the default checkbox */
+        }
+        .checkbox-item label {
+            display: block;
+            position: relative;
+            text-align: center; /* Center text below image */
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .checkbox-item label img {
+            width: 100%; /* Make sure image fits */
+            display: block;
+            transition: opacity 0.3s;
+        }
+        .checkbox-item input[type="checkbox"]:checked + label img {
+            opacity: 0.5; /* Optional: fade image when selected */
+        }
+        .checkbox-item input[type="checkbox"]:checked + label::before {
+            content: '✔'; /* Display tick */
+            position: absolute;
+            top: 15%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            color: black; /* Tick color */
+            font-size: 20px;
+            pointer-events: none; /* Prevent click interference */
+        }
+        .checkbox-item .option-label {
+            margin-top: 5px; /* Space between image and label */
+            font-size: 14px; /* Adjust font size if needed */
+        }
+        .next-step {
+            margin-top: 20px;
+        }
+label.last-label {
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+input#email {
+    width: 100%;
+    min-width: 400px;
+}
+.icons .form-content__question__option img {
+    max-width: 100px!important;
+    aspect-ratio: 1;
+}
+    .form-content__question__option__text {
+    margin-left: 0px;
+    border-radius: 30px;
+    width: 100%;
+    min-width: 40px;
+    background-color: transparent;
+    border: 0!important;
+    color: #000;
+    /* margin-left: 10px; */
+    padding-left: 20px;
+}
+
+.form-content__question__option {
+    border-radius: 30px;
+    margin-top: 0;
+    padding: 0;
+    /* min-height: 50px; */
+}
+.icons
+.form-content__question__option-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between items */
+    justify-content: space-between;
+  flex-direction:row;
+}
+.icons
+.form-content__question__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 16px); /* Three items per row, adjust as needed */
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.icons
+.form-content__question__option img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+.icons
+.form-content__question__option__text {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+}
+
+.slide-1 .form-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slide-2 .form-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slide-3 .form-content {
+    /* max-width: 600px; */
+    margin: 0 auto;
+}
+
+.icons .form-content__question__option-list {
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.icons .form-content__question__option {
+    width: calc(25% - 5px);
+    position: relative;
+}
+
+.icons .form-content__question__option img {
+    max-width: 60px!important;
+}
+
+.slide-3 .icons .form-content__question__option__text {
+    padding: 0;
+}
+
+.slide-3 .form-content__question__option__text::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media(max-width:767px){
+
+  .form-content__question__option__text{
+
+font-size:14px;
+}
+.form-content__question__count {
+
+position:absolute;
+top:-10px;left:20px;
+
+}
+.form-content__question__count__arrow{
+transform:rotate(90deg);
+}
+.icons .form-content__question__option-list{gap:5px;justify-content: start;}
+    .icons .form-content__question__option img{max-width: 75px;        aspect-ratio: 1;}
+    .icons .form-content__question__option__text{
+padding:0
+}
+
+    .section__main {
+    height: -moz-calc(var(--vh, 1vh)* 100);
+    height: calc(var(--vh, 1vh)* 100);
+      position:relative;
+}
+.section,
+.form-content{
+
+height:90vh;
+  overflow:visible;
+
+}
+
+  
+
+}
+input#email {
+    width: 100%;
+    min-width: 400px;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+border-radius:0;
+}
+  .progress-container {
+    width: calc(100% - 60px);
+    background-color: #afafaf;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+    left: 10px;
+    display:none;
+    
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #d29c74;
+    transition: width 0.4s ease;
+    z-index: 999;
+    border-radius: 20px;
+  display:none;
+  
+}
+    /* Responsive adjustments */
+@media (max-width: 767px) {
+  .icons
+    .form-content__question__option {
+        width: calc(50% - 3px); /* Two items per row */
+    }
+.form-navigation {
+    top: -30px;
+    right: 2rem;
+  bottom:unset;
+}
+/* .form-content__question {
+    padding-top: 5rem;
+} */
+input#email {
+    width: 100%;
+    min-width: auto;
+}
+
+  img.last-image {
+    display: block;
+    margin: 0 auto;
+}
+
+button#Subscribe {
+margin:0 auto;
+    display:block;
+}
+}
+.newsletter-form__field-wrapper {}
+
+button#Subscribe {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+img.last-image {
+    padding: 20px;
+    max-width: 250px;
+}
+</style>
+
+    <section class="section">
+       
+        <main  id="honeyQuiz" class="section__main">
+      <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+          <form method="post" action="/contact#honeyQuiz" id="honeyQuiz" accept-charset="UTF-8" class="footer__newsletter newsletter-form form-slider" data-slider data-persist-bound="true">
+       
+                <div class="form-slide slide-1 active" data-slide>
+                    <div class="form-content" data-form="inner">
+                        <div class="form-content__question">
+                            <!-- <div class="form-content__question__count">
+                                <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+                            </div> -->
+                            <div class="form-content__question__main intro">
+                                <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/balqees-quiz.jpg?v=1731321118" alt="Honey" class="quiz-image">
+                                <h2>Welcome to the Honey Quiz</h2>
+                               <p>Discover your personalised honey recommendations.</p>
+                                <button type="button" data-slide-toggle="down" class="form-content__question__btn">
+                                    Get Started
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-slide slide-2" data-slide>
+                    <div class="form-content" data-form="inner">
+                        <div class="form-content__question">
+                            <div class="form-content__question__count">
+                                <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+                            </div>
+                            <div class="form-content__question__main">
+                                <h3 class="form-content__question__title">How do you prefer to consume honey?<small class="text-danger">*</small></h3>
+                                <div class="form-content__question__option-list" data-option-group data-input-required>
+
+
+
+                                    <label class="form-content__question__option">
+                                 
+                                      
+             
+                                       
+                                      
+                                      <input type="radio" name="q1" value="Straight from the jar" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Straight from the jar</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio"  name="q1" value="Mixed in beverages (tea, smoothies)" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Mixed in beverages (tea, smoothies)</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio"name="q1" value="As a topping (yoghurt, toast, porridge)" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">As a topping (yoghurt, toast, porridge)</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio" name="q1" value="Incorporated in cooking or baking" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Incorporated in cooking or baking</span>
+                                    </label>
+                                    <!-- <label class="form-content__question__option">
+                                        <input type="radio" name="q1" value="E" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">In other way</span>
+                                    </label> -->
+                                </div>
+                                <button type="button" data-slide-toggle="down" class="form-content__question__btn">
+                                    Next
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-slide slide-3" data-slide>
+                    <div class="form-content" data-form="inner">
+                        <div class="form-content__question">
+                            <div class="form-content__question__count">
+                                <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+                            </div>
+                            <div class="form-content__question__main icons">
+                                <h3 class="form-content__question__title">Are you looking for specific benefits in honey?</h3>
+                                <div class="form-content__question__option-list">
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit1" name="q2" value="Gut health/Digestion" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Gut.svg" alt="Gut health/Digestion">
+                                    <span class="form-content__question__option__text">Gut health/Digestion</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit2" name="q2" value="Mood" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Mood.svg" alt="Mood">
+                                    <span class="form-content__question__option__text">Mood</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit3" name="q2" value="Vitality/Energy" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Energy_5826250a-d6ee-48e3-af34-d1aa51c70670.svg" alt="Vitality/Energy">
+                                    <span class="form-content__question__option__text">Vitality/Energy</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit4" name="q2" value="Immunity" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Immunity.svg" alt="Immunity">
+                                    <span class="form-content__question__option__text">Immunity</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit5" name="q2" value="Skin and Beauty" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Skin.svg" alt="Skin and Beauty">
+                                    <span class="form-content__question__option__text">Skin and Beauty</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit6" name="q2" value="Fertility/Libido" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Fertility.svg" alt="Fertility/Libido">
+                                    <span class="form-content__question__option__text">Fertility/Libido</span>
+                                </label>
+                                <label class="form-content__question__option">
+                                    <input type="checkbox" id="benefit7" name="q2" value="No specific benefits" class="form-content__question__option__input" data-form-inner="input">
+                                    <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/no-benefits_267dec56-1a67-40fa-a18f-c535d79d54da.png?v=1728385025" alt="No specific benefits">
+                                    <span class="form-content__question__option__text">No specific benefits</span>
+                                </label>
+                            </div>
+
+                                <button type="button" data-slide-toggle="down" class="form-content__question__btn">
+                                    Next
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-slide slide-4" data-slide>
+                    <div class="form-content" data-form="inner">
+                        <div class="form-content__question">
+                            <div class="form-content__question__count">
+                                <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+                            </div>
+                            <div class="form-content__question__main">
+                                <h3 class="form-content__question__title">What is your flavor preference?<small class="text-danger">*</small></h3>
+                             
+                              <div class="form-content__question__option-list" data-option-group data-input-required>
+
+
+
+                                    <label class="form-content__question__option">
+                                        <input type="radio" name="q3" value="Mild and floral" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Mild and floral</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio"  name="q3" value="Rich and robust" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Rich and robust</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio"name="q3" value="Sweet and fragrant" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Sweet and fragrant</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio" name="q3" value="Spicy and aromatic" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Spicy and aromatic</span>
+                                    </label>
+                                    <label class="form-content__question__option">
+                                        <input type="radio" name="q3" value="Unique and exotic" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">Unique and Exotic</span>
+                                    </label>
+                                 <!-- <label class="form-content__question__option">
+                                        <input type="checkbox" name="q3" value="F" class="form-content__question__option__input" data-form-inner="input">
+                                        <span class="form-content__question__option__text">In other way</span>
+                                    </label> -->
+                                </div>
+                                <button type="button" data-slide-toggle="down" class="form-content__question__btn">
+                                    Next
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-slide" data-slide>
+                    <div class="form-content" data-form="inner">
+                        <div class="form-content__question">
+                            <div class="form-content__question__count">
+                                <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
+                            </div>
+                            <div class="form-content__question__main text-left">
+                                <h2>Almost Done!</h2>
+                              
+
+
+                                <!-- <label class="form-content__question__title" for="email" hidden class="last-label">Email:<small class="text-danger">*</small></label> -->
+
+
+               
+ <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/recomment.png?v=1731518318" alt="rem" class="last-image" />
+  <button
+        type="submit"
+        class="newsletter-form__button field__button"
+        name="commit"
+        id="Subscribe"
+        aria-label="email"
+      > 
+        Get My Recommendations
+      </button>
+
+
+         {%- form 'customer', id: 'honeyQuizForm', class: 'footer__newsletter newsletter-form', return_to: routes.root_url -%}
+
+  <!-- Hidden field for redirection after form submission -->
+  <input type="hidden" name="return_to" id="returnTo" value="{{ routes.root_url }}">
+
+  <input type="hidden" name="contact[tags]" id="CustomerNote" value="">
+
+  <div class="newsletter-form__field-wrapper">
+    <div class="field">
+      <!-- Hidden email input field -->
+      <input
+        id="email"
+        type="email"
+        name="contact[email]"
+        class="field__input"
+        style="display: none;"
+        value=""
+      >
+      
+    
+    </div>
+
+    {%- if form.errors -%}
+      <small class="newsletter-form__message form__message" id="ContactFooter-error">
+        {{ form.errors.translated_fields.email | capitalize }}
+        {{ form.errors.messages.email }}
+      </small>
+    {%- endif -%}
+  </div>
+
+  {%- if form.posted_successfully? -%}
+    <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success">
+      Done
+    </h3>
+  {%- endif -%}
+
+{%- endform -%}
+
+
+                              
+                               
+
+
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <nav class="form-navigation mobile-hide">
+                <button type="button" class="form-navigation__btn form-navigation__btn--up" data-slide-toggle="up">
+                    <i class="bi bi-chevron-up"></i>
+                </button>
+                <button type="button" class="form-navigation__btn form-navigation__btn--down" data-slide-toggle="down">
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </nav>
+        </main>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+(function(){
+    const $slides = $('[data-slide]')
+    const $slidesArray = $slides.toArray()
+    const $slidesToggleUpButton = $('[data-slide-toggle="up"]')
+    const $slidesToggleDownButton = $('[data-slide-toggle="down"]')
+    const $progressBar = $('#progressBar') // Add reference to progress bar
+
+    function ifAllItemsTrue(arr) {
+        return arr.every(element => element === true);
+    }
+
+    function slidePositionSet(){
+        let $activeSlide = $('[data-slide].active').get(0)
+        let $activeSlideIndex = $slidesArray.indexOf($activeSlide)
+
+        let prevPosition
+        let nextPosition
+
+        if($activeSlideIndex == 0){
+            prevPosition = $slidesArray[0];
+        }else{
+            prevPosition = $slidesArray[$activeSlideIndex - 1];
+        }
+    
+        if($activeSlideIndex == $slidesArray.length - 1){
+            nextPosition = $slidesArray[$slidesArray.length - 1];
+        }else{
+            nextPosition = $slidesArray[$activeSlideIndex + 1];
+        }
+    
+        return[prevPosition, nextPosition];
+    }
+
+    function slidePositionUpdate(){
+        let $activeSlide = $('[data-slide].active').get(0)
+        let $activeSlideIndex = $slidesArray.indexOf($activeSlide)
+
+        $slidesArray.map(function(eachItem, eachIndex){
+            if(eachIndex === $activeSlideIndex){
+                $(eachItem).addClass('active')
+                $(eachItem).css('--slide-index', 0)
+                $(eachItem).attr('tabindex', 0)
+            } else if(eachIndex > $activeSlideIndex){
+                $(eachItem).removeClass('active')
+                $(eachItem).css('--slide-index', 1)
+                $(eachItem).attr('tabindex', -1)
+            } else {
+                $(eachItem).removeClass('active')
+                $(eachItem).css('--slide-index', -1)
+                $(eachItem).attr('tabindex', -1)
+            }
+        })
+
+        updateProgressBar($activeSlideIndex) // Update the progress bar
+
+        if($activeSlideIndex == 0){
+            $slidesToggleUpButton.prop('disabled', true)
+            $progressBar.hide(); // Hide progress bar on the first slide
+        } else {
+            $slidesToggleUpButton.removeAttr('disabled')
+            $progressBar.show(); // Show progress bar on the second slide and beyond
+        }
+
+        checkCurrentFormFieldsValidOrNotOnInput()
+        updateTextareaHeight()
+    }
+
+    function updateProgressBar(currentIndex) {
+        let totalSlides = $slidesArray.length
+
+        // Only start progress from the second slide
+        if (currentIndex > 0) {
+            let progressPercent = (currentIndex / (totalSlides - 1)) * 100
+            $progressBar.css('width', progressPercent + '%')
+        } else {
+            $progressBar.css('width', '0%') // Reset the progress if on the first slide
+        }
+    }
+
+    function calculateVerticalHeight(){
+        var vh = window.innerHeight * 0.01
+        document.documentElement.style.setProperty('--vh', vh + 'px')
+    }
+
+    function checkCurrentFormFieldsValidOrNot(){
+        let $currentSlidesInnerFields = $('[data-slide].active [data-form="inner"] [data-form-inner="input"]')
+        let currentSlidesInnerFieldsArray = []
+        let $currentSlidesInnerFieldsRequired = $('[data-slide].active [data-option-group]')
+        $currentSlidesInnerFields.each(function(inputsIndex, inputsItem){
+            if(inputsItem.type == 'checkbox'){
+                if(typeof $currentSlidesInnerFieldsRequired.data('input-required') !== 'undefined'){
+                    const currentTotalChecked = $('[data-slide].active [data-form="inner"] [data-form-inner="input"]:checked')
+                    if(currentTotalChecked.length === 0) {
+                        currentSlidesInnerFieldsArray.push(false)
+                    }else{
+                        currentSlidesInnerFieldsArray.push(true)
+                    }
+                }else{
+                    currentSlidesInnerFieldsArray.push(true)
+                }
+            }else{
+                currentSlidesInnerFieldsArray.push(inputsItem.checkValidity())
+            }
+        })
+
+        if(ifAllItemsTrue(currentSlidesInnerFieldsArray)){
+            $slidesToggleDownButton.removeAttr('disabled')
+        }else{
+            $slidesToggleDownButton.prop('disabled', true)
+        }
+    }
+
+    function checkCurrentFormFieldsValidOrNotOnInput(){
+        let $currentSlidesInnerFields = $('[data-slide].active [data-form="inner"] [data-form-inner="input"]')
+        $currentSlidesInnerFields.on('input', function(){
+            checkCurrentFormFieldsValidOrNot()
+        })
+    }
+
+    function updateTextareaHeight(){
+        $('[data-slide].active [data-form="inner"] textarea[data-form-inner="input"]').on('input', function(){
+            $(this).css('height', 'auto')
+            $(this).css('height', $(this).get(0).scrollHeight + 0.5 + 'px')
+        })
+    }
+
+    $(window).on('resize', function(){
+        calculateVerticalHeight();
+    })
+
+    $(document).ready(function () {
+        calculateVerticalHeight()
+        slidePositionUpdate()
+        checkCurrentFormFieldsValidOrNot()
+
+        $slidesToggleUpButton.on("click", function(){
+            let $activeSlide = $('[data-slide].active')
+            let [prevPosition, nextPosition] = slidePositionSet()
+            $activeSlide.removeClass("active")
+            $(prevPosition).addClass("active")
+            slidePositionUpdate()
+            checkCurrentFormFieldsValidOrNot()
+        })
+
+        $slidesToggleDownButton.on("click", function(){
+            let $activeSlide = $('[data-slide].active')
+            let [prevPosition, nextPosition] = slidePositionSet()
+            $activeSlide.removeClass("active")
+            $(nextPosition).addClass("active")
+            slidePositionUpdate()
+            checkCurrentFormFieldsValidOrNot()
+        })
+
+        $('[data-form-inner="input"]:not(textarea)').each(function(){
+            $(this).on('keydown', function(event){
+                if (event.key === 'Enter') {
+                    return false
+                }
+            })
+        })
+    });
+  
+})()
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const checkboxes = document.querySelectorAll('input[name="q2"]');
+
+    function handleSingleSelection(event) {
+        // Uncheck all checkboxes except the currently clicked one
+        checkboxes.forEach(checkbox => {
+            if (checkbox !== event.target) {
+                checkbox.checked = false;
+            }
+        });
+
+        // Re-enable all checkboxes and reset opacity
+        checkboxes.forEach(checkbox => {
+            checkbox.disabled = false;
+            checkbox.closest('label').style.opacity = '1';
+        });
+
+        // Disable unchecked checkboxes and lower opacity if the current one is checked
+        if (event.target.checked) {
+            checkboxes.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    checkbox.disabled = true;
+                    checkbox.closest('label').style.opacity = '0.5';
+                }
+            });
+        }
+    }
+
+    // Attach the event listener to each checkbox
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', handleSingleSelection);
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+    // Load JSON mapping file from Shopify
+    let quizMapping;
+    try {
+        const response = await fetch('{{ "honey_quiz_mapping.json" | asset_url }}');
+        quizMapping = await response.json();
+    } catch (error) {
+        console.error("Failed to load quiz mapping:", error);
+        return;
+    }
+
+    // Handle quiz step navigation
+    document.querySelectorAll(".next-step").forEach(button => {
+        button.addEventListener("click", () => {
+            const currentStep = button.closest(".quiz-step");
+            const nextStep = currentStep.nextElementSibling;
+
+            currentStep.classList.remove("active");
+            nextStep.classList.add("active");
+        });
+    });
+
+    // Handle quiz form submission
+    const honeyQuizForm = document.getElementById("honeyQuiz");
+    const returnToInput = document.getElementById("returnTo");
+
+    // Function to determine best collection based on quiz answers using JSON mapping
+    function calculateBestCollection() {
+        // Retrieve quiz answers
+        const consumptionPreference = document.querySelector('input[name="q1"]:checked').value;
+        const benefitPreferences = Array.from(document.querySelectorAll('input[name="q2"]:checked'))
+                                       .map(el => el.value)
+                                       .join("/");
+        const flavorPreference = document.querySelector('input[name="q3"]:checked').value;
+
+        // Generate the combination key
+        const combinationKey = `${consumptionPreference} -> ${benefitPreferences} -> ${flavorPreference}`;
+
+        // Lookup the best collection from the loaded quiz mapping
+        const bestCollection = quizMapping[combinationKey] || "default-collection";
+
+        // Set the best collection in the hidden input (for customer tag)
+        document.querySelector("#CustomerNote").value = bestCollection;
+
+        // Set the return_to URL based on the calculated collection
+        returnToInput.value = `/collections/${bestCollection.toLowerCase().replace(/ /g, "-")}`;
+
+        console.log("Best Collection: ", bestCollection);
+        console.log("Redirecting to: ", returnToInput.value);
+
+        return bestCollection;
+    }
+
+// Listen for form submission event
+honeyQuizForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission by default
+    calculateBestCollection(); // Calculate the best collection
+
+    window.location.href = returnToInput.value; // Redirect to recommendations
+});
+});
+</script>
+
+
+
+<script>
+
+(function() {
+    const $slidesToggleDownButton = $('[data-slide-toggle="down"]'); // Reference to next button
+
+    function checkCurrentFormFieldsValidOrNot() {
+        let $currentSlide = $('[data-slide].active');
+        let $currentSlideRequiredInputs = $currentSlide.find('[data-form-inner="input"]');
+        let allFieldsValid = true;
+
+        // Iterate over required inputs and check if they are valid
+        $currentSlideRequiredInputs.each(function() {
+            const $input = $(this);
+
+            if ($input.attr('type') === 'radio' || $input.attr('type') === 'checkbox') {
+                // For radio buttons and checkboxes, check if any option is selected
+                if ($currentSlide.find(`input[name="${$input.attr('name')}"]:checked`).length === 0) {
+                    allFieldsValid = false;
+                }
+            } else if (!$input.val()) {
+                // For text inputs, check if the input is filled
+                allFieldsValid = false;
+            }
+        });
+
+        // If all fields are valid, enable the next button; otherwise, disable it
+        if (allFieldsValid) {
+            $slidesToggleDownButton.removeAttr('disabled').css('opacity', '1');
+        } else {
+            $slidesToggleDownButton.attr('disabled', true).css('opacity', '0.5');
+        }
+    }
+
+    function checkCurrentFormFieldsValidOrNotOnInput() {
+        // Monitor changes in form fields to re-check validity
+        let $currentSlide = $('[data-slide].active');
+        $currentSlide.on('input change', '[data-form-inner="input"]', function() {
+            checkCurrentFormFieldsValidOrNot();
+        });
+    }
+
+    $(document).ready(function() {
+        // Initialize the form validation on load and whenever slide changes
+        checkCurrentFormFieldsValidOrNot();
+        checkCurrentFormFieldsValidOrNotOnInput();
+
+        // Update the form validation each time the slide changes
+        $('[data-slide-toggle="down"], [data-slide-toggle="up"]').on('click', function() {
+            setTimeout(function() {
+                checkCurrentFormFieldsValidOrNot();
+                checkCurrentFormFieldsValidOrNotOnInput();
+            }, 100); // Add slight delay to ensure slide change completes
+        });
+    });
+})();
+</script>
+

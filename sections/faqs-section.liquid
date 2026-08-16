@@ -1,0 +1,282 @@
+<style>
+  /* Start CSS */
+  .faqs-section {
+    background-color: {{ section.settings.bg_color }};
+    padding: 46px 0;
+  }
+
+  .faqs-section .page-width {
+    max-width: 1370px;
+    padding: 0 15px;
+    margin: 0px auto;
+  }
+
+  .faqs-section .question-faqs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 67px;
+    border-radius: 25px;
+    background-color: {{section.settings.bg_under_color }};
+  }
+
+  .faqs-section .image-wrapper {
+    width: 53.5%;
+  }
+  .faqs-section .image-wrap {
+    height: 100%;
+  }
+
+  .faqs-section .image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1.33/1;
+    border-radius: 25px;
+  }
+
+  .faqs-section .question-faqs-wrap {
+    width: 46.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px 0;
+}
+
+  .faqs-section .title-wrap h2 {
+    color: #000000;
+    margin: 0 0 68px;
+    letter-spacing: -1px;
+  }
+
+  .faqs-section .block-wrap {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .faqs-section .block-wrap:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .faqs-section .question-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .faqs-section .question-wrap h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .faqs-section .answer-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  .faqs-section .answer-text p {
+    margin: 0;
+  }
+
+  /* Tablet & Destop View in 768px to 1200px */
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .faqs-section {
+    padding: 30px 0;
+  }
+    .faqs-section .question-faqs-wrapper {
+    gap: 38px;
+  }
+    .faqs-section .title-wrap h2 {
+      margin: 0 0 20px;
+    }
+  }
+
+
+  /* Mobile View in 767px */
+  @media only screen and (max-width:767px) {
+     .faqs-section {
+       padding: 21px 0 38px;
+       background:#fff;
+  }
+    .faqs-section .question-faqs-wrapper {
+      gap: 14px;
+      flex-wrap: wrap;
+      border-radius: 5px;
+    }
+
+    .faqs-section .image-wrapper {
+      width: 100%;
+    }
+
+    .faqs-section .question-faqs-wrap {
+      width: 100%;
+      padding:0;
+    }
+
+    .faqs-section .image-wrap img {
+      aspect-ratio: 0;
+      border-radius: 5px;
+    }
+
+    .faqs-section .title-wrap h2 {
+      margin: 0 0 16px;
+      letter-spacing: -1.5px;
+    }
+
+    .faqs-section .answer-text {
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 9px;
+    }
+
+    .faqs-section .block-wrap {
+      padding-bottom: 18px;
+    }
+  }
+
+  /* End CSS */
+</style>
+<section class="faqs-section">
+  <div class="page-width">
+    <div class="question-faqs-wrapper">
+      
+      <div class="image-wrapper">
+        <div class="image-wrap">
+          {%- if section.settings.destop_img != blank -%}
+            {%- liquid
+              assign mobileImage = section.settings.destop_img
+              if section.settings.mobile_img != blank
+                assign mobileImage = section.settings.mobile_img
+              endif
+            -%}
+            <picture>
+              <source
+                media="(min-width: 1901px)"
+                srcset="{{ section.settings.destop_img | image_url: width: 2560 }}"
+              >
+              <source
+                media="(min-width: 1700px)"
+                srcset="{{ section.settings.destop_img | image_url: width: 2020 }}"
+              >
+              <source
+                media="(min-width: 1500px)"
+                srcset="{{ section.settings.destop_img | image_url: width: 1820 }}"
+              >
+              <source
+                media="(min-width: 1200px)"
+                srcset="{{ section.settings.destop_img | image_url: width: 1600 }}"
+              >
+              <source
+                media="(min-width: 768px)"
+                srcset="{{ section.settings.destop_img | image_url: width: 1350 }}"
+              >
+              <source media="(min-width: 767px)" srcset="{{ mobileImage | image_url: width: 1100 }}">
+              <source media="(min-width: 576px)" srcset="{{ mobileImage | image_url: width: 800 }}">
+              <source media="(min-width: 400px)" srcset="{{ mobileImage | image_url: width: 700 }}">
+              <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 600 }}">
+              <source media="(min-width: 0)" srcset="{{ mobileImage | image_url: width: 400 }}">
+              <img
+                src="{{ section.settings.destop_img | image_url }}"
+                alt="{{ section.settings.destop_img.alt | default: section.settings.heading | escape }}"
+                width="{{ section.settings.destop_img.width }}"
+                loading="lazy"
+                height="{{ section.settings.destop_img.width | divided_by: section.settings.destop_img.aspect_ratio | round }}"
+              >
+            </picture>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="question-faqs-wrap">
+        <div class="title-wrap">
+          {%- if section.settings.title_text != blank -%}
+            <h2 class="heading-font">{{ section.settings.title_text }}</h2>
+          {%- endif -%}
+        </div>
+        <div class="block-wrapper">
+          {% for block in section.blocks %}
+            <div class="block-wrap">
+              <div class="question-wrap">
+                {%- if block.settings.question_text != blank -%}
+                  <h3 class="body-font">{{ block.settings.question_text }}</h3>
+                {%- endif -%}
+              </div>
+              {%- if block.settings.answer != blank -%}
+                <div class="answer-text body-font">{{ block.settings.answer }}</div>
+              {%- endif -%}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faqs Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Faqs Contain"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "BG Color"
+    },
+    {
+      "type": "color",
+      "id": "bg_under_color",
+      "label": "BG Box Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_text",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "destop_img",
+      "label": "Destop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_img",
+      "label": "Mobile Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Faqs Block",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "question_text",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Faqs Section"
+    }
+  ]
+}
+{% endschema %}

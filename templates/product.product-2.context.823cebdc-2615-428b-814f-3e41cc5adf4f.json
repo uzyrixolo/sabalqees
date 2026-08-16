@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.product-2.json",
+  "context": {
+    "market": "823cebdc-2615-428b-814f-3e41cc5adf4f"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {},
+      "block_order": [
+        "custom_liquid_R8CCiU",
+        "title",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b",
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92",
+        "price_review",
+        "custom_liquid_9W7A4P",
+        "custom_liquid_xG4qxj",
+        "description",
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d",
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9",
+        "form",
+        "custom_liquid_AHjKNK",
+        "html_3rcPqr",
+        "meta",
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9",
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119",
+        "size_delivery_ask",
+        "fce11158-f428-4965-b9df-a549ff610b11",
+        "custom_liquid_tVUGja",
+        "e36839f5-0847-44e2-97d3-2885597bd1ff",
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
+        "56e67368-7424-4d73-8f14-dacdda4c59be",
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "07491781-28b2-43a7-81a4-35850443a8f1",
+        "83791d2e-d63a-4387-9a46-02fd0881dc11",
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3",
+        "tab_liquid_gKKgmq",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "tab_html_YdtJ8r",
+        "tab_html_ccjh6C",
+        "tab_liquid_VQgjnE"
+      ]
+    }
+  },
+  "order": [
+    "customproductbuilder",
+    "breadcrumb",
+    "main",
+    "custom_liquid_BdeizK",
+    "custom_section_xmqN6X",
+    "custom_section_d97fPR",
+    "custom_html_EpqXbN",
+    "1703245290a679a6fa",
+    "custom_section_TtRt8n",
+    "custom_liquid_Bdt4pr",
+    "custom_section_TUhdV7",
+    "logo_list_dL73Fn",
+    "custom_section_beRXcH",
+    "logo_list_iyFnhB",
+    "video_popup_inline_3cLztd",
+    "dc82fd1b-aec8-428d-802c-bd638646d842",
+    "sidebar",
+    "accordion_3XHwAX",
+    "44499bce-c3ca-4130-8cdc-0653b4b8f671",
+    "logo_list_A8Uw6k",
+    "product-recommendations",
+    "recently-viewed-products"
+  ]
+}

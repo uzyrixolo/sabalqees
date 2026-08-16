@@ -1,0 +1,217 @@
+<style>
+  .product-quiz {
+    background-color: #d29b74;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+margin-bottom:4rem;
+  }
+  .quiz-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:#fff;
+  }
+ .quiz-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+  .quiz-button {
+    display: inline-block;
+    background-color: #f4f1ea;
+    color: #d29b74;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    min-width: 220px;
+  }
+  .category-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .category-item {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    margin: 10px;
+    text-align: center;
+  }
+  .category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f4f1ea;
+    border-radius: 50%;
+    padding: 15px;
+  }
+.category-name {
+
+background:#87481b;
+    
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 5px;
+    padding: 6px 10px;
+    position: relative;
+    transition: all .4s ease;
+    z-index: 2;
+}
+  .section-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .quiz-title {
+      font-size: 2em;
+    }
+    .quiz-description {
+      font-size: 1em;
+    }
+    .category-icons {
+      margin-top: 30px;
+    }
+    .category-item {
+      margin: 2.5px;
+    }
+    .category-icon {
+      width: 70px;
+      height: 70px;
+      padding: 12px;
+    }
+    .category-name {
+      font-size: 0.8em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  .product-quiz {
+        padding: 30px 10px;
+        margin-bottom: 4rem;
+    }
+    .quiz-title {
+      font-size: 1.8em;
+    }
+        .quiz-description {
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .category-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+    }
+       .category-name {
+        font-size: 0.80em;
+        letter-spacing: 1px;
+        padding-inline: 5px;
+    }
+    .hidden-mobile {
+      display: none;
+    }
+  }
+  .section-link:hover,
+  .category-item:hover {
+    opacity: 0.9;
+  }
+</style>
+
+<section class="product-quiz">
+  <h2 class="quiz-title">{{ section.settings.title }}</h2>
+  <p class="quiz-description">{{ section.settings.description }}</p>
+
+  <a href="{{ section.settings.button_link }}" class="quiz-button">
+    {{ section.settings.button_text }}
+  </a>
+
+  <div class="category-icons">
+    {% assign icon_count = 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == 'category_icon' %}
+        {% assign icon_count = icon_count | plus: 1 %}
+        <a href="/pages/quiz" class="category-item{% if icon_count > 4 %} hidden-mobile{% endif %}">
+          <img src="{{ block.settings.icon | img_url: '160x160' }}" alt="{{ block.settings.category_name }}" class="category-icon">
+          <p class="category-name">{{ block.settings.category_name }}</p>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Quiz",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Not sure where to start?"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Take the Quiz and find out which Rheal Product is best for you!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "START NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_icon",
+      "name": "Category Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Quiz",
+      "blocks": [
+        {
+          "type": "category_icon"
+        },
+        {
+          "type": "category_icon"
+        },
+        {
+          "type": "category_icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

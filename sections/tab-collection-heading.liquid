@@ -1,0 +1,93 @@
+<!-- Welcome section starts -->
+<section class="grow-aov-collection">
+  <div class="grow-aov-collection__nav">
+    <nav class="grow-aov-collection__tabs">
+      <ul id="btn">
+        <li class="{% if collection.url contains section.settings.first_collection_handle %}grow-aov-collection__selected-tab{% endif %}">
+          <button id="one" onclick="window.location.href='{{ section.settings.first_collection_link }}'" >
+            <span class="grow-aov__icon grow-aov__icon--products" style="{% if request.path contains '/ar/' %} order:1; {% endif %}"><i class="las la-boxes"></i></span>
+            <span class="grow-aov__text">{{ section.settings.first_collection_text }}</span>
+          </button>
+        </li>
+        <li class="{% if collection.url contains section.settings.second_collection_handle %}grow-aov-collection__selected-tab{% endif %}">
+          <button id="two" onclick="window.location.href='{{ section.settings.second_collection_link }}'">
+            <span class="grow-aov__icon grow-aov__icon--products" style="{% if request.path contains '/ar/' %} order:1; {% endif %}"><i class="las la-box"></i></span>
+            <span class="grow-aov__text">{{ section.settings.second_collection_text }}</span>
+          </button>
+        </li>
+        <li class="{% if collection.url contains section.settings.third_collection_handle %}grow-aov-collection__selected-tab{% endif %}">
+          <button id="three" onclick="window.location.href='{{ section.settings.third_collection_link }}'">
+            <span class="grow-aov__icon grow-aov__icon--products" style="{% if request.path contains '/ar/' %} order:1; {% endif %}"><i class="las la-gift"></i></span>
+            <span class="grow-aov__text">{{ section.settings.third_collection_text }}</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!-- Welcome section ends -->
+
+{% schema %}
+{
+  "name": "Collection Button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "first_collection_handle",
+      "label": "First Collection Handle",
+      "default": "all"
+    },
+    {
+      "type": "url",
+      "id": "first_collection_link",
+      "label": "First Collection Link"
+    },
+    {
+      "type": "text",
+      "id": "first_collection_text",
+      "label": "First Collection Text",
+      "default": "All Products"
+    },
+    {
+      "type": "text",
+      "id": "second_collection_handle",
+      "label": "Second Collection Handle",
+      "default": "bundles"
+    },
+    {
+      "type": "url",
+      "id": "second_collection_link",
+      "label": "Second Collection Link"
+    },
+    {
+      "type": "text",
+      "id": "second_collection_text",
+      "label": "Second Collection Text",
+      "default": "Bundles"
+    },
+    {
+      "type": "text",
+      "id": "third_collection_handle",
+      "label": "Third Collection Handle",
+      "default": "gifting"
+    },
+    {
+      "type": "url",
+      "id": "third_collection_link",
+      "label": "Third Collection Link"
+    },
+    {
+      "type": "text",
+      "id": "third_collection_text",
+      "label": "Third Collection Text",
+      "default": "Gifting"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab Collection Heading",
+      "category": "Advanced Layout"
+    }
+  ]
+}
+{% endschema %}

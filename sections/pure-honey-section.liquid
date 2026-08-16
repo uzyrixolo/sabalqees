@@ -1,0 +1,348 @@
+<style>
+  /* Start CSS */
+  .pure-honey-section {
+    background: {{ section.settings.bg_color }};
+  }
+
+  .pure-honey-section .page-width {
+    max-width: 1110px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .pure-honey-section .pure-honey-wrapper {
+    padding: 76px 0 70px;
+  }
+
+  .pure-honey-section .title-wrapper {
+    max-width: 837px;
+    margin: 0 auto;
+    padding-bottom: 14px;
+    text-align: center;
+
+  }
+
+  .pure-honey-section .title-wrap h2 {
+    letter-spacing: -1px;
+    color: #000000;
+    margin: 0 0 5px;
+  }
+
+  .pure-honey-section .text-wrap {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  .pure-honey-slider .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .pure-honey-slider .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pure-honey-section .image-wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  .pure-honey-section .image-wrap img {
+    max-width: 217px;
+    min-height: 217px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit:cover;
+  }
+
+  .pure-honey-section .block-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Description / Hexagon */
+  .pure-honey-section .description-wrapper {
+    position: relative;
+    margin-top: -100px;
+    min-height: 320px;
+    /* KEY HEIGHT FIX */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pure-honey-section .description-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 312px;
+    height: 313px;
+    background: url('https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Polygon_7_3.png?v=1769510802') no-repeat center / contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .pure-honey-section .description-wrap {
+    max-width: 224px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pure-honey-section .image-title-wrap h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #000000;
+    margin: 0 0 5px;
+  }
+
+  .pure-honey-section .image-text-wrap {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  /* Tablet */
+  @media (max-width: 1200px) {
+    .pure-honey-section .pure-honey-wrapper {
+      padding: 43px 0 58px;
+    }
+
+    .pure-honey-section .image-text-wrap {
+      font-size: 14px;
+    }
+
+    .pure-honey-section .swiper {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .pure-honey-section .description-wrapper::before {
+      width: 290px;
+      height: 290px;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .pure-honey-section .pure-honey-wrapper {
+      padding: 38px 0 48px;
+    }
+
+    .pure-honey-section .title-wrapper {
+      max-width: 837px;
+      margin: 0 auto;
+      padding: 0 46px 14px;
+      text-align: center;
+    }
+
+    .pure-honey-section .title-wrap h2 {
+      margin: 0 0 3px;
+    }
+
+
+    .pure-honey-section .image-text-wrap {
+      font-size: 12px;
+    }
+
+    .pure-honey-section .description-wrapper::before {
+      width: 240px;
+      height: 240px;
+      top: 43%;
+    }
+
+    .pure-honey-section .swiper {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .pure-honey-section .image-wrap img {
+      max-width: 165px;
+      min-height: 165px;
+    }
+
+    .pure-honey-section .image-title-wrap h3 {
+      font-size: 12px;
+    }
+
+    .pure-honey-section .description-wrap {
+      max-width: 177px;
+    }
+  }
+
+  /* End CSS */
+</style>
+
+<section class="pure-honey-section">
+  <div class="page-width">
+    <div class="pure-honey-wrapper">
+      <div class="title-wrapper">
+        {%- liquid
+          assign ph_title = product.metafields.custom.pure_honey_title.value | default: product.metafields.custom.pure_honey_title
+          assign ph_text = product.metafields.custom.pure_honey_text.value | default: product.metafields.custom.pure_honey_text
+          if product == blank
+            assign ph_title = nil
+            assign ph_text = nil
+          endif
+        -%}
+        <div class="title-wrap">
+          {% if ph_title != blank %}
+            <h2 class="heading-font">{{ ph_title }}</h2>
+          {% elsif section.settings.title != blank %}
+            <h2 class="heading-font">{{ section.settings.title }}</h2>
+          {% endif %}
+        </div>
+        {% assign show_ph_text = ph_text | default: section.settings.text %}
+        {% if show_ph_text != blank %}
+          <div class="text-wrap body-font">{{ show_ph_text }}</div>
+        {% endif %}
+      </div>
+      <div class="block-wrapper">
+        <div class="swiper pure-honey-slider">
+          <div class="swiper-wrapper">
+            {% assign pure_honey_items = product.metafields.custom.pure_honey_items.value | default: nil %}
+            {% if product != blank and pure_honey_items != blank and pure_honey_items.size > 0 %}
+              {% for item in pure_honey_items %}
+                <div class="swiper-slide">
+                  {% if item.image != blank %}
+                    <div class="image-wrap">
+                      <img
+                        src="{{ item.image | image_url }}"
+                        alt="{{ item.image.alt | default: item.title | escape }}"
+                        width="{{ item.image.width }}"
+                        height="{{ item.image.height }}"
+                        loading="lazy"
+                      >
+                    </div>
+                  {% endif %}
+                  {% if item.title != blank %}
+                    <div class="description-wrapper">
+                      <div class="description-wrap">
+                        <div class="image-title-wrap">
+                          <h3 class="body-font">{{ item.title }}</h3>
+                        </div>
+                        {% if item.text != blank %}
+                          <div class="image-text-wrap body-font">{{ item.text }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% else %}
+              {% for block in section.blocks %}
+                <div class="swiper-slide">
+                  {% if block.settings.image != blank %}
+                    <div class="image-wrap">
+                      <img
+                        src="{{ block.settings.image | image_url }}"
+                        alt="{{ block.settings.image }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        loading="lazy"
+                      >
+                    </div>
+                  {% endif %}
+                  {% if block.settings.image_title != blank %}
+                    <div class="description-wrapper">
+                      <div class="description-wrap">
+                        <div class="image-title-wrap">
+                          <h3 class="body-font">{{ block.settings.image_title }}</h3>
+                        </div>
+                        {% if block.settings.image_text != blank %}
+                          <div class="image-text-wrap body-font">{{ block.settings.image_text }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  new Swiper('.pure-honey-slider', {
+    slidesPerView: 1.4,
+    spaceBetween: 10,
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false,
+      },
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Pure Honey Section",
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content",
+      "name": "Honey Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_title",
+          "label": "Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "image_text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pure Honey Section",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

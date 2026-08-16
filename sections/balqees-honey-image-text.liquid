@@ -1,0 +1,462 @@
+{% comment %}
+  Section: Image + Text — Why Choose Raw Honey
+  Features auto-cycle with image crossfade
+  Figma: Balqees Honey — node 339:10462
+{% endcomment %}
+
+<section class="bq-it" id="bq-it-{{ section.id }}" data-section-id="{{ section.id }}">
+  <div class="bq-it__inner">
+
+    <!-- Left: Image stack (crossfade) -->
+    <div class="bq-it__image-col">
+      {% assign first = true %}
+      {% for block in section.blocks %}
+        {% if block.type == 'feature' %}
+          <div
+            class="bq-it__image-wrap{% if first %} is-active{% endif %}"
+            data-feature-image="{{ forloop.index0 }}"
+          >
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | image_url: width: 800 }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                class="bq-it__image"
+                loading="{% if first %}eager{% else %}lazy{% endif %}"
+                width="700"
+                height="700"
+              >
+            {% elsif section.settings.fallback_image != blank %}
+              <img
+                src="{{ section.settings.fallback_image | image_url: width: 800 }}"
+                alt="{{ section.settings.fallback_image.alt | escape }}"
+                class="bq-it__image"
+                loading="{% if first %}eager{% else %}lazy{% endif %}"
+                width="700"
+                height="700"
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'bq-it__image bq-it__placeholder' }}
+            {% endif %}
+          </div>
+          {% assign first = false %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Right: Content -->
+    <div class="bq-it__content-col">
+
+      <!-- Heading block -->
+      <div class="bq-it__heading-block">
+        {% if section.settings.heading != blank %}
+          <h2 class="bq-it__heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.subheading != blank %}
+          <p class="bq-it__subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+        <hr class="bq-it__divider">
+      </div>
+
+      <!-- Feature rows -->
+      <div class="bq-it__features" data-features>
+        {% assign fi = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'feature' %}
+            <div
+              class="bq-it__feature{% if fi == 0 %} is-active{% endif %}"
+              data-feature-index="{{ fi }}"
+              {{ block.shopify_attributes }}
+            >
+              <p class="bq-it__feature-title">{{ block.settings.title }}</p>
+              <div class="bq-it__feature-body">
+                {% if block.settings.description != blank %}
+                  <p class="bq-it__feature-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+            {% assign fi = fi | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Progress bar -->
+      <div class="bq-it__progress" aria-hidden="true">
+        <div class="bq-it__progress-bar" data-progress-bar></div>
+      </div>
+
+      <!-- CTA Button -->
+      {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_url }}" class="bq-it__btn">
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Base ── */
+  .bq-it {
+    background: #fff;
+    padding: 60px 40px;
+  }
+
+  .bq-it__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
+  /* ── Image col ── */
+  .bq-it__image-col {
+    flex: 0 0 46%;
+    position: relative;
+    height: 700px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .bq-it__image-wrap {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    pointer-events: none;
+  }
+
+  .bq-it__image-wrap.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .bq-it__image,
+  .bq-it__placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── Content col ── */
+  .bq-it__content-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 20px;
+  }
+
+  /* ── Heading ── */
+  .bq-it__heading-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bq-it__heading {
+    font-family: 'Baskerville', Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #000;
+    margin: 0;
+  }
+
+  .bq-it__subheading {
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .bq-it__divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 4px 0 0;
+  }
+
+  /* ── Features ── */
+  .bq-it__features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bq-it__feature {
+    padding: 16px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .bq-it__feature:first-child {
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .bq-it__feature-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.22);
+    transition: color 0.4s ease;
+  }
+
+  .bq-it__feature.is-active .bq-it__feature-title {
+    color: #000;
+  }
+
+  /* Accordion body */
+  .bq-it__feature-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.35s ease;
+    opacity: 0;
+  }
+
+  .bq-it__feature.is-active .bq-it__feature-body {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .bq-it__feature-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    margin: 10px 0 4px;
+    max-width: 455px;
+  }
+
+  /* ── Progress bar ── */
+  .bq-it__progress {
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: -16px;
+  }
+
+  .bq-it__progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #000;
+    border-radius: 2px;
+    transition: width linear;
+  }
+
+  /* ── Button ── */
+  .bq-it__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    white-space: nowrap;
+    align-self: flex-start;
+    transition: opacity 0.2s ease;
+  }
+
+  .bq-it__btn:hover { opacity: 0.82; }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .bq-it__inner { flex-direction: column; gap: 40px; }
+    .bq-it__image-col { width: 100%; flex: unset; height: 420px; }
+    .bq-it__heading { font-size: 36px; }
+  }
+
+  @media (max-width: 600px) {
+    .bq-it { padding: 40px 20px; }
+    .bq-it__heading { font-size: 28px; }
+    .bq-it__feature-title { font-size: 22px; }
+    .bq-it__image-col { height: 300px; }
+  }
+</style>
+
+<script>
+(function () {
+  const section  = document.getElementById('bq-it-{{ section.id }}');
+  if (!section) return;
+
+  const DURATION = {{ section.settings.cycle_duration | default: 4000 }};
+  const features = Array.from(section.querySelectorAll('[data-feature-index]'));
+  const images   = Array.from(section.querySelectorAll('[data-feature-image]'));
+  const bar      = section.querySelector('[data-progress-bar]');
+  const total    = features.length;
+  if (total < 2) return;
+
+  let current = 0;
+  let timer   = null;
+  let paused  = false;
+
+  function activate(index) {
+    features.forEach((f, i) => f.classList.toggle('is-active', i === index));
+    images.forEach((img, i) => img.classList.toggle('is-active', i === index));
+    current = index;
+  }
+
+  function startBar() {
+    if (!bar) return;
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+    bar.getBoundingClientRect(); // force reflow
+    bar.style.transition = 'width ' + DURATION + 'ms linear';
+    bar.style.width = '100%';
+  }
+
+  function next() {
+    activate((current + 1) % total);
+    startBar();
+  }
+
+  function startCycle() {
+    clearInterval(timer);
+    timer = setInterval(next, DURATION);
+    startBar();
+  }
+
+  function stopCycle() {
+    clearInterval(timer);
+    if (bar) {
+      const w = getComputedStyle(bar).width;
+      bar.style.transition = 'none';
+      bar.style.width = w;
+    }
+  }
+
+  // Manual click
+  features.forEach(function (f) {
+    f.addEventListener('click', function () {
+      var idx = parseInt(f.dataset.featureIndex, 10);
+      activate(idx);
+      clearInterval(timer);
+      startBar();
+      timer = setInterval(next, DURATION);
+    });
+  });
+
+  // Pause on hover
+  section.addEventListener('mouseenter', function () { paused = true;  stopCycle(); });
+  section.addEventListener('mouseleave', function () { paused = false; startCycle(); });
+
+  // Only run when visible
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { if (!paused) startCycle(); }
+        else stopCycle();
+      });
+    }, { threshold: 0.2 });
+    obs.observe(section);
+  } else {
+    startCycle();
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Image + Text (Cycling)",
+  "tag": "section",
+  "class": "bq-section-image-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback image (used if a feature has no image)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why choose raw honey over supermarket honey?"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Discover the difference"
+    },
+    {
+      "type": "range",
+      "id": "cycle_duration",
+      "label": "Auto-cycle speed (milliseconds)",
+      "min": 2000,
+      "max": 8000,
+      "step": 500,
+      "default": 4000
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "SHOP SINGLE ORIGIN"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Feature image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature title",
+          "default": "Richer Flavour"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Less processing preserves natural taste and character, instead of the flat sweetness common in mass-produced honey."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image + Text (Cycling)",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Better for your body",
+            "description": "Raw honey retains its natural enzymes, antioxidants and pollen, delivering real nutritional value in every spoonful."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Richer Flavour",
+            "description": "Less processing preserves natural taste and character, instead of the flat sweetness common in mass-produced honey."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Fully traceable",
+            "description": "Every jar is sourced from a named beekeeper and region, so you always know exactly where your honey comes from."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,708 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "customproductbuilder": {
+      "type": "customproductbuilder",
+      "settings": {}
+    },
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "disabled": true,
+      "settings": {
+        "breadcrumb_pr": true,
+        "back_next_pr": true,
+        "cl_bg": "#ffffff",
+        "cl_link": "#000000"
+      }
+    },
+    "main": {
+      "type": "main-product-new",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 27,
+            "fw_pr": 900,
+            "lh_pr": 0,
+            "ls_pr": 1.5,
+            "pr_title_color": "#000000"
+          }
+        },
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{{product.metafields.custom.info}}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "des": "2",
+            "text": "",
+            "length": 31,
+            "readm": true,
+            "readm_txt": "Read more"
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "1",
+            "tax_ship": false,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 24,
+            "fw_price_pr": 500,
+            "price_color": "#000000",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "meta": {
+          "type": "meta",
+          "settings": {
+            "show_options": false,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": false,
+            "show_barcode": false,
+            "show_available": true,
+            "show_category": false,
+            "show_tags": false
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "block",
+            "enable_fit_ratio_img": false,
+            "color_size": "large",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": true,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "custom2",
+            "button_effect": "sweep-to-top",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "custom1",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"text-align:center;font-size:1rem;font-weight:300;color:#000;\">Secure Transactions with Visa/Master Card.</p>"
+          }
+        },
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"bigBox\">\n    <div class=\"box1\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/COD.png?v=1703242796\"\n            alt=\"\">\n\n        <p class=\"item_text2\">Cash on Delivery</p>\n        \n        \n    </div>\n\n    <div class=\"box1\"> <img\n            src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/free.png?v=1703242873\"\n            alt=\"\">\n\n        <p class=\"item_text2\">Free Delivery in Dubai</p>\n        \n        \n    </div>\n\n    <div class=\"box1\"> <img\n            src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/returns.png?v=1703242796\"\n            alt=\"\">\n\n        <p class=\"item_text2\">7 Days Returnable</p>\n        \n    </div>\n    <div class=\"box1\"> <img\n        src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/48.png?v=1703242873\"\n        alt=\"\">\n\n    <p class=\"item_text2\">Delivery within 48 hours</p>\n   \n    \n</div>\n</div>\n\n<style>\n    .bigBox {\n        justify-content: space-between;\n        display: flex;\n        text-align: center;\n    }\n\n    .box1 {\n        max-width: 135px;\n        padding: 20px 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-around;\n    }\n\n .box1 img {\n    width: 70px;\n    padding: 10px;\n    mix-blend-mode: multiply;\n}\n    .item_text2 {\n        width: 100%;\n        margin: 10px auto 0;\nletter-spacing:0;\n        font-weight: 400;\n        font-size: 12px!important;\n        text-align: center;\n        color: #000;\nmargin-top:0;\n    }\n</style>"
+          }
+        },
+        "custom_liquid_YJMMRH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"grid product__media-logos\">\n                \n                \n               \n                \n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/ISO.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                   <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/superbrand.png?v=1718805432\">\n                  </div>\n                  <div>\n                    <img src=\"https://cdn.shopify.com/s/files/1/0677/2831/0547/files/haccp.png?v=1718805433\" loading=\"lazy\">\n                  </div>\n                \n                 \n              </div>"
+          }
+        },
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if  product.metafields.custom.ways %}<h2 style=\"color:#d29b74;text-align:center;\" >Ways to use {{product.title}}</h2>\n{% endif %}\n\n\n{{product.metafields.custom.ways}}\n\n\n<style>\n.img-inline img {\n    max-width: 60px;\n}\n    .ways-inline {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 15px;\n}\n\n.img-inline {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.img-inline p {\n    padding: 0;\n    margin: 0;\n    color: #ce8f63;\n    font-weight: 500;\n    margin-left: 15px;\n    font-size: 1.5rem;\n}\n\n.ways-box {\n   \n    max-width: 650px;\n    margin-inline: 10px;\nmargin:0 auto;\n margin-top: 20px;\n}\n\n.ways-inline .green-tick {\n    width: 25px;\n}\n</style>"
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "disabled": true,
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "wimg": 70,
+            "svg": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa",
+            "height": 44
+          }
+        },
+        "size_delivery_ask": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": true,
+            "page_dr": "delivery-return",
+            "ask": true,
+            "phone": true
+          }
+        },
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
+          "type": "tab_des",
+          "settings": {
+            "title": "Description"
+          }
+        },
+        "e36839f5-0847-44e2-97d3-2885597bd1ff": {
+          "type": "tab_add",
+          "disabled": true,
+          "settings": {
+            "title": "Additional Information"
+          }
+        },
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Custom tab",
+            "content": "",
+            "page": "wash-care"
+          }
+        },
+        "56e67368-7424-4d73-8f14-dacdda4c59be": {
+          "type": "tab_rivui",
+          "disabled": true,
+          "settings": {
+            "title": "Reviews",
+            "review_liquid": "<!-- Start of Judge.me code -->\n      <div style='clear:both'></div>\n      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>\n        {{ product.metafields.judgeme.widget }}\n      </div>\n      <!-- End of Judge.me code -->"
+          }
+        },
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3": {
+          "type": "store_pickup",
+          "disabled": true,
+          "settings": {}
+        },
+        "94011ade-ec25-4d68-b37a-70660ede49dd": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "1",
+            "social_style": "1",
+            "social_size": "extra_small",
+            "bd_radius": 0,
+            "use_color_set": true,
+            "icon_cl": "#222222",
+            "bg_cl": "#00badb",
+            "space_h_item": "20",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        },
+        "fce11158-f428-4965-b9df-a549ff610b11": {
+          "type": "tab_html",
+          "disabled": true,
+          "settings": {
+            "title": "Collapsible tab",
+            "content": "",
+            "page": ""
+          }
+        },
+        "07491781-28b2-43a7-81a4-35850443a8f1": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "Raw vs other honey",
+            "custom_liquid": "<p>Some text here<p>"
+          }
+        },
+        "83791d2e-d63a-4387-9a46-02fd0881dc11": {
+          "type": "tab_liquid",
+          "disabled": true,
+          "settings": {
+            "title": "How to enjoy?",
+            "custom_liquid": "<p>{{product.metafields.custom.enjoy}}</p>"
+          }
+        },
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "page": ""
+          }
+        },
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "cd6ed80b-bcf8-4a04-a2e7-ac5f34f6134b",
+        "b2501913-522a-4ca4-99a8-f90f6d4dcb92",
+        "description",
+        "price_review",
+        "meta",
+        "form",
+        "03fd7f7d-5c1c-4cc6-a477-a052f8bce00d",
+        "7e7fd829-6065-4913-acc6-0c4c9be036b9",
+        "custom_liquid_YJMMRH",
+        "1c7b2da2-26e7-42e6-a2fb-14e8ef541119",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "size_delivery_ask",
+        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
+        "e36839f5-0847-44e2-97d3-2885597bd1ff",
+        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
+        "56e67368-7424-4d73-8f14-dacdda4c59be",
+        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
+        "94011ade-ec25-4d68-b37a-70660ede49dd",
+        "fce11158-f428-4965-b9df-a549ff610b11",
+        "07491781-28b2-43a7-81a4-35850443a8f1",
+        "83791d2e-d63a-4387-9a46-02fd0881dc11",
+        "6f7d582d-df8b-41d0-bf0e-07a500532ac9",
+        "9eeb119e-2e93-4cc7-8575-a638f33c0cd3"
+      ],
+      "custom_css": [
+        ".t4s_ratio:not(.t4s_bg) > :not(.t4s-not-style) {background-color: #fff;}"
+      ],
+      "settings": {
+        "pr_layout": "wide",
+        "enable_sticky_info": true,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratio1_1",
+        "image_size": "contain",
+        "image_position": "8",
+        "main_click": "pswp",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "tabs_design": "accordion",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "inner",
+        "enable_first_tab": false,
+        "tabs_layout": "tab",
+        "bg": "#ffffff",
+        "bg_mb": "#ffffff",
+        "product_list": [],
+        "sticky_mode": "2",
+        "sticky_show": "2",
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "1703245290a679a6fa": {
+      "type": "apps",
+      "blocks": {
+        "78365c34-af31-4c0d-a498-119bfafb430d": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "fce5de71-09c2-49d5-8650-a9428b206a9d": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "b4e73c21-ae19-4fc4-93a1-49128aab28db": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "0fa8dbce-4cd9-442b-beab-5c489ea0b257": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "526632a6-ec21-44cf-af5b-acb3503d49ae": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "30e89cd7-1eff-4698-a32c-0f707b0889d8": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "78365c34-af31-4c0d-a498-119bfafb430d",
+        "fce5de71-09c2-49d5-8650-a9428b206a9d",
+        "b4e73c21-ae19-4fc4-93a1-49128aab28db",
+        "0fa8dbce-4cd9-442b-beab-5c489ea0b257",
+        "526632a6-ec21-44cf-af5b-acb3503d49ae",
+        "30e89cd7-1eff-4698-a32c-0f707b0889d8"
+      ],
+      "settings": {}
+    },
+    "dc82fd1b-aec8-428d-802c-bd638646d842": {
+      "type": "testimonials",
+      "blocks": {
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        },
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "title": "Author's name",
+            "pos": "",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-1",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-2",
+        "template--21782093267219__dc82fd1b-aec8-428d-802c-bd638646d842-quote-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Testimonials",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "ter_des": "1",
+        "cl_name": "#222222",
+        "cl_content": "#878787",
+        "cl_bd": "",
+        "cl_bg_item": "",
+        "bdr": 0,
+        "content_align": "text-start",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "100px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "You may also like",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "3",
+        "image_ratio": "ratio1_1",
+        "image_size": "contain",
+        "image_position": "8",
+        "content_align": "center",
+        "col_dk": "3",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "simple",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "elessi",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "44499bce-c3ca-4130-8cdc-0653b4b8f671": {
+      "type": "apps",
+      "blocks": {
+        "c76fadfd-d75e-4d07-a292-04700ac88fcc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "b2f4d25c-f67c-4a52-bad8-cd044c9c5a76": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "9239b73e-0840-412e-b8a5-0e9707dfdaba": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "843ea767-f3da-4af5-b4d1-aaf9771d4534": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "16931657-542b-4d50-9fb4-84481ac62641": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "17e280cd-e3fd-4426-bc6f-0adb932bcd16": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "c76fadfd-d75e-4d07-a292-04700ac88fcc",
+        "b2f4d25c-f67c-4a52-bad8-cd044c9c5a76",
+        "9239b73e-0840-412e-b8a5-0e9707dfdaba",
+        "843ea767-f3da-4af5-b4d1-aaf9771d4534",
+        "16931657-542b-4d50-9fb4-84481ac62641",
+        "17e280cd-e3fd-4426-bc6f-0adb932bcd16"
+      ],
+      "settings": {}
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Recently viewed products",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "1",
+        "unavailable_prs": "show",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    }
+  },
+  "order": [
+    "customproductbuilder",
+    "breadcrumb",
+    "main",
+    "1703245290a679a6fa",
+    "dc82fd1b-aec8-428d-802c-bd638646d842",
+    "sidebar",
+    "product-recommendations",
+    "44499bce-c3ca-4130-8cdc-0653b4b8f671",
+    "recently-viewed-products"
+  ]
+}

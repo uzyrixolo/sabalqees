@@ -1,0 +1,377 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6": {
+          "type": "1",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "fontf": "2",
+            "text_cl": "#ffffff",
+            "text_fs": 50,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": true,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "e66f07ef-00c2-47c9-b464-5066cdf9c1a6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/bg60.jpg",
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 0,
+        "min_height": 300,
+        "min_height_mb": 200,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "7a031f53-f3c4-49b0-9d2f-48e613b1a7be": {
+          "type": "html",
+          "settings": {
+            "title": "",
+            "custom_html": "<div class=\"t4s-col-inner t4s-text-md-start t4s-text-start \" style=\"--pd: 0 0 0 0;--pd-mb: 0 0 0 0;\">\n                      \n                      <div class=\"t4s-footer-heading t4s-d-flex t4s-align-items-center t4s-justify-content-between t4s-d-md-block t4s-d-none\">\n                         \n                      </div>\n<div data-footer-open=\"\" class=\"t4s-footer-heading t4s-footer-heading-mobile t4s-d-flex t4s-align-items-center t4s-justify-content-between t4s-d-md-none\">\n                        \n                          <h3 class=\"t4s-col-heading t4s-fnt-fm-inherit\">HELP</h3>\n<span class=\"t4s-footer-collapse-icon\"></span>\n                      </div>\n<div data-footer-content=\"\" class=\"t4s-footer-content\">\n<div class=\"t4s-footer-menu t4s-footer-menu-style1\" style=\"--menu-mgb:px;--menu-mgb-mb:px;\">\n                            <ul class=\"t4s-footer-linklist\">\n<li>\n                                    <a href=\"/pages/frequently-asked-questions\" class=\"t4s-footer-link \">\n                                    FAQ\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/pages/contact\" class=\"t4s-footer-link \">\n                                    CONTACT US\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/account/login\" class=\"t4s-footer-link \">\n                                    MY PROFILE\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/pages/privacy-policy\" class=\"t4s-footer-link \">\n                                    PRIVACY POLICY\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/pages/delivery-information\" class=\"t4s-footer-link \">\n                                    DELIVERY INFORMATION\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/pages/return-refund-policy\" class=\"t4s-footer-link \">\n                                    RETURNS &amp; REFUNDS\n                                    </a>\n                                </li>\n<li>\n                                    <a href=\"/pages/shopping-online\" class=\"t4s-footer-link \">\n                                    SHOPPING ONLINE\n                                    </a>\n                                </li>\n</ul>\n                            </div>\n</div>\n                </div>"
+          }
+        }
+      },
+      "block_order": [
+        "7a031f53-f3c4-49b0-9d2f-48e613b1a7be"
+      ],
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "large",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "8a83a8c5-4004-4422-be7a-c39469efce18": {
+      "type": "accordion",
+      "blocks": {
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "How to Shop Online ",
+            "content": "<p><strong>Welcome to Balqees Online.</strong> Shopping is easy, convenient and secure. Simply select the product you want to purchase and follow the instructions below:</p><p><strong>Step One:</strong> Finding an item and adding to your shopping bag </p><p>Find the item you desire by either going through the category pages, or using on-site search.</p><p>Once you've found the product you want, select the size and then click \"add to bag\".</p><p>You can either rollover a product image and click on the Quickshop button and then click \"add to bag\", or for additional product information, click on the product name or 'view details' link. From the product detail page select add to bag\" to place the item in your bag.</p><p>You will be able to increase or decrease the quantity in your shopping bag.</p><p><strong>Step Two:</strong> The shopping bag</p><p>When you've finished shopping, click the shopping bag icon found on each page. The shopping bag is where you check if the products in your bag are correct, and have the option to change the quantities you're ordering.<br/>To continue to purchase, click the checkout button. </p><p><strong>Step Three:</strong> Order details</p><p>The next page will ask you to sign in, or register (if you have not already done so), and then provide billing and delivery address<br/>details. If you have already saved these in your Account Profile you won't have to fill them out again. Here you will also be asked to choose one of our five delivery options, and have the option to gift-wrap your order. You can also select the multiship option to arrange for parts of your order to be sent to any UK address of your choice.</p><p><strong>Step Four:</strong> Confirmation</p><p>Once you've confirmed your order you will see a confirmation page that gives you your unique reference number and the total sum deducted from your credit or debit card account. You can print this page for your reference, or alternatively wait until you receive this information in an order confirmation email. The email will show all details of items purchased, delivery addresses, delivery options and packaging options, which you can keep<br/>for your records. If you have any questions, please contact us.</p><p><strong>View Bag</strong></p><p>Click on the shopping bag icon to display your shopping bag with the list of the items selected for purchase, the selected quantities of each, and the total cost of the purchase. You may remove items or change the quantities ordered in this area.</p><p><strong>Deleting Items from your Shopping Bag</strong></p><p>If you wish to delete an item in your Shopping Bag, simply go to “View Bag” and select the \"Remove\" link below the product name. The item will be removed from your shopping bag.</p>"
+          }
+        },
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Offer Codes",
+            "content": "<p><strong>Applying an Offer Code</strong><br/></p><p>To successfully apply an offer code to your order, you will need to be signed into your online account with email address and password.Before entering your offer code, please fully read the Terms & Conditions associated with the offer/promotion, to ensure that your order meets the qualifying terms to be applied.Only one offer code may be used per order and offer codes cannot be used in conjunction with any other offers, including but not limited to sale items, new launches, gift sets, limited editions.NOTE: Offers cannot be applied to orders placed outside of the qualifying promotional dates. Any orders placed before the start, and after the expiry of the offer, will not qualify for the offer.<br/></p><p><strong>Troubleshooting</strong><br/></p><p>Please ensure you are signed into your account at the time of placing the order before entering the offer code.Check that your order does not contain any sale items, new launches, gift sets, or limited edition items.Please ensure that the offer code being applied is formatted correctly, e.g. be aware of capital letters and any special characters.NOTE: Offers cannot be applied to orders placed outside of the qualifying promotional dates. Any orders placed before the start, and after the expiry of the offer, will not qualify for the offer. If an offer does not appear to have applied to your order, please check your order qualifies before completing the transaction, as this will not auto-apply after checkout.</p>"
+          }
+        },
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-2": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Product Recommendations/Advice",
+            "content": "<p>Having a hard time choosing a honey? Can’t find a honey right for you?<br/>Our salesperson are ready to help you on Live Chat. Just ask away.</p>"
+          }
+        },
+        "0c18a9a9-c7e5-4713-a7d9-dbca2dd1ce13": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Optimal Monitor Settings",
+            "content": "<p>This site is best viewed with Google Chrome and a minimum monitor resolution of 1024 x 768.</p><p>Please note that monitors display colours differently based upon their settings.</p>"
+          }
+        },
+        "79e4f603-cb9b-4c36-8947-f58f976eb270": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Internet Browser Requirements",
+            "content": "<p>Our site works best with Google Chrome on PCs.</p><p>We also support Firefox 3 and Microsoft Edge for PCs and MACs, Safari 2.0.4 on MAC only.</p>"
+          }
+        },
+        "d1384a8f-cd31-493a-93d5-d18b3f654b7a": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Security Online",
+            "content": "<p>At Balqees Online, we understand how important security is to you and we are committed to making your internet shopping a positive experience. We assure you that any transactions that you make and any personal information you give us is secure.<br/>When you place an order at jomalone-ae.com, we encode your information using Secure Socket Layer (SSL) encryption technology. This is the most advanced consumer online security technique to date.</p><p>In order for encryption to take place, your browser must have the SSL protocol. The browsers that have this software include the following:</p><p>Internet Explorer 6.0 and higher ,Mozilla Firefox 2.0.4 and higher ,Safari 2.0.4 and higher</p>"
+          }
+        },
+        "b480794c-647b-4e12-8dd6-bbf6316464dd": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Item availability",
+            "content": "<p>Temporarily Out of Stock<br/>If a basic stock item is unavailable, it will show as out of stock, and you can request to receive an email when the product comes back into stock.</p><p>Alternatively, you can visit one of our Balqees stores. Please <a href=\"/pages/store-locator\" title=\"/pages/store-locator\">click here</a> to find your nearest store.</p>"
+          }
+        },
+        "8c36c4bc-57e8-4b0a-b963-9f55800f579f": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Maximum Purchase Policy",
+            "content": "<p>We regret that we must limit orders to no more than twelve (12) units of any item, with a maximum purchase of SAR 7500 per customer. In addition, we must also limit orders to no more than three (3) orders per customer per day. If you have any questions, please <a href=\"/pages/contact\" title=\"/pages/contact\">Contact Us </a>and we will be happy to assist.</p>"
+          }
+        },
+        "29c34e83-5d91-4620-b34d-bbcb6367e6ab": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Complimentary Gift Wrap Service ",
+            "content": "<p>Whether a treat for yourself, or a gift for a loved one you can choose for your order to arrive wrapped in the iconic cream box tied with the black ribbon. You can do this at the checkout process. Find out more<br/>If you are sending a gift, you may choose to include a gift card on which we will carefully print your personal message, also at no cost.</p>"
+          }
+        },
+        "8af0c383-836f-4d3e-b725-ccafa3553d98": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Payment Options",
+            "content": "<p>The following Credit/Debit cards are accepted for payment:</p><p>MasterCard</p><p>VisaVisa</p><p>Debit</p><p>Visa Electron</p><p>Please note that with the above payment options full payment will be taken immediately at checkout. </p><p>We’re sorry, we do not accept:</p><p>ChequesPostal Orders</p><p><strong>Important information:</strong><br/>For your security and to avoid any fraudulent transactions, your billing name and address must match that of the credit card used for payment. We reserve the right to cancel any order that does not match these criteria.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-0",
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-1",
+        "template--16915337675027__8a83a8c5-4004-4422-be7a-c39469efce18-16696348289f86ecfe-2",
+        "0c18a9a9-c7e5-4713-a7d9-dbca2dd1ce13",
+        "79e4f603-cb9b-4c36-8947-f58f976eb270",
+        "d1384a8f-cd31-493a-93d5-d18b3f654b7a",
+        "b480794c-647b-4e12-8dd6-bbf6316464dd",
+        "8c36c4bc-57e8-4b0a-b963-9f55800f579f",
+        "29c34e83-5d91-4620-b34d-bbcb6367e6ab",
+        "8af0c383-836f-4d3e-b725-ccafa3553d98"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "fc04118d-07df-4a0f-92f0-e7df5f3778c7": {
+      "type": "custom-section",
+      "blocks": {
+        "template--17288677097747__fc04118d-07df-4a0f-92f0-e7df5f3778c7-16715238341be29732-0": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "3",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "e7e73189-bf7c-4215-8437-5dbefb2fe591": {
+          "type": "html",
+          "settings": {
+            "html_content": "<h3 class=\"mb_20\">General Information</h3>\n<ul class=\"color_b\">\n<li><a href=\"/pages/store-locator\">Store Locator</a></li>\n<li><a href=\"/pages/terms-and-conditions\">Terms &amp; Conditions</a></li>\n<li><a href=\"/pages/corporate-info\">Corporate Information</a></li>\n<li><a href=\"/pages/privacy-policy\">Privacy Policy</a></li>\n<li><a href=\"/pages/careers\" target=\"_blank\" rel=\"noopener noreferrer\">Careers</a></li>\n</ul>\n\n<style>.mb_20{margin-bottom:20px;}\n.color_b p{color:black;letter-spacing:1px;}\n.color_b{ padding-left:0px;} .color_b li a{color:black;letter-spacing:1px}.color_b li {margin-bottom:10px;font-weight:700;}</style>",
+            "hidden_mobile": false
+          }
+        },
+        "b531ca2a-d9ea-4c81-9ef7-2e888f4485e0": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "9",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "196e314e-d5fd-4a43-8a4f-b421875d9dfc": {
+          "type": "html",
+          "settings": {
+            "html_content": "<h3 class=\"mb_20\"> <strong>Corporate Information</strong>\n</h3>\n<p>Balqees Honey is a flagship brand of Intellectual Capital Arabia currently located in UAE, Qatar, Egypt &amp; UK. The brand is a purveyor of premium Yemeni honey in the Middle East and has expanded its range of honey sourcing from around the globe and is dedicated to promoting bio-active raw honey – from exquisite mono and poly floral varieties to delectable fusions bursting with flavour.</p>",
+            "hidden_mobile": false
+          }
+        },
+        "cbf93a87-9149-45a2-a4f9-7be66834e397": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "cddc7d63-8068-487e-87fc-5e797b5aba7a": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div class=\"color_b\">\n<p><strong>For Bulk Sales Contact: </strong></p>\n<p>Farooq Ssemwanga<br>Sales Head, Local and International\nBusiness Research and Development<br>Mobile: +971 52 105 7207<br>Telephone: +971 4 880 3440<br>Email: farooq@icarabia.com</p>\n</div>",
+            "hidden_mobile": false
+          }
+        },
+        "398f65c0-6215-43f9-81fb-a8f28db8d1a5": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "096f978c-e742-42d2-b71d-745dc3a476fc": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div class=\"color_b\">\n<h3 style=\"color:white\" class=\"mb_20\"> \n</h3>\n<p><strong>For Events, Marketing &amp; Communications:</strong></p>\n<p>Salem Riath<br>Chief Executive Officer<br>Mobile: +971 52 681 5134<br>Telephone: +971 4 880 3440<br>Email: salem@icarabia.com</p>\n</div>",
+            "hidden_mobile": false
+          }
+        },
+        "f26220b9-a441-4031-b796-e739558140de": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "4",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "start",
+            "content_align_tablet": "start",
+            "content_align_mobile": "start",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "b2ea4809-33ed-45b6-ae73-636b9aa92226": {
+          "type": "html",
+          "settings": {
+            "html_content": "<div class=\"color_b\">\n<h3 style=\"color:white\" class=\"mb_20\"> \n</h3>\n<p><strong>For Business Operations &amp; CSR </strong></p>\n<p>Ruel Tolentino\n<br>Business Operations<br>Mobile: +971 52 105 7209<br>Telephone: +971 4 880 3440<br>Email: ruel@icarabia.com</p>\n</div>",
+            "hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17288677097747__fc04118d-07df-4a0f-92f0-e7df5f3778c7-16715238341be29732-0",
+        "e7e73189-bf7c-4215-8437-5dbefb2fe591",
+        "b531ca2a-d9ea-4c81-9ef7-2e888f4485e0",
+        "196e314e-d5fd-4a43-8a4f-b421875d9dfc",
+        "cbf93a87-9149-45a2-a4f9-7be66834e397",
+        "cddc7d63-8068-487e-87fc-5e797b5aba7a",
+        "398f65c0-6215-43f9-81fb-a8f28db8d1a5",
+        "096f978c-e742-42d2-b71d-745dc3a476fc",
+        "f26220b9-a441-4031-b796-e739558140de",
+        "b2ea4809-33ed-45b6-ae73-636b9aa92226"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": ",,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "8a83a8c5-4004-4422-be7a-c39469efce18",
+    "fc04118d-07df-4a0f-92f0-e7df5f3778c7"
+  ]
+}
