@@ -555,7 +555,7 @@
         "profile_item_AnByjC": {
           "type": "profile_item",
           "settings": {
-            "title": "TASTE",
+            "title": "المذاق",
             "color_swatch": "",
             "description": "{{ product.metafields.custom.honey_profile.value.taste.value }}"
           }
@@ -563,7 +563,7 @@
         "profile_item_nEda4p": {
           "type": "profile_item",
           "settings": {
-            "title": "COLOR",
+            "title": "اللون",
             "color_swatch": "{{ product.metafields.custom.honey_profile.value.color_hex_code.value }}",
             "description": "{{ product.metafields.custom.honey_profile.value.color.value }}"
           }
@@ -571,7 +571,7 @@
         "profile_item_G98mip": {
           "type": "profile_item",
           "settings": {
-            "title": "TEXTURE",
+            "title": "القوام",
             "color_swatch": "",
             "icon": "{{ product.metafields.custom.honey_profile.value.texture_icon.value }}",
             "description": "{{ product.metafields.custom.honey_profile.value.texture.value }}"
@@ -586,7 +586,7 @@
       "name": "Honey Profile Section",
       "settings": {
         "section_bg": "#e8e3da",
-        "heading": "Honey Profile",
+        "heading": "خصائص العسل",
         "subheading": "{{ product.title }}",
         "destop_img": "{{ product.metafields.custom.honey_profile.value.honey_profile_image.value }}",
         "mobile_img": "{{ product.metafields.custom.honey_profile.value.honey_profile_image.value }}",

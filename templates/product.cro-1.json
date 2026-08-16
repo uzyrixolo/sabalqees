@@ -484,21 +484,21 @@
         "profile_item_AnByjC": {
           "type": "profile_item",
           "settings": {
-            "title": "TASTE",
+            "title": "المذاق",
             "description": "Sweet and aromatic with butterscotch and caramel notes"
           }
         },
         "profile_item_nEda4p": {
           "type": "profile_item",
           "settings": {
-            "title": "COLOR",
+            "title": "اللون",
             "description": "Medium to dark amber"
           }
         },
         "profile_item_G98mip": {
           "type": "profile_item",
           "settings": {
-            "title": "TEXTURE",
+            "title": "القوام",
             "description": "Smooth and viscous"
           }
         }
@@ -511,7 +511,7 @@
       "name": "Honey Profile Section",
       "settings": {
         "section_bg": "#e8e3da",
-        "heading": "Honey Profile",
+        "heading": "خصائص العسل",
         "subheading": "{{ product.title }}",
         "destop_img": "shopify://shop_images/Frame_2087326270_1_292bf4e4-e8d3-4805-91ae-dd26f8ea75f5.webp",
         "mobile_img": "shopify://shop_images/Frame_2087326270_1_292bf4e4-e8d3-4805-91ae-dd26f8ea75f5.webp",
