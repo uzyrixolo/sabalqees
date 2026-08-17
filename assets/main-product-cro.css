@@ -896,3 +896,13 @@ h1.t4s-product__title{
 .product-tab-list {
     display: none;
 }
+
+/* RTL: accordion toggle icon sits on the left so it doesn't overlap the title */
+[dir="rtl"] .accordion details summary svg {
+  right: auto;
+  left: 0;
+}
+[dir="rtl"] .accordion details summary .summary__title {
+  padding-left: 34px;
+  padding-right: 0;
+}
