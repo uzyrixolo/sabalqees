@@ -573,7 +573,13 @@
       margin-top: 16px;
       justify-content: center;
     }
-  </style>
+  
+/* RTL: Aeonik is Latin-only; use the site-wide Arabic stack instead. */
+[dir="rtl"] .bubble-heading-{{ section.id }},
+[dir="rtl"] .bubble-heading-bottom-{{ section.id }} {
+  font-family: Cairo, Rubik, sans-serif !important;
+}
+</style>
 {% endif %}
 
 <div class="bubble-{{ section.id }}"style="background-color:{{section.settings.background-color}};">
