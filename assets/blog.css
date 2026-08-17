@@ -374,3 +374,18 @@ h3.t4s-post-title {
 .t4s-post-thumb a {
     border-radius: 10px;
 }
+
+/* ==========================================================================
+   RTL: Aeonik ships Latin glyphs only, so Arabic fell back to an arbitrary
+   system font and blog titles looked different from every other heading.
+   Match the site-wide Arabic stack. English/LTR is untouched.
+   ========================================================================== */
+[dir="rtl"] .t4s-post-item .t4s-post-title,
+[dir="rtl"] .t4s-post-item .t4s-post-title a,
+[dir="rtl"] h3.t4s-post-title,
+[dir="rtl"] h3.t4s-post-title a,
+[dir="rtl"] .t4s-blog-page .t4s-post-title,
+[dir="rtl"] .t4s-post-excerpt,
+[dir="rtl"] .t4s-post-metas {
+  font-family: Cairo, Rubik, sans-serif;
+}
