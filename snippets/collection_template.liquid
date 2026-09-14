@@ -26,11 +26,11 @@
             <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ image | image_url: width: 1 }});"></span>   
           {% else %}
             {%- assign txt = html[4] | append: 'x' | append: html[5] -%}
-            {%- render 'svg_holder',txt:txt,fs:"40px" | placeholder_svg_tag: 't4s-placeholder-svg t4s-obj-eff' -%}
+            {%- render 'svg_holder', txt: txt, fs: "40px", placeholder_svg_tag: 't4s-placeholder-svg t4s-obj-eff' -%}
           {% endif %}
         {%- else -%}
           {%- assign txt = html[4] | append: 'x' | append: html[5] -%}
-          {%- render 'svg_holder',txt:txt,fs:"40px" | placeholder_svg_tag: 't4s-placeholder-svg t4s-obj-eff' -%}
+          {%- render 'svg_holder', txt: txt, fs: "40px", placeholder_svg_tag: 't4s-placeholder-svg t4s-obj-eff' -%}
         {%- endif -%}
 	    </div>
     </a>
@@ -49,4 +49,20 @@
     {%- endif -%}
   </div>
 </div>
-{{html[10]}}
+{{html[10]}}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{%- render ''svg_holder'',txt:txt,fs:"40px" | placeholder_svg_tag: ''t4s-placeholder-svg
+    t4s-obj-eff'' -%}'
+  to: '{%- render ''svg_holder'', txt: txt, fs: "40px", placeholder_svg_tag: ''t4s-placeholder-svg
+    t4s-obj-eff'' -%}'
+  position: 2499..2604
+- from: '{%- render ''svg_holder'',txt:txt,fs:"40px" | placeholder_svg_tag: ''t4s-placeholder-svg
+    t4s-obj-eff'' -%}'
+  to: '{%- render ''svg_holder'', txt: txt, fs: "40px", placeholder_svg_tag: ''t4s-placeholder-svg
+    t4s-obj-eff'' -%}'
+  position: 2733..2838
+{%- endcomment -%}
