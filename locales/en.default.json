@@ -677,7 +677,8 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "optional_address2_label": "FOR KSA ONLY USE (4 letters + 4 numbers) Example: RUKN2952"
+        "optional_address2_label": "FOR KSA ONLY USE (4 letters + 4 numbers) Example: RUKN2952",
+        "address2_label": "FOR KSA ONLY USE (4 letters + 4 numbers) Example: RUKN2952"
       },
       "general": {
         "errors": {
