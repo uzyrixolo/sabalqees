@@ -102,8 +102,8 @@
         "image_parent_pBHNK3": {
           "type": "image_parent",
           "settings": {
-            "image": "shopify://shop_images/Banner-1800x600_1.webp",
-            "image_mb": "shopify://shop_images/Banner_750x960_4a775d4b-02b2-429a-9185-180c037a3b3f.webp",
+            "image": "shopify://shop_images/Banner-1800x600.webp",
+            "image_mb": "shopify://shop_images/Banner-750x960.webp",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "shopify://collections/all",
