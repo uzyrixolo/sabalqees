@@ -15,7 +15,166 @@
   "sections": {
     "1646035317ea8b6928": {
       "settings": {
-        "top_heading": "best seller"
+        "top_heading": "Best Sellers",
+        "top_subheading": "These are the honeys our customers come back to for taste, reliability and everyday use."
+      }
+    },
+    "16e4732a-25a7-4b64-8922-a24a7ccd563e": {
+      "blocks": {
+        "custom_button_GQtTXc": {
+          "settings": {
+            "button_text": "Shop Honey Fusions"
+          }
+        },
+        "custom_button_kjLVkF": {
+          "settings": {
+            "button_text": "Shop Raw Manuka Honey"
+          }
+        },
+        "03261211-8839-4e21-8f81-5522c6af6206": {
+          "settings": {
+            "button_text": "Shop Raw Bee Pollen"
+          }
+        },
+        "custom_button_KRFpJ9": {
+          "settings": {
+            "button_text": "Orange Grove Fusion"
+          }
+        },
+        "custom_button_dHAzAk": {
+          "settings": {
+            "button_text": "Shop Yemeni Sidr Honey"
+          }
+        },
+        "custom_button_Wc9eBn": {
+          "settings": {
+            "button_text": "Lemon Zest & Ginger Fusion"
+          }
+        },
+        "7da38231-60e8-4807-bdaf-0ae1e296f033": {
+          "settings": {
+            "text": "Discover the Fusions Range"
+          }
+        },
+        "46da7de0-2253-44bc-8333-121968c25f37": {
+          "settings": {
+            "text": "Discover the Fusions Range"
+          }
+        },
+        "acb495ad-cbbc-4711-a941-e9e3f5f70642": {
+          "settings": {
+            "button_text": "Cinnamon & Sesame Seed"
+          }
+        },
+        "1a73e633-f294-4d51-9e24-74977a4d1027": {
+          "settings": {
+            "text": "Discover the Fusions Range"
+          }
+        }
+      }
+    },
+    "hero_banner_section_T9fiqD": {
+      "blocks": {
+        "content_UgfyDW": {
+          "settings": {
+            "group_star_text": "4.9/5 - 1,500+ verified reviews",
+            "title_text": "<p>Real raw honey,<br/>real benefits</p>",
+            "text_1": "Single Origin",
+            "text_2": "Unfiltered",
+            "text_3": "Unpasteurised",
+            "text_4": "Lab Tested",
+            "button_text": "Shop Single Origin",
+            "mobile_icon_text": "Trusted by 20,000+ customers looking for real honey"
+          }
+        }
+      }
+    },
+    "shipping_VjdXai": {
+      "blocks": {
+        "shipping_wVNMDP": {
+          "settings": {
+            "title": "Free shipping within Riyadh on orders over 500 SAR"
+          }
+        },
+        "shipping_TMPcwA": {
+          "settings": {
+            "title": "Sign up and get 500 SAR off!"
+          }
+        },
+        "shipping_KhFKDy": {
+          "settings": {
+            "title": "14-day returns"
+          }
+        },
+        "shipping_PxVtAB": {
+          "settings": {
+            "title": "500+ five-star reviews"
+          }
+        }
+      }
+    },
+    "1770669079e36c1b0c": {
+      "blocks": {
+        "ai_gen_block_16d2d32_EyJfnV": {
+          "settings": {
+            "text_1": "Single-origin transparency",
+            "text_2": "Independent lab tested",
+            "text_3": "Ethical beekeeper sourcing",
+            "text_4": "14-day money-back guarantee"
+          }
+        }
+      }
+    },
+    "collections_list_Wjb7fQ": {
+      "settings": {
+        "top_heading": "Discover what matters most to you",
+        "collection_subtitle": "Products"
+      },
+      "blocks": {
+        "collection_item_XXY8GE": {
+          "settings": {
+            "collection_title": "Everyday Honey"
+          }
+        },
+        "collection_item_akDf67": {
+          "settings": {
+            "collection_title": "Functional Honey Fusions"
+          }
+        },
+        "collection_item_4KBUgD": {
+          "settings": {
+            "collection_title": "Rare Honey"
+          }
+        },
+        "collection_item_Ek34An": {
+          "settings": {
+            "collection_title": "Gifts & Bundles"
+          }
+        }
+      }
+    },
+    "collections_list_8djMwG": {
+      "settings": {
+        "top_heading": "Shop by Benefit",
+        "top_subheading": "Choose your health goal",
+        "collection_subtitle": "Products"
+      },
+      "blocks": {
+        "collection_item_DLncHh": {
+          "settings": {
+            "collection_title": "Fertility"
+          }
+        },
+        "collection_item_KRVL8W": {
+          "settings": {
+            "collection_title": "Immunity"
+          }
+        },
+        "collection_item_CjPACc": {
+          "settings": {
+            "collection_title": "Skin"
+          }
+        }
       }
     }
   }
