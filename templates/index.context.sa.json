@@ -176,6 +176,168 @@
           }
         }
       }
+    },
+    "top_heading_kaPfXH": {
+      "blocks": {
+        "bl_heading_9FJXtL": {
+          "settings": {
+            "top_heading": "Read what our customers say!"
+          }
+        },
+        "bl_subheading_QkAw6N": {
+          "settings": {
+            "top_subheading": "Best Shopify Theme"
+          }
+        }
+      }
+    },
+    "73cf5965-6dfd-470f-a8ef-5d6d52aff437": {
+      "blocks": {
+        "template--17157305434412__73cf5965-6dfd-470f-a8ef-5d6d52aff437-167751806008b02675-0": {
+          "settings": {
+            "title": "Raw & Unpasteurised",
+            "text": "<p>All our honey comes straight from the hive and is never heat-treated or micro-filtered</p>"
+          }
+        },
+        "template--17157305434412__73cf5965-6dfd-470f-a8ef-5d6d52aff437-167751806008b02675-1": {
+          "settings": {
+            "title": "Ethically & Sustainably Harvested",
+            "text": "<p>Our beekeepers use sustainable beekeeping practices and never feed the bees sugar substitutes</p>"
+          }
+        },
+        "template--17157305434412__73cf5965-6dfd-470f-a8ef-5d6d52aff437-167751806008b02675-2": {
+          "settings": {
+            "title": "100% Pure",
+            "text": "<p>Harvested from clean, flower-rich environments free from harmful pollutants</p>"
+          }
+        }
+      }
+    },
+    "03f74bad-4c13-419f-a0ca-253101fc2b1e": {
+      "settings": {
+        "top_heading": "Featured Products"
+      },
+      "blocks": {
+        "template--16878390247699__03f74bad-4c13-419f-a0ca-253101fc2b1e-1667981375cdf1547e-0": {
+          "settings": {
+            "title": "Yemeni Sidr Do'ani",
+            "text": "<p>From £39.99</p>",
+            "button_label": "Shop Now"
+          }
+        },
+        "template--16878390247699__03f74bad-4c13-419f-a0ca-253101fc2b1e-1667981375cdf1547e-1": {
+          "settings": {
+            "title": "Royal Jarrah Honey",
+            "button_label": "Shop Now"
+          }
+        }
+      }
+    },
+    "e713475a-1c6d-4256-bd6e-8e24c076f9bb": {
+      "settings": {
+        "top_heading": "Why choose our raw honey?"
+      },
+      "blocks": {
+        "template--19572417069356__e713475a-1c6d-4256-bd6e-8e24c076f9bb-bl_text-1": {
+          "settings": {
+            "text": "<p>Balqees Raw Honey Store has become one of the most renowned suppliers of premium raw honey in the Middle East. With our passion for the product and proven success, we have now expanded our range across the UK and around the world. </p><p>We work with independent beekeepers and beekeeping cooperatives around the world who follow sustainable and ethical practices. With every purchase, you help support beekeepers and their families in rural communities locally and internationally.</p><p>All our raw honey comes straight from the hive. We never heat-treat or micro-filter it, and none of our beekeepers feed the bees sugar solutions or supplements. We are committed to providing the purest, most natural raw honey on earth. </p>"
+          }
+        },
+        "0b9fd52b-951b-478c-a19f-7c79ac54a65e": {
+          "settings": {
+            "button_label": "Shop Now"
+          }
+        }
+      }
+    },
+    "quiz_section_Bp7abp": {
+      "settings": {
+        "title": "Not sure where to start?",
+        "description": "Take the quiz and find out which Balqees products are right for you!",
+        "button_text": "Start Now"
+      },
+      "blocks": {
+        "category_icon_49Eewh": {
+          "settings": {
+            "category_name": "Gut Health"
+          }
+        },
+        "category_icon_bhHwin": {
+          "settings": {
+            "category_name": "Mood"
+          }
+        },
+        "category_icon_Bgn4Qd": {
+          "settings": {
+            "category_name": "Vitality & Energy"
+          }
+        },
+        "category_icon_37469k": {
+          "settings": {
+            "category_name": "Immunity"
+          }
+        },
+        "category_icon_WfW84H": {
+          "settings": {
+            "category_name": "Skin & Beauty"
+          }
+        },
+        "category_icon_ntqtUP": {
+          "settings": {
+            "category_name": "Fertility & Libido"
+          }
+        }
+      }
+    },
+    "real_video_slider_section_rPipMp": {
+      "settings": {
+        "heading": "What our real customers say about our honey"
+      },
+      "blocks": {
+        "review_block_wGUcr6": {
+          "settings": {
+            "author_name": "Mohammad F.",
+            "text_wrapper": "“I have had black seed honey for about two weeks now and can feel massive improvements to my health. I take a teaspoon on an empty stomach with warm water. So far it has helped lower my sugar levels and cravings, and boosted my energy levels.”"
+          }
+        },
+        "review_block_8Bipk9": {
+          "settings": {
+            "text_wrapper": "“I've been using the honey for over a month now and have seen dramatic differences in my energy and a stronger immune system. This honey is unlike anything I've tried before, thick with a caramel-like taste that makes it incredibly sweet and delicious.”"
+          }
+        },
+        "review_block_4cMnDA": {
+          "settings": {
+            "author_name": "Lesley R.",
+            "text_wrapper": "“Everyone in my family has had flu and norovirus.. I have an immunity disorder but I've stayed as healthy as an ox.. it must be this wonderful product, it protects, tastes delicious and I can't wait to cook with it! So glad I found you!”"
+          }
+        },
+        "review_block_NjgR9D": {
+          "settings": {
+            "author_name": "Tracy S.",
+            "text_wrapper": "“This honey is delicious. I have never tasted honey like it. It's a real treat that I won't hesitate to repeat. Money well spent for the genuine product”"
+          }
+        },
+        "review_block_fDzm7G": {
+          "settings": {
+            "author_name": "Nina P.",
+            "text_wrapper": "“We really enjoyed the Saffron Honey Fusion. Beautiful honey with an absolutely magical note of saffron. A perfect way to start the day, and we'll be buying it again.”"
+          }
+        }
+      }
+    },
+    "artisanal_beekeeping_section_43Wc4N": {
+      "settings": {
+        "heading": "Our Commitment to Artisanal Beekeeping",
+        "subheading": "We're proud to partner with local beekeepers who follow traditional, sustainable practices to produce some of the purest honey in the world.",
+        "title": "Why we partner with artisanal beekeepers"
+      },
+      "blocks": {
+        "feature_QTegRR": {
+          "settings": {
+            "title": "Ethical Beekeeping"
+          }
+        }
+      }
     }
   }
 }
