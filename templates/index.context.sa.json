@@ -334,7 +334,130 @@
       "blocks": {
         "feature_QTegRR": {
           "settings": {
-            "title": "Ethical Beekeeping"
+            "title": "Ethical Beekeeping",
+            "text": "Our beekeepers use sustainable practices that avoid harmful chemicals, overharvesting and sugar substitutes, keeping bee health the priority"
+          }
+        },
+        "feature_k9fXrg": {
+          "settings": {
+            "title": "Support for Local Communities",
+            "text": "By partnering with local beekeepers and cooperatives, we help support families in rural communities and preserve traditional beekeeping methods"
+          }
+        },
+        "feature_fdPYrb": {
+          "settings": {
+            "title": "100% Pure Honey",
+            "text": "Sourced from clean, flower-rich environments that produce honey with greater depth of flavour, character and natural integrity."
+          }
+        }
+      }
+    },
+    "image_tab_section_yCjPtD": {
+      "settings": {
+        "heading": "Why choose raw honey over supermarket honey?",
+        "sub_text": "Discover the difference",
+        "btn_txt": "Shop Single Origin"
+      },
+      "blocks": {
+        "tab_block_wjgXnk": {
+          "settings": {
+            "heading": "Better for your body",
+            "answer": "<p>Raw honey retains natural enzymes and compounds damaged when honey is heated and filtered.</p>"
+          }
+        },
+        "tab_block_jJyVGg": {
+          "settings": {
+            "heading": "Richer Flavour",
+            "answer": "<p>Less processing preserves natural taste and character, instead of the flat sweetness common in mass-produced honey.</p>"
+          }
+        },
+        "tab_block_BypBLH": {
+          "settings": {
+            "heading": "Fully traceable",
+            "answer": "<p>Single-origin raw honey isn't blended or diluted, so you know exactly where it comes from.</p>"
+          }
+        },
+        "tab_block_hb3eLq": {
+          "settings": {
+            "heading": "Better for your body",
+            "answer": "<p>Raw honey retains natural enzymes and compounds damaged when honey is heated and filtered.</p>"
+          }
+        },
+        "tab_block_Mp6JQp": {
+          "settings": {
+            "heading": "Richer Flavour",
+            "answer": "<p>Less processing preserves natural taste and character, instead of the flat sweetness common in mass-produced honey.</p>"
+          }
+        },
+        "tab_block_zVQyyq": {
+          "settings": {
+            "heading": "Fully traceable",
+            "answer": "<p>Single-origin raw honey isn't blended or diluted, so you know exactly where it comes from.</p>"
+          }
+        }
+      }
+    },
+    "featured_collection_EbdFrb": {
+      "settings": {
+        "top_heading": "The perfect gift for honey lovers"
+      }
+    },
+    "image_with_banner_text_section_c73RHt": {
+      "settings": {
+        "heading": "Not sure which honey is right for you?",
+        "review_text": "Answer a few simple questions and we'll guide you to the honey that suits your taste, lifestyle and health goals.",
+        "btn_txt": "Take the Quiz"
+      }
+    },
+    "blog_post_3J88nj": {
+      "settings": {
+        "top_heading": "Learn more about real honey and wellness"
+      }
+    },
+    "balqees_honey_image_text_BDqGhB": {
+      "settings": {
+        "heading": "Why choose raw honey over supermarket honey?",
+        "subheading": "Discover the difference",
+        "button_label": "Shop Single Origin"
+      },
+      "blocks": {
+        "feature_DzFaNm": {
+          "settings": {
+            "title": "Better for your body",
+            "description": "Raw honey retains its natural enzymes, antioxidants and pollen, giving you real nutritional value in every spoonful."
+          }
+        },
+        "feature_Cpp9bH": {
+          "settings": {
+            "title": "Richer Flavour",
+            "description": "Less processing preserves natural taste and character, instead of the flat sweetness common in mass-produced honey."
+          }
+        },
+        "feature_xDTmtN": {
+          "settings": {
+            "title": "Fully traceable",
+            "description": "Every jar is sourced from a named beekeeper and region, so you always know where your honey comes from."
+          }
+        }
+      }
+    },
+    "health_heritage_section_mWqpeQ": {
+      "settings": {
+        "heading": "Conversations on Honey, Health & Heritage",
+        "review_text": "An exploration of wellness, tradition and food integrity with experts and specialists.",
+        "btn_txt": "Watch the Podcast"
+      }
+    },
+    "newsletter_Hy9MBA": {
+      "blocks": {
+        "custom_text_i6DX7G": {
+          "settings": {
+            "text": "Stay Connected to Real Honey"
+          }
+        },
+        "custom_text_T3d9Dr": {
+          "settings": {
+            "text": "Stories, sourcing updates, and wellness education. Sent occasionally, never spam."
           }
         }
       }
