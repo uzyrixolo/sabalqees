@@ -964,7 +964,16 @@ img.last-image {
     max-width: 250px;
 }
 </style>
-
+{%- if quiz_ar -%}
+<style>
+  #honeyQuiz, #honeyQuiz * { font-family: "Cairo", "Rubik", sans-serif; }
+  #honeyQuiz .form-content__question__btn { font-family: "Cairo", "Rubik", sans-serif; font-weight: 700; }
+  #honeyQuiz p { font-size: 17px; }
+  #honeyQuiz .form-content__question__option__text { padding-left: 6px; padding-right: 20px; }
+  #honeyQuiz .icons .form-content__question__option__text { font-size: 14px; line-height: 1.5; padding: 0 0 0 24px; }
+  #honeyQuiz .slide-3 .form-content__question__option__text::before { right: auto; left: 0; }
+</style>
+{%- endif -%}
     <section class="section">
        
         <main  id="honeyQuiz" class="section__main">
