@@ -218,6 +218,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
+        {%- unless request.locale.primary -%}
+<script>
+(function () {
+  var root = {{ routes.root_url | json }};
+  var skip = /^\/(cdn|checkouts?|apps|tools|admin|\.well-known)(\/|$)/;
+  function fix(a) {
+    var href = a.getAttribute('href'); if (!href) return;
+    var u; try { u = new URL(href, location.origin); } catch (e) { return; }
+    if (u.origin !== location.origin) return;
+    if (u.pathname === root || u.pathname.indexOf(root + '/') === 0) return;
+    if (skip.test(u.pathname)) return;
+    u.pathname = root + (u.pathname === '/' ? '' : u.pathname);
+    a.setAttribute('href', u.pathname + u.search + u.hash);
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a[href]');
+    if (a) fix(a);
+  }, true);
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="https://sa.balqees.com/"], a[href^="/"]').forEach(fix);
+  });
+})();
+</script>
+{%- endunless -%}
   </body>
   <style>
   /* Forces the badge to the top right of the collection image */
