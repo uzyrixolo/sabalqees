@@ -30,14 +30,15 @@
     font-display: swap;
   }
 
+  {%- if t4s_lang_code == 'ar' -%}
   :root {
-   --font-heading-family: "Cairo", "Rubik", sans-serif !important;
+    --font-heading-family: "Cairo", "Rubik", sans-serif !important;
     --font-body-family: "Cairo", "Rubik", sans-serif !important;
     --font-family-1: "Cairo", "Rubik", sans-serif !important;
     --font-family-2: "Cairo", "Rubik", sans-serif !important;
     --font-family-3: "Cairo", "Rubik", sans-serif !important;
   }
-
+  {%- endif -%}
   {%- comment -%}
     assets/new-dev.css pins `body h1..h6` to "Baskervville", a family nothing on the page ever
     loads, so every heading was falling through to the generic serif. Re-point the same selector
