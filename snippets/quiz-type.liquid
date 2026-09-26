@@ -1,3 +1,9 @@
+{%- comment -%}
+  Bilingual quiz: visible copy switches on request.locale (ar/en). Input values are kept in English
+  because honey_quiz_mapping.json keys on them. Redirect uses routes.collections_url so /en stays on /en.
+{%- endcomment -%}
+{%- assign quiz_ar = false -%}
+{%- if request.locale.iso_code == 'ar' -%}{%- assign quiz_ar = true -%}{%- endif -%}
 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -975,10 +981,10 @@ img.last-image {
                             </div> -->
                             <div class="form-content__question__main intro">
                                 <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/balqees-quiz.jpg?v=1731321118" alt="Honey" class="quiz-image">
-                                <h2>Welcome to the Honey Quiz</h2>
-                               <p>Discover your personalised honey recommendations.</p>
+                                <h2>{%- if quiz_ar -%}مرحبًا بك في اختبار العسل{%- else -%}Welcome to the Honey Quiz{%- endif -%}</h2>
+                               <p>{%- if quiz_ar -%}اكتشف توصيات العسل المناسبة لك.{%- else -%}Discover your personalised honey recommendations.{%- endif -%}</p>
                                 <button type="button" data-slide-toggle="down" class="form-content__question__btn">
-                                    Get Started
+                                    {%- if quiz_ar -%}ابدأ الآن{%- else -%}Get Started{%- endif -%}
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
                             </div>
@@ -992,7 +998,7 @@ img.last-image {
                                 <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
                             </div>
                             <div class="form-content__question__main">
-                                <h3 class="form-content__question__title">How do you prefer to consume honey?<small class="text-danger">*</small></h3>
+                                <h3 class="form-content__question__title">{%- if quiz_ar -%}كيف تفضّل تناول العسل؟{%- else -%}How do you prefer to consume honey?{%- endif -%}<small class="text-danger">*</small></h3>
                                 <div class="form-content__question__option-list" data-option-group data-input-required>
 
 
@@ -1004,19 +1010,19 @@ img.last-image {
                                        
                                       
                                       <input type="radio" name="q1" value="Straight from the jar" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Straight from the jar</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}مباشرة من العبوة{%- else -%}Straight from the jar{%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio"  name="q1" value="Mixed in beverages (tea, smoothies)" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Mixed in beverages (tea, smoothies)</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}ممزوجًا بالمشروبات (الشاي، السموذي){%- else -%}Mixed in beverages (tea, smoothies){%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio"name="q1" value="As a topping (yoghurt, toast, porridge)" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">As a topping (yoghurt, toast, porridge)</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}كإضافة (الزبادي، التوست، الشوفان){%- else -%}As a topping (yoghurt, toast, porridge){%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio" name="q1" value="Incorporated in cooking or baking" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Incorporated in cooking or baking</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}في الطبخ أو الخَبز{%- else -%}Incorporated in cooking or baking{%- endif -%}</span>
                                     </label>
                                     <!-- <label class="form-content__question__option">
                                         <input type="radio" name="q1" value="E" class="form-content__question__option__input" data-form-inner="input">
@@ -1024,7 +1030,7 @@ img.last-image {
                                     </label> -->
                                 </div>
                                 <button type="button" data-slide-toggle="down" class="form-content__question__btn">
-                                    Next
+                                    {%- if quiz_ar -%}التالي{%- else -%}Next{%- endif -%}
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
                             </div>
@@ -1038,47 +1044,47 @@ img.last-image {
                                 <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
                             </div>
                             <div class="form-content__question__main icons">
-                                <h3 class="form-content__question__title">Are you looking for specific benefits in honey?</h3>
+                                <h3 class="form-content__question__title">{%- if quiz_ar -%}هل تبحث عن فوائد معيّنة في العسل؟{%- else -%}Are you looking for specific benefits in honey?{%- endif -%}</h3>
                                 <div class="form-content__question__option-list">
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit1" name="q2" value="Gut health/Digestion" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Gut.svg" alt="Gut health/Digestion">
-                                    <span class="form-content__question__option__text">Gut health/Digestion</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}صحة الأمعاء / الهضم{%- else -%}Gut health/Digestion{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit2" name="q2" value="Mood" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Mood.svg" alt="Mood">
-                                    <span class="form-content__question__option__text">Mood</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}المزاج{%- else -%}Mood{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit3" name="q2" value="Vitality/Energy" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Energy_5826250a-d6ee-48e3-af34-d1aa51c70670.svg" alt="Vitality/Energy">
-                                    <span class="form-content__question__option__text">Vitality/Energy</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}الحيوية / الطاقة{%- else -%}Vitality/Energy{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit4" name="q2" value="Immunity" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Immunity.svg" alt="Immunity">
-                                    <span class="form-content__question__option__text">Immunity</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}المناعة{%- else -%}Immunity{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit5" name="q2" value="Skin and Beauty" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Skin.svg" alt="Skin and Beauty">
-                                    <span class="form-content__question__option__text">Skin and Beauty</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}البشرة والجمال{%- else -%}Skin and Beauty{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit6" name="q2" value="Fertility/Libido" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/Fertility.svg" alt="Fertility/Libido">
-                                    <span class="form-content__question__option__text">Fertility/Libido</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}الخصوبة / الرغبة{%- else -%}Fertility/Libido{%- endif -%}</span>
                                 </label>
                                 <label class="form-content__question__option">
                                     <input type="checkbox" id="benefit7" name="q2" value="No specific benefits" class="form-content__question__option__input" data-form-inner="input">
                                     <img src="https://cdn.shopify.com/s/files/1/0688/9612/9324/files/no-benefits_267dec56-1a67-40fa-a18f-c535d79d54da.png?v=1728385025" alt="No specific benefits">
-                                    <span class="form-content__question__option__text">No specific benefits</span>
+                                    <span class="form-content__question__option__text">{%- if quiz_ar -%}لا فوائد محددة{%- else -%}No specific benefits{%- endif -%}</span>
                                 </label>
                             </div>
 
                                 <button type="button" data-slide-toggle="down" class="form-content__question__btn">
-                                    Next
+                                    {%- if quiz_ar -%}التالي{%- else -%}Next{%- endif -%}
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
                             </div>
@@ -1092,7 +1098,7 @@ img.last-image {
                                 <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
                             </div>
                             <div class="form-content__question__main">
-                                <h3 class="form-content__question__title">What is your flavor preference?<small class="text-danger">*</small></h3>
+                                <h3 class="form-content__question__title">{%- if quiz_ar -%}ما النكهة التي تفضّلها؟{%- else -%}What is your flavor preference?{%- endif -%}<small class="text-danger">*</small></h3>
                              
                               <div class="form-content__question__option-list" data-option-group data-input-required>
 
@@ -1100,23 +1106,23 @@ img.last-image {
 
                                     <label class="form-content__question__option">
                                         <input type="radio" name="q3" value="Mild and floral" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Mild and floral</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}خفيف وزهري{%- else -%}Mild and floral{%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio"  name="q3" value="Rich and robust" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Rich and robust</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}غني وقوي{%- else -%}Rich and robust{%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio"name="q3" value="Sweet and fragrant" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Sweet and fragrant</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}حلو ومعطّر{%- else -%}Sweet and fragrant{%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio" name="q3" value="Spicy and aromatic" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Spicy and aromatic</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}متبّل وعطري{%- else -%}Spicy and aromatic{%- endif -%}</span>
                                     </label>
                                     <label class="form-content__question__option">
                                         <input type="radio" name="q3" value="Unique and exotic" class="form-content__question__option__input" data-form-inner="input">
-                                        <span class="form-content__question__option__text">Unique and Exotic</span>
+                                        <span class="form-content__question__option__text">{%- if quiz_ar -%}فريد ونادر{%- else -%}Unique and Exotic{%- endif -%}</span>
                                     </label>
                                  <!-- <label class="form-content__question__option">
                                         <input type="checkbox" name="q3" value="F" class="form-content__question__option__input" data-form-inner="input">
@@ -1124,7 +1130,7 @@ img.last-image {
                                     </label> -->
                                 </div>
                                 <button type="button" data-slide-toggle="down" class="form-content__question__btn">
-                                    Next
+                                    {%- if quiz_ar -%}التالي{%- else -%}Next{%- endif -%}
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
                             </div>
@@ -1138,7 +1144,7 @@ img.last-image {
                                 <i class="bi bi-arrow-right-short form-content__question__count__arrow"></i>
                             </div>
                             <div class="form-content__question__main text-left">
-                                <h2>Almost Done!</h2>
+                                <h2>{%- if quiz_ar -%}أوشكت على الانتهاء!{%- else -%}Almost Done!{%- endif -%}</h2>
                               
 
 
@@ -1154,7 +1160,7 @@ img.last-image {
         id="Subscribe"
         aria-label="email"
       > 
-        Get My Recommendations
+        {%- if quiz_ar -%}احصل على توصياتي{%- else -%}Get My Recommendations{%- endif -%}
       </button>
 
 
@@ -1190,7 +1196,7 @@ img.last-image {
 
   {%- if form.posted_successfully? -%}
     <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success">
-      Done
+      {%- if quiz_ar -%}تم{%- else -%}Done{%- endif -%}
     </h3>
   {%- endif -%}
 
@@ -1467,7 +1473,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.querySelector("#CustomerNote").value = bestCollection;
 
         // Set the return_to URL based on the calculated collection
-        returnToInput.value = `/collections/${bestCollection.toLowerCase().replace(/ /g, "-")}`;
+        returnToInput.value = `{{ routes.collections_url }}/${bestCollection.toLowerCase().replace(/ /g, "-")}`;
 
         console.log("Best Collection: ", bestCollection);
         console.log("Redirecting to: ", returnToInput.value);
