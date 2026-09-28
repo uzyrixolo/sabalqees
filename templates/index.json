@@ -101,6 +101,7 @@
         },
         "image_parent_pBHNK3": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Banner-1800x600.webp",
             "image_mb": "shopify://shop_images/Banner-750x960.webp",
@@ -1022,7 +1023,7 @@
             "mobile_img": "shopify://shop_images/Frame_2087326382.webp",
             "group_star": "shopify://shop_images/Frame_2087326262_c536a6eb-8895-4018-b887-5814f0b2b4ae.svg",
             "group_star_text": "4.9/5 - أكثر من 1,500 تقييم موثّق",
-            "title_text": "<p>عسل خام حقيقي،<br/>بفوائد حقيقية </p>",
+            "title_text": "<p>عسل خام حقيقي،<br/>بفوائد حقيقية&nbsp;</p>",
             "icon_1": "shopify://shop_images/Group_7_1.svg",
             "text_1": "أحادي المصدر",
             "icon_2": "shopify://shop_images/Group_7_2.svg",
